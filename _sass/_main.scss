@@ -149,9 +149,9 @@ img.tiny {
     background-color: #555;
 }
 
-pre, code, table, .highlight {
-    background: transparent !important;
-}
+// pre, code, table, .highlight {
+//     background: transparent !important;
+// }
 
 pre {
     margin: 0;
@@ -170,7 +170,7 @@ div.highlighter-rouge {
     // border: 1px solid #afafaf;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem 0 0 0;
+    // padding: 1rem 0 0 0;
     background-color: #FFFFFF;
     background-image: url("/assets/images/code-bg.png");
     background-size: auto 3.60rem;

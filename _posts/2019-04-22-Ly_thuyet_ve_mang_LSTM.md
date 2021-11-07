@@ -1,6 +1,6 @@
 ---
 layout: post
-author: phamdinhkhanh
+author: dinhhuyhoang
 title: Bài 2 - Lý thuyết về mạng LSTM part 2
 ---
 

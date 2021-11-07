@@ -1,17 +1,16 @@
-
 <ul>
-  {% for post in site.posts %}
-	  <div>
+	{% for post in site.posts %}
+	<div>
 		<hr>
-		<h2><a class="post-link" style="text-align: left; color: #204081; font-weight: bold" href="{{post.url}}">{{ post.title }}</a></h2>
+		<h2><a class="post-link" style="text-align: left; color: #204081; font-weight: bold" href="{{post.url}}">{{
+				post.title }}</a></h2>
 		<br>
 		<p>
-		{{ post.content | strip_html | truncatewords: 75 }}
+			{{ post.content | strip_html | truncatewords: 75 }}
 		</p>
-		<a href="{{post.url}}" sylte="color: #204081;">Xem tiếp » </a> 
+		<a href="{{post.url}}" sylte="color: #204081;">Xem tiếp » </a>
 		<span class="post-date" style="float: right; "><strong>{{ post.date | date_to_string}}</strong></span>
-	  </div>
-	
-  {% endfor %}
-</ul>
+	</div>
 
+	{% endfor %}
+</ul>
