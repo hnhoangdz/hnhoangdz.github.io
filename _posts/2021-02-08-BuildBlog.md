@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 author: phamdinhkhanh
 title: Appendix 2 - How this blog is built
@@ -150,4 +150,4 @@ Write the content is not a easy job. Your blog is attractive or not mainly distr
 
 - **Reference**: You should list down the reference book or article at the last, it helps to audience can study if they want to read more. Moreover, sometime you also forget your knownledge and the reference links maybe useful.
 
-What is your opinion about this matter? Let me know if you want to add.
+What is your opinion about this matter? Let me know if you want to add. -->
