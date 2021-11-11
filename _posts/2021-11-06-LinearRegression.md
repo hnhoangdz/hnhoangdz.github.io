@@ -9,7 +9,7 @@ title: Bài 1 - Linear Regression
 - [1. Giới thiệu](#1-introduction)
 - [2. Hàm dự đoán](#2-prediction)
 - [3. Hàm mất mát](#3-loss)
-- [4. Lập công thức chung cho bài toán](#4-generalization)
+- [4. Lập công thức chung](#4-generalization)
 	- [4.1. Hình học](#41-geometry)
 	- [4.2. Đại số tuyến tính](#42-linear-algebra)
 - [5. Thực nghiệm với Python](#5-coding)
@@ -58,13 +58,13 @@ Giả sử $$f$$ là giá trị thực của một căn hộ, $$f'$$ là giá tr
 
 $$f \approx f' + e$$
 
-Và trong bài toán hồi quy tuyến tính (Linear Regression) chúng ta cần tối ưu sao cho $$e$$ tiến tới 0. Phương trình cần tối ưu trong bài toán:
+Và trong bài toán hồi quy tuyến tính (Linear Regression) chúng ta cần tối ưu sao cho $$e$$ có giá trị nhỏ nhất có thể. Phương trình cần tối ưu trong bài toán:
 
 $$\frac{1}{2}e^2 = \frac{1}{2}(f - f')^2$$
 
 <a name="4-generalization"></a>
 
-## 4. Lập công thức chung cho bài toán
+## 4. Lập công thức chung
 
 Với bài toán dự đoán giá nhà dựa trên diện tích, ta có:
 
@@ -140,7 +140,7 @@ $$<=>X^T.X.W = X^T.Y$$
 
 $$<=>W = (X^T.X)^{-1}.X^T.Y$$
 
-Ta thấy nghiệm giải bằng phương pháp sử dụng đại số tuyến tính kết hợp đạo hàm cho ra nghiệm bài toán giống với phương pháp hình học trên. Phương pháp sử dụng đạo hàm này cũng sẽ là cơ sở để chúng ta bắt đầu với các thuật toán tối ưu trong machine learning như Gradient Descent.
+Ta thấy nghiệm giải bằng phương pháp sử dụng đại số tuyến tính kết hợp đạo hàm cho ra nghiệm bài toán giống với phương pháp hình học trên. Phương pháp này cũng sẽ là cơ sở để chúng ta bắt đầu với các thuật toán tối ưu trong machine learning như Gradient Descent.
 
 <a name="5-coding"></a>
 
