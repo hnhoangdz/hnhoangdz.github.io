@@ -136,7 +136,7 @@ def main():
 </p>
 <p align="center"> <b>Hình 2</b>: Visualize các nghiệm sau mỗi lần cập nhật và đường thẳng tương ứng </p>
 
-Ta thấy đường màu đen chính nghiệm mà ta khởi tạo, các đường màu xanh chính là nghiệm sau mỗi cập nhật theo công thức Gradient Descent (ở bước 2). Đường màu đỏ chính là nghiệm cuối cùng của bài toán.
+Ta thấy đường màu đen chính là nghiệm mà ta khởi tạo, các đường màu xanh chính là nghiệm sau mỗi cập nhật theo công thức Gradient Descent (ở bước 2). Đường màu đỏ chính là nghiệm cuối cùng của bài toán.
 
 Ở đây ta thấy sau 100 lần lặp thì nghiệm cuối cùng đã tìm được, nghiệm cho bài toán khá tốt, đường tìm được khá giống với nghiệm tìm theo công thức ở [bài 1 - Linear Regression](https://hnhoangdz.github.io/2021/11/06/LinearRegression.html). Hãy xem hàm mất mất biến đổi như thế nào sau mỗi lần lặp
 
