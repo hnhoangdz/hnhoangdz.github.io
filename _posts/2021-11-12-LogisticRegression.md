@@ -289,7 +289,7 @@ Vậy để lấy điểm phân chia thì $ x_2 = \frac{-(w_0 + w_1 + \ln(\frac{
 - Logistic Regression có thể coi là một mạng neural network không có hidden layer, chỉ có input layer và output layer.
 - Trong thực tế, nếu dữ liệu có các dạng phân bố theo nhãn phức tạp thì Logistic Regression hoạt động không hiệu quả vì hàm dự đoán rất khó có thể tìm ra đường thẳng, mặt phẳng hoặc siêu phẳng phù hợp. Do vậy việc neural network ra đời sẽ giúp cải tiến điểm yếu này.
 - Ở loss function của Logistic Regression, chúng ta sử dụng hàm Binary Cross Entropy vì là hàm convex tức local optimum và global optimum là một.
-- Ngoài ra tiền đề của thuật toán này mạng neural network chính là thuật toán PLA, chi tiết hơn [tại đây](https://machinelearningcoban.com/2017/01/21/perceptron/)
+- Ngoài ra tiền đề của thuật toán này và mạng neural network chính là thuật toán PLA, chi tiết hơn [tại đây](https://machinelearningcoban.com/2017/01/21/perceptron/)
 
 <a name="8-references"></a>
 
