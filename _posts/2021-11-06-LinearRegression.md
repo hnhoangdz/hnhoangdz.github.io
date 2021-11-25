@@ -240,7 +240,7 @@ plt.show()
 
 - Ở hàm mất mát, có một số thuật toán nhằm tránh overfiting như Ridge Regression, Lasso Regression hay trong deep learning là regurlization.
 
-- Thuật toán này sử dụng trung bình tổng sai số của giá trị dự đoán và giá trị thật để triển khai và đánh giá, vì vậy khi 1 dữ liệu "nhiễu" tồn tại sẽ gây ảnh hưởng tới chất lượng dự đoán. Một số phương pháp khắc phục đó là sử dụng: MAE Loss, Huber Loss...
+- Thuật toán này sử dụng trung bình tổng sai số của giá trị dự đoán và giá trị thật để triển khai và đánh giá, vì vậy khi tồn tại dữ liệu "nhiễu" sẽ gây ảnh hưởng tới chất lượng dự đoán. Một số phương pháp khắc phục đó là sử dụng: MAE Loss, Huber Loss... Nhưng vì các hàm này khá khó để giải trực tiếp vì vậy, thường sẽ loại bỏ các dữ liệu "nhiễu" trước khi traning.
 
 <a name="7-references"></a>
 

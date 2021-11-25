@@ -401,6 +401,8 @@ print("Inverse of A: ",A_inv)
 - Trên đây là những kiến thức cơ bản nhất của đại số tuyến tính như ma trận và vector.
 - Ở phần 2, một số khái niệm chuyên sâu hơn sẽ được trình bày.
 
+<a name="6-references"></a>
+
 ## 6. Tham khảo
 
 [1] [Machine Learning cơ bản ebook](https://github.com/tiepvupsu/ebookMLCB)
