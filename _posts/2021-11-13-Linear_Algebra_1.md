@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 4 - Ôn tập đại số tuyến tính (1/2)
+title: Bài 4 - Ôn tập đại số tuyến tính (1/3)
 ---
 
 **Phụ lục:**
@@ -16,9 +16,8 @@ title: Bài 4 - Ôn tập đại số tuyến tính (1/2)
     - [3.3. Tích vô hướng](#33-dot-product)
     - [3.4. Cosine rule](#34-cosine)
     - [3.5. Hình chiếu](#35-projection)
-- [4. Ma trận](#4-matrix)
-    - [4.1. Tích giữa 2 ma trận](#41-multiply)
-    - [4.2. Các ma trận đặc biệt](#42-special)
+- [4. Norm](#4-norm)
+    - [4.1. Khoảng cách](#41-distance)
 - [5. Đánh giá và kết luận](#5-evaluation)
 - [6. Tham khảo](#6-references)
 
@@ -55,13 +54,30 @@ print("a x b = ", a * b)
 
 Vector thực ra chúng ta đã được học ở cấp 3, như các bài toán tìm vector hình chiếu. Nhưng chưa hiểu rõ ý nghĩa của vector là gì ngoài biết nó có phương, chiều, độ dài và độ lớn. Vector là một khái niệm rất căn bản, nó có thể biểu diễn bất kì đại lượng nào trong thực tế, ví dụ như: diện tích các căn nhà, tuổi của các học sinh trong lớp...
 
-Để khai báo vector trong numpy, ta khai báo chúng trong ngoặc vuông như sau:
+Vector thường được biểu diễn dưới dạng cột array và có ngoặc vuông bao quanh, ví dụ:
+
+$$\mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ -1  \end{bmatrix} $$
+
+Vector thường được kí hiệu như sau: $\mathbf{v} \in \mathbb{R}^n$, trong đó $n$ là số lượng phần tử (dimension, length, size) của vector $\mathbf{v}$. Với ví dụ trên $ n = 3$.
+
+Những giá trị bên trong vector còn được gọi là: element, entries, coefficients, components. Để lấy ra giá trị $ith = v_i$ bên trong vector, ta có thể truy xuất tương tự như truy xuất phần tử trong mảng hoặc list (lưu ý: index của vector trong ngôn ngữ lập trình bắt đầu từ $0$ tới $n-1$, trong toán học $1$ tới $n$).
+
+**Thao tác với numpy**
 
 ```python
 v = np.array([0,1.1,2.2,3,4]) # Khai báo vector
 print(v)
 >>> [0,1.1,2.2,3,4]
+
+print(v[2]) # truy xuất phần tử thứ 2
+>>> 2.2
 ```
+
+**Vector đơn vị (unit vector)**
+
+Các phần tử bên trong chỉ có duy nhất một phần tử có giá trị bằng 1, còn lại đều bằng 0. Kí hiệu: với vector $\mathbf{e_i}$, giá trị tại phần tử thứ $i$th $=1$, ví dụ:
+
+$$\mathbf{e_1} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \mathbf{e_2} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},\mathbf{e_3} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$$
 
 <a name="31-attributes"></a>
 
@@ -135,7 +151,7 @@ print("v / k = ",v/k)
 
 Cho 2 vector $\textbf{u}, \textbf{v} \in \mathbb{R}^{n}$. Lưu ý: 2 vector cần phải cùng độ dài (cùng chiều).
 
--- Cộng: $\textbf{u} + \textbf{v} = \textbf{r}$, trong đó $r_i = u_i/s_i$. . Cộng 2 vector theo quy tắc hình bình hành:
+-- Cộng: $\textbf{u} + \textbf{v} = \textbf{r}$, trong đó $r_i = u_i + s_i$. . Cộng 2 vector theo quy tắc hình bình hành:
 
 <img src="/assets/images/bai4/anh2.png" class="normalpic"/>
 
@@ -238,168 +254,78 @@ $$\cos{\alpha} = \frac{\lvert \mathbf{h}\rvert}{\lvert \mathbf{u} \rvert} =  \fr
 
 $$=> \mathbf{h} = \frac{\mathbf{u}.\mathbf{v}}{\lvert \mathbf{u} \rvert} . \frac{\mathbf{u}}{\lvert \mathbf{u} \rvert}$$
 
-<a name="4-matrix"></a>
+<a name="4-norm"></a>
 
-## 4. Ma trận
+## 4. Norm
 
-Ma trận hiểu đơn giản nó sẽ ghép nhiều vector để thành một ma trận. Việc một vector chỉ lưu trữ được một biến phụ thuộc, nhưng ma trận sẽ lưu trữ được nhiều biến hơn. Kí hiệu: $\mathbf{A} \in R^{m \times n}$ - tức ma trận A gồm $m$ hàng và $n$ cột.
+Trong machine learning, đôi khi chúng ta cần tính toán độ lớn (size) của một vector. Để tính toán độ lớn đó, ta sẽ sử dụng khái niệm về $\mathbf{norm}$. Công thức được đưa ra như sau:
 
-$$ \begin{split}\mathbf{A}=\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \\ \end{bmatrix}\end{split} $$
+$$ \|\mathbf{x}\|_p = \left(\sum_{i=1}^n \left|x_i \right|^p \right)^{1/p} (1)$$
 
-Trong numpy, ma trận sẽ là một mảng 2 chiều. Vì vậy để truy xuất một phần tử, ta sử dụng $\mathbf{A_{ij}}$ trong đó $i$ chỉ vị trí hàng, $j$ chỉ vị trí cột. Để lấy toàn bộ hàng $i$, sử dụng: $\mathbf{A_{i:}}$ và lấy toàn bộ cột $j$, sử dụng: $\mathbf{A_{:j}}$. Thao tác với numpy
+trong đó $p \in \mathbf{R}, p \geq 1$.
 
-```python
-A = np.array([[1,2,3],
-              [4,5,6],
-              [7,8,9],
-              [-1,0,1]])
+Norm của vector $\mathbf{x}$ còn có thể được gọi là khoảng cách từ gốc tọa độ tới tọa độ của vector $\mathbf{x}$. Một số tính chất về norm:
 
-# Chiều của ma trận A
-print("Shape of A: ", A.shape)
->>> Shape of A: (4, 3)
+- $$ \|\mathbf{x}\| \geq 0 $$, dấu bằng xảy ra khi và chỉ khi $\mathbf{x}$ = 0.
 
-# Truy xuất phần tử hàng 2, cột 3
-# Trong numpy, vị trí hàng và cột bắt đầu từ 0
-print("A[2][3] = ", A[1][2])
->>> A[2][3] = 6
+- $$\alpha \|\mathbf{x}\| = \|\mathbf{\alpha x}\|$$, việc phóng đại lên véc tơ $\alpha$ lần thì giá trị chuẩn của nó cũng phóng đại lên $\alpha$ lần.
 
-# Lấy toàn bộ hàng 1
-print("Hàng 1: ", A[:1,:])
->>> Hàng 1: [[1, 2, 3]]
+- $$ \|\mathbf{x}\| + \|\mathbf{y}\| \geq \|\mathbf{x + y}\| $$, trong đó vector $\mathbf{y}$ cùng chiều vector $\mathbf{x}$. Bất đẳng thức trong tam giác: tổng 2 cạnh luôn lớn hơn cạnh còn lại.
 
-# Lấy toàn bộ cột 2
-print("Cột 2: ", A[:,1:2])
->>> Cột 2:  [[2], [5], [8],[0]]
-```
-<a name="41-multiply"></a>
+Với công thức (1) là trường hợp tổng quát nhất của norm ($L^p$), còn có tên gọi là **Minkowski Norm**. Việc thay đổi giá trị $p$ sẽ tạo ra các độ đo khác nhau, một số độ đo thường được sử dụng:
 
-### 4.1. Các phép tính trên ma trận
+- **Với $p = 2$ - Euclidean Norm ($L^2$)**
 
-Hai ma trận có cùng kích thước chúng ta có thể thực hiện các phép cộng, trừ, tích hadamard (hoặc elementi-wise) bằng việc sử dụng broadcasting tương tự với phần [3.2.2](https://hnhoangdz.github.io/2021/11/13/Linear_Algebra_1.html#322-vector-vector). 
+$$\|\mathbf{x}\|_2 = \left(\sum_{i=1}^n \left|x_i \right|^2 \right)^{1/2} = (\mathbf{x}^T \mathbf{x})^{1/2}$$
 
-- **Tích hadamard hoặc elementi-wise**: Cho $\mathbf{A} \in \mathbb{R}^{m \times n}$ và $\mathbf{B} \in \mathbb{R}^{m \times n}$. 
+- **Với $p = 1$ - Mahattan Norm ($L^1$)**
 
-$$
-\begin{split}\mathbf{A} \odot \mathbf{B} =
-\begin{bmatrix}
-    a_{11}  b_{11} & a_{12}  b_{12} & \dots  & a_{1n}  b_{1n} \\
-    a_{21}  b_{21} & a_{22}  b_{22} & \dots  & a_{2n}  b_{2n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{m1}  b_{m1} & a_{m2}  b_{m2} & \dots  & a_{mn}  b_{mn}
-\end{bmatrix}\end{split}
-$$
+$$\|\mathbf{x}\|_1 = \sum_{i=1}^n \left|x_i \right|$$
 
-- **Tích thông thường**: Cho 2 ma trận $\mathbf{A} \in \mathbb{R}^{m \times n}$ và $\mathbf{B} \in \mathbb{R}^{n \times p}$, tích của 2 ma trận được kí hiệu: $\mathbf{C} = \mathbf{A} \mathbf{B} \in \mathbb{R}^{m \times p}$. Lưu ý: để nhân được 2 ma trận này, ta cần số cột của $\mathbf{A}$ bằng số hàng của $\mathbf{B}$, ví dụ:
+- **Với $p \rightarrow \infty$ - Chebyshev Norm**
 
-$$\mathbf{A} = \begin{bmatrix} a_{11} && a_{12} \\ a_{21} && a_{22} \\a_{31} && a_{32} \end{bmatrix} \in \mathbb{R}^{3\times2}, \mathbf{B} = \begin{bmatrix} b_{11} && b_{12} \\ b_{21} && b_{22} \end{bmatrix} \in \mathbb{R}^{2\times2}$$
+$$||\mathbf{x}||_{\infty} = \max_{i = 1, 2, \dots, n} |x_i|$$
 
-$$\mathbf{C} = \mathbf{A} \mathbf{B} =  \begin{bmatrix}a_{11}b_{11} + a_{12}b_{21} && a_{11}b_{12} + a_{12}b_{22}
-\\ a_{21}b_{11} + a_{22}b_{21} && a_{21}b_{12} + a_{22}b_{22} \\ a_{31}b_{11} + a_{32}b_{21} && a_{31}b_{12} + a_{32}b_{22}\end{bmatrix} \in \mathbb{R}^{3\times2} $$
+<a name="41-distance"></a>
 
-- **Thao tác với python**
+### 4.1 Khoảng cách
 
-```python
-A = np.array([[1, 2, 3], 
-              [3, 2, 1]])
+Ở các bài toán về tính khoảng cách giữa 2 điểm bậc THPT, chúng ta đã quá quen thuộc với khoảng cách Euclidean. Khoảng cách này chính là một norm với giá trị $p = 2$. Cho 2 vector $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$
 
-B = np.array([[2, 1, 2], 
-             [1, 3, 0]])
+$$d_2(\mathbf{x},\mathbf{y}) = ||\mathbf{x - y}||$$
 
-# Element-wise multiplication
-print("Element-wise multiplication: ",A*B)
->>> Element-wise:  [[2 2 6]
-                    [3 6 0]]
+Với $p = 1$, khoảng cách Mahattan được định nghĩa là norm 1.
 
-X = np.array([[1, 2, 3], 
-              [3, 2, 1]])
+$$d_1(\mathbf{x},\mathbf{y}) = ||\mathbf{x - y}||$$
 
-Y = np.array([[2, 1], 
-              [1, 3],
-              [1, 1]])
+**So sánh sự khác biệt norm 1 và norm 2**:
 
-# Dot multiplication
-print("Dot multiplication: ",X.dot(Y))
->>> Dot multiplication:  [[ 7 10]
-                          [ 9 10]]
-```
+<img src="/assets/images/bai4/anh5.png" class="normalpic"/>
 
-<a name="42-special"><a/>
+<p align="center"> <b>Hình 4</b>: Norm 1 và norm 2 trong không gian 2 chiều (Nguồn: <a href="https://machinelearningcoban.com/math/#-norms-chuan"> Machine Learning cơ bản</a>)</p>
 
-### 4.2. Các ma trận đặc biệt
+Norm 2 (màu xanh lục) là đường "chim bay" giữa 2 vector $\mathbf{x}$ và  $\mathbf{y}$. Norm 1 thường được sử dụng trong tính toán đồ thị khi không có đường thẳng nối trực tiếp giữa 2 điểm vì vậy ta chỉ có cách đi dọc theo cạnh.
 
-- **Ma trận chuyển vị (transpose matrix)**: Cho ma trận $\mathbf{A} \in \mathbb{R}^{m \times n}$ và $\mathbf{B} \in \mathbb{R}^{n \times m}$. Ta gọi ma trận B là ma trận chuyển vị của ma trận A nếu $\mathbf{A_{ij}} = \mathbf{B_{ji}}$, trong đó ∀1 ≤ i ≤ n, 1 ≤ j ≤ m. Kí hiệu: $\mathbf{A}^T = \mathbf{B}$. Nếu $\mathbf{A} = \mathbf{A}^{T}$ thì ta gọi $\mathbf{A}$ là ma trận đối xứng (symetric matrix).
+**Chứng minh tính chất bất đẳng thức trong tam giác**. Cho tam giác và có các vector tọa độ $\mathbf{a},\mathbf{b},\mathbf{b}$ ta có thể suy ra các độ dài cạnh của tam giác như hình sau:
 
-$$\begin{split}\mathbf{A}=\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \\ \end{bmatrix}\end{split} => \begin{split}\mathbf{A}^T=\begin{bmatrix} a_{11} & a_{21} & \cdots & a_{m1} \\ a_{12} & a_{22} & \cdots & a_{m2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{2n} & \cdots & a_{mn} \\ \end{bmatrix}\end{split}$$
+<img src="/assets/images/bai4/anh6.png" class="smallpic"/>
 
-- **Ma trận vuông (square matrix)**: Ma trận vuông là ma trận có số hàng bằng số cột. Cho $\mathbf{A} \in \mathbb{R}^{m \times n}$ thì $m = n$.
+<p align="center"> <b>Hình 5</b>: tam giác</p>
 
-- **Ma trận đơn vị (identity matrix)**: là ma trận vuông và có các phần tử nằm trên đường chéo chính bằng 1 và các phần tử còn lại bằng 0. Kí hiệu: $\mathbf{I_n} \in  \mathbb{R}^{n \times n}$, ví dụ $\mathbf{I_3}$:
+Ta có:
 
-$$\begin{split}\mathbf{I}_3=
-\begin{bmatrix} 
-1 & 0 & 0 \\ 
-0 & 1 & 0 \\ 
-0 & 0 & 1 
-\end{bmatrix}
-\end{split}$$
+$$ ||\mathbf{a - b}|| + ||\mathbf{b - c}|| \geq ||\mathbf{a - c}|| $$
 
-- **Ma trận đường chéo (diagonal matrix)**: Là ma trận có các phần tử trên đường chéo chính khác 0 và các phần tử còn lại bằng 0. Ma trận chéo có thể là ma trận không vuông, ví dụ:
-
-$$\begin{split}\mathbf{A}=
-\begin{bmatrix} 
-1 & 0 & 0 \\ 
-0 & 2 & 0 \\ 
-0 & 0 & 3 
-\end{bmatrix}
-\end{split}$$
-
-- **Ma trận tam giác (triangle matrix)**: Một ma trận vuông được gọi là ma trận tam giác trên (upper triangular matrix) nếu tất cả
-các thành phần nằm phía dưới đường chéo chính bằng 0 và trường hợp ngược lại là ma trận tam giác dưới, ví dụ về ma trận tam giác trên:
-
-$$\begin{split}\mathbf{A}=
-\begin{bmatrix} 
-1 & 3 & 4 \\ 
-0 & 2 & 5 \\ 
-0 & 0 & 3 
-\end{bmatrix}
-\end{split}$$
-
-- **Ma trận nghịch đảo (inverse matrix)**: Cho ma trận vuông $\mathbf{A} \in \mathbb{R}^{n \times n}$, nếu tồn tại ma trận vuông $\mathbf{B} \in \mathbb{R}^{n \times n}$ mà $\mathbf{A}\mathbf{B} = \mathbf{I_n}$ thì $\mathbf{A}$ là ma trận khả nghịch và $\mathbf{B}$ là ma trận nghịch đảo của $\mathbf{A}$. [Đọc thêm](https://phamdinhkhanh.github.io/deepai-book/ch_algebra/appendix_algebra.html#ma-tran-nghich-dao)
-
-- **Thao tác với numpy** 
-
-```python
-A = np.array([[1, 2, 3], 
-              [0, 2, 1],
-              [4, 5, 6]])
-
-# Ma trận chuyển vị
-print("Tranpose of A: ",A.T)
->>> Tranpose of A:  [[1 0 4]
-                     [2 2 5]
-                     [3 1 6]]
-
-# Ma trận đơn vị
-identity_matrix = np.identity(3)
-print("Identity matrix: ",identity_matrix)
->>> Identity matrix:  [[1. 0. 0.]
-                       [0. 1. 0.]
-                       [0. 0. 1.]]
-
-# Ma trận nghịch đảo
-A_inv = np.linalg.inv(A)
-print("Inverse of A: ",A_inv)
->>> Inverse of A:  [[-0.77777778 -0.33333333  0.44444444]
-                    [-0.44444444  0.66666667  0.11111111]
-                    [ 0.88888889 -0.33333333 -0.22222222]]
-```
+$$<=>||\mathbf{a - b}|| + ||\mathbf{b - c}|| \geq ||\mathbf{(a - b) + (b - c)}|$$
 
 <a name="5-evaluation"></a>
 
 ## 5. Đánh giá và kết luận
 
-- Trên đây là những kiến thức cơ bản nhất của đại số tuyến tính như ma trận và vector.
-- Ở phần 2, một số khái niệm chuyên sâu hơn sẽ được trình bày.
+- Trên đây là những kiến thức cơ bản nhất về vector trong đại số tuyến tính.
+- Các phép toán của vector có rất nhiều ứng dụng trong machine learning như: so sánh độ tương đồng (dựa trên khoảng cách hoặc cosine), giúp việc biểu diễn các features dễ dàng hơn nhằm mục đích tính toán nhanh hơn,..
+- 2 thuật toán ở [bài 6 - K-means](https://hnhoangdz.github.io/2021/11/21/Kmeans.html) và [bài 7 - K-nearest neighbors](http://localhost:4000/2021/11/25/KNN.html) sẽ sử dụng tính chất về norm để giải quyết.
+- Ở phần 2, các kiến thức về ma trận và một số khái niệm chuyên sâu sẽ được trình bày.
 
 <a name="6-references"></a>
 
@@ -408,6 +334,10 @@ print("Inverse of A: ",A_inv)
 [1] [Machine Learning cơ bản ebook](https://github.com/tiepvupsu/ebookMLCB)
 
 [2] [Deep AI ebook](https://phamdinhkhanh.github.io/deepai-book/intro.html)
+
+[3] [Machine Learning cơ bản](https://machinelearningcoban.com/math/#-norms-chuan)
+
+
 
 
 
