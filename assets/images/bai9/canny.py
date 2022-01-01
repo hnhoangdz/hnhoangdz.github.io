@@ -6,16 +6,13 @@ gray_img = cv2.imread('ronaldo.jpg',0)
 
 def convolute(X, kernel, stride = 1, padding = 0):
     """
-
     Parameters
     ----------
     X : Input image
     kernel : kernel matri
-
     Returns
     -------
     Y : Convoluted image
-
     """
     
     x_h,x_w = X.shape
@@ -40,11 +37,9 @@ def gaussian_kernel(kernel_size, sigma=1):
     ----------
     kernel_size : odd number
     sigma : standard deviation
-
     Returns
     -------
     g : kernel matrix (sliding window)
-
     """
     size = int(kernel_size) // 2
     x, y = np.mgrid[-size:size+1, -size:size+1]
@@ -58,12 +53,10 @@ def sobel(image):
     ----------
     image : TYPE
         DESCRIPTION.
-
     Returns
     -------
     G : Gradient image
     theta : Angle image (radian type)
-
     """
     f_y = np.array([[-1,-2,-1],
                     [0,0,0],
@@ -87,11 +80,9 @@ def non_max_suppression(img, theta):
     ----------
     img : Gradient image
     theta : Angle image
-
     Returns
     -------
     Z : nonMax image
-
     """
     M, N = img.shape
     Z = np.zeros((M,N), dtype=np.int32)
@@ -147,11 +138,9 @@ def threshold(img, weak_pixel=75, strong_pixel=255, lowThresholdRatio=0.05, high
     highThresholdRatio : ratio (cái này k bắt buộc vì 
                                 trong hàm opencv sẽ cố định một giá trị pixel làm ngưỡng)
         DESCRIPTION. The default is 0.15.
-
     Returns
     -------
     res : thresholded image
-
     """
     maxVal = img.max() * highThresholdRatio
     minVal = maxVal * lowThresholdRatio
@@ -168,17 +157,41 @@ def threshold(img, weak_pixel=75, strong_pixel=255, lowThresholdRatio=0.05, high
     res[weak_i, weak_j] = weak_pixel
     
     return res
+def hysteresis(img, weak = 75, strong = 255):
+    """
+    Parameters
+    ----------
+    img : threholded image
+    weak : weak pixel value
+    strong : strong pixel value
 
+    Returns
+    -------
+    img : final image
+
+    """
+    M, N = img.shape  
+    for i in range(1, M-1):
+        for j in range(1, N-1):
+            if (img[i,j] == weak):
+                if ((img[i+1, j-1] == strong) or (img[i+1, j] == strong) or (img[i+1, j+1] == strong)
+                    or (img[i, j-1] == strong) or (img[i, j+1] == strong)
+                    or (img[i-1, j-1] == strong) or (img[i-1, j] == strong) or (img[i-1, j+1] == strong)):
+                    img[i, j] = strong
+                else:
+                    img[i, j] = 0
+    return img
 g = gaussian_kernel(5)
 convoluted_img = convolute(gray_img,g)
 G,theta = sobel(convoluted_img)
 nonMax_img = non_max_suppression(G, theta)
-th = threshold(nonMax_img)
+threholded = threshold(nonMax_img)
+final_img = hysteresis(threholded)
 fig = plt.figure(figsize=(30, 30))
 rows = 1
 columns = 2
-imgs = [nonMax_img,th]
-names = ['Non-max Suppression','Threshold']
+imgs = [threholded,final_img]
+names = ['Threshold','Hysteresis']
 for i in range(0,2):
     fig.add_subplot(rows, columns, i+1)
     plt.imshow(imgs[i],cmap='gray')

@@ -197,16 +197,14 @@ sobelCombined = sobelX + sobelY
 # canny built - in
 k = cv2.GaussianBlur(gray, (5, 5), 0)
 canny = cv2.Canny(k, 75, 255)
+fig = plt.figure(figsize=(30, 30))
+rows = 1
+columns = 2
+imgs = [th,canny]
+names = ['Implement Canny','Built-in Canny']
+for i in range(0,2):
+    fig.add_subplot(rows, columns, i+1)
+    plt.imshow(imgs[i],cmap='gray')
+    plt.axis('off')
+    plt.title(names[i])
 
-images = [th,canny]
-titles = ['Implement Canny','Built-in Canny']
-n_row=1 
-n_col=2
-plt.figure(figsize=(1.8 * n_col, 2.4 * n_row))
-plt.subplots_adjust(bottom=0, left=0.01, right=0.99, top=0.90, hspace=0.35)
-for i in range(n_row * n_col):
-    plt.subplot(n_row, n_col, i + 1)
-    plt.imshow(images[i], cmap=plt.cm.gray)
-    plt.title(titles[i], size=12)
-    plt.xticks(())
-    plt.yticks(())
