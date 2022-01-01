@@ -2,24 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-gray_img = cv2.imread('test.png',0)
-def gaussian_kernel(kernel_size, sigma=1):
-    """
-    Parameters
-    ----------
-    kernel_size : odd number
-    sigma : standard deviation
-
-    Returns
-    -------
-    g : kernel matrix (sliding window)
-
-    """
-    size = int(kernel_size) // 2
-    x, y = np.mgrid[-size:size+1, -size:size+1]
-    normal = 1 / (2.0 * np.pi * sigma**2)
-    g =  np.exp(-((x**2 + y**2) / (2.0*sigma**2))) * normal
-    return g
+gray_img = cv2.imread('ronaldo.jpg',0)
 
 def convolute(X, kernel, stride = 1, padding = 0):
     """
@@ -51,6 +34,24 @@ def convolute(X, kernel, stride = 1, padding = 0):
           
     return Y
 
+def gaussian_kernel(kernel_size, sigma=1):
+    """
+    Parameters
+    ----------
+    kernel_size : odd number
+    sigma : standard deviation
+
+    Returns
+    -------
+    g : kernel matrix (sliding window)
+
+    """
+    size = int(kernel_size) // 2
+    x, y = np.mgrid[-size:size+1, -size:size+1]
+    normal = 1 / (2.0 * np.pi * sigma**2)
+    g =  np.exp(-((x**2 + y**2) / (2.0*sigma**2))) * normal
+    return g
+
 def sobel(image):
     """
     Parameters
@@ -78,6 +79,8 @@ def sobel(image):
     theta = np.arctan2(G_y, G_x)
 
     return G,theta
+
+
 def non_max_suppression(img, theta):
     """
     Parameters
@@ -128,3 +131,56 @@ def non_max_suppression(img, theta):
                 pass
     
     return Z
+
+def threshold(img, weak_pixel=75, strong_pixel=255, lowThresholdRatio=0.05, highThresholdRatio=0.15):
+    """
+    Parameters
+    ----------
+    img : nonMax image
+    weak_pixel : if weak pixel
+        DESCRIPTION. The default is 75.
+    strong_pixel : if strong pixel
+        DESCRIPTION. The default is 255.
+    lowThresholdRatio : ratio (cái này k bắt buộc vì 
+                               trong hàm opencv sẽ cố định một giá trị pixel làm ngưỡng)
+        DESCRIPTION. The default is 0.05.
+    highThresholdRatio : ratio (cái này k bắt buộc vì 
+                                trong hàm opencv sẽ cố định một giá trị pixel làm ngưỡng)
+        DESCRIPTION. The default is 0.15.
+
+    Returns
+    -------
+    res : thresholded image
+
+    """
+    maxVal = img.max() * highThresholdRatio
+    minVal = maxVal * lowThresholdRatio
+    
+    M, N = img.shape
+    res = np.zeros((M,N), dtype=np.int32)
+    
+    strong_i, strong_j = np.where(img >= maxVal)
+    zeros_i, zeros_j = np.where(img < minVal)
+    
+    weak_i, weak_j = np.where((img <= maxVal) & (img >= minVal))
+    
+    res[strong_i, strong_j] = strong_pixel
+    res[weak_i, weak_j] = weak_pixel
+    
+    return res
+
+g = gaussian_kernel(5)
+convoluted_img = convolute(gray_img,g)
+G,theta = sobel(convoluted_img)
+nonMax_img = non_max_suppression(G, theta)
+th = threshold(nonMax_img)
+fig = plt.figure(figsize=(30, 30))
+rows = 1
+columns = 2
+imgs = [nonMax_img,th]
+names = ['Non-max Suppression','Threshold']
+for i in range(0,2):
+    fig.add_subplot(rows, columns, i+1)
+    plt.imshow(imgs[i],cmap='gray')
+    plt.axis('off')
+    plt.title(names[i])

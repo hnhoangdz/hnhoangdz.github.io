@@ -1,10 +1,8 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib
 
-test = cv2.imread('ronaldo.jpg')
-gray = cv2.cvtColor(test, cv2.COLOR_BGR2GRAY)
-
+gray = cv2.imread('ronaldo.jpg',0)
 def convolute(X, kernel, stride = 1, padding = 0):
   x_h,x_w = X.shape
   k_h,k_w = kernel.shape
@@ -43,13 +41,3 @@ def sobel(image):
     return square_sobel,abs_sobel
 
 square_sobel,abs_sobel = sobel(gray)
-fig = plt.figure(figsize=(30, 30))
-rows = 1
-columns = 3
-imgs = [gray,square_sobel,abs_sobel]
-names = ['original','square_sobel','abs_sobel']
-for i in range(0,3):
-  fig.add_subplot(rows, columns, i+1)
-  plt.imshow(imgs[i],cmap='gray')
-  plt.axis('off')
-  plt.title(names[i])
