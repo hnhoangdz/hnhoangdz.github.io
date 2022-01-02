@@ -171,7 +171,7 @@ $$w_2 := w_2 - \alpha \frac{dL}{dw_2}$$
 
 ### 5.2. Toàn tập dữ liệu với ma trận và vector hóa
 
-Cho m điểm dữ liệu và learning rate \alpha, ta có:
+Cho m điểm dữ liệu và learning rate $\alpha$, ta có:
 
 $$X = \begin{bmatrix} 1&&x_1^{(1)}&&x_2^{(1)} \\1&&x_1^{(2)}&&x_2^{(2)} \\ ...&&...&&... \\ 1&&x_1^{(m)}&&x_2^{(m)}
 \end{bmatrix}, Y = \begin{bmatrix}y_1\\ y_2 \\ ...\\ y_n\end{bmatrix},
