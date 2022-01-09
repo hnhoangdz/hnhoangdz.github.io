@@ -27,7 +27,7 @@ Cụ thể trong bài này ta cùng tìm hiểu về thuật toán Logistic Regr
 
 <img src="/assets/images/bai3/anh1.png" class="normalpic"/>
 
-<p align="center"> <b>Hình 1</b>: Bài toán nhị phân (<b>Source: </b><a href="https://machinelearningcoban.com/2017/01/21/perceptron/">machine learning cơ bản</a>)</p>
+<p align="center"> <b>Hình 1</b>: Bài toán nhị phân (<b>Nguồn: </b><a href="https://machinelearningcoban.com/2017/01/21/perceptron/">machine learning cơ bản</a>)</p>
 
 Ở hình trên, ta có 2 nhãn với: nhãn 1 đại diện cho các hình vuông màu xanh dương, nhãn 0 đại diện cho các hình tròn màu đỏ. Điều ta cần làm đó là dự đoán hình tam giác màu xám sẽ thuộc nhãn nào. Nhìn đơn giản ta có thể thấy, hình tam giác gần với các hình tròn màu đỏ hơn. Vì vậy ta mong xác suất mà thuộc nhãn 0 sẽ lớn hơn xác suất thuộc nhãn 1, và tổng xác suất của chúng bằng 1.
 
@@ -43,15 +43,15 @@ $$\lim_{x \rightarrow +\infty} \sigma(x) = \lim_{x \rightarrow +\infty} \frac{1}
 
 $$\lim_{x \rightarrow -\infty} \sigma(x) = \lim_{x \rightarrow -\infty} \frac{1}{1+e^{-x}}=0$$
 
-<img src="/assets/images/bai3/anh2.png" class="normalpic"/>
+<img src="/assets/images/bai3/anh2.png" class="smallpic"/>
 
 <p align="center"> <b>Hình 2</b>: Đồ thị hàm Sigmoid</p>
 
-Hãy thử đạo hàm hàm hàm Sigmoid, ta được:
+Ta có đạo hàm bậc nhất hàm Sigmoid như sau:
 
 $$f'(x) = \frac{e^{-x}}{(1+e^{-x})^2} = \frac{1}{1+e^{-x}} - \frac{1}{(1+e^{-x})^2} = f(x) - f(x)^2 = f(x)(1-f(x))$$
 
-Đạo hàm của hàm Sigmoid rất đẹp, giúp cho việc tính toán dễ dàng. 
+Nhận thấy rằng đạo hàm của hàm Sigmoid rất đẹp, giúp cho việc tính toán dễ dàng. 
 
 <a name="3-prediction"></a>
 
@@ -61,15 +61,15 @@ Bắt đầu với bài toán phân loại khách hàng để quyết định ch
 
 <img src="/assets/images/bai3/anh3.png" class="normalpic"/>
 
-<p align="center"> <b>Hình 3</b>: Visualize dữ liệu (<b>Source: </b><a href="https://nttuan8.com/bai-2-logistic-regression/">deep learning cơ bản</a>)</p>
+<p align="center"> <b>Hình 3</b>: Visualize dữ liệu (<b>Nguồn: </b><a href="https://nttuan8.com/bai-2-logistic-regression/">deep learning cơ bản</a>)</p>
 
-Ta thấy với dữ liệu như trên ta cần tìm một đường thẳng để phân chia thành 2 vùng khác nhau bao gồm: vùng cho vay - nhãn 1, vùng từ chối - nhãn 0.
+Ta thấy với dữ liệu như trên ta cần tìm một đường thẳng để phân chia thành 2 vùng khác nhau bao gồm: vùng cho vay - nhãn 1 màu đỏ, vùng từ chối - nhãn 0 màu xanh dương.
 
 Giả sử có một người làm việc với mức lương là $x_1$, số năm kinh nghiệm là $x_2$ thì ta sẽ có giá trị dự đoán là:
 
-$$\hat{y} = sig(w_0 + w_1x_1 + w_2x_2) = \frac{1}{1+e^{-({w_0 + w_1x_1 + w_2x_2})}}$$
+$$\hat{y} = \theta(w_0 + w_1x_1 + w_2x_2) = \frac{1}{1+e^{-({w_0 + w_1x_1 + w_2x_2})}}$$
 
-trong đó $w_0, w_1, w_2$ là các giá trị ta cần tìm và cũng là hệ số đường thẳng phân chia (boundary), sig là kí hiệu cho hàm Sigmoid và $\hat{y}$ chính là giá trị dự đoán.
+trong đó $w_0, w_1, w_2$ là các giá trị ta cần tìm và cũng là hệ số đường thẳng phân chia (boundary), $\theta$ là kí hiệu cho hàm Sigmoid và $\hat{y}$ chính là giá trị dự đoán.
 
 Lúc này giá trị $\hat{y}$ sẽ nằm trong khoảng [0,1]. Vì vậy thường ta sẽ đặt ngưỡng là 0.5, nếu $\hat{y} >= 0.5$ ta có thể coi là nhãn 1 (vùng cho vay) và ngược lại. Tất nhiên, nếu khó tính hơn thì có thể đặt ngưỡng cao hơn 0.5 để lấy được những người có thu nhập và kinh nghiệm chất lượng hơn.
 

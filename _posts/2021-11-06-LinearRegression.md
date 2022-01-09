@@ -16,6 +16,8 @@ title: Bài 1 - Linear Regression
 	- [5.1. Dạng đường thẳng](#51-straight-line)
 	- [5.2. Dạng parabol](#52-parabol-line)
 	- [5.3. Nghiệm bằng thư viện scikit-learn](#53-sklearn)
+		- [5.3.1. Dạng đường thẳng](#531-sklearn_line)
+		- [5.3.2. Polynomial Regression](#532-sklearn_polynomial)
 - [6. Đánh giá và kết luận](#6-evaluation)
 - [7. Tham khảo](#7-references)
 
@@ -250,6 +252,12 @@ print(W)
 
 ### 5.3. Nghiệm bằng thư viện scikit-learn
 
+Ở phần này ta sẽ sử dụng thư viện scikit-learn để thực hành bài toán và so sánh xem giữa nghiệm bài toán tự implement và nghiệm của bài toán được xử lí bởi thư viện có mang tới kết quả giống nhau không. **scikit-learn** là một trong những thư viện rất phổ biến để thực hành các mô hình Machine Learning cơ bản, ngoài ra trong scikit-learn sẽ gồm rất nhiều thư viện tiện ích như dataset, parameters tuning strategy,...
+
+<a name="531-sklearn_line"></a>
+
+#### 5.3.1. Dạng đường thẳng
+
 ```python
 from sklearn.linear_model import LinearRegression
 import numpy as np
@@ -273,7 +281,55 @@ Kết quả thu được là:
 W = [[0.32361847]], b = [1.88039364]
 ```
 
-Ta thấy kết quả nghiệm của bài toán giữa phương pháp tự thực hiện ở phần 5.1 và thư viện scikit-learn đã đưa ra kết quả giống nhau. 
+Ta thấy kết quả nghiệm của bài toán giữa phương pháp tự thực hiện ở phần 5.1 và thư viện scikit-learn đã đưa ra kết quả giống nhau. Sau khi tìm được nghiệm bài toán, việc tiếp theo khi có dữ liệu cần dự đoán bạn chỉ cần gọi tới hàm predict để lấy ra giá trị dự đoán.
+
+<a name="532-sklearn_polynomial"></a>
+
+#### 5.3.2. Polynomial Regression
+
+Ở phần 5.2 dữ liệu lúc này không còn ở dạng tuyến tính, tuy nhiên chúng ta vẫn có thể sử dụng mô hình tuyến tính để tìm nghiệm tối ưu. Ở phần 5.2 mình đã sử dụng cách thêm 1 biến bình phương để giúp mô hình có thể khái quát hóa dữ liệu tốt hơn. Vì vậy, trong scikit-learn cũng sẽ cung cấp một class PolynomialFeatures giúp thay đổi giữ liệu gốc ban đầu thành dữ liệu có cả bậc mũ cao hơn.
+
+Đầu tiên sẽ là bước tiền xử lí cho bài toán: 
+
+```python
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+import numpy as np # đstt
+import matplotlib.pyplot as plt # visualize
+
+# Dữ liệu
+X = np.array([[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]]).T
+Y = np.array([[2,5,7,9,11,16,19,23,22,29,29,35,37,40,46,42,39,31,30,28,20,15,10,6]]).T
+
+# Visualize dữ liệu
+plt.scatter(X, Y)
+
+poly_features = PolynomialFeatures(degree=2, include_bias=False)
+X_poly = poly_features.fit_transform(X)
+```
+
+Kết quả của X ban đầu và X_poly sau khi sử dụng PolynomialFeatures với mũ bậc 2:
+
+```python
+print(X[0])
+print(X_poly[0])
+>>> [2]
+    [2. 4.]
+```
+
+Việc tiền xử lí này đã giúp mô hình của ta có thêm 1 biến bậc cao, bước tiếp theo chỉ cần khai báo mô hình và fit tương tự ở phần trên:
+
+```python
+lin_reg = LinearRegression()
+lin_reg.fit(X_poly, y)
+```
+
+Kết quả chính xác với hàm implement ở trên:
+
+```python
+print('b = {}, W = {}'.format(lin_reg.intercept_, lin_reg.coef_))
+>>> b = [-20.44709486], W = [[ 7.60002888 -0.25718303]]
+```
 
 <a name="6-evaluation"></a>
 
