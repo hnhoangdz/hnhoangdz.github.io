@@ -15,6 +15,7 @@ title: Bài 1 - Linear Regression
 - [5. Thực nghiệm với Python](#5-coding)
 	- [5.1. Dạng đường thẳng](#51-straight-line)
 	- [5.2. Dạng parabol](#52-parabol-line)
+	- [5.3. Nghiệm bằng thư viện scikit-learn](#53-sklearn)
 - [6. Đánh giá và kết luận](#6-evaluation)
 - [7. Tham khảo](#7-references)
 
@@ -245,6 +246,8 @@ print(W)
 	[ -0.25718303]]
 ```
 
+<a name="53-sklearn"></a>
+
 ### 5.3. Nghiệm bằng thư viện scikit-learn
 
 ```python
@@ -278,7 +281,7 @@ Ta thấy kết quả nghiệm của bài toán giữa phương pháp tự thự
 
 - Nếu bài toán có dữ liệu dạng parabol mà vẫn sử dụng hàm dự đoán là đường thẳng thì sao? Vẫn được, nhưng sai số cao, chưa thể tối ưu bằng sử dụng hàm parabol. Giả sử, đầu vào lúc này không phải là 1 chiều mà là 2 chiều thì hàm dự đoán sẽ trở thành một mặt phẳng và công thức nghiệm trên vẫn đúng. Còn đầu vào có quá nhiều chiều dữ liệu thì lúc này mô hình của bài toán sẽ là một siêu phẳng (hyper plan). Như vậy bài toán dự đoán của chúng ta đã được giải quyết bằng cách tìm nghiệm W. Để dự đoán một điểm mới ta chỉ cần áp dụng như tính y0 ở trên. 
 
-- Việc tìm ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time và space complexity ($O(n^{2.4}) - O(n^{3})$ với $n$ là số lượng features của bài toán). Vì vậy, trong thư viện scikit-learn các nhà phát triển đã tối ưu phương pháp giải bằng ứng dụng của thuật toán [SVD - Singular Value Decomposite](https://machinelearningcoban.com/2017/06/07/svd/) và đạt được tốc độ khoảng $O(n^2)$. Tuy nhiên, cả 2 phương pháp này sẽ rất chậm với những bộ dữ liệu có features cao chiều (100.000) nên sẽ phù hợp hơn với những bộ dữ liệu thấp chiều (kể cả nhiều dữ liệu) thì phương pháp này vẫn sẽ hoạt động tốt.
+- Việc tìm ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time complexity ($O(n^{2.4}) - O(n^{3})$ với $n$ là số lượng features của bài toán) và space complexity . Vì vậy, trong thư viện scikit-learn các nhà phát triển đã tối ưu phương pháp giải bằng ứng dụng của thuật toán [SVD - Singular Value Decomposite](https://machinelearningcoban.com/2017/06/07/svd/) và đạt được tốc độ khoảng $O(n^2)$. Tuy nhiên, cả 2 phương pháp này sẽ rất chậm với những bộ dữ liệu có features cao chiều (100.000) nên sẽ phù hợp hơn với những bộ dữ liệu thấp chiều (kể cả nhiều dữ liệu) thì phương pháp này vẫn sẽ hoạt động tốt.
 
 - Ở hàm mất mát, có một số thuật toán nhằm tránh overfiting như Ridge Regression, Lasso Regression hay trong deep learning là regurlization.
 
@@ -288,6 +291,10 @@ Ta thấy kết quả nghiệm của bài toán giữa phương pháp tự thự
 
 ## 7. Tham khảo
 
-[1] [Machine Learning cơ bản](https://machinelearningcoban.com/2016/12/28/linearregression/)
+[1] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras and TensorFlow: concepts, tools, and techniques to build intelligent systems (2nd ed.). O’Reilly.
 
-[2] [Dung Lai github page](https://dunglai.github.io/2017/10/10/linear-regression/)
+[2] [Week 2 Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features) 
+
+[2] [Bài 3: Linear Regression - Machine Learning cơ bản by Vu Huu Tiep](https://machinelearningcoban.com/2016/12/28/linearregression/)
+
+[3] [Linear Regression by Dung Lai](https://dunglai.github.io/2017/10/10/linear-regression/)
