@@ -184,6 +184,14 @@ plt.show()
 
 <p align="center"> <b>Hình 2</b>: Visualize đường thẳng cần tìm</p>
 
+Và giá trị nghiệm W ta tìm được là: 
+
+```python
+print(W)
+>>> [[1.88039364]
+     [0.32361847]]
+```
+
 <a name="52-parabol-line"></a>
 
 ### 5.2. Dạng Parabol
@@ -212,7 +220,7 @@ X = np.concatenate((X,X_square),axis=1)
 W = np.linalg.inv(X.T.dot(X)).dot(X.T.dot(Y))
 w0,w1,w2 = W[0][0],W[1][0],W[2][0]
 
-# lấy điểm đầu và điểm cuối 
+# lấy 10000 điểm để vẽ 
 # để vẽ đường thẳng cần tìm
 x0 = np.linspace(2,25,10000)
 y0 = w0 + w1*x0 + w2*(x0**2)
@@ -228,9 +236,41 @@ plt.show()
 
 <p align="center"> <b>Hình 3</b>: Visualize parabol cần tìm</p>
 
-### 5.3. Nghiệm bằng thư viện sk-learn
+Và giá trị nghiệm W ta tìm được ta:
 
+```python
+print(W)
+>>>	[[-20.44709486]
+	[  7.60002888]
+	[ -0.25718303]]
+```
 
+### 5.3. Nghiệm bằng thư viện scikit-learn
+
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Dữ liệu
+X = np.array([[2,5,7,9,11,16,19,23,22,29,29,35,37,40,46]]).T
+Y = np.array([[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]]).T
+
+# Khởi tạo model
+lin_reg = LinearRegression()
+
+# Fit/train model
+lin_reg.fit(X, Y)
+
+print('W = {}, b = {}'.format(lin_reg.coef_,lin_reg.intercept_))
+```
+
+Kết quả thu được là:
+
+```python
+W = [[0.32361847]], b = [1.88039364]
+```
+
+Ta thấy kết quả nghiệm của bài toán giữa phương pháp tự thực hiện ở phần 5.1 và thư viện scikit-learn đã đưa ra kết quả giống nhau. 
 
 <a name="6-evaluation"></a>
 
@@ -238,7 +278,7 @@ plt.show()
 
 - Nếu bài toán có dữ liệu dạng parabol mà vẫn sử dụng hàm dự đoán là đường thẳng thì sao? Vẫn được, nhưng sai số cao, chưa thể tối ưu bằng sử dụng hàm parabol. Giả sử, đầu vào lúc này không phải là 1 chiều mà là 2 chiều thì hàm dự đoán sẽ trở thành một mặt phẳng và công thức nghiệm trên vẫn đúng. Còn đầu vào có quá nhiều chiều dữ liệu thì lúc này mô hình của bài toán sẽ là một siêu phẳng (hyper plan). Như vậy bài toán dự đoán của chúng ta đã được giải quyết bằng cách tìm nghiệm W. Để dự đoán một điểm mới ta chỉ cần áp dụng như tính y0 ở trên. 
 
-- Việc tính ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time và space complexity. 
+- Việc tìm ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time và space complexity ($O(n^{2.4}) - O(n^{3})$ với $n$ là số lượng features của bài toán). Vì vậy, trong thư viện scikit-learn các nhà phát triển đã tối ưu phương pháp giải bằng ứng dụng của thuật toán [SVD - Singular Value Decomposite](https://machinelearningcoban.com/2017/06/07/svd/) và đạt được tốc độ khoảng $O(n^2)$. Tuy nhiên, cả 2 phương pháp này sẽ rất chậm với những bộ dữ liệu có features cao chiều (100.000) nên sẽ phù hợp hơn với những bộ dữ liệu thấp chiều (kể cả nhiều dữ liệu) thì phương pháp này vẫn sẽ hoạt động tốt.
 
 - Ở hàm mất mát, có một số thuật toán nhằm tránh overfiting như Ridge Regression, Lasso Regression hay trong deep learning là regurlization.
 

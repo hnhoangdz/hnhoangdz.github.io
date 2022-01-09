@@ -17,7 +17,7 @@ title: Bài 2 - Gradient Descent
 
 ## 1. Giới thiệu
 
-Ở [bài 1 - Linear Regression](https://hnhoangdz.github.io/2021/11/06/LinearRegression.html) chúng ta đã đi tìm nghiệm cho bài toán bằng các phương pháp sử dụng hình học, đại số tuyến tính kết hợp đạo hàm. Nhưng điểm yếu còn tồn tại đó là ta phải tính ma trận nghịch đảo (trong nhiều trường hợp không thể tìm trực tiếp) làm chậm về tốc độ tính toán, tràn bộ nhớ với những tập dữ liệu lớn. Thuật toán Gradient Descent có thể cải thiện hơn mà vẫn đạt độ hiệu quả khá cao.
+Ở [bài 1 - Linear Regression](https://hnhoangdz.github.io/2021/11/06/LinearRegression.html) chúng ta đã đi tìm nghiệm cho bài toán bằng các phương pháp sử dụng hình học, đại số tuyến tính kết hợp đạo hàm. Nhưng điểm yếu còn tồn tại đó là ta phải tính ma trận nghịch đảo (trong nhiều trường hợp không thể tìm trực tiếp) làm chậm về tốc độ tính toán, tràn bộ nhớ với những tập dữ liệu lớn đặc biệt là khi số lượng features của dữ liệu rất lớn. Thuật toán Gradient Descent có thể cải thiện hơn mà vẫn đạt độ hiệu quả khá cao, hơn nữa Gradient Descent là cơ sở của rất nhiều thuật toán tối ưu trong Machine Learning/Deep Learning.
 
 Ý tưởng của thuật toán Gradient Descent chính là việc ứng dụng đạo hàm để tìm nghiệm tối ưu. Để dễ dàng giải thích, hãy xem đồ thị của phương trình $f(x) = x^4 - 5x^2 - x + 3$
 
