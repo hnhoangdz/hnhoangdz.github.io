@@ -22,9 +22,7 @@ title: Bài 1 - Linear Regression
 
 ## 1. Giới thiệu
 
-Hồi quy tuyến tính (Linear Regression) là một thuật toán căn bản nhất đối với bất kì ai bắt đầu học về AI đều sẽ đi qua. Trong thực tế, bài toán hồi quy tuyến tính được ứng dụng rất nhiều vì tính dễ dàng mô tả và dễ dàng triển khai.
-
-Hồi quy nói chung là lớp bài toán thuộc học có giám sát (supervised-learning). Dựa trên dữ liệu có sẵn (tức giá trị mục tiêu đã biết) và sự phụ thuộc của giá trị đầu vào để dự đoán một giá trị mới.
+Hồi quy tuyến tính (Linear Regression) là một thuật toán căn bản nhất đối với bất kì ai bắt đầu học về AI đều sẽ đi qua. Trong thực tế, bài toán hồi quy tuyến tính được ứng dụng rất nhiều vì tính dễ dàng mô tả và dễ dàng triển khai. Hồi quy nói chung là lớp bài toán thuộc học có giám sát (supervised-learning). Dựa trên dữ liệu có sẵn (tức giá trị mục tiêu đã biết) và sự phụ thuộc của giá trị đầu vào để dự đoán một giá trị mới.
 
 Ví dụ đơn giản nhất như: dựa trên diện tích nhà để đưa ra giá dự đoán, dựa trên chiều cao để dự đoán cân nặng,... hoặc rằng buộc thêm như dựa vào diện tích nhà, số phòng, view để đưa ra giá nhà dự đoán.
 
@@ -50,9 +48,9 @@ trong đó, $$w_0$$ - bias, $$w_1$$ và $$w_2$$ - trọng số là các giá tr�
 
 ## 3. Hàm mất mát - Loss function
 
-Khi nhắc đến giá trị dự đoán thì sai số luôn luôn được kèm theo. Sai số tức sự khác biệt giữa giá trị dự đoán và giá trị thực. Sai số càng bé chứng tỏ giá trị dự đoán càng chính xác. Đây cũng là mục tiêu của hàm mất mát nhằm giảm thiểu sai số tối đa nhất có thể.
+Khi nhắc đến giá trị dự đoán thì sai số luôn luôn được kèm theo. Sai số tức sự khác biệt giữa giá trị dự đoán và giá trị thực. Sai số càng nhỏ chứng tỏ giá trị dự đoán càng chính xác. Đây cũng là mục tiêu của hàm mất mát nhằm giảm thiểu sai số tối đa nhất có thể.
 
-Loss function chỉ sai số của một điểm dữ liệu còn cost function sẽ chỉ ra trung bình sai số trên toàn tập dữ liệu. Đây là những thuật ngữ cơ bản và rất quan trọng trong machine learning. Thường các thuật toán tối ưu sẽ tối ưu phần này và cũng là phàn tối ưu khó nhất vì yêu cầu kiến thức toán lớn.
+Loss function chỉ sai số của một điểm dữ liệu còn cost function sẽ chỉ ra trung bình sai số trên toàn tập dữ liệu. Đây là những thuật ngữ cơ bản và rất quan trọng trong machine learning. Thường các thuật toán tối ưu sẽ tối ưu phần này và cũng là phần tối ưu khó nhất vì yêu cầu kiến thức toán lớn.
 
 Giả sử $$f$$ là giá trị thực của một căn hộ, $$f'$$ là giá trị dự đoán và $$e$$ là sai số khi dự đoán. Điều ta mong muốn là làm sao cho phương trình sau xảy ra:
 
@@ -86,7 +84,7 @@ Lúc này khi đã định nghĩa được 2 hàm số trên, chúng ta có th�
 
 ### 4.1. Hình học
 
-Cho 3 điểm dữ liệu $A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$ và đường màu đỏ chính là đường thẳng ta cần tìm, ta có
+Cho 3 điểm dữ liệu $A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$ và đường màu đỏ chính là đường thẳng ta cần tìm, ta có:
 
 <img src="/assets/images/bai1/anh1.png" class="normalpic"/>
 
@@ -98,13 +96,13 @@ $$y_2 = w_0 + w_1x_2 (2)$$
 
 $$y_3 = w_0 + w_1x_3 (3)$$
 
-Nhưng với 3 phương trình 2 ẩn thì việc tìm nghiệm chính xác là điều không thể, vì vậy ta sẽ đi tìm $w_0$ và $w_1$ gần đúng sao cho sai số là bé nhất tức $d_A^{2} + d_B^{2} + d_C^{2}$ bé nhất.
+Nhưng với 3 phương trình 2 ẩn thì việc tìm nghiệm chính xác là điều không thể, vì vậy ta sẽ đi tìm $w_0$ và $w_1$ gần đúng sao cho sai số là bé nhất từ đó các nhà toán học đã đưa ra một giá trị cần tối ưu: $d_A^{2} + d_B^{2} + d_C^{2}$ bé nhất.
 
 Từ (1), (2), (3) ta có thể vector hóa dưới dạng: $$\begin{bmatrix}y_1\\ y_2 \\ y_3\end{bmatrix} \approx w_0\begin{bmatrix}1\\ 1 \\ 1\end{bmatrix} + w_1\begin{bmatrix}x_1\\ x_2 \\ x_3\end{bmatrix} (4)$$. Đặt $$y = \begin{bmatrix}y_1\\ y_2 \\ y_3\end{bmatrix}$$, $$o = \begin{bmatrix}1\\ 1 \\ 1\end{bmatrix}$$,$$x = \begin{bmatrix}x_1\\ x_2 \\ x_3\end{bmatrix}$$. Lúc này biểu diễn dưới dạng hình học ta sẽ được
 
 <img src="/assets/images/bai1/anh3.png" class="normalpic"/>
 
-Với những giá trị khác nhau của $w_0$ và $w_1$ ta sẽ thu được mặt phẳng $\textbf{(P)}$, hơn nữa vế phải của phương trình (4) sẽ tạo được một vector $\textbf{a}$ nằm trong mặt phẳng $\textbf{(P)}$. Do đó, ta cần tìm $w_0$ và $w_1$ để $\textbf{y}$ và $\textbf{a}$ gần nhau nhất. Để điều kiện này xảy ra khi và chỉ khi $\textbf{a}$ chính là hình chiếu của $\textbf{y}$ lên mặt phẳng $\textbf{(P)}$, gọi vector hình chiếu đó là $\textbf{h}$.
+Với những giá trị khác nhau của $w_0$ và $w_1$ ta sẽ thu được mặt phẳng $\textbf{(P)}$, vế phải của phương trình (4) sẽ tạo được một vector $\textbf{a}$ nằm trong mặt phẳng $\textbf{(P)}$. Do đó, ta cần tìm $w_0$ và $w_1$ để $\textbf{y}$ và $\textbf{a}$ gần nhau nhất. Để điều kiện này xảy ra khi và chỉ khi $\textbf{a}$ chính là hình chiếu của $\textbf{y}$ lên mặt phẳng $\textbf{(P)}$, gọi vector hình chiếu đó là $\textbf{h}$.
 
 Lúc này ta có $\textbf{h}$ $\bot$ $\textbf{x}$ và $\textbf{h}$ $\bot$ $\textbf{o}$ (tính chất của đường thẳng vuông góc mặt phẳng) $=>$ $\textbf{x}^T.\textbf{h}=0$ và $\textbf{o}^T.\textbf{h}=0 (5)$ 
 
@@ -140,7 +138,7 @@ $$<=>X^T.X.W = X^T.Y$$
 
 $$<=>W = (X^T.X)^{-1}.X^T.Y$$
 
-Ta thấy nghiệm giải bằng phương pháp sử dụng đại số tuyến tính kết hợp đạo hàm cho ra nghiệm bài toán giống với phương pháp hình học trên. Phương pháp này cũng sẽ là cơ sở để chúng ta bắt đầu với các thuật toán tối ưu trong machine learning như Gradient Descent.
+Ta thấy nghiệm giải bằng phương pháp sử dụng đại số tuyến tính kết hợp đạo hàm cho ra nghiệm bài toán giống với phương pháp hình học trên. Phương pháp sử dụng đạo hàm này có thể mở rộng ra các thuật toán tối ưu trong machine learning như Gradient Descent.
 
 <a name="5-coding"></a>
 
@@ -230,13 +228,17 @@ plt.show()
 
 <p align="center"> <b>Hình 3</b>: Visualize parabol cần tìm</p>
 
+### 5.3. Nghiệm bằng thư viện sk-learn
+
+
+
 <a name="6-evaluation"></a>
 
 ## 6. Đánh giá và kết luận
 
-- Nếu bài toán có dữ liệu dạng parabol mà vẫn sử dụng hàm dự đoán là đường thẳng thì sao? Vẫn được, nhưng sai số cao, chưa thể tối ưu bằng sử dụng hàm parabol. Giả sử, đầu vào lúc này không phải là 1 chiều mà là 2 chiều thì hàm dự đoán sẽ trở thành một mặt phẳng và công thức nghiệm trên vẫn đúng. Còn đầu vào có quá nhiều chiều dữ liệu thì lúc này khá khó để giải bằng numpy nên ta sẽ sử dụng thư viện sklearn. Như vậy bài toán dự đoán của chúng ta đã được giải quyết bằng cách tìm nghiệm W. Để dự đoán một điểm mới ta chỉ cần áp dụng như tính y0 ở trên. 
+- Nếu bài toán có dữ liệu dạng parabol mà vẫn sử dụng hàm dự đoán là đường thẳng thì sao? Vẫn được, nhưng sai số cao, chưa thể tối ưu bằng sử dụng hàm parabol. Giả sử, đầu vào lúc này không phải là 1 chiều mà là 2 chiều thì hàm dự đoán sẽ trở thành một mặt phẳng và công thức nghiệm trên vẫn đúng. Còn đầu vào có quá nhiều chiều dữ liệu thì lúc này mô hình của bài toán sẽ là một siêu phẳng (hyper plan). Như vậy bài toán dự đoán của chúng ta đã được giải quyết bằng cách tìm nghiệm W. Để dự đoán một điểm mới ta chỉ cần áp dụng như tính y0 ở trên. 
 
-- Việc tính ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time và space complexity.
+- Việc tính ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time và space complexity. 
 
 - Ở hàm mất mát, có một số thuật toán nhằm tránh overfiting như Ridge Regression, Lasso Regression hay trong deep learning là regurlization.
 

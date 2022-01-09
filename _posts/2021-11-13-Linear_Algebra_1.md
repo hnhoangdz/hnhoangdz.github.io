@@ -290,17 +290,17 @@ $$||\mathbf{x}||_{\infty} = \max_{i = 1, 2, \dots, n} |x_i|$$
 
 ### 4.1 Khoảng cách
 
-Ở các bài toán về tính khoảng cách giữa 2 điểm bậc THPT, chúng ta đã quá quen thuộc với khoảng cách Euclidean. Khoảng cách này chính là một norm với giá trị $p = 2$. Cho 2 vector $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$
+Ở các bài toán về tính khoảng cách giữa 2 điểm bậc THPT, chúng ta đã quen thuộc với khoảng cách Euclidean. Khoảng cách này chính là một norm với giá trị $p = 2$. Cho 2 vector $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$
 
-$$d_2(\mathbf{x},\mathbf{y}) = ||\mathbf{x - y}||$$
+$$d_2(\mathbf{x},\mathbf{y}) = ||\mathbf{x - y}||_2$$
 
 Với $p = 1$, khoảng cách Mahattan được định nghĩa là norm 1.
 
-$$d_1(\mathbf{x},\mathbf{y}) = ||\mathbf{x - y}||$$
+$$d_1(\mathbf{x},\mathbf{y}) = ||\mathbf{x - y}||_1$$
 
 **So sánh sự khác biệt norm 1 và norm 2**:
 
-<img src="/assets/images/bai4/anh5.png" class="normalpic"/>
+<img src="/assets/images/bai4/anh5.png" class="smallpic"/>
 
 <p align="center"> <b>Hình 4</b>: Norm 1 và norm 2 trong không gian 2 chiều (Nguồn: <a href="https://machinelearningcoban.com/math/#-norms-chuan"> Machine Learning cơ bản</a>)</p>
 
@@ -323,8 +323,13 @@ $$<=>||\mathbf{a - b}|| + ||\mathbf{b - c}|| \geq ||\mathbf{(a - b) + (b - c)}|$
 ## 5. Đánh giá và kết luận
 
 - Trên đây là những kiến thức cơ bản nhất về vector trong đại số tuyến tính.
-- Các phép toán của vector có rất nhiều ứng dụng trong machine learning như: so sánh độ tương đồng (dựa trên khoảng cách hoặc cosine), giúp việc biểu diễn các features dễ dàng hơn nhằm mục đích tính toán nhanh hơn,..
-- 2 thuật toán ở [bài 6 - K-means](https://hnhoangdz.github.io/2021/11/21/Kmeans.html) và [bài 7 - K-nearest neighbors](http://localhost:4000/2021/11/25/KNN.html) sẽ sử dụng tính chất về norm để giải quyết.
+
+- Các phép toán của vector có rất nhiều ứng dụng trong machine learning như: so sánh độ tương đồng (dựa trên khoảng cách hoặc cosine), giúp việc biểu diễn các features dễ dàng hơn nhằm mục đích tính toán nhanh hơn,...
+
+- Trong toán học, sẽ không tồn tại các phép chia ma trận hay vector, tuy nhiên với các phép tính trong numpy thì phép chia chỉ có thể thực hiện tương ứng phép nhân nghịch đảo element-wise.
+
+- 2 thuật toán ở [bài 6 - K-means](https://hnhoangdz.github.io/2021/11/21/Kmeans.html) và [bài 7 - K-nearest neighbors](https://hnhoangdz.github.io/2021/11/25/KNN.html) sẽ sử dụng tính chất về norm để giải quyết.
+
 - Ở phần 2, các kiến thức về ma trận và một số khái niệm chuyên sâu sẽ được trình bày.
 
 <a name="6-references"></a>
