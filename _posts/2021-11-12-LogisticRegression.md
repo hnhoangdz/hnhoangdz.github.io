@@ -385,7 +385,7 @@ Với nghiệm của thư viện tìm được và nghiệm tự implement ở t
 
 [1] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras and TensorFlow: concepts, tools, and techniques to build intelligent systems (2nd ed.). O’Reilly.
 
-[2] [Week 3 Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/wlPeP/classification)
+[2] [Week 3 - Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/wlPeP/classification)
 
 [3] [Bài 10: Logistic Regression - Machine Learning cơ bản by Vu Huu Tiep](https://machinelearningcoban.com/2017/01/27/logisticregression/)
 

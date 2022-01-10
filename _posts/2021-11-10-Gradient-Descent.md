@@ -233,7 +233,7 @@ trong đó $s_i$ có thể là std (độ lệch chuẩn) hoặc range của $x$
 
 [1] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras and TensorFlow: concepts, tools, and techniques to build intelligent systems (2nd ed.). O’Reilly.
 
-[2] [Week 2 Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features) 
+[2] [Week 2 - Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features) 
 
 [3] [Bài 7: Gradient Descent (phần 1/2) - Machine Learning cơ bản by Vu Huu Tiep](https://machinelearningcoban.com/2017/01/12/gradientdescent/)
 

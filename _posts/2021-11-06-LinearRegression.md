@@ -349,7 +349,7 @@ print('b = {}, W = {}'.format(lin_reg.intercept_, lin_reg.coef_))
 
 [1] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras and TensorFlow: concepts, tools, and techniques to build intelligent systems (2nd ed.). O’Reilly.
 
-[2] [Week 2 Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features) 
+[2] [Week 2 - Machine Learning coursera by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features) 
 
 [2] [Bài 3: Linear Regression - Machine Learning cơ bản by Vu Huu Tiep](https://machinelearningcoban.com/2016/12/28/linearregression/)
 
