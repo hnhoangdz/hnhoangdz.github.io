@@ -78,3 +78,13 @@ while True:
 
 plt.scatter(X[:,0], X[:,1], c = labels, cmap='rainbow')
 plt.scatter(centroids[:,0], centroids[:,1], color='black')
+
+from sklearn.cluster import KMeans
+
+k = 3
+kmeans = KMeans(n_clusters=k)
+kmeans.fit(X)
+centroids = kmeans.cluster_centers_
+
+plt.scatter(X[:,0], X[:,1], c = labels, cmap='rainbow')
+plt.scatter(centroids[:,0], centroids[:,1], color='black')
