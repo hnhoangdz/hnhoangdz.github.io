@@ -11,7 +11,7 @@ X, true_labels = make_blobs(n_samples=750, centers=true_centroids,
                             cluster_std=0.4, random_state=0)
 
 # predict labels
-labels = []
+# labels = []
 
 # # Visualize dữ liệu
 # plt.plot(X[:,0],X[:,1],'o')
@@ -27,8 +27,8 @@ def init_centroids(K):
     centroids = np.array(centroids)
     return centroids
 
-K = 3
-centroids = init_centroids(K)
+# K = 3
+# centroids = init_centroids(K)
 # plt.plot(centroids[:,0],centroids[:,1],'o')
 
 
@@ -51,7 +51,8 @@ def update_labels(X):
     return labels
 
 # Cập nhật centroids dựa trên nhãn trước đó tìm được
-def update_centroids(centroids,X,labels):
+def update_centroids(centroids, X, labels):
+    # print(centroids.shape)
     before_centroids = centroids.copy()
     for i in range(len(centroids)):
         count = 0
@@ -75,13 +76,31 @@ def stop(centroids,new_centroids):
     return (set([tuple(a) for a in centroids]) == 
         set([tuple(a) for a in new_centroids]))
 
-while True:
+def cost_function(centroids, X, labels):
+    cost_f = 0
+    for i in range(len(X)):
+        cost_f += distance(centroids[labels[i]], X[i])
+    return cost_f/X.shape[0]
+
+final_centroids = []
+final_labels = []
+cost = 9999999
+
+for i in range(500):
+    K = 3
+    centroids = init_centroids(K)
     labels = update_labels(X)
-    centroids, before_centroids = update_centroids(centroids, X, labels)
-    if stop(centroids, before_centroids):
-        break
-print(labels)
-plt.scatter(X[:,0], X[:,1], c = labels, cmap='rainbow')
-plt.scatter(centroids[:,0], centroids[:,1], color='black')
+    centroids, _ = update_centroids(centroids, X, labels)
+    labels, centroids = np.array(labels), np.array(centroids)
+    cost_f = cost_function(centroids, X, labels)
+    if cost_f < cost:
+        cost = cost_f
+        final_centroids = centroids
+        final_labels = labels
+print(true_labels)
+print(final_centroids)
+print(cost)
+plt.scatter(X[:,0], X[:,1], c = final_labels, cmap='rainbow')
+plt.scatter(final_centroids[:,0], final_centroids[:,1], color='black')
 
 
