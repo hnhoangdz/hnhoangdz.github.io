@@ -13,9 +13,6 @@ ax1.set_title('Before')
 labels = np.array([0]*len(true_labels))
 visited = np.array([False]*len(true_labels))
 labels_border = []
-# fig, (ax1, ax2) = plt.subplots(1,2, figsize=(10, 4.5))
-# ax1.plot(X[:, 0], X[:, 1], 'o')
-# ax1.set_title('Before')
 
 # Calculate distance by norm 2 of two points
 def distance(p1,p2):
