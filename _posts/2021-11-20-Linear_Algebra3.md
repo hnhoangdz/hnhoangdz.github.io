@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 6 - Ôn tập đại số tuyến tính (3/3)
+title: 6. Ôn tập đại số tuyến tính (3/3)
 ---
 
 - [1. Hệ trực chuẩn, ma trận trực giao](#1-orthogonal)

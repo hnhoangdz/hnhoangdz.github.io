@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 4 - Ôn tập đại số tuyến tính (1/3)
+title: 4. Ôn tập đại số tuyến tính (1/3)
 ---
 
 **Phụ lục:**

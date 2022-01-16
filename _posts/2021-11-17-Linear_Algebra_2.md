@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 5 - Ôn tập đại số tuyến tính (2/3)
+title: 5. Ôn tập đại số tuyến tính (2/3)
 ---
 
 - [1. Ma trận](#1-matrix)

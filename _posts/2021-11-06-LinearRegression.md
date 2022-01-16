@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 1 - Linear Regression
+title: 1. Linear Regression
 ---
 
 **Phụ lục:**

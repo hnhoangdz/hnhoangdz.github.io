@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 2 - Gradient Descent
+title: 2. Gradient Descent
 ---
 
 **Phụ lục:**

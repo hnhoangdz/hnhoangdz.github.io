@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: Bài 3 - Logistic Regression
+title: 3. Logistic Regression
 ---
 
 **Phụ lục:**
