@@ -52,7 +52,7 @@ Ta thấy rằng để đưa ra quyết định khả thi hay không khả thi, 
 
 <p align="center"> <b>Hình 3</b>: $x_1 > 5$</p>
 
-Từ đây ta có thể suy ra rằng, với bất kì điểm dữ liệu mới nào cần dự đoán chỉ cần có giá trị $x_1 > 5$ sẽ thuộc _nhãn 1_. Tuy nhiên với $x_1 < 5$ ta có thể thấy rằng vẫn còn có phần dữ liệu nhãn màu xanh lục, vì vậy khi có điểm dữ liệu có $x_1 < 5$ thì rất có thể dự đoán nhầm lẫn. Do đó, ta sẽ tiếp tục xét một ngưỡng $x_2 > 4$ như sau:
+Từ đây ta có thể suy ra rằng, với bất kì điểm dữ liệu mới nào cần dự đoán chỉ cần có giá trị $x_1 > 5$ sẽ thuộc _nhãn 1_. Tuy nhiên với $x_1 < 5$ ta có thể thấy rằng vẫn còn có phần dữ liệu nhãn màu xanh dương, vì vậy khi có điểm dữ liệu có $x_1 < 5$ thì rất có thể dự đoán nhầm lẫn. Do đó, ta sẽ tiếp tục xét một ngưỡng $x_2 > 4$ như sau:
 
 <img src="/assets/images/bai12/anh4.png" class="medianpic"/>
 
@@ -92,9 +92,9 @@ Tuy nhiên, tiêu chí chọn $x_1$ và $t_1$ để đưa ra điều kiện phâ
 
 _Phần này được tham khảo từ [phần 2. ID3 - Bài 34: Decision Trees (1): Iterative Dichotomiser 3 - Machine Learning cơ bản](https://machinelearningcoban.com/2018/01/14/id3/#-id), ở phần mình sẽ tóm tắt lại lí thuyết và đưa ra ví dụ để bản thân mình hiểu hơn chứ không implement code. Bạn có thể vào blog trên để theo dõi cách implement._
 
-_Source code: [Implement ID3](https://github.com/tiepvupsu/DecisionTreeID3/blob/master/id3.py)._
+_Source code: [Implement ID3 - Machine Learning cơ bản](https://github.com/tiepvupsu/DecisionTreeID3/blob/master/id3.py)._
 
-Thuật toán ID3 là một giải thuật được ra đời từ khá lâu đời và được sử dụng phổ biến trong bài toán cây nhị phân (binary tree). Thuật toán này được sử dụng cho các bài toán classification mà tất cả các thuộc tính ở dạng categorical. Việc xây dựng một Decision Tree là lần lượt đi chọn các câu hỏi cho từng thuộc tính với mức độ ưu tiên từ trên xuống (top-down) để từ đó tạo nên một cây nhị phân. Tất nhiên là có thể kết hợp nhiều thuộc tính để đưa ra câu hỏi và lựa chọn nhưng cách này sẽ khá phức tạp.
+Thuật toán ID3 là một giải thuật được ra đời từ khá lâu đời và được sử dụng phổ biến trong bài toán cây nhị phân (binary tree). Thuật toán này được sử dụng cho các bài toán classification mà tất cả các thuộc tính ở dạng categorical. Việc xây dựng một Decision Tree là lần lượt đi chọn các câu hỏi cho từng thuộc tính với mức độ ưu tiên từ trên xuống (top-down) để từ đó tạo nên một cây mang những câu hỏi có tính phân tách dữ liệu tốt nhất. Tất nhiên là có thể kết hợp nhiều thuộc tính để đưa ra câu hỏi và lựa chọn nhưng cách này sẽ khá phức tạp.
 
 <a name="31-idea"></a>
 
@@ -116,13 +116,13 @@ _Đọc đến đây nếu bạn cảm thấy khó hiểu, 'dont worry about it'
 
 Tuy nhiên hàm _Entropy_ sử dụng để đánh giá mức độ tinh khiết và vẩn đục của phép phân chia sẽ chỉ sử dụng mình xác suất dự đoán. Giả sử một sự kiện xảy ra với phân phối xác suất là $\mathbf{p} = (p_1, p_2, \dots, p_C)$ thoả mãn $\sum_{i=1}^{C} p_i = 1$. Khi đó hàm entropy đối với sự kiện trên là:
 
-$$\mathbf{H}(\mathbf{p}) = -\sum_{i=1}^{C}p_i \log(p_i) \quad $$ 
+$$\mathbf{E}(\mathbf{p}) = -\sum_{i=1}^{C}p_i \log(p_i) $$ 
 
-Nếu cây của ta đang sử dụng là một cây nhị phân thì chỉ có 2 xác suất xảy ra $p$ và $1 - p$ tại 1 node, hàm _Entropy_ có thể viết lại như sau:
+Nếu sự kiện chỉ có 2 xác suất xảy ra $p$ và $1 - p$ tại 1 node, hàm _Entropy_ có thể viết lại như sau:
 
-$$\mathbf{H}(\mathbf{p}) = -p \log(p) - (1 - p)\log(1 - p)$$ 
+$$\mathbf{E}(\mathbf{p}) = -p \log(p) - (1 - p)\log(1 - p)$$ 
 
-Để hiểu rõ mình sẽ visualize hàm $\mathbf{H}(\mathbf{p})$ với các xác suất $p$ như sau:
+Để hiểu rõ mình sẽ visualize hàm $\mathbf{E}(\mathbf{p})$ với các xác suất $p$ như sau:
 
 ```python
 import numpy as np
@@ -149,7 +149,7 @@ plt.show()
 
 <p align="center"> <b>Hình 6</b>: Entropy</p>
 
-Nhận thấy rằng hàm _Entropy_ đạt giá trị cực tiểu tại $p = 1$ và $p = 0$, đạt giá trị cực đại tại $p = 0.5$. Điều này chỉ ra rằng giá trị entropy cực tiểu đạt được khi phân phối $p$ là tinh khiết nhất, tức phân phối hoàn toàn thuộc về một nhóm. Trái lại, entropy đạt cực đại khi toàn bộ xác suất thuộc về các nhóm là bằng nhau. Một phân phối có entropy càng thấp thì mức độ tinh khiết của phân phối đó sẽ càng lớn.
+Nhận thấy rằng hàm _Entropy_ đạt giá trị cực tiểu tại $p = 1$ và $p = 0$, đạt giá trị cực đại tại $p = 0.5$. Điều này chỉ ra rằng giá trị entropy cực tiểu đạt được khi phân phối $p$ là tinh khiết nhất, tức phân phối hoàn toàn thuộc về một lớp. Trái lại, entropy đạt cực đại khi toàn bộ xác suất thuộc về các lớp là bằng nhau. Một phân phối có entropy càng thấp thì mức độ tinh khiết của phân phối đó sẽ càng lớn.
 
 Với $C > 2$ tức có thể là một cây nhiều nhánh thì điều này vẫn đúng (chứng minh [tại đây](https://machinelearningcoban.com/2017/04/02/duality/#--phuong-phap-nhan-tu-lagrange)) tức hàm _Entropy_ là tinh khiết nhất khi có một xác suất $p = 1$ (rơi vào chỉ 1 class).
 
@@ -163,19 +163,19 @@ Lúc này ta đã có một độ đo để đưa ra cách lựa chọn cách ph
 
 **Bước 1**: Xét bài toán phân loại có $C$ class, node đang tới là một **non-leaf node** $\mathcal{X}$ với các điểm dữ liệu tạo thành là $\mathcal{S}$ có số lượng phần tử là $N$. $N_c$ là số lượng phần tử của class $c$ với $c = 1, 2, ..., C$. Xác suất để mỗi điểm dữ liệu rơi vào một class $c$ được xấp xỉ bằng $\frac{N_c}{N}$. Hàm _Entropy_ dựa trên xác suất được tính như sau:
 
-$$\mathbf{H}(\mathcal{S}) = -\sum_{c=1}^C \frac{N_c}{N} \log\left(\frac{N_c}{N}\right) \quad\quad (1) $$
+$$\mathbf{E}(\mathcal{S}) = -\sum_{c=1}^C \frac{N_c}{N} \log\left(\frac{N_c}{N}\right) \quad\quad (1) $$
 
 **Bước 2**: Yêu cầu đặt ra rằng: Ở **non-leaf node** này ta cần chọn ra một thuộc tính $x$. Và khi $x$ được chọn thì nhánh tiếp theo sẽ có số lượng **child node** bằng với số giá trị mà thuộc tính $x$ có. Dựa trên $x$, các điểm dữ liệu trong $\mathcal{S}$ được phân ra thành $K$ child node $\mathcal{S_1},\mathcal{S_2},…,\mathcal{S_K}$ với số điểm trong mỗi **child node** lần lượt là $m_1,m_2,…,m_K$. Suy ra tổng trọng số _Entropy_ của mỗi **child node** là:
 
-$$\mathbf{H}(x, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{H}(\mathcal{S}_k) \quad\quad (2)$$
+$$\mathbf{E}(x, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{E}(\mathcal{S}_k) \quad\quad (2)$$
 
 Thông số đánh giá _information gain_ dựa trên thuộc tính $x$ được tính toán như sau:
 
-$$\mathbf{G}(x, \mathcal{S}) = \mathbf{H}(\mathcal{S}) - \mathbf{H}(x, \mathcal{S}) \quad\quad (3)$$
+$$\mathbf{G}(x, \mathcal{S}) = \mathbf{E}(\mathcal{S}) - \mathbf{E}(x, \mathcal{S}) \quad\quad (3)$$
 
 Cuối cùng, thuộc tính được lựa chọn $x^*$ là:
 
-$$x^* = \arg\max_{x} \mathbf{G}(x, \mathcal{S}) = \arg\min_{x} \mathbf{H}(x, \mathcal{S}) \quad\quad (4)$$
+$$x^* = \arg\max_{x} \mathbf{G}(x, \mathcal{S}) = \arg\min_{x} \mathbf{E}(x, \mathcal{S}) \quad\quad (4)$$
 
 tức $x^*$ làm cho _information gain_ **lớn nhất** hoặc tổng trọng số _Entropy_ **nhỏ nhất**
 
@@ -207,7 +207,7 @@ và `Play Tennis` là giá trị cần dự đoán dựa vào 4 thuộc tính tr
 
 Ta sẽ bắt đầu đi tìm thuộc tính và xây dựng một Decision Tree dựa trên thuật toán ID3 đã trình bày bên trên. Đầu tiên ta thấy rằng ở bảng trên có _5 giá trị `Play Tennis = No`_ và _9 giá trị `Play Tennis = Yes`_ (bước 1) suy ra _Entropy_ tại **root node** sẽ có giá trị bằng:
 
-$$\mathbf{H}(\mathcal{S}) = - \frac{5}{14}\log\left(\frac{5}{14}\right) - \frac{9}{14}\log\left(\frac{9}{14}\right) \approx 0.94$$
+$$\mathbf{E}(\mathcal{S}) = - \frac{5}{14}\log\left(\frac{5}{14}\right) - \frac{9}{14}\log\left(\frac{9}{14}\right) \approx 0.94$$
 
 Tiếp theo ta sẽ tính toán _information gain_ hoặc tổng trọng số _Entropy_ của 4 thuộc tính `Outlook`, `Temperature`, `Humidity`, `Wind` để tìm ra thuộc tính _phù hợp nhất_ làm **root node**. 
 
@@ -225,19 +225,19 @@ _Xét **root node** là `Outlook`, ta có thể vẽ lại bảng sau cho dễ t
 
 - Ta thấy rằng với **root node** là `Outlook` ta sẽ có 3 **child node**: _Sunny, Overcast, Rain_. Bây giờ ta cần đi tìm _information gain_ của `Outlook` dựa trên 3 **child node** này (bước 2):
 
-    $$\mathbf{G}(\text{outlook}, \mathcal{S}) = \mathbf{H}(\mathcal{S}) - \mathbf{H}(\text{outlook}, \mathcal{S})$$ 
+    $$\mathbf{G}(\text{outlook}, \mathcal{S}) = \mathbf{E}(\mathcal{S}) - \mathbf{E}(\text{outlook}, \mathcal{S})$$ 
     
-    mà $$\mathbf{H}(\text{outlook}, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{H}(\mathcal{S}_k)$$ trong đó $K = 3, N = 14$.
+    mà $$\mathbf{E}(\text{outlook}, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{E}(\mathcal{S}_k)$$ trong đó $K = 3, N = 14$.
 
-- _Entropy_ của 3 tập con _Sunny, Overcast, Rain_ trong `outlook` sẽ được kí hiệu lần lượt là: $\mathbf{H}(\mathcal{S}_s), \mathbf{H}(\mathcal{S}_o), \mathbf{H}(\mathcal{S}_r)$. Suy ra:
+- _Entropy_ của 3 tập con _Sunny, Overcast, Rain_ trong `outlook` sẽ được kí hiệu lần lượt là: $\mathbf{E}(\mathcal{S}_s), \mathbf{E}(\mathcal{S}_o), \mathbf{E}(\mathcal{S}_r)$. Suy ra:
 
-    $$\mathbf{H}(\mathcal{S}_s) = - \frac{3}{5}\log\left(\frac{3}{5}\right) - \frac{2}{5}\log\left(\frac{2}{5}\right) \approx 0.97$$
+    $$\mathbf{E}(\mathcal{S}_s) = - \frac{3}{5}\log\left(\frac{3}{5}\right) - \frac{2}{5}\log\left(\frac{2}{5}\right) \approx 0.97$$
 
-    $$\mathbf{H}(\mathcal{S}_o) = - \frac{0}{4}\log\left(\frac{0}{4}\right) - \frac{4}{4}\log\left(\frac{4}{4}\right) = 0$$
+    $$\mathbf{E}(\mathcal{S}_o) = - \frac{0}{4}\log\left(\frac{0}{4}\right) - \frac{4}{4}\log\left(\frac{4}{4}\right) = 0$$
 
-    $$\mathbf{H}(\mathcal{S}_r) = - \frac{2}{5}\log\left(\frac{2}{5}\right) - \frac{3}{5}\log\left(\frac{3}{5}\right) \approx 0.97$$
+    $$\mathbf{E}(\mathcal{S}_r) = - \frac{2}{5}\log\left(\frac{2}{5}\right) - \frac{3}{5}\log\left(\frac{3}{5}\right) \approx 0.97$$
 
-    $$\mathbf{H}(\text{outlook}, \mathcal{S}) = \frac{5}{14}\mathbf{H}(\mathcal{S}_s) + \frac{4}{14}\mathbf{H}(\mathcal{S}_o) +\frac{5}{14}\mathbf{H}(\mathcal{S}_r) \approx 0.69$$
+    $$\mathbf{E}(\text{outlook}, \mathcal{S}) = \frac{5}{14}\mathbf{E}(\mathcal{S}_s) + \frac{4}{14}\mathbf{E}(\mathcal{S}_o) +\frac{5}{14}\mathbf{E}(\mathcal{S}_r) \approx 0.69$$
 
     $$\mathbf{G}(\text{outlook}, \mathcal{S}) = 0.94 - 0.69 = 0.25 \quad\quad (5) $$
 
@@ -253,17 +253,17 @@ _Xét **root node** là `Wind`, tương tự ta có thể vẽ lại bảng sau:
 
 - Ta thấy rằng với **root node** là `Wind` ta sẽ có 2 **child node**: _Weak, Strong_. Bây giờ ta cần đi tìm _information gain_ của `Wind` dựa trên  **child node** này (bước 2):
 
-    $$\mathbf{G}(\text{wind}, \mathcal{S}) = \mathbf{H}(\mathcal{S}) - \mathbf{H}(\text{wind}, \mathcal{S})$$ 
+    $$\mathbf{G}(\text{wind}, \mathcal{S}) = \mathbf{E}(\mathcal{S}) - \mathbf{E}(\text{wind}, \mathcal{S})$$ 
     
-    mà $$\mathbf{H}(\text{wind}, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{H}(\mathcal{S}_k)$$ trong đó $K = 2, N = 14$.
+    mà $$\mathbf{E}(\text{wind}, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{E}(\mathcal{S}_k)$$ trong đó $K = 2, N = 14$.
 
-- _Entropy_ của _Weak, Strong_ trong `Wind` sẽ được kí hiệu lần lượt là: $\mathbf{H}(\mathcal{S}_w), \mathbf{H}(\mathcal{S}_s)$. Suy ra:
+- _Entropy_ của _Weak, Strong_ trong `Wind` sẽ được kí hiệu lần lượt là: $\mathbf{E}(\mathcal{S}_w), \mathbf{E}(\mathcal{S}_s)$. Suy ra:
 
-   $$\mathbf{H}(\mathcal{S}_w) = - \frac{2}{8}\log\left(\frac{2}{8}\right) - \frac{6}{8}\log\left(\frac{6}{8}\right) \approx 0.81$$
+   $$\mathbf{E}(\mathcal{S}_w) = - \frac{2}{8}\log\left(\frac{2}{8}\right) - \frac{6}{8}\log\left(\frac{6}{8}\right) \approx 0.81$$
 
-   $$\mathbf{H}(\mathcal{S}_s) = - \frac{3}{6}\log\left(\frac{3}{6}\right) - \frac{3}{6}\log\left(\frac{3}{6}\right) = 1$$
+   $$\mathbf{E}(\mathcal{S}_s) = - \frac{3}{6}\log\left(\frac{3}{6}\right) - \frac{3}{6}\log\left(\frac{3}{6}\right) = 1$$
 
-   $$\mathbf{H}(\text{wind}, \mathcal{S}) = \frac{8}{14}\mathbf{H}(\mathcal{S}_w) + \frac{6}{14}\mathbf{H}(\mathcal{S}_s) \approx 0.89$$
+   $$\mathbf{E}(\text{wind}, \mathcal{S}) = \frac{8}{14}\mathbf{E}(\mathcal{S}_w) + \frac{6}{14}\mathbf{E}(\mathcal{S}_s) \approx 0.89$$
 
    $$\mathbf{G}(\text{wind}, \mathcal{S}) = 0.94 - 0.89 = 0.05 \quad\quad (6) $$
 
@@ -283,17 +283,17 @@ _Xét nhánh **sunny**:_
 
 - Giá trị Entropy của $\mathcal{S}$ tại nhánh _sunny_ là:
 
-$$\mathbf{H}(\mathcal{S}_\text{sunny}) = - \frac{3}{5}\log\left(\frac{3}{5}\right) - \frac{2}{5}\log\left(\frac{2}{5}\right) \approx 0.97$$
+$$\mathbf{E}(\mathcal{S}_\text{sunny}) = - \frac{3}{5}\log\left(\frac{3}{5}\right) - \frac{2}{5}\log\left(\frac{2}{5}\right) \approx 0.97$$
 
-- Nếu chọn thuộc tính `Humidity` (nhìn nhanh thì bạn có thể thấy được thuộc tính này phân tách rất rõ ràng khi được phân loại tuy nhiên mình vẫn sẽ viết toàn bộ cách tính), _Entropy_ của _High, Normal_ sẽ được kí hiệu lần lượt là: $\mathbf{H}(\mathcal{S}_h), \mathbf{H}(\mathcal{S}_n)$. Suy ra:
+- Nếu chọn thuộc tính `Humidity` (nhìn nhanh thì bạn có thể thấy được thuộc tính này phân tách rất rõ ràng khi được phân loại tuy nhiên mình vẫn sẽ viết toàn bộ cách tính), _Entropy_ của _High, Normal_ sẽ được kí hiệu lần lượt là: $\mathbf{E}(\mathcal{S}_h), \mathbf{E}(\mathcal{S}_n)$. Suy ra:
 
-$$\mathbf{H}(\mathcal{S}_h) = - \frac{3}{3}\log\left(\frac{3}{3}\right) - \frac{0}{3}\log\left(\frac{0}{3}\right) = 0$$
+$$\mathbf{E}(\mathcal{S}_h) = - \frac{3}{3}\log\left(\frac{3}{3}\right) - \frac{0}{3}\log\left(\frac{0}{3}\right) = 0$$
 
-$$\mathbf{H}(\mathcal{S}_n) = - \frac{0}{2}\log\left(\frac{0}{2}\right) - \frac{2}{2}\log\left(\frac{2}{2}\right) = 0$$
+$$\mathbf{E}(\mathcal{S}_n) = - \frac{0}{2}\log\left(\frac{0}{2}\right) - \frac{2}{2}\log\left(\frac{2}{2}\right) = 0$$
 
-$$\mathbf{H}(\text{humidity}, \mathcal{S}_\text{sunny}) = \frac{3}{5}\mathbf{H}(\mathcal{S}_h) + \frac{2}{5}\mathbf{H}(\mathcal{S}_n) = 0$$
+$$\mathbf{E}(\text{humidity}, \mathcal{S}_\text{sunny}) = \frac{3}{5}\mathbf{E}(\mathcal{S}_h) + \frac{2}{5}\mathbf{E}(\mathcal{S}_n) = 0$$
 
-$$\mathbf{G}(\text{humidity}, \mathcal{S}_\text{sunny}) = \mathbf{H}(\mathcal{S}_\text{sunny}) - \mathbf{H}(\text{humidity}, \mathcal{S}_\text{sunny}) = 0.97$$
+$$\mathbf{G}(\text{humidity}, \mathcal{S}_\text{sunny}) = \mathbf{E}(\mathcal{S}_\text{sunny}) - \mathbf{E}(\text{humidity}, \mathcal{S}_\text{sunny}) = 0.97$$
 
 - Tính toán tương tự cho 2 thuộc tính `Temperature` và `Wind` bạn sẽ nhận được giá _information gain_ lần lượt là: $0.57,  0.019$. So sánh với _information gain_ của `Humidity` thì ta sẽ chọn **node** này là `Humidity` và cây của ta lúc này sẽ được như sau:
 
@@ -305,13 +305,11 @@ _Tương tự xét nhánh **rain** ta sẽ thu được một cây hoàn chỉnh
 
 **Kết luận:** Tới đây một Decision Tree đã được hoàn thiện bằng thuật toán ID3, khi có một điểm dữ liệu mới ta sẽ bắt đầu hỏi các câu hỏi từ trên xuống (từ root node) để xác định nhãn cuối cùng. Nếu bạn thử lại toàn bộ dữ liệu ở trên ví dụ thì sẽ thấy với cây ta tạo được sẽ dự đoán chính xác 100% và nếu dụ một dữ liệu như sau: _`Outlook: Rain`, `Temperature: Hot`, `Humidity: Normal`, `Wind: Strong`_ thì sẽ có nhãn là `No`. 
 
-_Vì bài tới đây khá dài nên mình sẽ trình bày về thuật toán CART ở bài sau cũng như vấn đề mà các thuật toán Decision Tree gặp phải._
-
 <a name="4-evaluation"></a>
 
 ## 4. Đánh giá và kết luận
 
-- ID3 là thuật toán dựa trên thuật toán Greedy (tham lam) dựa trên rằng buộc là _information gain_ hoặc tổng trọng số _Entropy_ của một thuộc tính để từ đó chọn ra một thuộc tính có thể phân chia dữ liệu theo nhãn _phù hợp nhất_ ở mỗi **node** được chọn. Tuy nhiên điểm yếu của thuật toán Greedy là đôi khi nó không tìm ra một nghiệm tối ưu toàn cục mà chỉ là cục bộ. Vì vậy ID3 chưa chắc đã tạo nên một cây tối ưu nhất, ví dụ với bộ dữ liệu bên trên vẫn tồn tại một số sơ đồ cây khác đảm bảo dự đoán chính xác 100% training data như sau:
+- ID3 sử dụng thuật toán Greedy (tham lam) dựa trên rằng buộc là _information gain_ hoặc tổng trọng số _Entropy_ của một thuộc tính để từ đó chọn ra một thuộc tính có thể phân chia dữ liệu theo nhãn _phù hợp nhất_ ở mỗi **node** được chọn. Tuy nhiên điểm yếu của thuật toán Greedy là đôi khi nó không tìm ra một nghiệm tối ưu toàn cục mà chỉ là cục bộ. Vì vậy ID3 chưa chắc đã tạo nên một cây tối ưu nhất, ví dụ với bộ dữ liệu bên trên vẫn tồn tại một số sơ đồ cây khác đảm bảo dự đoán chính xác 100% training data như sau:
 
 <hr>
 
@@ -321,9 +319,11 @@ _Vì bài tới đây khá dài nên mình sẽ trình bày về thuật toán C
 
 - Vậy ID3 sẽ lựa chọn cây nào? ID3 sẽ lựa chọn duy nhất một cây thỏa mãn điều kiện hỗn tạp (_information gain_ lớn nhất) nhỏ nhất, vì vậy cây tìm ra sẽ dựa trên thuộc tính mà ID3 tìm ra và lựa chọn làm **non-leaf node** ở mỗi lần lặp.
 
-- Với ID3 cây có xu hướng mở rộng bề ngang (lùn, thấp) vì những thuộc tính có _information gain_ cao sẽ càng gần **root node**. Thật vậy, giả sử khi bạn muốn dựa trên một số thông tin cho trước để đưa ra dự đoán xem đó là ai trong lớp học. Các thông tin này có thể bao gồm: Sở thích, thói quen, giới tính, ngày sinh... giả sử rằng trong lớp không có ai trùng ngày sinh với nhau thì ta chỉ cần mỗi thông tin/thuộc tính này để có thể đưa ra dự đoán chính xác 100%. Vì tính hỗn tạp của thuộc tính lúc này là không có tức tổng trọng số hàm _Entropy_ lúc này bằng không thì _information gain_ là lớn nhất.
+- Với ID3 cây có xu hướng mở rộng bề ngang (lùn, thấp) vì những thuộc tính có _information gain_ cao sẽ càng gần **root node**. Thật vậy, giả sử khi bạn muốn dựa trên một số thông tin cho trước để đưa ra dự đoán xem đó là ai trong lớp học. Các thông tin này có thể bao gồm: Sở thích, thói quen, giới tính, ngày sinh... giả sử rằng trong lớp không có ai trùng ngày sinh với nhau thì ta chỉ cần mỗi thông tin/thuộc tính này để có thể đưa ra dự đoán chính xác 100%. Vì tính hỗn tạp của thuộc tính lúc này là không có tức tổng trọng số hàm _Entropy_ lúc này bằng không thì _information gain_ là lớn nhất. Vì vậy thuộc tính mà có càng nhiều giá trị thường có xu thế nằm gần **root node**.
 
-- Thuật toán ID3 làm việc với dữ liệu dạng _categorical_ tuy nhiên với dữ liệu dạng _numeric_ ta có thể biến đổi một chút để đưa thành dạng _categorical_. Ví dụ bạn có dữ liệu thuộc tính điểm là: $1,2,3,...10$ bạn có thể chia thành 3 khoảng: $1 - 4$ là _weak_, $5 - 7$ là _median_, $8 - 10$ là _high_. Tuy nhiên cách này sẽ làm mất đi khá nhiều ý nghĩa của dữ liệu. Đặc biệt khi phân chia kiểu này thì sẽ rất dễ bị nhầm lẫn khi dự đoán vì vô tình ta đã coi điểm $1 = 4$.
+- Thuật toán ID3 làm việc với dữ liệu dạng _categorical_ tuy nhiên với dữ liệu dạng liên tục ta có thể biến đổi một chút để đưa thành dạng _categorical_. Ví dụ bạn có dữ liệu thuộc tính điểm là: $1,2,3,...10$ bạn có thể chia thành 3 khoảng: $1 - 4$ là _weak_, $5 - 7$ là _median_, $8 - 10$ là _high_. Tuy nhiên cách này sẽ làm mất đi khá nhiều ý nghĩa của dữ liệu. Đặc biệt khi phân chia kiểu này thì sẽ rất dễ bị nhầm lẫn khi dự đoán vì vô tình ta đã coi điểm $1 = 4$.
+
+_Vì bài tới đây khá dài nên mình sẽ trình bày về thuật toán CART ở bài sau cũng như vấn đề mà các thuật toán Decision Tree gặp phải._
 
 <a name="5-references"></a>
 
