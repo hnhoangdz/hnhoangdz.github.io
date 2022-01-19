@@ -76,6 +76,8 @@ Lúc này ta có thể nói rằng với các điểm dữ liệu có $x_1 > 5$ 
 
 - Các **non-leaf node** có hai hoặc nhiều **node con (child node)** và các **child node** có thể là một **leaf node** hoặc một **non-leaf node** khác
 
+- Các **child node** có cùng bố mẹ được gọi là **sibling node**
+
 Vậy tiêu chí gì để mình tìm được điều kiện đầu tiên? tại sao lại là $x_1$ và tại sao lại là 5 mà không phải là một số khác? Nếu mọi người để ý ở trên thì mình sẽ tạo điều kiện để tách dữ liệu thành 2 phần mà dữ liệu mỗi phần có tính phân tách hơn dữ liệu ban đầu. Ví dụ: điều kiện $x_1 > 5$, tại nhánh đúng thì tất cả các phần tử đều thuộc lớp 1.
 
 - Thế điều kiện $x_1 > 8$ cũng chia nhánh đúng thành toàn lớp 1 sao không chọn? vì nhánh đúng ở điều kiện x1>5 chứa nhiều phần tử lớp 1 hơn và tổng quát hơn nhán đúng của $x_1 > 8$.
