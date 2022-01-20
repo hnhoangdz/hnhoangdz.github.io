@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dinhhuyhoang
-title: 12. Decision Tree - ID3 (1/2)
+title: 12. Decision Tree - ID3
 ---
 
 - [1. Giới thiệu](#1-introduction)
