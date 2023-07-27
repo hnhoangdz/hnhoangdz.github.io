@@ -87,11 +87,11 @@ Lúc này khi đã định nghĩa được 2 hàm số trên, chúng ta có th�
 
 ### 4.1. Hình học
 
-Cho 3 điểm dữ liệu $A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$ và đường màu đỏ chính là đường thẳng ta cần tìm, ta có:
+Cho 3 điểm dữ liệu $A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$ và đường màu xanh chính là đường thẳng ta cần tìm, ta có:
 
 <img src="/assets/images/bai1/anh1.png" class="normalpic"/>
 
-Giả sử đường thẳng màu đỏ đi qua 3 điểm A,B,C thì ta có 3 phương 2 ẩn $w_0$ và $w_1$:
+Giả sử đường thẳng màu xanh đi qua 3 điểm A,B,C thì ta có 3 phương 2 ẩn $w_0$ và $w_1$:
 
 $$y_1 = w_0 + w_1x_1 (1)$$ 
 
