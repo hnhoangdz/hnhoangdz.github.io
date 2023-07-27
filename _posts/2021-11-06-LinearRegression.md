@@ -79,7 +79,7 @@ Hàm mất mát:
 
 $$J = \frac{1}{2m}\sum_{i=1}^{m}(\hat{y_i}-y_i)^2$$
 
-trong đó $m$ là số lượng dữ liệu ($$\textbf{#samples}$$), $y_i$ là giá trị thực của mẫu dữ liệu thứ $i$.
+trong đó $m$ là số lượng dữ liệu, $y_i$ là giá trị thực của mẫu dữ liệu thứ $i$.
 
 Lúc này khi đã định nghĩa được 2 hàm số trên, chúng ta có thể đi tìm nghiệm cho bài toán tức tìm $w_0$ và $w_1$. Với thuật toán này, có nhiều phương pháp để tìm nghiệm. Các phương pháp dựa trên toán hình học, đại số tuyến tính và giải tích. Trong bài này, mình sẽ trình bày 2 phương pháp: hình học và đại số tuyến tính.
 
