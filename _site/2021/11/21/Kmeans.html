@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">7. K-means</p>
+    </h2>
+    <strong><i>21 Nov 2021</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-expedted">2. Kết quả mong muốn</a></li>
+  <li><a href="#3-loss">3. Hàm mất mát</a></li>
+  <li><a href="#4-steps">4. Các bước giải bài toán</a></li>
+  <li><a href="#5-coding">5. Thực nghiệm với Python</a>
+    <ul>
+      <li><a href="#51-implement">5.1. Implement thuật toán</a></li>
+      <li><a href="#52-sklearn">5.2. Nghiệm bằng thư viện scikit-learn</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-improvement">6. Cải tiến K-means</a>
+    <ul>
+      <li><a href="#61-init_centroids">6.1. Khởi tạo centroids</a>
+        <ul>
+          <li><a href="#611-try_error">6.1.1. Thử sai</a></li>
+          <li><a href="#612-k-means_plus">6.1.2. K-means++</a></li>
+        </ul>
+      </li>
+      <li><a href="#62-choose_K">6.2. Chọn số lượng cụm - Elbow method</a></li>
+    </ul>
+  </li>
+  <li><a href="#7-evaluation">7. Đánh giá và kết luận</a></li>
+  <li><a href="#8-references">8. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Trong thực tế, những bài toán như dự báo, phân loại yêu cầu phần lớn dữ liệu cần phải gán nhãn. Vậy nếu khi có một tập dữ liệu về khách hàng như: sở thích, thói quen, giới tính, độ tuổi… làm sao để phân loại khách hàng nào là tiềm năng hoặc không trong khi các dữ liệu chưa được gán nhãn. Việc đi tìm nhãn cho khách hàng (dữ liệu) chính là mục tiêu của thuật toán K-means. Và sau khi gán nhãn cho khách hàng thành công, khi một khách hàng mới đến ta có thể trả lời rằng người này thuộc nhóm khách hàng tiềm năng hay không, từ đó có thể phát triển rất nhiều chiến lược về khuyến mại và marketing.</p>
+
+<p>Khác với các bài toán thuộc học có giám sát (supervised-learning) - các biến mục tiêu đã biết, K-means là lớp bài toán thuộc học không giám sát (unsupervised-learning) - các biến mục tiêu chưa biết.</p>
+
+<p><img src="/assets/images/bai7/anh1.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: Supervised vs Unsupervised</p>
+
+<p><a name="2-expected"></a></p>
+
+<h2 id="2-kết-quả-mong-muốn">2. Kết quả mong muốn</h2>
+
+<p>Trong thuật toán K-means, với tập dữ liệu có $m$ samples. Ta cần phân nhóm $m$ samples thành $k$ $(k &lt; m)$ cụm, với mỗi cụm sẽ có độ tương đồng về dữ liệu nhất định (có thể là sở thích, tích cách, giới tính… đối với người). Với <strong>hình 1</strong> bên phải, tức ta cần phân nhóm 9 samples thành 2 cụm: màu xanh lục và màu đỏ.</p>
+
+<p>Ví dụ với tập dữ liệu 2 chiều sau:</p>
+
+<p style="display: flex">
+<img src="/assets/images/bai7/anh2.png" class="smallpic" /> <img src="/assets/images/bai7/anh3.png" class="smallpic" />
+</p>
+
+<p align="center"> <b>Hình 2</b>: Hình trái - Dataset, Hình phải - Kết quả (<b>Nguồn: </b><a href="https://www.coursera.org/learn/machine-learning/lecture/93VPG/k-means-algorithm">Machine learning - Coursera</a>)</p>
+
+<p>Với input là tập dataset chưa hề có nhãn cho từng điểm dữ liệu, mong muốn của bài toán nhằm gán nhãn cho toàn bộ dữ liệu. Bằng trực giác ta có thể thấy rằng với <strong>Hình 2 - bên phải</strong> biểu thị kết quả rằng những điểm dữ liệu có khoảng cách càng gần nhau sẽ có màu càng giống nhau. Tuy nhiên, làm sao mà kết quả có thể chia làm 2 màu xanh, đỏ rõ ràng như vậy? Đây chính là mấu chốt của thuật toán này, nếu để ý 2 điểm ‘x’ màu đỏ và xanh có ở kết quả thì ban đầu dữ liệu không hề có 2 điểm này. Hơn nữa, nếu gióng tọa độ của 2 điểm này lên trục tọa độ ta sẽ thấy giá trị tọa độ của nó là trung bình cộng của toàn bộ điểm dữ liệu thuộc màu của nó. 2 điểm này chính là tâm cụm (centroids) của mỗi màu dữ liệu.</p>
+
+<p>Giả sử rằng mỗi điểm dữ liệu chỉ thuộc vào đúng một nhóm, trong thuật toán K-means, ta cần lựa chọn số lượng cụm như là hyper-parameter đầu vào. Với hình trên thì ta có thể thấy số lượng cụm là 2 khá hợp lí. Vì vậy, từ dữ liệu đầu vào và số lượng nhóm chúng ta muốn tìm, hãy chỉ ra centroids (điểm trung tâm cụm) của mỗi nhóm và phân các điểm dữ liệu vào các nhóm tương ứng.</p>
+
+<p><a name="3-loss"></a></p>
+
+<h2 id="3-hàm-mất-mát">3. Hàm mất mát</h2>
+
+<p>Giả sử ta có $m$ điểm dữ liệu. $\mathbf{X} = \begin{bmatrix} x^{(1)}, x^{(2)}, x^{(3)},…x^{(m)} \end{bmatrix}$ trong đó $x^{(i)} \in \mathbb{R}^d $, $i$ chạy từ 1,2,…$m$, $\mathbf{X} \in \mathbb{R}^{d \times m}$. Có $K$ cụm với $K &lt; m$. Đặt $c_k$ là tâm cụm ta đã tìm được và $x^{(i)}$ là điểm dữ liệu thuộc cụm này. Điều ta mong muốn là khoảng cách (sai số) giữa $c_k$ và $x_i$ là nhỏ nhất có thể. Và sai số trên toàn tập dữ liệu là:</p>
+
+\[J = \sum_{j=1}^K\sum_{i=1}^m \|\mathbf{x}^{(i)} \in j - \mathbf{c}_j\|_2^2\]
+
+<p>Ở công thức trên ta hiểu là: tổng sai số bằng tổng khoảng cách của tâm cụm $j$ với các điểm dữ liệu $x_i$ thuộc cụm $j$. Trong đó $j$ được hiểu ngầm là nhãn cho dữ liệu vì vậy ta sẽ có $K$ nhãn khác nhau. Và $c_j$ là trung bình cộng của các điểm thuộc cụm $j$.</p>
+
+<p>Ở đây, mình đã đơn giản hóa cách biểu diễn để khi thực code sẽ dễ dàng hơn, bạn có thể đọc thêm <a href="https://machinelearningcoban.com/2017/01/01/kmeans/#-phan-tich-toan-hoc">tại đây</a> để xem cách biểu diễn dạng vector one-hot, chứng minh tâm cụm là trung bình cộng của các điểm dữ liệu thuộc cụm đó và hàm Loss luôn giảm sau mỗi vòng lặp. Ngoài ra thuật toán sẽ dừng sau 1 số hữu hạn vòng lặp.</p>
+
+<p><a name="4-steps"></a></p>
+
+<h2 id="4-các-bước-giải-bài-toán">4. Các bước giải bài toán</h2>
+
+<ul>
+  <li>
+    <p><strong>Bước 1</strong>: Chọn $K$ điểm dữ liệu làm điểm tâm cụm ban đầu.</p>
+  </li>
+  <li>
+    <p><strong>Bước 2</strong>: Tính khoảng cách mỗi điểm dữ liệu với tâm cụm và gán dữ liệu vào cụm gần nhất.</p>
+  </li>
+  <li>
+    <p><strong>Bước 3</strong>: Nếu việc gán dữ liệu vào từng cluster ở bước 2 không thay đổi so với vòng lặp trước nó thì ta dừng thuật toán.</p>
+  </li>
+  <li>
+    <p><strong>Bước 4</strong>: Cập nhật điểm tâm cụm bằng trung bình cộng các dữ liệu thuộc cụm đó.</p>
+  </li>
+  <li>
+    <p><strong>Bước 5</strong>: Quay lại bước 2.</p>
+  </li>
+</ul>
+
+<p><a name="5-coding"><a></a></a></p>
+
+<h2 id="5-thực-nghiệm-với-python">5. Thực nghiệm với Python</h2>
+
+<p><a name="51-implement"><a></a></a></p>
+
+<h3 id="51-implement-thuật-toán">5.1. Implement thuật toán</h3>
+
+<p>Đầu tiên ta sẽ tạo dataset, tuy nhiên lưu ý 2 biến <code class="language-plaintext highlighter-rouge">true_centroids</code> và <code class="language-plaintext highlighter-rouge">true_labels</code> trong thực tế sẽ không có.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># ĐSTT
+</span><span class="kn">import</span> <span class="nn">random</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># Visualize
+</span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span> <span class="c1"># Make the dataset
+</span>
+<span class="c1"># Init original centroids
+</span><span class="n">true_centroids</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span> 
+
+<span class="c1"># dataset
+</span><span class="n">X</span><span class="p">,</span> <span class="n">true_labels</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">true_centroids</span><span class="p">,</span> 
+                            <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># predict labels
+</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Visualize dữ liệu
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s">'o'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Dataset'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai7/anh4.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: Visualize dataset</p>
+
+<p>Giả sử với bộ dữ liệu trên, ta khởi tạo K = 3 là số cụm và sẽ thu các tâm cụm tương ứng với giá trị ngẫu nhiên.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="c1"># Init random centroids
+</span><span class="k">def</span> <span class="nf">init_centroids</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">centroids</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">centroids</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">centroids</span>
+
+<span class="n">K</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">init_centroids</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centroids</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">centroids</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s">'o'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai7/anh5.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 4</b>: Khởi tạo tâm cụm</p>
+
+<p>Tiếp theo là hàm tính toán khoảng cách giữa 2 điểm với K-means khoảng cách được sử dụng sẽ là norm 2.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1"># Tính khoảng cách 2 điểm
+</span><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">norm</span><span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tiếp theo ta cần tính toán khoảng cách của từng điểm dữ liệu với từng centroids, khoảng cách ngắn nhất của điểm dữ liệu với từng centroids sẽ được coi là nhãn của điểm dữ liệu đó.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="c1"># Update labels for dataset
+</span><span class="k">def</span> <span class="nf">update_labels</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+        <span class="n">fake_distance</span> <span class="o">=</span> <span class="mi">999999</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">clusters</span><span class="p">)):</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">clusters</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">fake_distance</span><span class="p">:</span>
+                <span class="n">fake_distance</span> <span class="o">=</span> <span class="n">d</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="n">labels</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">labels</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Sau khi đã lấy nhãn cho toàn bộ dữ liệu, ta cần cập nhật giá trị tâm cụm bằng cách tính trung bình cộng của những điểm dữ liệu thuộc nhãn của cụm.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="c1"># Update centroids
+</span><span class="k">def</span> <span class="nf">update_centroids</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">before_centroids</span> <span class="o">=</span> <span class="n">centroids</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centroids</span><span class="p">)):</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">y0</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">x0</span> <span class="o">+=</span> <span class="n">X</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">y0</span> <span class="o">+=</span> <span class="n">X</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">x0</span> <span class="o">/=</span> <span class="n">count</span>
+        <span class="n">y0</span> <span class="o">/=</span> <span class="n">count</span>
+        <span class="n">centroids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+        <span class="n">centroids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y0</span>
+    <span class="k">return</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">before_centroids</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Cuối cùng là điều kiện dừng của thuật toán, ở đây ta sét cho tới khi giá trị của centroids không đổi thì sẽ dừng.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c1"># When stop
+</span><span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span><span class="n">new_centroids</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">centroids</span><span class="p">])</span> <span class="o">==</span> 
+        <span class="nb">set</span><span class="p">([</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">new_centroids</span><span class="p">]))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Các hàm quan trọng của bài toán đã được hoàn thành, bây giờ ta cần lắp ghép chúng vào theo phần 4 để tìm nghiệm cho bài toán.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">update_labels</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">centroids</span><span class="p">,</span> <span class="n">before_centroids</span> <span class="o">=</span> <span class="n">update_centroids</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">stop</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span> <span class="n">before_centroids</span><span class="p">):</span>
+        <span class="k">break</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'rainbow'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroids</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centroids</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai7/anh6.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 5</b>: Kết quả thu được</p>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Sau 1 số vòng lặp, ta đã chia được dữ liệu thành 3 cụm khác nhau trông có vẻ được phân thành 3 nhóm khá rõ ràng.</p>
+  </li>
+  <li>
+    <p>Lúc này khi có điểm dữ liệu mới đến, ta chỉ cần tính toán khoảng cách giữa điểm đó với các tâm cụm để lấy ra khoảng cách nhỏ nhất chính là thuộc cụm đó. Phần này khá dễ, bạn có thể thử implement.</p>
+  </li>
+</ul>
+
+<p><a name="52-sklearn"></a></p>
+
+<h3 id="52-nghiệm-bằng-thư-viện-scikit-learn">5.2. Nghiệm bằng thư viện scikit-learn</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># Visualize
+</span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span> <span class="c1"># Make the dataset
+</span>
+<span class="c1"># Init original centroids
+</span><span class="n">true_centroids</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span> 
+
+<span class="c1"># dataset
+</span><span class="n">X</span><span class="p">,</span> <span class="n">true_labels</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">true_centroids</span><span class="p">,</span> 
+                            <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span> <span class="o">=</span> <span class="n">k</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">cluster_centers_</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'rainbow'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroids</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centroids</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai7/anh7.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 6</b>: Kết quả thu được</p>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Kết quả thu được của scikit-learn giống với hàm mà mình đã implement, các giá trị centroids và nhãn đã giống nhau.</p>
+  </li>
+  <li>
+    <p>Với scikit-learn, khi có dữ liệu mới ta chỉ cần gọi hàm <code class="language-plaintext highlighter-rouge">predict</code> để dự đoán xem điểm đó thuộc cụm nào (chú ý hàm này có thể dùng để dự đoán không chỉ một mà có thể là tập hợp các điểm dữ liệu). Ta nhận thấy rằng tuy thuật toán chạy quá trình training có thể mất thời gian một chút ($O(mkn)$) với $m$ là số lần lặp của thuật toán và $n$ là số lượng samples, nhưng khi dự đoán thì chỉ mất ($O(k)$) với $k$ là số lượng cụm.</p>
+  </li>
+  <li>
+    <p>Tuy nhiên, một điểm yếu của K-means là việc random các điểm centroids ban đầu sẽ ảnh hưởng tới kết quả của bài toán. Như ở phần implement 5.1, mình đã thử chạy vài lần ở mỗi lần số lượng vòng lặp sẽ khác nhau phụ thuộc vào điểm khởi tạo ban đầu thậm chí đôi khi nghiệm cuối cùng thu được không phải là nghiệm tối ưu của bài toán (local optima), bằng trực giác ta thấy rằng các điểm khởi tạo ban đầu có khoảng cách càng xa nhau càng tốt. Ví dụ minh họa:</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/bai7/anh8.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 7</b>: Điểm yếu của khởi tạo</p>
+
+<ul>
+  <li>
+    <p>Ngoài ra số lượng cụm cũng cần phải khởi tạo ban đầu, với bộ dữ liệu 2D ở trên thì khá dễ để chọn nhưng trong trường hợp dữ liệu ở dạng cao chiều sẽ không thể nhìn trực tiếp để chọn số lượng cụm. Vì vậy phần tiếp theo mình sẽ giới thiệu 1 số cách cải tiến những vấn đề này.</p>
+  </li>
+  <li>
+    <p>Tất nhiên rằng trong thư viện scikit-learn, những điểm yếu về khởi tạo đã được tối ưu bằng thuật toán K-means++ thay vì thuật toán gốc, nếu tò mò bạn có thể đọc tiếp phần 6 để xem cách cải tiến thuật toán K-means gốc.</p>
+  </li>
+</ul>
+
+<p><a name="6-improvement"></a></p>
+
+<h2 id="6-cải-tiến-k-means">6. Cải tiến K-means</h2>
+
+<p>Ở phần này ta sẽ xem xét 2 vấn đề yếu điểm của K-means đó là những điểm centroids khởi tạo ban đầu và số lượng cụm. Một số hướng giải quyết cũng sẽ được trình bày.</p>
+
+<p><a name="61-init_centroids"></a></p>
+
+<h3 id="61-khởi-tạo">6.1. Khởi tạo</h3>
+
+<p>Như đã đề cập bên trên, vấn đề khởi tạo những centroids ban đầu sẽ ảnh hưởng tới kết quả của bài toán (hội tụ tới local optima hay global optima). Vì vậy nếu có cách nào đó chọn lựa những điểm khởi tạo ‘tốt’ một chút sẽ giúp bài toán cải tiến nhiều về performance.</p>
+
+<p><a name="611-try_error"></a></p>
+
+<h4 id="611-thử-sai">6.1.1. Thử sai</h4>
+
+<p>Có một điều chắc chắn rằng nếu nghiệm cuối cùng của bài toán (global optima) sẽ đưa ra hàm cost function đạt giá trị nhỏ nhất. Vì vậy, ta có thể sử dụng một cách ‘mò’ đó là đưa ra giới hạn số hạn $m$ vòng lặp, ở mỗi vòng lặp ta sẽ khởi tạo tâm cụm ngẫu nhiên và tính toán cập nhật tâm cụm như bình thường.Tuy nhiên, ta sẽ tính thêm hàm cost function và lấy ra giá trị hàm cost function có giá trị nhỏ nhất trong $m$ lần lặp và coi đây là nghiệm tối ưu cuối cùng của bài toán.</p>
+
+<p>Đầu tiên là hàm cost function của thuật toán K-means:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1"># Hàm này sẽ tính tổng khoảng cách trong mỗi cụm
+# Và kết quả đầu ra ta mong muốn hàm này có giá trị nhỏ nhất
+</span><span class="k">def</span> <span class="nf">cost_function</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">cost_f</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+        <span class="n">cost_f</span> <span class="o">+=</span> <span class="n">distance</span><span class="p">(</span><span class="n">centroids</span><span class="p">[</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">cost_f</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tiếp theo ta sẽ thay vòng lặp <code class="language-plaintext highlighter-rouge">while: True</code> bên trên bằng đoạn code sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="n">final_centroids</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">final_labels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">cost</span> <span class="o">=</span> <span class="mi">9999999</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">):</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="n">init_centroids</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">update_labels</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">labels</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">update_centroids</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="n">labels</span><span class="p">,</span> <span class="n">centroids</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">centroids</span><span class="p">)</span>
+    <span class="n">cost_f</span> <span class="o">=</span> <span class="n">cost_function</span><span class="p">(</span><span class="n">centroids</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cost_f</span> <span class="o">&lt;</span> <span class="n">cost</span><span class="p">:</span>
+        <span class="n">cost</span> <span class="o">=</span> <span class="n">cost_f</span>
+        <span class="n">final_centroids</span> <span class="o">=</span> <span class="n">centroids</span>
+        <span class="n">final_labels</span> <span class="o">=</span> <span class="n">labels</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="n">final_labels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'rainbow'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">final_centroids</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">final_centroids</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai7/anh9.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 8</b>: Kết quả phương pháp thử sai</p>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Với phương pháp này thì ta có thể đảm bảo chắc chắn rằng kết quả cuối cùng của thuật toán sẽ là nghiệm tối ưu của bài toán và đây cũng là cách mà thư viện scikit-learn làm việc với thuật toán K-means (lấy hàm cost có giá trị nhỏ nhất làm nghiệm cuối cùng) với 10 lần lặp.</p>
+  </li>
+  <li>
+    <p>Mặc dù phương pháp này sẽ mất time khá nhiều vì sẽ lựa từ đầu rất nhiều lần mỗi lần như vậy lại lặp lại thuật toán nhưng như đã đề cập bên trên khi đã train/fit được rồi thì việc dự đoán sẽ rất nhanh.</p>
+  </li>
+</ul>
+
+<p><a name="612-k-means_plus"></a></p>
+
+<h4 id="612-k-means">6.1.2. K-means++</h4>
+
+<p>Bằng trực giác ta có thể cảm nhận rằng, các điểm khởi tạo ban đầu đôi một có khoảng cách càng xa nhau càng tốt. Nó sẽ rất tiện lợi cho việc cập nhật tâm cụm hơn nữa nó sẽ giúp tránh những trường hợp bị rơi vào nghiệm (local optima) như ở hình 7. Từ đây, thuật toán K-means++ ra đời nhằm giải quyết vấn đề về khởi tạo này và các bước cập nhật/tính toán còn lại vẫn như cũ.</p>
+
+<p>Các bước khởi tạo như sau, giả sử có $K$ cụm:</p>
+
+<ul>
+  <li>
+    <p><strong>Bước 1:</strong> Chọn 1 centroid ngẫu nhiên từ dữ liệu ban đầu.</p>
+  </li>
+  <li>
+    <p><strong>Bước 2:</strong> Mỗi điểm dữ liệu ta sẽ tìm khoảng cách với các tâm cụm đang có và chọn ra khoảng cách ngắn nhất và được một tập hợp khoảng cách gọi là <code class="language-plaintext highlighter-rouge">dists</code>.</p>
+  </li>
+  <li>
+    <p><strong>Bước 3:</strong> Từ tập hợp <code class="language-plaintext highlighter-rouge">dists</code> chọn ra <code class="language-plaintext highlighter-rouge">index</code> của khoảng cách lớn nhất.</p>
+  </li>
+  <li>
+    <p><strong>Bước 4:</strong> Tâm cụm mới chính là giá trị của <code class="language-plaintext highlighter-rouge">index</code> trong dữ liệu ban đầu.</p>
+  </li>
+  <li>
+    <p><strong>Bước 5:</strong> Lặp lại bước 2, 3, 4 cho tới khi hết $K - 1$ lần.</p>
+  </li>
+</ul>
+
+<p><strong>Thao tác với Python:</strong></p>
+
+<p>Các hàm và dataset đã được implement bên trên nên mình sẽ không sử dụng lại ở phần code này vì hơi dài.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td><td class="rouge-code"><pre><span class="c1"># Hàm để vẽ các bước chọn tâm cụm
+</span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">centroids</span><span class="p">):</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s">'.'</span><span class="p">,</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s">'gray'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'data points'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroids</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">centroids</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s">'black'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'previously centroids'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroids</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">centroids</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s">'red'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'next centroid'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Selected % d th centroid'</span><span class="o">%</span><span class="p">(</span><span class="n">centroids</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+  
+<span class="c1"># Thuật toán khởi tạo
+</span><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># chọn ngẫu nhiên tâm cụm đầu tiên (bước 1)
+</span>    <span class="n">random_idx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">centroids</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">random_idx</span><span class="p">])</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">centroids</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">dists</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Bước 2
+</span>        <span class="c1"># tìm khoảng cách của mỗi điểm dữ liệu với các tâm cụm đang có
+</span>        <span class="c1"># chọn ra khoảng cách ngắn nhất
+</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">point</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="mi">999999</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centroids</span><span class="p">)):</span>
+                <span class="n">temp_dist</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">centroids</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">temp_dist</span><span class="p">)</span>
+            <span class="n">dists</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">dists</span><span class="p">)</span>
+        <span class="c1"># Bước 3
+</span>        <span class="c1"># lấy ra index có giá trị lớn nhất trong dists
+</span>        <span class="n">next_centroid</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">dists</span><span class="p">),</span> <span class="p">:]</span>
+        <span class="c1"># Bước 4 
+</span>        <span class="c1"># Tâm cụm mới chính là giá trị của index trong dữ liệu ban đầu
+</span>        <span class="n">centroids</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">next_centroid</span><span class="p">)</span>
+        <span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">centroids</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">centroids</span>
+<span class="n">initialize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p style="display: flex">
+<img src="/assets/images/bai7/anh10.png" class="smallpic" /> <img src="/assets/images/bai7/anh11.png" class="smallpic" /> <img src="/assets/images/bai7/anh12.png" class="smallpic" />
+</p>
+
+<p><strong>Giải thích:</strong></p>
+
+<p>Chắc hẳn khi đọc tới đây bạn sẽ chưa hiểu tại sao các bước như trên lại có thể tìm ra được tâm cụm mới giúp cải tiến thuật toán. Lúc đầu mình đọc cũng vậy, hơi khó hiểu về mặt số học và cách giải thích tại sao các bước này có thể làm được. Tuy nhiên, khi vẽ các bước lên mặt phẳn 2D bạn sẽ thấy cái hay của phương pháp này. Ở bước 2 và bước 3 chính là mấu chốt của thuật toán, ý tưởng của này nhằm giúp chọn tâm cụm mới tránh gần (xa) với các tâm cụm đã có. Nếu $K = 2$ thì thuật toán đơn giản là chỉ khởi tạo 1 tâm cụm ngẫu nhiên ban đầu và tâm cụm 2 sẽ là điểm dữ liệu có khoảng cách xa nhất với tâm cụm vừa khởi tạo. Tiếp tục nếu $K &gt; 2$ cụ thể $K = 3$ thì nó sẽ hay hơn rất nhiều, lúc này ta đã chọn 2 tâm cụm khá tốt về mặt không gian, tiếp theo ta tìm tập hợp <code class="language-plaintext highlighter-rouge">dists</code> bao gồm khoảng cách của mỗi điểm dữ liệu với tâm cụm gần nó nhất, chắc chắn rằng những điểm gần 2 tâm cụm ban đầu có giá trị cực nhỏ nhưng dữ liệu ở xa 2 tâm cụm ban đầu sẽ lớn, từ đây ta chỉ cần chọn điểm có khoảng cách lớn nhất làm tâm cụm mới.</p>
+
+<p>Tới đây việc còn lại cho thuật toán K-means là cập nhật các centroids và nhãn cho điểm dữ liệu tương tự ở các phần trên.</p>
+
+<p><a name="62-choose_K"></a></p>
+
+<h3 id="62-chọn-số-lượng-cụm---elbow-method">6.2. Chọn số lượng cụm - Elbow method</h3>
+
+<p>Ở phần trên mình đã trình bày về cách cải tiến điểm khởi tạo của thuật toán K-means. Tuy nhiên, một điểm then chốt của thuật toán K-means đó là số lượng cụm cần được lựa chọn trước khi train/fit model. Với các ví dụ trình bày bên trên đều là các dữ liệu trong không gian 2D nên có thể dễ dàng nhìn bằng trực giác để đưa ra số lượng cụm, nhưng trong thực dữ liệu cao chiều thì không thể nhìn được.</p>
+
+<p>Bạn có thể suy nghĩ rằng đưa ra số một số lượng cụm nhất định có thể là $K$ nằm trong khoảng [2, 10] và chọn ra giá trị $K$ có giá trị hàm cost nhỏ nhất, tuy nhiên nếu các điểm khởi tạo đã được tối ưu thì hàm cost sẽ luôn giảm khi số lượng cụm tăng. Đơn giản vì khi có càng nhiều cụm, khoảng cách những điểm gần nhau sẽ càng tập trung gần vào tâm cụm mà nó thuộc về và khoảng cách giữa tâm cụm và các điểm dữ liệu thuộc cụm đó ngày càng ngắn.</p>
+
+<p>Phương pháp Elbow method sẽ giúp ta có thể chọn lựa số lượng cụm tốt hơn nếu ta chưa biết chọn số cụm như thế nào, hình ảnh minh họa:</p>
+
+<p><img src="/assets/images/bai7/anh13.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 10</b>: Elbow method</p>
+
+<p>Ở hình 10, trục hoành là các giá trị $K$ (số cụm) và trục tung là giá trị inertia (cost function) tương ứng với $K$. Như đã thấy hướng của inertia đi nhanh, thẳng tới trước giá trị $K = 4$, sau đó $K$ tăng và hướng của inertia đi khá đều và chậm. Điều này chỉ ra rằng, giá trị inertia của giảm rất ít khi giá trị $K &gt; 4$ tức hàm cost function không thay đổi gì nhiều, vì vậy ta có thể chọn số lượng cụm là 4 (tại điểm gấp khúc - khuỷu tay). Tuy nhiên trong một số trường nếu giá trị inertia giảm khá đều khi $K$ tăng thì sẽ khá khó để chọn $K$ chính xác. Có một phương pháp sử dụng để chọn số lượng cụm cũng khá phổ biến dựa trên <a href="https://towardsdatascience.com/silhouette-coefficient-validating-clustering-techniques-e976bb81d10c#:~:text=Silhouette%20Coefficient%20or%20silhouette%20score%20is%20a%20metric%20used%20to,each%20other%20and%20clearly%20distinguished.&amp;text=a%3D%20average%20intra%2Dcluster%20distance,each%20point%20within%20a%20cluster.">silhouette score</a> mà bạn có thể tham khảo thêm.</p>
+
+<p><a name="7-evaluation"></a></p>
+
+<h2 id="7-đánh-giá-và-kết-luận">7. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>K-means là một thuật toán đơn giản, khá dễ để hiểu ý tưởng nhưng vẫn được ứng dụng khá nhiều trong các bài khác làm bước pre-processing. Hơn nữa, tuy thời gian để tính toán và suy ra nghiệm (tâm cụm) tốn thời gian, nhưng bù lại khi dự đoán lại rất nhanh.</p>
+  </li>
+  <li>
+    <p>Một số ứng dụng của K-means có thể kể tới là phân đoạn ảnh (Image Segmentation), Image Compression (nén ảnh) một lĩnh vực rất hay trong Computer Vision, giảm chiều dữ liệu, search engine, là tiền đề trong semi-supervised learning…</p>
+  </li>
+  <li>
+    <p>Tuy nhiên các điểm yếu về thuật toán có thể xử lí nhưng về dữ liệu thì khá khó như: K-means bị ảnh hưởng bởi nhiễu (outlier) vì dựa trên khoảng cách và giá trị trung bình để cập nhật tâm cụm, K-means sẽ đưa ra những kết quả khá kém trong trường hợp dữ liệu phân chia theo kiểu đường viền hình tròn, dẹt hay trong các tập dữ liệu bị mất cân bằng về phân phối mỗi cụm…</p>
+  </li>
+  <li>
+    <p>Ngoài ra có một số điểm khá hay của thư viện scikit-learn với K-means mà mình chưa đề cập tới, bạn có đọc documents của K-measn trong sklearn <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html">tại đây</a>.</p>
+  </li>
+</ul>
+
+<p><a name="8-references"></a></p>
+
+<h2 id="8-tham-khảo">8. Tham khảo</h2>
+
+<p>[1] <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+<p>[2] <a href="https://machinelearningcoban.com/2017/01/01/kmeans/">Bài 4: K-means Clustering - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[3] <a href="https://www.coursera.org/learn/machine-learning/lecture/czmip/unsupervised-learning-introduction">Week 8 - Machine Learning course by Andrew Ng</a></p>
+
+<p>[4] <a href="https://www.geeksforgeeks.org/ml-k-means-algorithm">K-means++ Algorithm by geeksforgeeks</a></p>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">11. DBSCAN</p>
+    </h2>
+    <strong><i>11 Jan 2022</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-definition">2. Các định nghĩa trong DBSCAN</a></li>
+  <li><a href="#3-type_point">3. Các loại điểm dữ liệu trong DBSCAN</a>
+    <ul>
+      <li><a href="#31-core">3.1. Core point</a></li>
+      <li><a href="#32-boder">3.2. Boder point</a></li>
+      <li><a href="#33-noise">3.3. Noise point</a></li>
+      <li><a href="#34-overview">3.4. Ví dụ tổng quát</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-work">4. Cách thức hoạt động</a>
+    <ul>
+      <li><a href="#41-image">4.1. Cách thức hoạt động</a></li>
+      <li><a href="#42-step">4.2. Các bước giải bài toán</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-coding">5. Thực nghiệm với Python</a>
+    <ul>
+      <li><a href="#51-implement">5.1. Implement thuật toán</a></li>
+      <li><a href="#52-sklearn">5.2. Nghiệm bằng thư viện scikit-learn</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-tuning_parameter">6. Cách lựa chọn tham số</a></li>
+  <li><a href="#7-prediction">7. Dự đoán</a></li>
+  <li><a href="#8-evaluation">8. Đánh giá và kết luận</a></li>
+  <li><a href="#9-references">9. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Ở <a href="https://hnhoangdz.github.io/2021/11/21/Kmeans.html">bài 7</a> mình đã trình bày về một thuật toán unsupervised - K-means clustering, mục đích của thuật toán này là gom những cụm dữ liệu có cùng độ tương đồng nào đó về thành một nhóm. Bên cạnh một số ưu điểm của thuật toán này thì một điểm yếu lớn của K-means là toàn bộ dữ liệu sẽ ảnh hưởng tới tâm cụm tìm được tức sẽ bị ảnh hưởng bởi nhiễu (outlier). Vì vậy, trong thuật toán DBSCAN hôm nay mà mình sẽ trình bày sẽ giúp khắc phục được điểm yếu này (phát hiện outlier). Nhưng liệu sau khi đã phát hiện được outlier và bỏ qua chúng thì việc sử dụng thuật toán K-means tiếp theo sẽ tốt hơn? Câu trả lời là có và không. Để hiểu hơn hãy xem ví dụ minh họa về sự khác biệt của 2 thuật toán này:</p>
+
+<p><img src="/assets/images/bai11/anh1.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: DBSCAN vs K-means</p>
+
+<p>Như đã thấy ở hình trên, thuật toán DBSCAN có chiến lược phân cụm hoàn toàn khác so với K-means (dữ liệu hình vuông cuối cùng bên phải thể hiện rõ điều này). Từ đây nhận ra rằng với DBSCAN bên trong mỗi cụm sẽ có mật độ dữ liệu cao hơn bên ngoài cụm. Hơn nữa, những điểm outlier thì sẽ có mật độ rất rất thưa.</p>
+
+<p>Vậy thuật toán DBSCAN làm việc như thế nào để tìm ra cụm và điểm nhiễu, mình sẽ trình bày bên dưới.</p>
+
+<p><a name="2-definition"></a></p>
+
+<h2 id="2-các-định-nghĩa-trong-dbscan">2. Các định nghĩa trong DBSCAN</h2>
+
+<p>Có một số định nghĩa về mặt lí thuyết của thuật toán DBSCAN (phần này cũng không quá quan trọng trong việc hiểu ý tưởng thuật toán, bạn có thể bỏ qua), nên mình sẽ dịch lại các định nghĩa của <a href="https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf">bài báo gốc</a>:</p>
+
+<p><strong>Định nghĩa 1:</strong> Vùng lân cận $\epsilon$ (Epsilon-neighborhood)</p>
+
+<p>Gọi $D$ là tập hợp các điểm trong cơ sở dữ liệu. $p$ là một điểm dữ liệu bất kì thuộc $D$, $\epsilon$ là một hằng số xác định. Tập hợp các điểm lân cận của $p$ có khoảng cách nhỏ hơn $\epsilon$ là:</p>
+
+\[N_{eps}(p) = \{q \in \mathcal{D}: d(p, q) \leq \epsilon\}\]
+
+<p><strong>Định nghĩa 2:</strong> Khả năng tiếp cận trực tiếp mật độ (directly density-reachable)</p>
+
+<p>Một điểm $p \in D$ là directly density - reachable từ một điểm $ q ∈ D $ tương ứng với tham số <code class="language-plaintext highlighter-rouge">epsilon</code> và <code class="language-plaintext highlighter-rouge">minPoints</code> nếu như nó thoả mãn hai điều kiện:</p>
+
+\[p \in N_{eps}(p)\]
+
+\[|N_{eps}(p)| \geq \text{minPoints}\]
+
+<p>trong đó <code class="language-plaintext highlighter-rouge">minPoints</code> cũng là một hằng số xác định nhằm đảm bảo một lượng đủ mật độ để xác định điểm cốt lõi (core point).</p>
+
+<p><strong>Định nghĩa 3:</strong> Khả năng tiếp cận mật độ (density-reachable)</p>
+
+<p>Một điểm $p$ là density–reachable từ $q$ khi và chỉ khi có một dây chuyền các điểm $p_1, …, p_n$ với $p_1 = q$ và $p_n = p$ mà $p_i+1$ là directly density – reachable từ $p_i$.</p>
+
+<p>Hai điểm nằm trên biên của một nhóm thì không density–reachable lẫn nhau, bởi vì điều kiện xác định điểm lõi không chứa chúng. Tuy nhiên, trong nhóm sẽ có một điểm lõi mà hai điểm biên đều density–reachable.</p>
+
+<p><strong>Định nghĩa 4:</strong> Kết nối mật độ (density-connected)</p>
+
+<p>Một điểm $p$ là density-connected đến một điểm $q$ khi và chỉ khi có một điểm $o$ mà cả hai điểm $p$ và $q$ đều density-reachable từ $o$.</p>
+
+<p><strong>Định nghĩa 5:</strong> Nhóm (cluster)</p>
+
+<p>Một nhóm $C$ là một tập con không rỗng của $D$ thỏa các điều kiệu sau:</p>
+
+<ul>
+  <li>
+    <p>$∀ p, q$: nếu $p ∈ C$ và $q$ là density-reachable từ $p$ thì $q ∈ C$.</p>
+  </li>
+  <li>
+    <p>$∀ p, q ∈ C: p$ là density-connected từ $q$.</p>
+  </li>
+</ul>
+
+<p><strong>Định nghĩa 6:</strong> Nhiễu (noise)</p>
+
+<p>Gọi $C_1, …, C_k$ là các nhóm của tập dữ liệu $D$. Nhiễu là tập hợp tất cả các điểm không thuộc bất kỳ nhóm $C_i$ nào với $i=1, …, k$.</p>
+
+<p><a name="3-type_point"></a></p>
+
+<h2 id="3-các-loại-điểm-dữ-liệu-trong-dbscan">3. Các loại điểm dữ liệu trong DBSCAN</h2>
+
+<p>Tóm tắt lại đoạn định nghĩa ở phần trên như sau:</p>
+
+<ul>
+  <li>
+    <p>Vùng lân cận $\epsilon$ là vòng tròn bánh kính bằng $\epsilon$ được vẽ xunh quanh điểm $p \in D$ để quét số lượng điểm rơi bên trong vòng tròn này.</p>
+  </li>
+  <li>
+    <p>Sử dụng <code class="language-plaintext highlighter-rouge">minPoints</code> làm ngưỡng xác định xem vùng lân cận $\epsilon$ có số điểm dữ liệu tối thiểu để trở thành: <em>core point</em> hay <em>boder point</em> hay <em>noise point</em>.</p>
+  </li>
+</ul>
+
+<p><a name="31-core"></a></p>
+
+<h3 id="31-core-point">3.1. Core point</h3>
+
+<p>Core point là điểm có số điểm vùng lân cận nhiều hơn hoặc bằng <code class="language-plaintext highlighter-rouge">minPoints</code> (tính cả điểm đang xét), ví dụ với <code class="language-plaintext highlighter-rouge">minPoints</code> bằng 5 các điểm tròn màu đỏ là core point và màu xanh không phải core point:</p>
+
+<p><img src="/assets/images/bai11/anh2.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 2</b>: Core point</p>
+
+<p><a name="32-boder"></a></p>
+
+<h3 id="32-boder-point">3.2. Boder point</h3>
+
+<p>Boder point là điểm có vùng lân cận chứa ít điểm hơn <code class="language-plaintext highlighter-rouge">minPoints</code> nhưng có điểm ở vùng lân cận của điểm cốt lõi (core point), ví dụ minh họa <code class="language-plaintext highlighter-rouge">minPoints</code> bằng 5:</p>
+
+<p><img src="/assets/images/bai11/anh3.png" class="smallpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: Boder point</p>
+
+<p><a name="33-noise"></a></p>
+
+<h3 id="33-noise-point">3.3. Noise point</h3>
+
+<p>Noise point là điểm dữ liệu nhiễu: số lượng điểm lân cận nhỏ hơn <code class="language-plaintext highlighter-rouge">minPoints</code> và không có điểm lân cận nào nằm trong vùng lân cận có core point, ví dụ minh họa:</p>
+
+<p><img src="/assets/images/bai11/anh4.png" class="smallpic" /></p>
+
+<p align="center"> <b>Hình 4</b>: Noise point</p>
+
+<p><a name="34-overview"><a></a></a></p>
+
+<h3 id="34-ví-dụ-tổng-quát">3.4. Ví dụ tổng quát</h3>
+
+<p>Với <code class="language-plaintext highlighter-rouge">minPoints</code> bằng 4, các điểm màu đỏ là core point, màu vàng là Boder point, xanh dương là noise point.</p>
+
+<p><img src="/assets/images/bai11/anh5.png" class="smallpic" /></p>
+
+<p align="center"> <b>Hình 5</b>: Ví dụ</p>
+
+<p><a name="4-work"></a></p>
+
+<h2 id="4-cách-thức-hoạt-động">4. Cách thức hoạt động</h2>
+
+<p><a name="41-image"></a></p>
+
+<h3 id="41-minh-họa-hình-ảnh">4.1. Minh họa hình ảnh</h3>
+
+<p><img src="/assets/images/bai11/dbscan.gif" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 6</b>: Cách DBSCAN hoạt động</p>
+
+<p>Như bạn đã thấy, thuật toán DBSCAN sẽ dựa trên 2 tham số <code class="language-plaintext highlighter-rouge">epsilon</code> và <code class="language-plaintext highlighter-rouge">minPoints</code> để tiến hành phân cụm. Quá trình phân cụm sẽ dựa trên một điểm khởi tạo ban đầu, nếu là core point nó sẽ tiếp tục lan truyền mật độ dần dần để mở rộng phạm vi của cụm cho tới khi chạm được hết các điểm border point. Sau khi đã chạm được các điểm border point, thì các điểm chưa được xét sẽ tiếp tục được tính toán dựa trên 2 tham số <code class="language-plaintext highlighter-rouge">epsilon</code> và <code class="language-plaintext highlighter-rouge">minPoints</code> cho tới khi toàn bộ dữ liệu đã được xét.</p>
+
+<p><a name="42-step"></a></p>
+
+<h3 id="42-các-bước-giải-bài-toán">4.2. Các bước giải bài toán</h3>
+
+<p><strong>Bước 1:</strong> Chọn 1 điểm $p$ từ tập dữ liệu</p>
+
+<p><strong>Bước 2:</strong> Tìm toàn bộ những vùng lân cận của $p$ với điều kiện thỏa mãn tham số <code class="language-plaintext highlighter-rouge">epsilon</code>:</p>
+
+\[N_{eps}(p) = \{q \in \mathcal{D}: d(p, q) \leq \epsilon\}\]
+
+<p><strong>Bước 3:</strong> Xác định xem $p$ có thể là core point thỏa mãn điều kiện sau với tham số <code class="language-plaintext highlighter-rouge">minPoints</code>:</p>
+
+\[|N_{eps}(p)| \geq \text{minPoints}\]
+
+<p><strong>Bước 4:</strong> Nếu $p$ là core point, tiếp tục mở rộng vùng lân cận của các điểm thuộc lân cận của $p$ và xác định như bước 2 và bước 3.</p>
+
+<p><strong>Bước 5:</strong> Tiếp thuật cho tới khi toàn bộ dữ liệu đã được xử lí.</p>
+
+<p><strong>Lưu ý:</strong> Ở các bước 1, 2, 3, 4 phải thỏa mãn điều kiện điểm $p$ chưa được xét tới bao giờ.</p>
+
+<p><a name="5-coding"></a></p>
+
+<h2 id="5-thực-nghiệm-với-python">5. Thực nghiệm với Python</h2>
+
+<p>Ở phần này, mình sẽ trình bày 2 phương pháp giải: tự implement và thư viện. Sau đó mình sẽ sử dụng kết quả của 2 phương pháp để so sánh xem cách mình tự implement đã đúng chưa. Ngoài ra, mình sẽ sử dụng lại bộ datasets đã thực hiện với bài toán K-means và để so sánh sự khác nhau giữa 2 thuật toán này.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># ĐSTT 
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># Visualize
+</span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span> <span class="c1"># Make the dataset
+</span>
+<span class="c1"># Init original centroids
+</span><span class="n">true_centroids</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span> 
+<span class="c1"># dataset
+</span><span class="n">X</span><span class="p">,</span> <span class="n">true_labels</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">true_centroids</span><span class="p">,</span> 
+                            <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Visualize dữ liệu
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s">'o'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Dataset'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Dataset:</strong></p>
+
+<p><img src="/assets/images/bai11/anh6.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 7</b>: Dataset</p>
+
+<p><a name="51-implement"></a></p>
+
+<h3 id="51-implement-thuật-toán">5.1. Implement thuật toán</h3>
+
+<ul>
+  <li>Trước tiên ta cần một số biến để lưu trữ thông tin cần thiết như: nhãn của toàn tập dữ liệu, đánh dấu xem điểm đang xét tới đã được xét trước đó hay chưa, nhãn của các border point.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">true_labels</span><span class="p">))</span>
+<span class="n">visited</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="bp">False</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">true_labels</span><span class="p">))</span>
+<span class="n">labels_border</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm tính khoảng cách giữa 2 điểm:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1"># Calculate distance by norm 2 of two points
+</span><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">norm</span><span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm lấy ra vùng lân cận của điểm $p$ đang xét tới:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1"># Find nearest neighbors that have distance &lt;= epsilon of point
+</span><span class="k">def</span> <span class="nf">nearestNeighbors</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">):</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">point</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">distance</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">eps</span><span class="p">:</span>
+            <span class="n">neighbors</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">neighbors</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm xử lí thuật toán của DBSCAN, như mình đã trình bày các bước thì ở hàm này nhiệm vụ sẽ đi đánh nhãn cho mỗi điểm dữ liệu dựa trên mật độ và lan rộng từ core point ra các điểm xung quanh từ đó thuật toán sẽ chủ yếu lặp đi lặp lại bước này tới hết toàn bộ dữ liệu được xét (lưu ý các điểm noise ở phần code sẽ có nhãn là -1 và nếu biến visited để kiểm tra xem điểm đó đã được xét hay chưa)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td><td class="rouge-code"><pre><span class="c1"># Main algorithm - DBSCAN
+</span><span class="k">def</span> <span class="nf">dbscan</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">minPoints</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># label for each dense density
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span> <span class="c1"># this point was visited
+</span>            <span class="k">continue</span>
+        <span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># change point status to visited
+</span>        <span class="n">neighbors</span> <span class="o">=</span> <span class="n">nearestNeighbors</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span> <span class="c1"># nearest neighbors of point
+</span>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">minPoints</span><span class="p">:</span>
+            <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># this is noise point
+</span>            <span class="k">continue</span>
+        <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span> <span class="c1"># core point
+</span>        <span class="n">neighbors</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># remove current core point
+</span>        <span class="n">S</span> <span class="o">=</span> <span class="n">neighbors</span>
+        <span class="c1"># spread from core point
+</span>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">visited</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">labels</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span> <span class="c1"># change point's label of nearest core point
+</span>            <span class="n">neighbors</span> <span class="o">=</span> <span class="n">nearestNeighbors</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">eps</span><span class="p">)</span> <span class="c1"># nearest neighbors of nearest core point
+</span>            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">minPoints</span><span class="p">:</span>
+                <span class="n">S</span> <span class="o">+=</span> <span class="n">neighbors</span> <span class="c1"># spread from core point more
+</span>            <span class="k">else</span><span class="p">:</span>
+                <span class="n">labels_border</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="c1"># this is boder point
+</span>            <span class="n">S</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="c1"># remove current core point
+</span>            <span class="n">visited</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># change point status to visited
+</span>        <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># new cluster initalizes 
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Nếu mới đọc đoạn code hàm <code class="language-plaintext highlighter-rouge">dbscan</code> thì có chút bối rối, nhưng bạn có thể vẽ một chút và dựa trên bản chất lan theo mật độ thì nó khá dễ đấy. Bây giờ mình sẽ gọi hàm <code class="language-plaintext highlighter-rouge">dbscan</code> và visualize kết quả:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="c1"># For visualize
+</span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">ax1</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">)</span>
+<span class="n">ax1</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Before'</span><span class="p">)</span>
+
+<span class="c1"># Main algorithm
+</span><span class="n">eps</span><span class="o">=</span><span class="mf">0.3</span>
+<span class="n">minPoints</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">dbscan</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">minPoints</span><span class="p">)</span>
+
+<span class="c1"># For visualize
+</span><span class="n">n_noise_</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">labels</span><span class="p">).</span><span class="n">count</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">core_samples_mask</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="n">core_samples_mask</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels_border</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">n_clusters_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">labels</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">unique_labels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">Spectral</span><span class="p">(</span><span class="n">each</span><span class="p">)</span>
+          <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">))]</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># Black used for noise.
+</span>        <span class="n">col</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">class_member_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">labels</span> <span class="o">==</span> <span class="n">k</span><span class="p">)</span>
+
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_member_mask</span> <span class="o">&amp;</span> <span class="n">core_samples_mask</span><span class="p">]</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">col</span><span class="p">),</span>
+             <span class="n">markeredgecolor</span><span class="o">=</span><span class="s">'k'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_member_mask</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">core_samples_mask</span><span class="p">]</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">col</span><span class="p">),</span>
+             <span class="n">markeredgecolor</span><span class="o">=</span><span class="s">'k'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'After'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<ul>
+  <li>Kết quả khá tốt, những điểm ngoại lai màu đen chính là các outlier ta đã tìm được</li>
+</ul>
+
+<p><img src="/assets/images/bai11/test1.png" class="large" /></p>
+
+<p align="center"> <b>Hình 8</b>: DBSCAN implement</p>
+
+<ul>
+  <li>Mình sẽ in ra số lượng điểm outlier, boder point để lát kiểm tra với thư viện sklearn:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'Number of outlier: '</span><span class="p">,</span> <span class="n">n_noise_</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of boder: '</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels_border</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of core: '</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels_border</span><span class="p">)</span> <span class="o">-</span> <span class="n">n_noise_</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">Number</span> <span class="n">of</span> <span class="n">outlier</span><span class="p">:</span>  <span class="mi">22</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">boder</span><span class="p">:</span>  <span class="mi">56</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">core</span><span class="p">:</span>  <span class="mi">672</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="52-sklearn"></a></p>
+
+<h3 id="52-nghiệm-bằng-thư-viện-scikit-learn">5.2. Nghiệm bằng thư viện scikit-learn</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> 
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">DBSCAN</span> 
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> 
+  
+<span class="c1"># dataset
+</span><span class="n">centers</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span> 
+<span class="n">X</span><span class="p">,</span> <span class="n">labels_true</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">centers</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># For visualize
+</span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">ax1</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">)</span>
+<span class="n">ax1</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Before'</span><span class="p">)</span>
+
+<span class="c1"># Init DBSCAN model and fit
+</span><span class="n">db</span> <span class="o">=</span> <span class="n">DBSCAN</span><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">10</span><span class="p">).</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Attribute values
+</span><span class="n">core_samples_mask</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">db</span><span class="p">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="n">core_samples_mask</span><span class="p">[</span><span class="n">db</span><span class="p">.</span><span class="n">core_sample_indices_</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># db.core_sample_indices_: index of core point
+</span><span class="n">labels</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">labels_</span> <span class="c1"># labels of training dataset
+</span><span class="n">n_clusters_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">labels</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># number of cluster except noise
+</span><span class="n">n_noise_</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">labels</span><span class="p">).</span><span class="n">count</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># number of noise data
+</span>
+<span class="c1"># For visualize
+</span><span class="n">unique_labels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">Spectral</span><span class="p">(</span><span class="n">each</span><span class="p">)</span>
+          <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">))]</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># Black used for noise.
+</span>        <span class="n">col</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">class_member_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">labels</span> <span class="o">==</span> <span class="n">k</span><span class="p">)</span>
+
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_member_mask</span> <span class="o">&amp;</span> <span class="n">core_samples_mask</span><span class="p">]</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">col</span><span class="p">),</span>
+             <span class="n">markeredgecolor</span><span class="o">=</span><span class="s">'k'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_member_mask</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">core_samples_mask</span><span class="p">]</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">col</span><span class="p">),</span>
+             <span class="n">markeredgecolor</span><span class="o">=</span><span class="s">'k'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'After'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<ul>
+  <li>Như đã thấy thì kết quả của DBSCAN khi sử dụng sklearn cho kết quả giống với cách mình đã implement ở trên</li>
+</ul>
+
+<p><img src="/assets/images/bai11/test1.png" class="large" /></p>
+
+<p align="center"> <b>Hình 9</b>: DBSCAN sklearn</p>
+
+<ul>
+  <li>Để chắc chắn mình sẽ in số lượng các điểm outlier, boder, core</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'Number of outlier: '</span><span class="p">,</span> <span class="n">n_noise_</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of boder: '</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="p">.</span><span class="n">core_sample_indices_</span><span class="p">)</span> <span class="o">-</span> <span class="n">n_noise_</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of core: '</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="p">.</span><span class="n">core_sample_indices_</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">Number</span> <span class="n">of</span> <span class="n">outlier</span><span class="p">:</span>  <span class="mi">22</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">boder</span><span class="p">:</span>  <span class="mi">56</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">core</span><span class="p">:</span>  <span class="mi">672</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Nhận xét:</strong></p>
+
+<p>Như vậy, kết quả của thuật toán DBSCAN giữa việc tự implement và thư viện sklearn đã có cùng một kết quả. Điểm mạnh lớn nhất của thuật toán là đã giúp mô hình có thể phát hiện những điểm dữ liệu, việc này sẽ vô cùng quan trọng trong một bài toán Machine Learning. Ngoài ra, DBSCAN đã giúp phân cụm khá chính xác mà không cần lựa chọn số lượng cụm khởi tạo ban đầu. Tuy nhiên, một vấn đề lớn mà mình chưa hề đề cập đó là chọn 2 tham số <code class="language-plaintext highlighter-rouge">epsilon</code> và <code class="language-plaintext highlighter-rouge">minPoints</code>. Thuật toán sẽ không thể hoạt động nếu thiếu đi 2 tham số tiên quyết này, vậy làm sao để chọn 2 tham số này phù hợp cho các tập dữ liệu khác nhau, mình sẽ trình bày phần tiếp theo.</p>
+
+<p><a name="6-tuning_parameter"></a></p>
+
+<h2 id="6-cách-lựa-chọn-tham-số">6. Cách lựa chọn tham số</h2>
+
+<p>Như đã đề cập bên trên, việc chọn tham số <code class="language-plaintext highlighter-rouge">epsilon</code> và <code class="language-plaintext highlighter-rouge">minPoints</code> sẽ ảnh hưởng trực tiếp tới mô hình, đặc biệt là giá trị <code class="language-plaintext highlighter-rouge">epsilon</code> sẽ rất nhạy với dữ liệu vì khi gom một nhóm nhỏ thành vùng lân cận sẽ cần so sánh với giá trị <code class="language-plaintext highlighter-rouge">epsilon</code> để quyết định 2 điểm dữ liệu có cùng thuộc một nhóm hay không. Còn việc lựa chọn <code class="language-plaintext highlighter-rouge">minPoints</code> sẽ trực tiếp ảnh hưởng tới vấn đề phát hiện outlier.</p>
+
+<p>Các phương pháp chọn tham số:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">minPoints</code>: có một điều chắc chắn rằng giá trị $\textbf{minPoints} \geq 3$, vì nếu $\textbf{minPoints} = 1$ thì mỗi điểm dữ liệu là 1 cụm (vô lí), nếu $\textbf{minPoints} \leq 2$ thì bài toán sẽ chuyển thành kết quả sẽ giống như phân cụm phân cấp (hierarchical clustering) với single linkage với biểu đồ dendrogram được cắt ở độ cao $y = \epsilon$. Do vậy, ở <a href="https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf">bài báo gốc</a> tác giả đã thử nghiệm và đưa ra với dữ liệu 2 chiều tối thiểu $\textbf{minPoints} = 4$, và tối thiểu $\textbf{minPoints} = 2 \times D$ với dữ liệu trong không gian $D$ chiều. Thường $\textbf{minPoints}$ to sẽ đưa ra các kết quả tốt hơn.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">epsilon</code>: trong bài báo <a href="https://iopscience.iop.org/article/10.1088/1755-1315/31/1/012012/pdf">Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra</a>, tác giả đã đề xuất một phương pháp có thể chọn <code class="language-plaintext highlighter-rouge">epsilon</code> ‘có lí hơn’ dựa trên khoảng cách giữa mỗi với điểm tới $n$ điểm gần nhất của nó trên toàn bộ dữ liệu. Tức với $\textbf{minPoints}$ đã tìm được thì ta sẽ đi tìm $k = \textbf{minPoints} - 1$ điểm có khoảng cách gần nhất với mỗi điểm trên toàn bộ dữ liệu. Ứng với mỗi điểm ta sẽ chọn ra khoảng cách lớn nhất của $k$ khoảng cách tìm được và sắp xếp chúng giảm dần, sau đó áp dụng ý tưởng của Elbow method để chọn ra <code class="language-plaintext highlighter-rouge">epsilon</code>.</p>
+  </li>
+</ul>
+
+<p>Cụ thể như sau:</p>
+
+<p>Với bộ dữ liệu đã dùng bên trên ta sẽ sử dụng $\textbf{minPoints} = 4$, sử dụng class <code class="language-plaintext highlighter-rouge">NearestNeighbors</code> để tìm các điểm gần nhất:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c1"># Get 4 nearest neighbors for each point in dataset
+</span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">NearestNeighbors</span>
+<span class="n">neighbors</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">neighbors</span><span class="p">)</span>
+<span class="n">nbrs</span> <span class="o">=</span> <span class="n">neigh</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tiếp theo ta sẽ sử dụng hàm <code class="language-plaintext highlighter-rouge">kneighbors</code> để lấy ra 2 mảng. 1 mảng $m \times k$ lưu giữ khoảng cách tăng dần với $m$ là số lượng dữ liệu, 1 mảng lưu giữ index tương ứng. Và sau đó sắp xếp khoảng cách lớn nhất tăng dần</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">nbrs</span><span class="p">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">distances</span><span class="p">[:,</span><span class="n">neighbors</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Bước cuối cùng là xét điểm Elbow, ở đây mình sẽ sử dụng thư viện <code class="language-plaintext highlighter-rouge">kneed</code> để tìm ra điểm Elbow chính xác nhất:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">kneed</span> <span class="kn">import</span> <span class="n">KneeLocator</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span>
+<span class="n">knee</span> <span class="o">=</span> <span class="n">KneeLocator</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">S</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="s">'convex'</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s">'increasing'</span><span class="p">,</span> <span class="n">interp_method</span><span class="o">=</span><span class="s">'polynomial'</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">knee</span><span class="p">.</span><span class="n">plot_knee</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Points"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Distance"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Epsilon = '</span><span class="p">,</span> <span class="n">distances</span><span class="p">[</span><span class="n">knee</span><span class="p">.</span><span class="n">knee</span><span class="p">])</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kết quả như sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">Epsilon</span> <span class="o">=</span>  <span class="mf">0.1618130416143343</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p><img src="/assets/images/bai11/anh7.png" class="large" /></p>
+
+<p align="center"> <b>Hình 10</b>: Elbow method</p>
+
+<p>Vậy ta đã xác định <code class="language-plaintext highlighter-rouge">minPoints</code> = 4 và <code class="language-plaintext highlighter-rouge">epsilon</code> = 0.16, fit vào dữ liệu ta được:</p>
+
+<p><img src="/assets/images/bai11/anh8.png" class="large" /></p>
+
+<p align="center"> <b>Hình 11</b>: Paramter tuning DBSCAN</p>
+
+<p>Nhận thấy rằng, so với việc chọn <code class="language-plaintext highlighter-rouge">epsilon</code> nhỏ đi sẽ ảnh hưởng rất nhiều tới kết quả vì <code class="language-plaintext highlighter-rouge">epsilon</code> càng nhỏ thì độ khó tính của thuật toán càng cao, các điểm outlier sẽ xuất hiện nhiều hơn. Vì vậy nếu kết quả bài toán đang đưa ra quá nhiều outlier thì bạn có thể tăng giá <code class="language-plaintext highlighter-rouge">epsilon</code> để xem xét. Trong khi đó giá <code class="language-plaintext highlighter-rouge">minPoints</code> có thể có thể cố định một giá trị xung quanh $2 \times D$. Tuy nhiên với thuật toán DBSCAN, sklearn không cung cấp hàm <code class="language-plaintext highlighter-rouge">predict</code> giúp dự đoán nhãn của một điểm mới đến. Vậy làm sao để xử lí vấn đề này? Mình sẽ trình bày bên dưới.</p>
+
+<p><a name="7-prediction"></a></p>
+
+<h2 id="7-dự-đoán">7. Dự đoán</h2>
+
+<p>Vì thuật toán DBSCAN cũng sử dụng khoảng cách để đo lường và sau đó sử dụng <code class="language-plaintext highlighter-rouge">epsilon</code> để tìm ra nearest neighbors. Ý tưởng này có đôi chút giống với thuật toán KNN mà mình đã trình bày ở <a href="https://hnhoangdz.github.io/2021/11/25/KNN.html">bài 8 - K-nearest neighbors</a>. Thật vậy ta có thể tưởng tượng rằng, sau khi đã sử dụng thuật toán DBSCAN để đánh nhãn cho toàn bộ dữ liệu ban đầu, khi có dữ liệu mới tới ta có thể tìm ra $K$ khoảng cách gần nhất với nó rồi voting xem tần suất nhãn nào nhiều nhất để đưa ra dự đoán nhưng sẽ cần đánh trọng số về khoảng cách, và đây cũng chính là ý tưởng của KNN trong bài toán phân loại.</p>
+
+<p>Vẫn với bộ dữ liệu ban đầu và thêm 1 số điểm cần dự đoán như sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1"># dataset
+</span><span class="n">centers</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span> 
+<span class="n">X</span><span class="p">,</span> <span class="n">labels_true</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">centers</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X_new</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s">'b'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_new</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X_new</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">marker</span><span class="o">=</span><span class="s">"v"</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s">'red'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai11/anh9.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 12</b>: Dự đoán điểm mới với DBSAN</p>
+
+<p>Sau đó ta sử dụng thuật toán DBSCAN để đánh nhãn và sử dụng những nhãn đó làm cho bài toán phân loại với KNN:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="c1"># Init DBSCAN model and fit
+</span><span class="n">db</span> <span class="o">=</span> <span class="n">DBSCAN</span><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="mf">0.18</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">5</span><span class="p">).</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">labels_</span>
+
+<span class="c1"># Init KNN model
+</span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s">'distance'</span><span class="p">)</span>
+<span class="n">knn</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
+<span class="c1"># Predict X_new
+</span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_new</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'X_new label predict: '</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kết quả thu được rất chính xác:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">X_new</span> <span class="n">label</span> <span class="n">predict</span><span class="p">:</span>  <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">0</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tuy nhiên, việc chọn số lượng $K$ có thể ảnh hưởng tới kết quả bài toán. Vì nếu có ít nhiễu mà ta lại chọn số lượng giá trị $K$ quá lớn thì sẽ làm cho bài toán khó khăn để dự đoán điểm mới đó là nhiễu. Ngoài ra sủ dụng <code class="language-plaintext highlighter-rouge">weights = distance</code> sẽ giúp mô hình tốt hơn.</p>
+
+<p><a name="8-evaluation"></a></p>
+
+<h2 id="8-đánh-giá-và-kết-luận">8. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>DBSCAN là một thuật toán vô cùng hay và hiệu quả trong việc phát hiện những outlier, tuy nhiên việc chọn <code class="language-plaintext highlighter-rouge">epsilon</code> và <code class="language-plaintext highlighter-rouge">minPoints</code> sẽ ảnh hưởng rất nhiều tới kết quả vì vậy ta nên sử dụng phương pháp Elbow ở trên để lựa chọn tham số. Trong trường hợp đoạn cắt Elbow không quá rõ ràng thì có thể sử dụng phương pháp Knee đã trình bày ở trên và tuning giá trị <code class="language-plaintext highlighter-rouge">epsilon</code> xung quanh giá trị này.</p>
+  </li>
+  <li>
+    <p>DBSCAN không hoạt động tốt cho các bộ dữ liệu thưa thớt hoặc cho các điểm dữ liệu có mật độ khác nhau vì vậy các thuật toán phân cụm phụ thuộc rất nhiều vào sự phân bố của dữ liệu.</p>
+  </li>
+  <li>
+    <p>Vì phải tính đi tính lại khoảng cách giữa 2 điểm rất nhiều lần nên thuật toán DBSCAN sẽ bị chậm và kém hiệu quả với những bộ dữ liệu cao chiều.</p>
+  </li>
+  <li>
+    <p>Điểm kém hiệu quả của thuật toán là việc tìm nearest neighborhood phải toàn bộ dữ liệu nên độ phức tạp của thuật toán có thể lên tới $O(n^2)$. Vì vậy có một số cải tiến của thuật toán như: HDBSCAN, sử dụng kd-trees…</p>
+  </li>
+</ul>
+
+<p><a name="9-references"></a></p>
+
+<h2 id="9-tham-khảo">9. Tham khảo</h2>
+
+<p>[1] <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+<p>[2] <a href="https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf">A density-based algorithm for discovering clusters in large spatial databases with noise - Original paper</a></p>
+
+<p>[3] <a href="https://towardsdatascience.com/how-to-use-dbscan-effectively-ed212c02e62">How to Use DBSCAN Effectively by Towardsdatascience</a></p>
+
+<p>[4] <a href="https://www.kdnuggets.com/2020/04/dbscan-clustering-algorithm-machine-learning.html">DBSCAN Clustering Algorithm in Machine Learning by Nagesh Singh Chauhan</a></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">2. Gradient Descent</p>
+    </h2>
+    <strong><i>10 Nov 2021</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-generalization">2. Lập công thức chung</a></li>
+  <li><a href="#3-coding">3. Thực nghiệm với Python</a></li>
+  <li><a href="#4-problems">4. Một số vấn đề lưu ý</a>
+    <ul>
+      <li><a href="#41-learning-rate">4.1. Learning rate</a></li>
+      <li><a href="#42-cost-function">4.2. Cost function</a></li>
+      <li><a href="#43-feature-scaling">4.3. Feature scaling</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-evaluation">5. Đánh giá và kết luận</a></li>
+  <li><a href="#6-references">6. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Ở <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1 - Linear Regression</a> chúng ta đã đi tìm nghiệm cho bài toán bằng các phương pháp sử dụng hình học, đại số tuyến tính kết hợp đạo hàm. Nhưng điểm yếu còn tồn tại đó là ta phải tính ma trận nghịch đảo (trong nhiều trường hợp không thể tìm trực tiếp) làm chậm về tốc độ tính toán, tràn bộ nhớ với những tập dữ liệu lớn đặc biệt là khi số lượng features của dữ liệu rất lớn. Thuật toán Gradient Descent có thể cải thiện hơn mà vẫn đạt độ hiệu quả khá cao, hơn nữa Gradient Descent là cơ sở của rất nhiều thuật toán tối ưu trong Machine Learning/Deep Learning.</p>
+
+<p>Ý tưởng của thuật toán Gradient Descent chính là việc ứng dụng đạo hàm để tìm nghiệm tối ưu. Để dễ dàng giải thích, hãy xem đồ thị của phương trình $f(x) = x^4 - 5x^2 - x + 3$</p>
+
+<p><img src="/assets/images/bai2/anh1.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: Đồ thị hàm số</p>
+
+<p>Để tìm giá trị nhỏ nhất cho hàm $f(x)$ trên. Ta thường tìm đạo hàm $f’(x)$ và tìm nghiệm $f’(x) = 0$. Và sau đó thế lại các nghiệm đã tìm được vào hàm $f(x)$ để lấy giá trị nhỏ nhất. Trong machine learning, quá trình thế này có thể gọi là so sánh các local optimum để lấy được global optimum. Ở đồ thị <b>Hình 1</b> ta có nghiệm $x_1$ là nghiệm local optimum và $x_2$ là nghiệm global optimum. Nhưng trong các bài toán machine learning rất khó để có thể tìm đạo hàm rồi đi tìm từng nghiệm, vì vậy ta sẽ cố gắng tìm các điểm local optimum nào đó và coi nó là nghiệm chấp nhận được cho bài toán.</p>
+
+<p>Xét điểm $x_0$ trên đồ thị <b>Hình 1</b> là nghiệm khởi tạo ban đầu, điều ta cần chính là làm sao để $x_0$ tiến gần tới $x_2$. Đây chính là cách mà thuật toán Gradient Descent sẽ làm. Qua nhiều lần lặp với công thức $x_0 := x_0 - \alpha f’(x_0)$ trong đó hằng số dương $\alpha$ được gọi là learning rate cần được khởi tạo ban đầu. Ta thấy $f’(x_0) &lt; 0 &lt;=&gt; \alpha f’(x_0) &lt; 0 =&gt;$ $x_0$ sẽ ngày càng tiến đến vị trí $x_2$ và làm cho $f(x_0)$ giảm dần. <strong>Tức ta cần di chuyển nghiệm $x_0$ ngược dấu với đạo hàm đang xét.</strong></p>
+
+<p><a name="2-generalization"></a></p>
+
+<h2 id="2-lập-công-thức-chung">2. Lập công thức chung</h2>
+
+<p>Để ứng dụng thuật toán Gradient Descent, ở bài này mình sẽ trình cách sử dụng thuật toán Gradient Descent để giải quyết bài toán hồi quy đã được xử lí bằng cách giải và tìm nghiệm trực tiếp ở <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1 - Linear Regression</a>. Vì vậy hàm dự đoán và hàm mất mát vẫn tương tự. Như đã trình bày bên trên, ta sẽ sử dụng phương pháp cập nhật nghiệm ban đầu khởi tạo nhiều lần nhằm giảm giá trị hàm cost nhất có thể.</p>
+
+<p>Bài toán dự đoán giá nhà dựa trên diện tích với $m$ mẫu dữ liệu, ta có:</p>
+
+\[X = \begin{bmatrix} 1 &amp;&amp; x_1 \\ 1 &amp;&amp; x_2 \\ ... &amp;&amp; ... \\ 1 &amp;&amp; x_m \end{bmatrix}, Y = \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_m \end{bmatrix}, W = \begin{bmatrix} w_0 \\ w_1 \end{bmatrix}, \hat{Y} = X.W = \begin{bmatrix} w_0*1 + w_1*x_1  \\ w_0*1 + w_1*x_2 \\ ... \\ w_0*1 + w_1*x_m \end{bmatrix} = \begin{bmatrix} \hat{y_1} \\ \hat{y_2} \\ ... \\ \hat{y_m} \end{bmatrix}\]
+
+\[J = \frac{1}{2m}sum(\hat{Y}-Y)^2\]
+
+\[\frac{dJ}{dW} = \frac{1}{m}X^T.(\hat{Y}-Y)\]
+
+<p>Các bước để xử lí bài toán:</p>
+<ul>
+  <li>Bước 1: Khởi tạo nghiệm $W$, learning rate $\alpha$, số lần lặp $\textbf{iterations}$.</li>
+  <li>Bước 2: Cập nhật $W := W - \alpha \frac{dJ}{dW}$.</li>
+  <li>Bước 3: Dừng lại khi hết $\textbf{iterations}$ lần lặp.</li>
+</ul>
+
+<p>Ở bước 3, có khá nhiều cách để dừng vòng lặp như:</p>
+<ul>
+  <li>Giới hạn số lần lặp (như ở trên).</li>
+  <li>Giới hạn giá trị hàm cost - J.</li>
+  <li>Giới hạn hiệu giá trị của hàm cost tại 2 lần gần nhất.</li>
+</ul>
+
+<p>Nhưng trong thực thế, các giá trị hàm cost sẽ khá khó để biết nó thay đổi như thế nào khi train model, cách giới hạn số vòng lặp và đưa ra một số rules để thuật toán dừng (callbacks) là đơn giản nhất mà vẫn đạt được các giá trị tốt.</p>
+
+<p><a name="3-coding"></a></p>
+
+<h2 id="3-thực-nghiệm-với-python">3. Thực nghiệm với Python</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># ĐSTT
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># Visualize
+</span>
+<span class="c1"># Hàm này sử dụng để tìm nghiệm W và cost sau mỗi lần lặp
+# vì vậy W và cost cuối cùng sẽ là nghiệm và giá trị cost cho bài toán
+</span><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">num_iterations</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ones</span><span class="p">,</span> <span class="n">X</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">cost</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_iterations</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">W_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">):</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">W</span><span class="p">)</span> <span class="o">-</span> <span class="n">Y</span>
+        <span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dist</span><span class="o">*</span><span class="n">dist</span><span class="p">)</span>
+        <span class="n">W</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">learning_rate</span><span class="o">/</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">T</span><span class="p">,</span><span class="n">dist</span><span class="p">))</span>
+        <span class="n">W_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">W_list</span><span class="p">,</span><span class="n">cost</span>
+
+<span class="c1"># Hàm này sử dụng để dự đoán khi có một giá trị x0
+</span><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">x0</span><span class="p">):</span>
+    <span class="n">w0</span><span class="p">,</span><span class="n">w1</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x0</span>
+    <span class="k">return</span> <span class="n">y0</span>
+
+<span class="c1"># Dùng để visualize đường thẳng cần tìm
+</span><span class="k">def</span> <span class="nf">draw_line</span><span class="p">(</span><span class="n">min_x</span><span class="p">,</span><span class="n">max_x</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'r'</span><span class="p">):</span>
+    <span class="n">min_y</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">min_x</span><span class="p">)</span>
+    <span class="n">max_y</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">max_x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">((</span><span class="n">min_x</span><span class="p">,</span><span class="n">max_x</span><span class="p">),(</span><span class="n">min_y</span><span class="p">,</span><span class="n">max_y</span><span class="p">),</span><span class="n">color</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Dữ liệu
+</span>    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">46</span><span class="p">]]).</span><span class="n">T</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">]]).</span><span class="n">T</span>
+    
+    <span class="c1"># Visualize dữ liệu
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+    <span class="n">min_x</span><span class="p">,</span><span class="n">max_x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="mi">46</span> <span class="c1"># Điểm để visualize
+</span>    
+    <span class="c1"># Khởi tạo nghiệm
+</span>    <span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.</span><span class="p">],</span>
+                  <span class="p">[</span><span class="mf">2.</span><span class="p">]])</span>
+    
+    <span class="c1"># leaning rate - alpha
+</span>    <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.0001</span>
+    
+    <span class="c1"># số lần lặp iterations
+</span>    <span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+    
+    <span class="c1"># Visualize đường khởi tạo
+</span>    <span class="n">draw_line</span><span class="p">(</span><span class="n">min_x</span><span class="p">,</span> <span class="n">max_x</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+    
+    <span class="c1"># Tìm nghiệm
+</span>    <span class="n">W_list</span><span class="p">,</span><span class="n">cost</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">num_iterations</span><span class="p">)</span>
+    
+    <span class="c1"># Visualize đường thẳng các nghiệm tìm được
+</span>    <span class="k">for</span> <span class="n">W</span> <span class="ow">in</span> <span class="n">W_list</span><span class="p">:</span>
+        <span class="n">draw_line</span><span class="p">(</span><span class="n">min_x</span><span class="p">,</span><span class="n">max_x</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="s">'blue'</span><span class="p">)</span>
+        
+    <span class="c1"># Visualize đường kết quả
+</span>    <span class="n">draw_line</span><span class="p">(</span><span class="n">min_x</span><span class="p">,</span><span class="n">max_x</span><span class="p">,</span><span class="n">W_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="s">'red'</span><span class="p">)</span>
+    
+    <span class="n">title</span> <span class="o">=</span> <span class="p">[</span><span class="s">'init line'</span><span class="p">,</span><span class="s">'update line'</span><span class="p">]</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Diện tích'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Giá'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p style="display: flex">
+<img src="/assets/images/bai2/anh2.png" class="smallpic" /> <img src="/assets/images/bai2/anh3.png" class="smallpic" />
+</p>
+<p align="center"> <b>Hình 2</b>: Visualize các nghiệm sau mỗi lần cập nhật và đường thẳng tương ứng </p>
+
+<p>Ta thấy đường màu đen chính là nghiệm mà ta khởi tạo, các đường màu xanh chính là nghiệm sau mỗi cập nhật theo công thức Gradient Descent (ở bước 2). Đường màu đỏ chính là nghiệm cuối cùng của bài toán.</p>
+
+<p>Ở đây ta thấy sau 100 lần lặp thì nghiệm cuối cùng đã tìm được, nghiệm cho bài toán khá tốt, đường tìm được khá giống với nghiệm tìm theo công thức ở <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1 - Linear Regression</a>. Hãy xem hàm mất mát biến đổi như thế nào sau mỗi lần lặp</p>
+
+<p><img src="/assets/images/bai2/anh4.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: Visualize cost function </p>
+
+<p>Trục ngang là giá trị số lần lặp của thuật toán, trục dọc là giá trị hàm cost sau mỗi vòng lặp. Nhận thấy rằng, tại vòng lặp thứ 40 đổ đi gần như hàm cost vẫn giữ nguyên giá trị rất gần 0, tức ta đã đạt được mong muốn rằng giá trị hàm cost càng nhỏ càng tốt (gần 0). Tuy nhiên, máy tính vẫn thực thi 60 vòng lặp mà các giá trị của hàm cost gần như không thay đổi vì vậy ta sẽ các chiến thuật để dừng vòng lặp là callbacks hoặc tính toán 2 giá trị cost gần nhất, về vấn đề này mình sẽ trình bày ở bài khác.</p>
+
+<p><a name="4-problems"></a></p>
+
+<h2 id="4-một-số-vấn-đề-lưu-ý">4. Một số vấn đề lưu ý</h2>
+
+<p><a name="41-learning-rate"></a></p>
+
+<h3 id="41-learning-rate">4.1. Learning rate</h3>
+
+<p>Có một điều khá qua trọng mà chưa được nhắc tới ở phần trên đó là việc chọn learning rate. Hãy xem sự ảnh hưởng của chọn learning rate</p>
+
+<p style="display: flex">
+<img src="/assets/images/bai2/anh5.png" class="smallpic" /> <img src="/assets/images/bai2/anh6.png" class="smallpic" />
+</p>
+
+<p style="display: flex">
+<img src="/assets/images/bai2/anh8.png" class="smallpic" /> <img src="/assets/images/bai2/anh7.png" class="smallpic" />
+</p>
+
+<p align="center"> <b>Hình 4</b>: So sánh chọn learning rate </p>
+
+<p>Ta thấy ở <b>Hình 4</b>, việc lựa chọn các learning rate khác nhau sẽ đem đến các kết quả khác nhau. Đây cũng là một hạn chế của thuật toán này khi phải tuning lại giá trị của learning rate nhiều lần. Nhưng nếu chọn learning rate quá nhỏ sẽ làm cho quá trình hội tụ (tức đạt tới giá trị nghiệm tối ưu) rất rất chậm, hoặc nếu quá to thì sẽ có thể không bao giờ đạt tới</p>
+
+<p><img src="/assets/images/bai2/anh9.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 5</b>: Hình trái - learning quá nhỏ, Hình phải - learning rate quá to </p>
+
+<p><a name="42-cost-function"></a></p>
+
+<h3 id="42-cost-function">4.2. Cost function</h3>
+
+<p>Trong bài 1 và bài 2 này ta đã làm quen với Cost function là trung bình bình phương lỗi của toàn bộ dữ liệu, tên gọi tiếng Anh là: Mean Squared Error. Vậy tại sao hàm Cost function này lại được sử dụng mà không phải hàm số nào khác cũng có thể đo lường sai số giữa giá trị thực và giá trị dự đoán, cùng xem ví dụ sau:</p>
+
+<p><img src="/assets/images/bai2/anh10.jpg" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 6</b>: Gradient Descent pitfalls (Nguồn: Hands-on machine learning) </p>
+
+<p>Ở <strong>Hình 6</strong>, giả sử ta khởi tạo giá trị nghiệm ban đầu phía bên trái của điểm Local minimum thì hàm cost sẽ hội tụ tại đúng điểm Local minimum và rất khó có thể tới vươn tới điểm global minimum (gần như không thể). Mặt khác, nếu nghiệm ban đầu ta khởi tạo nằm trên đoạn Plateau thì việc cập nhật GD sẽ rất lâu tới điểm Global minimum, thậm chí nếu vòng lặp không đủ lớn nó sẽ dừng trước khi đạt tới điểm hội tụ Global minimum.</p>
+
+<p>Đây cũng là lí do mà hàm Cost function cho bài toán Linear Regression là hàm Mean Squared Error. Hàm này đảm bảo yếu tố Convex khi tìm nghiệm tối ưu, hàm Convex sẽ giúp nghiệm bài toán luôn đảm bảo là Global minimum. Ví dụ hình ảnh:</p>
+
+<p><img src="/assets/images/bai2/anh12.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 7</b>: Convex vs Non-convex</p>
+
+<p>Ở <strong>Hình 7</strong>, phía bên trái là hàm Convex, bên phải không phải hàm Convex. Hiểu đơn giản rằng khi lấy 2 điểm bất kì trên đồ thị và nối chúng lại sẽ được một đường thẳng, nếu đường thẳng này không cắt bất kì điểm nào trên đồ thị nữa sẽ là hàm Convex. Việc tìm ra hàm Convext sẽ giúp ta dễ dàng giải quyết bài toán tối ưu rất nhiều, nghiệm sẽ luôn đảm bảo rằng là Gloabal minimum nếu số vòng lặp phù hợp và learning rate không quá lớn.</p>
+
+<p><a name="43-feature-scaling"></a></p>
+
+<h3 id="43-feature-scaling">4.3. Feature scaling</h3>
+
+<p>Trong thực tế, với mỗi loại dữ liệu thì sẽ có kharong giá trị khác nhau, ví dụ: diện tích nhà có thể có giá trị tới hàng trăm, hàng nghìn (mét vuông) tuy nhiên số phòng ngủ thì chỉ có thể là hàng đơn vị (thông thường). Vì vậy khi tiền xử lí dữ liệu, tất cả các thuật toán Machine Learning cần các kiểu dữ liệu về cùng một khoảng nhất định, điều này sẽ giúp máy tính giảm chi phí tính toán rất nhiều và quan trọng nhất là sẽ ảnh hưởng tới performance của thuật toán. Có 2 phương pháp scaling phổ biến nhất giúp đưa các loại dữ liệu về cùng 1 range [0,1] hoặc [-1,1]:</p>
+
+<ul>
+  <li>Min-max scaling [0,1]:</li>
+</ul>
+
+\[\begin{equation}
+x’=\frac{x-min(x)}{max(x)-min(x)}
+\end{equation}\]
+
+<p>trong đó $x$ là vector dữ liệu ban đầu</p>
+
+<ul>
+  <li>Standard scaling [-1,1]:</li>
+</ul>
+
+\[\begin{equation}
+x’=\frac{x-mean(x)}{s_i}
+\end{equation}\]
+
+<p>trong đó $s_i$ có thể là std (độ lệch chuẩn) hoặc range của $x$ (max - min)</p>
+
+<p><a name="5-evaluation"></a></p>
+
+<h2 id="5-đánh-giá-và-kết-luận">5. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>Thuật toán Gradient Descent đã giải quyết được vấn đề về tính toán và bộ nhớ so với cách tính ở <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1 - Linear Regression</a></p>
+  </li>
+  <li>
+    <p>Tuy nhiên, chọn learning rate và điểm khởi tạo lại chính là điểm yếu của thuật toán này, vì vậy ta phải lựa chọn nhiều lần để có được kết quả mong muốn.</p>
+  </li>
+  <li>
+    <p>Gradient Descent là tiền đề của rất nhiều thuật toán tối ưu nâng cao hơn như: Adam, RMSprop, SGD…</p>
+  </li>
+  <li>
+    <p>Vì dựa trên đạo hàm nên việc đạo hàm chính xác một hàm số là điều tiên quyết, có 1 cách để debug xem mình đã đạo hàm đúng hay chưa dựa trên định nghĩa của đạo hàm. Tham khảo thêm <a href="https://machinelearningcoban.com/2017/01/12/gradientdescent/#ki%e1%bb%83m-tra-%c4%91%e1%ba%a1o-h%c3%a0m">kiểm tra đạo hàm</a>.</p>
+  </li>
+</ul>
+
+<p><a name="6-references"></a></p>
+
+<h2 id="6-tham-khảo">6. Tham khảo</h2>
+
+<p>[1] <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+<p>[2] <a href="https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features">Week 2 - Machine Learning coursera by Andrew Ng</a></p>
+
+<p>[3] <a href="https://machinelearningcoban.com/2017/01/12/gradientdescent/">Bài 7: Gradient Descent (phần 1/2) - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[4] <a href="https://dunglai.github.io/2017/12/21/gradient-descent/">Gradient descent by Dung Lai</a></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">3. Logistic Regression</p>
+    </h2>
+    <strong><i>12 Nov 2021</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-sigmoid-function">2. Hàm Sigmoid</a></li>
+  <li><a href="#3-prediction">3. Hàm dự đoán</a></li>
+  <li><a href="#4-loss">4. Hàm mất mát</a></li>
+  <li><a href="#5-generalization">5. Lập công thức chung</a>
+    <ul>
+      <li><a href="#51-generalization1">5.1. Một điểm dữ liệu</a></li>
+      <li><a href="#52-generalization2">5.2. Toàn tập dữ liệu</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-coding">6. Thực nghiệm với Python</a>
+    <ul>
+      <li><a href="#61-implement">6.1. Implement thuật toán</a></li>
+      <li><a href="#62-sklearn">6.2. Nghiệm bằng thư viện scikit-learn</a></li>
+    </ul>
+  </li>
+  <li><a href="#7-evaluation">7. Đánh giá và kết luận</a></li>
+  <li><a href="#8-references">8. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Ở <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1 - LinearRegression</a> và <a href="https://hnhoangdz.github.io/2021/11/10/Gradient-Descent.html">bài 2 - Gradient Descent</a> ta đã tìm hiểu về bài toán dự đoán (prediction) trong lớp bài toán Regression, ở bài này ta cùng tìm hiểu về bài toán phân loại (classification). Sự khác biệt cơ bản của lớp bài toán dự đoán và phân loại chính là đầu ra (output), vì giá trị dự đoán đầu ra sẽ không bị giới hạn và liên tục còn giá trị phân loại sẽ bị chặn và rời rạc. Ứng dụng của phân loại là rất nhiều trong đời sống, một số ví dụ đơn giản nhất như: phân loại nợ xấu, phân loại email spam, phân loại bệnh…</p>
+
+<p>Cụ thể trong bài này ta cùng tìm hiểu về thuật toán Logistic Regression, dùng phần lớn phân loại nhị nhân (binary classification). Hiểu đơn giản phân loại nhị phân là đầu ra sẽ thuộc nhãn 0 hoặc 1. Ví dụ: nợ xấu - 1, không nợ xấu - 0; mắc ung thư - 1, không mắc ung thư - 0. Mục tiêu của phân loại nhị phân giúp dự báo xác suất xảy ra của một sự kiện, với giá trị xác suất tương ứng với nhãn 1 và nhãn 0 có tổng bằng 1. Xem hình dưới đây</p>
+
+<p><img src="/assets/images/bai3/anh1.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: Bài toán nhị phân (<b>Nguồn: </b><a href="https://machinelearningcoban.com/2017/01/21/perceptron/">machine learning cơ bản</a>)</p>
+
+<p>Ở hình trên, ta có 2 nhãn với: nhãn 1 đại diện cho các hình vuông màu xanh dương, nhãn 0 đại diện cho các hình tròn màu đỏ. Điều ta cần làm đó là dự đoán hình tam giác màu xám sẽ thuộc nhãn nào. Nhìn đơn giản ta có thể thấy, hình tam giác gần với các hình tròn màu đỏ hơn. Vì vậy ta mong xác suất mà thuộc nhãn 0 sẽ lớn hơn xác suất thuộc nhãn 1, và tổng xác suất của chúng bằng 1.</p>
+
+<p><a name="2-sigmoid-function"></a></p>
+
+<h2 id="2-hàm-sigmoid">2. Hàm Sigmoid</h2>
+
+<p>Như đã đề cập ở trên, ta cần đầu ra là xác suất tương ứng cho mỗi nhãn. Do đó, hàm Sigmoid được ra đời để nhằm giới hạn giá trị đầu ra của bài toán Linear Regression.</p>
+
+<p>Hàm Sigmoid: $f(x) = \frac{1}{1+e^{-x}}$, ta thấy đồ thị hàm Sigmoid bên dưới có giá trị giới hạn [0,1]. Thật vậy:</p>
+
+\[\lim_{x \rightarrow +\infty} \sigma(x) = \lim_{x \rightarrow +\infty} \frac{1}{1+e^{-x}}=1\]
+
+\[\lim_{x \rightarrow -\infty} \sigma(x) = \lim_{x \rightarrow -\infty} \frac{1}{1+e^{-x}}=0\]
+
+<p><img src="/assets/images/bai3/anh2.png" class="smallpic" /></p>
+
+<p align="center"> <b>Hình 2</b>: Đồ thị hàm Sigmoid</p>
+
+<p>Ta có đạo hàm bậc nhất hàm Sigmoid như sau:</p>
+
+\[f'(x) = \frac{e^{-x}}{(1+e^{-x})^2} = \frac{1}{1+e^{-x}} - \frac{1}{(1+e^{-x})^2} = f(x) - f(x)^2 = f(x)(1-f(x))\]
+
+<p>Nhận thấy rằng đạo hàm của hàm Sigmoid rất đẹp, giúp cho việc tính toán dễ dàng.</p>
+
+<p><a name="3-prediction"></a></p>
+
+<h2 id="3-hàm-dự-đoán">3. Hàm dự đoán</h2>
+
+<p>Bắt đầu với bài toán phân loại khách hàng để quyết định cho vay hoặc từ chối dựa trên mức lương và số năm kinh nghiệm. Xem hình sau</p>
+
+<p><img src="/assets/images/bai3/anh3.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: Visualize dữ liệu (<b>Nguồn: </b><a href="https://nttuan8.com/bai-2-logistic-regression/">deep learning cơ bản</a>)</p>
+
+<p>Ta thấy với dữ liệu như trên ta cần tìm một đường thẳng để phân chia thành 2 vùng khác nhau bao gồm: vùng cho vay - nhãn 1 màu đỏ, vùng từ chối - nhãn 0 màu xanh dương. Tuy nhiên trong bài toán phân loại, không những ta cần giá trị đầu ra mà còn muốn giá trị xác xuất của mỗi đầu ra là bao nhiêu. Ví dụ khi tiến hành mổ ung thư cho bệnh nhân, bác sĩ không muốn nói hẳn rằng ca mổ sẽ thất bại hay thành công mà thường sẽ đưa ra xác suất thành công của ca mổ cho người nhà bệnh nhân quyết định, tất nhiên xác suất càng cao sẽ càng tốt nhưng nếu chỉ là 0.5 - 0.6 thì rất cần đắn đo.</p>
+
+<p>Quay lại với ví dụ trên, giả sử có một người làm việc với mức lương là $x_2$, số năm kinh nghiệm là $x_1$ thì ta sẽ có giá trị dự đoán là:</p>
+
+\[\hat{y} = \sigma(w_0 + w_1x_1 + w_2x_2) = \frac{1}{1+e^{-({w_0 + w_1x_1 + w_2x_2})}}\]
+
+<p>trong đó $w_0, w_1, w_2$ là các giá trị ta cần tìm và cũng là hệ số đường thẳng phân chia (boundary), $\sigma$ là kí hiệu cho hàm Sigmoid và $\hat{y}$ chính là giá trị xác suất dự đoán. Lúc này giá trị $\hat{y}$ sẽ nằm trong đoạn {0,1}. Vì vậy thường ta sẽ đặt ngưỡng là 0.5, nếu $\hat{y} &gt;= 0.5$ ta có thể coi là nhãn 1 (vùng cho vay) và ngược lại. Biểu diễn với $c$ là viết tắt của class (nhãn):</p>
+
+\[\begin{equation}
+  c =\begin{cases}
+    1, &amp; \text{if $\hat{y} \geq$ 0.5}\\
+    0, &amp; \text{if $\hat{y}$ &lt; 0.5}
+  \end{cases}
+\end{equation}\]
+
+<p>Tất nhiên, nếu khó tính hơn thì có thể đặt ngưỡng cao hơn 0.5 để lấy được những người có thu nhập và kinh nghiệm chất lượng hơn.</p>
+
+<p><a name="4-loss"></a></p>
+
+<h2 id="4-hàm-mất-mát">4. Hàm mất mát</h2>
+
+<p>Hàm mất mát dược sử dụng để đo độ sai số của mô hình, tức làm cho sai số là nhỏ nhất có thể. Nếu trong dữ liệu mẫu (training set) giá trị của một sample thứ $i$ là 1 thì giá trị dự đoán $\hat{y}$ cũng cần gần 1 và tương tự với 0.</p>
+
+<p>Hàm mất mát ở bài toán này sử dụng là Binary Cross Entropy, để cho dễ dàng giải thích ở đây hàm loss sẽ biểu diễn cho một điểm dữ liệu:</p>
+
+\[L = -(y\log(\hat{y}) + (1-y)\log({1-\hat{y}}))\]
+
+<p>trong đó $y$ là giá trị 0 hoặc 1, $\hat{y}$ là giá trị dự báo nằm trong khoảng {0,1}.</p>
+
+<p>Hàm loss trên, có thể chia thành 2 trường hợp:</p>
+
+<p>– Nếu $y = 1 =&gt; L = -\log{(\hat{y})}$</p>
+
+<p><img src="/assets/images/bai3/anh4.png" class="smallpic" /></p>
+
+<p align="center"> <b>Hình 4</b>: Visualize Loss với $y = 1$ (<b>Nguồn: </b><a href="https://nttuan8.com/bai-2-logistic-regression/">deep learning cơ bản</a>)</p>
+
+<p>Ta thấy:</p>
+
+<ul>
+  <li>Khi giá trị của $\hat{y}$ và $y$ gần bằng nhau (tức $\hat{y}$ gần bằng 1) thì giá trị Loss sẽ giảm dần và cực gần nhau (sai số rất nhỏ) và đây cũng là điều ta mong muốn. Nhưng nếu giá trị $\hat{y}$ và $y$ khác nhau nhiều tức $\hat{y}$ tiến dần về 0 thì sai số giữa giá trị dự đoán và giá trị thực khác nhau nhiều thì giá Loss rất lớn. Điều này sẽ giúp cho mô hình làm việc hiệu quả hơn và phạt các giá trị sai tốt hơn.</li>
+</ul>
+
+<p>– Nếu $y = 0 =&gt; L = -\log{(1 - \hat{y})}$</p>
+
+<p><img src="/assets/images/bai3/anh5.png" class="smallpic" /></p>
+
+<p align="center"> <b>Hình 5</b>: Visualize Loss $y = 0$ (<b>Nguồn: </b><a href="https://nttuan8.com/bai-2-logistic-regression/">deep learning cơ bản</a>)</p>
+
+<p>Ta thấy:</p>
+
+<ul>
+  <li>Khi giá trị của $\hat{y}$ và $y$ gần bằng nhau (tức $\hat{y}$ gần bằng 0) thì giá trị Loss sẽ giảm dần. Tương tự với trường hợp $y = 1$ thì khi giá trị dự đoán và giá trị thực khác nhau nhiều thì hàm Loss sẽ có giá trị lớn.</li>
+</ul>
+
+<p>Vì vậy, tính sai số của hàm Loss luôn được đảm bảo giữa giá trị dự đoán và giá trị thực. Hơn nữa, đồ thị luôn có cực trị tại $\hat{y} = y$.</p>
+
+<p><a name="5-generalization"></a></p>
+
+<h2 id="5-lập-công-thức-chung">5. Lập công thức chung</h2>
+
+<p>Với bài toán dự đoán cho vay hoặc từ chối nêu trên, đầu vào sẽ gồm 2 giá trị: lương và số năm kinh nghiệm. Đầu ra sẽ là xác suất tương ứng: nếu lớn hơn 0.5 thì sẽ là cho vay, nhỏ hơn 0.5 sẽ là từ chối.</p>
+
+<p><a name="51-generalization1"></a></p>
+
+<h3 id="51-một-điểm-dữ-liệu">5.1. Một điểm dữ liệu</h3>
+
+<p>Với một điểm dữ liệu thứ $i$ trong tập dữ liệu gồm $m$ mẫu, ta có:</p>
+
+\[\hat{y_i} = \sigma(w_0 + w_1x_1 + w_2x_2)\]
+
+\[L = -(y_i \log(\hat{y_i}) + (1 - y_i)\log(1-\hat{y_i}))\]
+
+<p>trong đó $x_1$ và $x_2$ là giá trị lương và số năm kinh nghiệm; $w_0, w_1$ và $w_2$ là biến cần tìm; $\hat{y_i}$ là giá trị dự đoán; $\sigma$ là kí hiệu hàm Sigmoid; $y_i$ là giá trị thực.</p>
+
+<p>Để tìm nghiệm cho bài toán này, ta sẽ sử dụng thuật toán Gradient Descent để tìm nghiệm (vì không thể giải và tìm nghiệm trực tiếp như bài Linear Regression).</p>
+
+<p>Đặt $z_i = w_0 + w_1x_1 + w_2x_2 =&gt; \hat{y_i} = \sigma(z_i)$. Áp dụng Chain Rule ta được:</p>
+
+\[\frac{dL}{dw_0} = \frac{dL}{dz_i}.\frac{dz_i}{dw_0} (1)\]
+
+\[\frac{dL}{dw_1} = \frac{dL}{dz_i}.\frac{dz_i}{dw_1} (2)\]
+
+\[\frac{dL}{dw_2} = \frac{dL}{dz_i}.\frac{dz_i}{dw_2} (3)\]
+
+<p>Lại có:</p>
+
+\[\frac{dL}{dz_i} = \frac{dL}{d\hat{y_i}}.\frac{d\hat{y_i}}{dz_i} = \hat{y_i} - y_i (4)\]
+
+\[\frac{dz_i}{dw_0} = 1 (5)\]
+
+\[\frac{dz_i}{dw_1} = x_1 (6)\]
+
+\[\frac{dz_i}{dw_2} = x_2 (7)\]
+
+<p>Từ (1),(4),(5) suy ra</p>
+
+\[\frac{dL}{dw_0} = \hat{y_i} - y_i\]
+
+<p>Từ (2),(4),(6) suy ra</p>
+
+\[\frac{dL}{dw_1} = x_1(\hat{y_i} - y_i)\]
+
+<p>Từ (3),(4),(7) suy ra</p>
+
+\[\frac{dL}{dw_2} = x_2(\hat{y_i} - y_i)\]
+
+<p>Lúc này ta tiến hành cập nhật các nghiệm với learning rate $\alpha$:</p>
+
+\[w_0 := w_0 - \alpha \frac{dL}{dw_0}\]
+
+\[w_1 := w_1 - \alpha \frac{dL}{dw_1}\]
+
+\[w_2 := w_2 - \alpha \frac{dL}{dw_2}\]
+
+<p><a name="52-generalization2"></a></p>
+
+<h3 id="52-toàn-tập-dữ-liệu">5.2. Toàn tập dữ liệu</h3>
+
+<p>Cho m điểm dữ liệu và learning rate $\alpha$, ta có:</p>
+
+\[X = \begin{bmatrix} 1&amp;&amp;x_1^{(1)}&amp;&amp;x_2^{(1)} \\1&amp;&amp;x_1^{(2)}&amp;&amp;x_2^{(2)} \\ ...&amp;&amp;...&amp;&amp;... \\ 1&amp;&amp;x_1^{(m)}&amp;&amp;x_2^{(m)}
+\end{bmatrix}, Y = \begin{bmatrix}y_1\\ y_2 \\ ...\\ y_n\end{bmatrix},
+W = \begin{bmatrix} w_0 \\ w_1 \\ w_2 \end{bmatrix}\]
+
+\[\hat{Y} = \sigma(X.W) = \sigma(\begin{bmatrix}  w_0 + w_1x_1^{(1)} + w_2x_2^{(1)}\\ w_0 + w_1x_1^{(2)} + w_2x_2^{(2)} \\ ... \\ w_0 + w_1x_1^{(m)} + w_2x_2^{(m)}\end{bmatrix}) = \begin{bmatrix} \hat{y_1} \\ \hat{y_2} \\ ... \\ \hat{y_m}\end{bmatrix}\]
+
+\[J = -\frac{1}{m}\sum_{i=1}^{m}[Y\log(\hat{Y}) + (1 - Y)\log{(1 - \hat{Y}})]\]
+
+<p>Áp dụng GD trên toàn tập dữ liệu ta được:</p>
+
+\[\frac{dJ}{dW} = \frac{1}{m}X^T(\hat{Y}-Y)\]
+
+\[W := W - \alpha \frac{dL}{dW}\]
+
+<p><a name="6-coding"></a></p>
+
+<h2 id="6-thực-nghiệm-với-python">6. Thực nghiệm với Python</h2>
+
+<p><a name="61-implement"></a></p>
+
+<h3 id="61-implement-thuật-toán">6.1. Implement thuật toán</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># ĐSTT
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># Visualize
+</span>
+<span class="c1"># Hàm sigmoid
+</span><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Sử dụng GD để tìm nghiệm
+</span><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">,</span><span class="n">num_iterations</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ones</span><span class="p">,</span><span class="n">X</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">cost</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_iterations</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">):</span>
+      <span class="n">y_pred</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+      <span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">y_pred</span><span class="p">))</span><span class="o">+</span><span class="n">np</span><span class="p">.</span><span class="n">multiply</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">Y</span><span class="p">),</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y_pred</span><span class="p">)))</span>
+      <span class="n">W</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">learning_rate</span><span class="o">/</span><span class="n">m</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">T</span><span class="p">,</span><span class="n">y_pred</span> <span class="o">-</span> <span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cost</span><span class="p">,</span><span class="n">W</span>
+
+<span class="c1"># Dự đoán 1 điểm dữ liệu mới
+</span><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">threshold</span><span class="p">):</span>
+    <span class="n">w0</span><span class="p">,</span><span class="n">w1</span><span class="p">,</span><span class="n">w2</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="n">w2</span><span class="o">*</span><span class="n">x2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">y_hat</span> <span class="o">&gt;=</span> <span class="n">threshold</span> <span class="k">else</span> <span class="mi">0</span>
+
+<span class="c1"># Vẽ đường phân cách dựa trên ngưỡng
+</span><span class="k">def</span> <span class="nf">draw_line</span><span class="p">(</span><span class="n">x21</span><span class="p">,</span><span class="n">x22</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">threshold</span><span class="p">):</span>
+    <span class="n">w0</span><span class="p">,</span><span class="n">w1</span><span class="p">,</span><span class="n">w2</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">x11</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x21</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">threshold</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">w2</span>
+    <span class="n">x12</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x22</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">threshold</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">w2</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">((</span><span class="n">x21</span><span class="p">,</span> <span class="n">x22</span><span class="p">),(</span><span class="n">x11</span><span class="p">,</span><span class="n">x12</span><span class="p">),</span> <span class="s">'g'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Dữ liệu
+</span>    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1.8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.15</span><span class="p">]],</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">).</span><span class="n">T</span>
+    
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]],</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">).</span><span class="n">T</span>
+
+    <span class="n">X_cho_vay</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">Y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># lấy các giá trị cho vay của X
+</span>    <span class="n">X_tu_choi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">Y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># lấy các giá trị từ chối của X
+</span>    
+    <span class="c1"># Visualize dữ liệu
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_cho_vay</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_cho_vay</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s">'red'</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s">'none'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'cho vay'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_tu_choi</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_tu_choi</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s">'blue'</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s">'none'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'từ chối'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'mức lương (triệu)'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'kinh nghiệm (năm)'</span><span class="p">)</span>
+    
+    <span class="c1"># Khởi tạo nghiêm ban đầu
+</span>    <span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]]).</span><span class="n">T</span>
+    
+    <span class="c1"># Khởi tạo learning rate
+</span>    <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.3</span>
+    
+    <span class="c1"># Khởi tạo số vòng lặp
+</span>    <span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">1000</span>
+    
+    <span class="c1"># Nghiệm tìm được
+</span>    <span class="n">cost</span><span class="p">,</span><span class="n">W</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">,</span><span class="n">num_iterations</span><span class="p">)</span>
+    
+    <span class="c1"># Draw đường phân cách boudary dựa trên ngưỡng
+</span>    <span class="n">x21</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">x22</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">draw_line</span><span class="p">(</span><span class="n">x21</span><span class="p">,</span><span class="n">x22</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">threshold</span><span class="p">)</span>
+    
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai3/anh6.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 6</b>: Kết quả cho bài toán</p>
+
+<p>Chú ý: Ở hàm <b>draw_line</b>, ta cần dựa vào ngưỡng $\textbf{threshold}$ để vẽ được đường phân cách. Ở ví dụ đơn trên, ngưỡng $\textbf{threshold}$ được chọn là 0.5, để vẽ được đường thẳng đó ta cần 2 điểm dựa trên tọa độ.</p>
+
+<p>Ta thấy với $\hat{y}$ dự đoán được, nếu $\hat{y} &gt;= \textbf{threshold}$ tức nhãn một và cho vay tiền. Ta được:</p>
+
+\[\hat{y} \geq \textbf{threshold}\]
+
+\[&lt;=&gt; \frac{1}{1+e^{-(w_0 + w_1x_1 + w_2x_2)}} \geq \textbf{threshold}\]
+
+\[&lt;=&gt; e^{-(w_0 + w_1x_1 + w_2x_2)} \leq \frac{1}{\textbf{threshold}} - 1\]
+
+\[&lt;=&gt; -(w_0 + w_1x_1 + w_2x_2) \leq \ln(\frac{1}{\textbf{threshold}} - 1)\]
+
+\[&lt;=&gt; x_2 \geq \frac{-(w_0 + w_1 + \ln(\frac{1}{\textbf{threshold}} - 1))}{w_2}\]
+
+<p>Ở đây ta đang xét $\hat{y} \geq \textbf{threshold}$ và trục hoành lúc này là $x_2$ và trục tung là $x_1$, vậy để lấy điểm phân chia thì ta sẽ lấy dấu ‘ = ‘ $ x_2 = \frac{-(w_0 + w_1 + \ln(\frac{1}{\textbf{threshold}} - 1))}{w_2} $ và thay các giá trị $x_1$ tương ứng để lấy 2 điểm để plot Decision Boundary (đường xanh lục phía trên).</p>
+
+<p>Nếu khó tính hơn, ta có thể tăng ngưỡng $\textbf{threshold}$ lên để các hợp đồng có thể vay cần có mức lương và năm kinh nghiệm cao hơn, với $\textbf{threshold} = 0.8$, lúc này 1 số người được vay lúc trước sẽ bị loại khỏi khi tăng độ khó tính bằng ngưỡng $\textbf{threshold}$</p>
+
+<p><img src="/assets/images/bai3/anh7.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 7</b>: $\textbf{threshold} = 0.8$</p>
+
+<p>Cuối cùng giá trị vector W được tìm thấy với $\text{threshold} = 0.5$</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'W = '</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">W</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mf">9.1733122</span> <span class="p">]</span>
+         <span class="p">[</span> <span class="mf">0.8410079</span> <span class="p">]</span>
+         <span class="p">[</span> <span class="mf">4.29242685</span><span class="p">]]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="62-sklearn"></a></p>
+
+<h3 id="61-nghiệm-bằng-thư-viện-scikit-learn">6.1. Nghiệm bằng thư viện scikit-learn</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># ĐSTT
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># Visualize
+</span>
+<span class="c1"># Dữ liệu
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1.8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.15</span><span class="p">]],</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">).</span><span class="n">T</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">)</span>
+
+<span class="n">X_cho_vay</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">Y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="c1"># lấy các giá trị cho vay của X
+</span><span class="n">X_tu_choi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">Y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># lấy các giá trị từ chối của X
+</span><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_cho_vay</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_cho_vay</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s">'red'</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s">'none'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'cho vay'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_tu_choi</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_tu_choi</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s">'blue'</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s">'none'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'từ chối'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'mức lương (triệu)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'kinh nghiệm (năm)'</span><span class="p">)</span>
+
+<span class="n">log_reg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">log_reg</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'b = {}, W = {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">log_reg</span><span class="p">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">log_reg</span><span class="p">.</span><span class="n">coef_</span><span class="p">))</span>
+
+<span class="c1"># Vẽ đường phân cách dựa trên ngưỡng
+</span><span class="k">def</span> <span class="nf">draw_line</span><span class="p">(</span><span class="n">x21</span><span class="p">,</span><span class="n">x22</span><span class="p">,</span><span class="n">threshold</span><span class="p">):</span>
+    <span class="n">w0</span><span class="p">,</span><span class="n">w1</span><span class="p">,</span><span class="n">w2</span> <span class="o">=</span> <span class="n">log_reg</span><span class="p">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">log_reg</span><span class="p">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">log_reg</span><span class="p">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">x11</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x21</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">threshold</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">w2</span>
+    <span class="n">x12</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x22</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">threshold</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">w2</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">((</span><span class="n">x21</span><span class="p">,</span> <span class="n">x22</span><span class="p">),(</span><span class="n">x11</span><span class="p">,</span><span class="n">x12</span><span class="p">),</span> <span class="s">'g'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">draw_line</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.4390718</span><span class="p">],</span> <span class="n">W</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.66716139</span> <span class="mf">2.09426755</span><span class="p">]]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai3/anh8.png" class="normalpic" /></p>
+
+<p>Với nghiệm của thư viện tìm được và nghiệm tự implement ở trên có chút khác biệt vì thực chất ở trong hàm có sẵn của thư viện, nhà phát triển có thể sử dụng một thuật toán tối ưu nào đó khác GD như là SGD hoặc các tham số như learning rate và số vòng lặp khác nhau sẽ đưa ra kết quả nghiệm cuối cùng khác nhau. Tuy nhiên khi plot Decision Boundary thì không có sự khác biệt quá nhiều vì đơn giản trong GD sẽ không có một nghiệm hoàn toàn chính xác 100% mà chỉ là nghiệm tối ưu, hơn nữa với hàm Loss của Logistic Regression thì vẫn đảm bảo tính Convex nên sẽ luôn đảm bảo tìm nghiệm này rất sát với Global minimum.</p>
+
+<p><a name="7-evaluation"></a></p>
+
+<h2 id="7-đánh-giá-và-kết-luận">7. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>Trong thuật toán Logistic Regression ta không thể tìm nghiệm bài toán trực tiếp như ở <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1 - Linear Regression</a>, vì vậy ta cần dựa trên thuật toán Gradient Descent để tìm tối ưu cho bài toán. Ở loss function của Logistic Regression, chúng ta sử dụng hàm Binary Cross Entropy vì là hàm Convex nên ta sẽ đảm bảo tìm được nghiệm tốt và có thể coi là Global minimum.</p>
+  </li>
+  <li>
+    <p>Hàm MSE loss sẽ không phù hợp với bài toán này vì độ phạt khi 2 giá trị dự đoán và giá trị thực khau nhau nhiều sẽ không cao nên khó để kiểm soát mô hình. Nhưng quan trọng nhất là hàm MSE sẽ không Convex vì đầu ra của bài tuyến Linear sẽ cần thêm hàm activation là Sigmoid.</p>
+  </li>
+  <li>
+    <p>Logistic Regression có thể coi là một mạng Neural Network không có hidden layer, chỉ có input layer và output layer.</p>
+  </li>
+  <li>
+    <p>Trong thực tế, nếu dữ liệu có các dạng phân bố theo nhãn phức tạp thì Logistic Regression hoạt động không hiệu quả vì hàm dự đoán rất khó có thể tìm ra đường thẳng, mặt phẳng hoặc siêu phẳng phù hợp. Do vậy việc neural network ra đời sẽ giúp cải tiến điểm yếu này.</p>
+  </li>
+  <li>
+    <p>Ngoài ra với Logistic Regression ta cũng có thể thực hành cho bài toán phân loại đa lớp (Multi-class classification), ý tưởng là tập hợp nhiều kết quả của bài toán nhị phân và cuối cùng đưa ra nhãn có xác suất lớn nhất từ mỗi bài nhị phân. Ví dụ với bài toán phân loại: chó, mèo, gà với input là một bức ảnh bao gồm một con vật, ta có thể chia làm 3 stage: stage 1 phân loại xem chó có xác suất bao nhiêu, stage 2 phân loại xem mèo có xác suất bao nhiêu, stage 3 phân loại xem gà có xác suất bao nhiêu. Cuối cùng sẽ lấy ra xác suất cao nhất làm nhãn (rất hiếm gần như không có trường hợp xác suất bằng nhau).</p>
+  </li>
+</ul>
+
+<p><a name="8-references"></a></p>
+
+<h2 id="8-tham-khảo">8. Tham khảo</h2>
+
+<p>[1] <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+<p>[2] <a href="https://www.coursera.org/learn/machine-learning/lecture/wlPeP/classification">Week 3 - Machine Learning coursera by Andrew Ng</a></p>
+
+<p>[3] <a href="https://machinelearningcoban.com/2017/01/27/logisticregression/">Bài 10: Logistic Regression - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[4] <a href="https://nttuan8.com/bai-2-logistic-regression/">Bài 2: Logistic regression - Deep Learning cơ bản by Nguyen Thanh Tuan</a></p>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">10. Xử lí ảnh (2/2)</p>
+    </h2>
+    <strong><i>15 Dec 2021</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-segmentation">1. Image segmentation</a>
+    <ul>
+      <li><a href="#11-threshold">1.1. Thresholding algorithm</a>
+        <ul>
+          <li><a href="#111-simple">1.1.1. Simple thresholding</a></li>
+          <li><a href="#112-otsu">1.1.2. Ostu thresholding</a></li>
+          <li><a href="#113-adaptive">1.1.3. Adaptive thresholding</a></li>
+        </ul>
+      </li>
+      <li><a href="#12-kmeans">1.2. K-means based</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-contour">2. Contour detection</a>
+    <ul>
+      <li><a href="#21-idea">2.1. Ý tưởng</a></li>
+      <li><a href="#22-shape">2.2. Shape</a>
+        <ul>
+          <li><a href="#221-box">2.2.1. Bounding Box and Circle box</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#3-evaluation">3. Kết luận</a></li>
+  <li><a href="#4-references">4. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-segmentation"></a></p>
+
+<h2 id="1-image-segmentation">1. Image Segmentation</h2>
+
+<p>Image Segmentation (phân khúc ảnh) là một bài toán lớn và xuất hiện khá lâu đời trong thị giác máy tính. Hiểu đơn giản thì input của bài toán là 1 bức ảnh hoặc frame của video và output sẽ là nhãn của từng giá trị pixel (trong thực tế có 2 bài toàn là sematic segmentation và instance segmentation, ở phần cuối mình sẽ trình bày sự khác nhau của 2 bài toán này). Ví dụ minh họa:</p>
+
+<p><img src="/assets/images/bai10/anh1.jpg" class="normalpic" /></p>
+
+<p>Tại thời điểm viết, các bài toán Image Segmentation được xử lí rất tốt bởi các mô hình Deep Learning tuy nhiên trước khi Deep Learning phát triển mạnh như ngày nay các thuật toán cổ điển làm việc như thế nào cùng tìm hiểu bên dưới, ngoài ra đôi khi với 1 số tác vụ đơn giản sẽ không cần ôm một mô hình Deep Learning hàng triệu tham số để tính toán là không cần thiết.</p>
+
+<p><a name="11-threshold"></a></p>
+
+<h3 id="11-thresholding-algorithm">1.1. Thresholding algorithm</h3>
+
+<p>Phân khúc ảnh dựa trên ngưỡng (threshold) là một thuật toán khá đơn giản, bức ảnh ban đầu sẽ chuyển sang không gian grayscale sau đó sẽ xác định màu của mỗi pixel thuộc nhãn 0 (đen) hoặc 255 (trắng) tức ảnh đầu ra sẽ là một binary image. Để có thể làm hình ảnh grayscale thành binary ta sẽ xét một ngưỡng nguyên dương $T$ nằm trong đoạn (0, 255), với những pixel nhỏ hơn ngưỡng $T$ thì sẽ được xét là 0, ngược lại xét là 255. Với kết quả đầu ra của thuật toán threshold ta có thể tìm được các vùng có thể có đối tượng được quan tâm (ROI - Regions of interest) tách ra khỏi phần background của ảnh.</p>
+
+<p><a name="111-simple"></a></p>
+
+<h4 id="111-simple-thresholding">1.1.1. Simple thresholding</h4>
+
+<p>Simple thresholding sẽ cần ta xác định ngưỡng $T$, với những giá trị pixels nhỏ hơn $T$ ta sẽ xét bằng 0, ngược lại xét bằng 255.</p>
+
+\[\begin{equation}
+  B(x,y)=\begin{cases}
+    0, &amp; \text{if G(x,y) $\leq$ T}\\
+    255, &amp; \text{otherwise}
+  \end{cases}
+\end{equation}\]
+
+<p>Việc thực hành với OpenCV khá đơn giản, thao tác với Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">gray_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'coin.jpg'</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="mi">125</span> <span class="c1"># threshold value
+</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">thresh_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">thresh_img_inv</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY_INV</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">bitwise_and</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,</span> <span class="n">thresh_img_inv</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">151</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Origin'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">152</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">thresh_img</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'THRESH BINARY'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">153</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">thresh_img_inv</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'THRESH BINARY INV'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">154</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Bitwise And'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh2.png" class="large" /></p>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>OpenCV cung cấp hàm <code class="language-plaintext highlighter-rouge">cv2.threshold</code> gồm 4 đối số: ảnh grayscale, ngưỡng threshold $T$, giá trị nếu pixel lớn hơn $T$ (ở ví dụ trên thì với bất kì giá trị pixel nào lớn hơn 125 sẽ gán bằng 255, ngược lại gán = 0), <code class="language-plaintext highlighter-rouge">cv2.THRESH_BINARY</code> sẽ coi giá trị khi lớn là 0, nhỏ hơn là 255 và <code class="language-plaintext highlighter-rouge">cv2.THRESH_BINARY_INV</code> thì ngược lại (ở phần này bạn có thể nhìn hình kết quả và code để suy ra một cách đơn giản) và thêm khảo thêm 1 số cách khác <a href="https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html">tại đây</a>.</p>
+  </li>
+  <li>
+    <p>Để visualize rõ ràng kết quả, mình đã sử dụng phép toán <code class="language-plaintext highlighter-rouge">cv2.bitwise_and</code> để kết hợp ảnh gốc với ảnh nhị phân. Nếu bạn chưa biết cách phép tính này hoạt động như thế nào bạn có thể xem lại <a href="https://hnhoangdz.github.io/2021/11/29/XLA_1.html#52-bitwise">tại đây</a>.</p>
+  </li>
+  <li>
+    <p>Kết quả này đã giúp chúng ta phân biệt rõ được các đồng coin và background của chúng, tuy nhiên một hạn chế lớn của phương pháp này là ta đang phải chọn ngưỡng $T$ thủ công, tức sẽ phải tuning nhiều lần (bạn có thể thử thay đổi các giá trị $T$ và xem xét các kết quả khác nhau).</p>
+  </li>
+</ul>
+
+<p><a name="112-otsu"></a></p>
+
+<h4 id="112-ostu-thresholding">1.1.2. Ostu thresholding</h4>
+
+<p>Một trong những hạn chế của phương pháp Simple thresholding là phải chọn ngưỡng $T$, việc chọn ngưỡng $T$ một cách thủ công có thể làm việc vẫn tốt trong trường hợp điều kiện ánh sáng trong ảnh khá rõ nét. Tuy nhiên trong thực tế, các hình ảnh thu thập sẽ không có điều kiện ánh sáng tốt và dễ dàng phân biệt, vì vậy thuật Ostu ra đời nhằm tìm ngưỡng $T$ một cách tối ưu nhất.</p>
+
+<p>Ý tưởng của thuật toán Ostu tập trung vào việc khai thác những thông tin hữu ích của Histogram trong ảnh. Ý nghĩa của Histogram nhằm giúp ta có thể chọn ngưỡng $T$ một cách tốt nhất để phân biệt giữa Foreground và Background (<a href="https://hnhoangdz.github.io/2021/11/29/XLA_1.html#54-histogram">Histogram là gì?</a>). Để hiểu rõ cách hoạt động của phương pháp này hãy xem ví dụ sau:</p>
+
+<p><img src="/assets/images/bai10/anh2.jpg" class="smallpic" /></p>
+
+<p>Với bức ảnh 6 x 6 bên phải ta có một biểu đồ Histogram tương ứng bên trái. Giả sử ta chọn ngưỡng giá trị 3 làm ngưỡng để phân chia giữa Background và Foreground chia thành 2 nhãn (B - Background, F - Foreground), sau đó ta sẽ tính toán các tham số cho 2 nhãn này như sau:</p>
+
+<p><img src="/assets/images/bai10/anh3.jpg" class="normalpic" /></p>
+
+<p>Theo thuật toán Ostu, đầu tiên ta sẽ tính toán trọng 2 trọng số của nhãn B và nhãn F đồng thời cũng là xác suất xuất hiện của nhãn B và F trong ảnh ($W_b, W_f$). Tiếp theo ta sẽ tính toán các giá trị trung bình của 2 nhãn ($\mu_b, \mu_f$) và phương sai ($\sigma_b^2, \sigma_f^2$).</p>
+
+<p>Tới đây Ostu đưa ra 2 phương pháp để có thể chọn ngưỡng như sau:</p>
+
+<p><strong>PP1. Within-Class Variance</strong> $\sigma_W^2 = W_b \sigma_b^2 + W_f\sigma_f^2 = 0.47220.4637 + 0.52780.5152 = 0.4909$. Bằng việc tính toán các bước như trên với tất cả các ngưỡng có thể ta sẽ được bảng sau:</p>
+
+<p><img src="/assets/images/bai10/anh4.jpg" class="normalpic" /></p>
+
+<ul>
+  <li>Ta thấy rằng với giá trị $T = 3$ đưa ra được kết quả tốt nhất, tức sẽ chọn giá trị $\sigma_W^2$ nhỏ nhất. Tức tìm ngưỡng có tổng phương pháp có trọng số thấp nhất.</li>
+</ul>
+
+<p><img src="/assets/images/bai10/anh5.jpg" class="normalpic" /></p>
+
+<ul>
+  <li>Tuy nhiên, điểm hạn chế lớn của phương pháp này là phải tính toán trên tất cả ngưỡng có thể (0 - 255 với 8bit image) điều này sẽ làm cho lượng tính toán nhiều làm cho thuật toán rất chậm. Tất nhiên là ta có thể giới hạn một khoảng nhất định như là: 50 - 200 hay 75 - 150 để xét ngưỡng có thể trên khoảng này nhưng vẫn không đáng kể. Từ đây Ostu đề xuất một phương pháp giúp giảm thiểu chi phí tính toán là <i>between class variance</i>.</li>
+</ul>
+
+<p><strong>PP2. Between-class variance</strong> ta sẽ đi tìm giá trị chênh lệch tối đa giữa phương sai giữa 2 ngưỡng màu. Và giá trị ngưỡng tối ưu $T$ sẽ là nghiệm của phương trình:</p>
+
+\[T = argmax(W_bW_f(\mu_b - \mu_f)^2)\]
+
+<p>Các bước thực hiện thuật toán này cũng không khó, mình sẽ so sánh cách tự implement và thư viện có cùng ra 1 ngưỡng $T$ không. Thao tác với Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">otsu_implement</span><span class="p">(</span><span class="n">gray</span><span class="p">):</span>
+    <span class="c1"># Mean weight to calculate probability
+</span>    <span class="n">mean_weight</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">gray</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">gray</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="c1"># Histogram and bins edge horizontal axis
+</span>    <span class="n">his</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">256</span><span class="p">))</span>
+
+    <span class="n">T</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># threshold value
+</span>    <span class="n">max_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">intensity_arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        
+        <span class="c1"># Weight/probability of Foreground and Background
+</span>        <span class="n">pcb</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">his</span><span class="p">[:</span><span class="n">t</span><span class="p">])</span>
+        <span class="n">pcf</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">his</span><span class="p">[</span><span class="n">t</span><span class="p">:])</span>
+        <span class="n">Wb</span> <span class="o">=</span> <span class="n">pcb</span> <span class="o">*</span> <span class="n">mean_weight</span>
+        <span class="n">Wf</span> <span class="o">=</span> <span class="n">pcf</span> <span class="o">*</span> <span class="n">mean_weight</span>
+        
+        <span class="c1"># Mean of Foreground and Background
+</span>        <span class="n">mub</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">intensity_arr</span><span class="p">[:</span><span class="n">t</span><span class="p">]</span><span class="o">*</span><span class="n">his</span><span class="p">[:</span><span class="n">t</span><span class="p">])</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">pcb</span><span class="p">)</span>
+        <span class="n">muf</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">intensity_arr</span><span class="p">[</span><span class="n">t</span><span class="p">:]</span><span class="o">*</span><span class="n">his</span><span class="p">[</span><span class="n">t</span><span class="p">:])</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">pcf</span><span class="p">)</span>
+        
+        <span class="c1"># Formula must be maximum
+</span>        <span class="n">value</span> <span class="o">=</span> <span class="n">Wb</span> <span class="o">*</span> <span class="n">Wf</span> <span class="o">*</span> <span class="p">(</span><span class="n">mub</span> <span class="o">-</span> <span class="n">muf</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">max_value</span><span class="p">:</span>
+            <span class="n">T</span> <span class="o">=</span> <span class="n">t</span>
+            <span class="n">max_value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="n">gray</span><span class="p">[</span><span class="n">gray</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+    <span class="n">gray</span><span class="p">[</span><span class="n">gray</span> <span class="o">&lt;</span> <span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">T</span><span class="p">,</span> <span class="n">gray</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Hàm <code class="language-plaintext highlighter-rouge">otsu_implement</code> này sẽ nhận đầu vào là một grayscale image, sau đó tính toán biểu đồ histogram trên ảnh đó. Còn lại việc tính toán ra các giá trị trọng số/xác suất, trung bình và công thức cần tối ưu khá đơn giản. Nhìn chung hàm này sẽ duyệt qua các giá ngưỡng $T$ từ 0 - 255 để tìm giá trị phù hợp nhất. Tiếp theo sẽ là hàm của OpenCV:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">otsu_built</span><span class="p">(</span><span class="n">gray</span><span class="p">):</span>
+    <span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">threshImg</span><span class="p">)</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> \
+                <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span> <span class="o">|</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_OTSU</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">T</span><span class="p">,</span><span class="n">threshImg</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Hàm <code class="language-plaintext highlighter-rouge">otsu_built</code> cũng nhận đầu vào là một ảnh grayscale, sau đó ta sẽ sử dụng hàm <code class="language-plaintext highlighter-rouge">cv2.threshold</code> để phân ngưỡng, trong hàm này bao gồm 4 đối số: ảnh đầu vào, giá trị min, giá trị max, cách định nghĩa ngưỡng đầu ra (nếu bạn chưa hiểu có thể xem lại phần trên) + thuật toán sử dụng: <code class="language-plaintext highlighter-rouge">cv2.THRESH_OTSU</code>.</p>
+
+<p>Cuối cùng hãy xem kết quả thực hiện của bài toán:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="n">gray_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'coin.jpg'</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gray_img2</span> <span class="o">=</span> <span class="n">gray_img</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span> 
+
+<span class="n">otsu_implement_threshold</span><span class="p">,</span><span class="n">thresh_img</span> <span class="o">=</span> <span class="n">otsu_implement</span><span class="p">(</span><span class="n">gray_img</span><span class="p">)</span>
+<span class="n">otsu_built_threshold</span><span class="p">,</span><span class="n">threshImg</span> <span class="o">=</span> <span class="n">otsu_built</span><span class="p">(</span><span class="n">gray_img2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">151</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray_img2</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Origin'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">152</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">thresh_img</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'T-implement = '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">otsu_implement_threshold</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">153</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">threshImg</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'T-built = '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">otsu_built_threshold</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh6.png" class="large" /></p>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Với hàm tự implement và thư viện có sẵn, 2 giá đầu ra có giá trị gần như giống nhau. Với $T$ tự implement là 118 và hàm có sẵn là 117, câu hỏi là tại sao lại có giá trị khác nhau? Thực ra trong thuật toán Otsu, tác giả cho rằng sẽ có những giá trị $T$ khác nhau đưa ra một giá trị tối đa cho hàm <strong>Between-class variance</strong>, vì vậy kết quả cuối cùng sẽ là trung bình cộng với những giá trị $T$ đó. Nhưng ở phần implement của mình chưa có động tới vấn đề này. Tuy nhiên, sẽ khó mà có trường hợp nào tìm ra 2 giá trị $T$ lệch nhau lớn, vì vậy việc giá trị ngưỡng lệch nhau +- 5 không quá tồi.</p>
+  </li>
+  <li>
+    <p>Mặc dù phương pháp Otsu đã đưa ra được cách tìm ngưỡng một cách tự động thay vì xác định thủ công, nhưng ngưỡng của Otsu và thuật toán Simple thresholding đều là những ngưỡng toàn cục (Global thresholding) vì vậy khi ảnh có dải màu khá đồng đều (tức biểu đồ histogram trải đều) thì tìm ngưỡng toàn cục sẽ không thể tối ưu được nhất. Vì vậy ở phần dưới ta sẽ tìm hiểu thuật toán khác phục vấn đề này.</p>
+  </li>
+</ul>
+
+<p><a name="113-adaptive"></a></p>
+
+<h4 id="113-adaptive-thresholding">1.1.3. Adaptive thresholding</h4>
+
+<p>Như đã đề cập ở trên, khi dải màu trong ảnh được trải rộng thì một ngưỡng $T$ sẽ có sai số khá nhiều. Hơn nữa, với global thresholding ta chỉ đang phân vùng được Foreground và Background của anh. Vì vậy thuật toán adaptive thresholding ra đời nhằm giải quyết vấn đề này khá tốt bằng cách tìm những vùng lân cận liền kề trong ảnh giá trị ngưỡng $T$ tối ưu nhất có thể. Do đó sẽ có nhiều hơn 1 giá trị $T$ khác nhau trong mỗi vùng ảnh nên thuật toán này có thể gọi là local thresholding.</p>
+
+<p>Ở phần này mình sẽ sử dụng luôn thư viện do OpenCV cung cấp để thực hiện thuật toán này, tuy nhiên thuật toán này cũng khá dễ để implement. Thao tác với Python và kết quả:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="n">gray_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'text.jpg'</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">blurred</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Apply threhold
+</span><span class="n">_</span><span class="p">,</span> <span class="n">thresh_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">otsu_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> \
+                <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span> <span class="o">|</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_OTSU</span><span class="p">)</span>
+<span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">adaptiveThreshold</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>
+	<span class="n">cv2</span><span class="p">.</span><span class="n">ADAPTIVE_THRESH_GAUSSIAN_C</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Original'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s">'gray'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray_img</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'T = 125'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">thresh_img</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s">'gray'</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">223</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Otsu'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s">'gray'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">otsu_img</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Adaptive'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">thresh</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s">'gray'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh8.png" class="normalpic" /></p>
+
+<p><strong>Giải thích:</strong></p>
+
+<ul>
+  <li>
+    <p>Như đã đề cập ở phía trên, thuật toán Adaptive threshold sẽ tìm ra nhiều ngưỡng với các vùng cục bộ trong ảnh, và từ đó sẽ phân ngưỡng từng vùng trong ảnh theo giá trị ngưỡng tìm được.</p>
+  </li>
+  <li>
+    <p>Ở hàm <code class="language-plaintext highlighter-rouge">cv2.adaptiveThreshold</code> bao gồm 6 đối số lần lượt là: ảnh gốc, giá trị max, <code class="language-plaintext highlighter-rouge">cv2.ADAPTIVE_THRESH_GAUSSIAN_C</code> hoặc <code class="language-plaintext highlighter-rouge">cv2.ADAPTIVE_THRESH_MEAN_C</code>, cách xác định giá trị đầu ra <code class="language-plaintext highlighter-rouge">cv2.THRESH_BINARY</code>, blockSize = 21, C = 4</p>
+  </li>
+  <li>
+    <p>Để xét ngưỡng của mỗi vùng trong ảnh, ta cần xác định kích thước vùng chữ nhật đó và ở đây chính là blockSize (số lẻ). Tiếp theo ta cần xác định thuật toán sử dụng để tính ra giá trị trung bình:</p>
+    <ul>
+      <li>với <code class="language-plaintext highlighter-rouge">cv2.ADAPTIVE_THRESH_MEAN_C</code> ta sẽ tính ra giá trị trung bình tại vùng đó rồi trừ C làm ngưỡng.</li>
+      <li>với <code class="language-plaintext highlighter-rouge">cv2.ADAPTIVE_THRESH_GAUSSIAN_C</code> ta sẽ cần 1 Gaussian window có kích thước blockSize x blockSize với công thức mình đã trình bày <a href="https://hnhoangdz.github.io/2021/11/29/XLA_1.html#82-canny">tại đây</a> sau đó trừ C làm ngưỡng.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Bước đầu ta sẽ sử dụng bộ lọc GaussianBlur để giảm nhiễu ảnh.</p>
+  </li>
+  <li>
+    <p>Như đã thấy, với thuật toán Simple threshold và Otsu (Global threshold) trong trường hợp này làm việc rất tệ. Nguyên nhân là do lúc này ảnh gốc đang đang bị che khuất khá nhiều nên lúc này giữa Foreground và Background không hoàn toàn rõ ràng để máy tính có thể hiểu.</p>
+  </li>
+  <li>
+    <p>Ngược lại hoàn toàn với 2 thuật trên, thuật toán Adaptive threshold (local threshold) đưa ra một kết quả vô cùng tuyệt vời, các con số, dòng kẻ được highlight gần như rất chính xác. Vậy điều gì làm thuật toán này mạnh mẽ tới vậy? Cùng xem các tham số bên trong thuật toán này làm như thế nào.</p>
+  </li>
+  <li>
+    <p>Các thuật toán threshold khá dễ dàng để hiểu và thực hiện tuy nhiên trong 1 số task yêu cầu các chi tiết về object có trong ảnh thì thuật toán này sẽ không phù hợp vì nó sẽ chỉ ouput được một binary image.</p>
+  </li>
+</ul>
+
+<p><a name="12-kmeans"></a></p>
+
+<h3 id="12-k-means-based">1.2. K-means based</h3>
+
+<p>K-means là một thuật toán học không giám sát (unsupervised learning), mục tiêu chính của thuật toán này nhằm tìm nhãn cho toàn bộ dữ liệu dựa trên sự tương đồng lẫn nhau của chúng. Chi tiết về thuật toán và cách hoạt động của nó bạn có thể xem <a href="https://hnhoangdz.github.io/2021/11/21/Kmeans.html">tại đây</a>. Tuy nhiên, việc tìm nhãn cho toàn bộ dữ liệu với mỗi cụm sẽ có một nhãn khác nhau hoàn toàn có thể ứng dụng để phân vùng ảnh (image segmentation). Những pixel có giá trị tương đồng nhau càng cao thì càng dễ có màu sắc giống nhau, dựa trên ý tưởng này ta có thể xem với K-means thì việc segment sẽ xảy ra như thế nào với đoạn code sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="c1"># Load image
+</span><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'nature.jpg'</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+<span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="n">shape</span>
+
+<span class="c1"># Transform channels -&gt; vectors
+</span><span class="n">image_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">image</span><span class="p">,(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># Init K-means 
+</span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Training
+</span><span class="n">kmeans</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">image_vec</span><span class="p">)</span>
+
+<span class="c1"># Get labels for each pixel
+</span><span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">image_vec</span><span class="p">)</span>
+
+<span class="c1"># Get centroids
+</span><span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">cluster_centers_</span>
+
+<span class="c1"># Init zeros image vec
+</span><span class="n">image_result</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image_vec</span><span class="p">)</span>
+
+<span class="c1"># Update each pixel equal to corresponding centroid
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">image_result</span><span class="p">)):</span>
+    <span class="n">image_result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">centroids</span><span class="p">[</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+<span class="n">image_result</span> <span class="o">=</span> <span class="n">image_result</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">151</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Origin'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">152</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_result</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'K = 3'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh9.png" class="large" /></p>
+
+<p><strong>Giải thích:</strong></p>
+
+<ul>
+  <li>
+    <p>Bức ảnh đầu vào có shape lần lượt là width, height, channels và với ảnh màu sẽ có channels = 3. Sau đó ta sẽ chuyển màu BGR sang RGB vì OpenCV sẽ đọc ảnh theo vị trí 3 kênh màu là B-&gt;G-&gt;R.</p>
+  </li>
+  <li>
+    <p>Vì K-means trong sklearn sẽ cần nhận vào một tensor có kích thước &lt;= 2D, nên ta cần reshape bức ảnh ban đầu mỗi channel thành 1 vector nên biến <code class="language-plaintext highlighter-rouge">image_vec</code> lúc này sẽ có shape = (width*height,3).</p>
+  </li>
+  <li>
+    <p>Tiếp theo ta sẽ sử dụng các method, attributes có sẵn trong sklearn để huấn luyện và lấy ra các nhãn, tâm cụm (centroids). Với số lượng cụm được xác định ở trên bằng 3 nên ta sẽ chỉ có 3 nhãn (0, 1, 2) và 3 tâm cụm (centroids).</p>
+  </li>
+  <li>
+    <p>Tiếp theo ta chỉ cần gán toàn bộ tâm cụm với giá trị nhãn tương ứng vào một biến <code class="language-plaintext highlighter-rouge">image_result</code> có shape giống với <code class="language-plaintext highlighter-rouge">image_vec</code> nhưng gồm toàn giá trị 0.</p>
+  </li>
+  <li>
+    <p>Cuối cùng, ta sẽ show kết quả với hình bên trên.</p>
+  </li>
+</ul>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Với K = 3, ta thấy bức ảnh kết quả so với bức ảnh ban đầu đã phân được các vùng có giá trị giống nhau thành 1 màu (giá trị những pixel có độ tương đồng cao - L2 norm nhỏ thì sẽ về cùng 1 màu).</p>
+  </li>
+  <li>
+    <p>Với K = 3 ta thấy ảnh đã chia được các vùng như: tán cây màu xanh lục, mặt nước màu xanh dương, bầu trời màu xám trắng. Tuy nhiên 1 số tán cây và viên đá đang có màu xám trắng giống với bầu trời vì giá trị L2 của nó gần các giá trị trong bầu trời hơn là tán cây. Để ảnh có thể mô tả chi tiết, ta chỉ cần tăng số lượng cụm K lên và kết quả như sau:</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/bai10/anh10.png" class="large" /></p>
+
+<p>Toàn bộ sourcecode sẽ được lưu <a href="https://github.com/hnhoangdz/hnhoangdz.github.io/tree/main/assets/images/bai10">tại đây</a>.</p>
+
+<p><a name="2-contour"></a></p>
+
+<h2 id="2-contour-detection">2. Contour detection</h2>
+
+<p><a name="21-idea"></a></p>
+
+<h3 id="21-ý-tưởng">2.1. Ý tưởng</h3>
+
+<p>Contour detection là một phương pháp phát hiện đường viên quanh những đối tượng có trong ảnh, những đường viền này có thể bao gồm nhiều hình dạng khác nhau như: hình chữ nhật, hình tròn, đa giác… tức là tập hợp các điểm liên tục để tạo nê đường nối giữa các điểm tạo nên hình dáng. Việc tìm được các contours chính xác giúp ích rất nhiều trong một số bài toán trong thị giác máy tính như: Object detection, Object tracking…</p>
+
+<p>Có một số lưu ý trước khi đi vào chi tiết với bài toán Contour ta cần 1 số bước tiền xử lí sau:</p>
+
+<ul>
+  <li>
+    <p>Ảnh đầu vào của thuật toán tìm Contours cần là một binary image. Vì vậy ta sẽ có thể sử dụng thuật toán Canny (bạn có thể xem lại <a href="https://hnhoangdz.github.io/2021/11/29/XLA_1.html#82-canny">tại đây</a>) hoặc thuật toán Thresholding mình đã trình bày ở trên.</p>
+  </li>
+  <li>
+    <p>Khi thực hiện với OpenCV, ảnh gốc sẽ bị thay đổi sau khi đi qua thuật toán Contours vì vậy ta cần copy ảnh gốc ra một biến khác trước khi đi qua thuật toán nếu vẫn muốn sử dụng giá trị biến ban đầu.</p>
+  </li>
+</ul>
+
+<p><strong>Thao tác với Python:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'coin2.jpg'</span><span class="p">)</span>
+<span class="n">rgb_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+<span class="n">gray_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<span class="n">img2</span> <span class="o">=</span> <span class="n">rgb_img</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span> 
+
+<span class="c1"># Blur image by GaussianBlur
+</span><span class="n">blurred</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Edge detection by Canny -&gt; binary image
+</span><span class="n">edge</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">180</span><span class="p">)</span>
+
+<span class="c1"># Finds contours
+</span><span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+<span class="n">draw_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img2</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">151</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Original'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_img</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">152</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Edge'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">edge</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">153</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Contours'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">draw_img</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh11.png" class="large" /></p>
+
+<p><strong>Giải thích:</strong></p>
+
+<ul>
+  <li>
+    <p>Bước đầu ta sẽ Blur Image bằng thuật toán GaussianBlur và kết hợp với thuật toán Canny để phát hiện cạnh cho ảnh grayscale. Lúc này ảnh đầu ra sẽ là một binary image (biến <code class="language-plaintext highlighter-rouge">edge</code> dòng 10).</p>
+  </li>
+  <li>
+    <p>Tiếp theo ta sẽ sử dụng hàm <code class="language-plaintext highlighter-rouge">cv2.findContours</code> để tìm ra những contours có trong ảnh. Hàm này bao gồm 3 đối số lần lượt là: ảnh gốc, <code class="language-plaintext highlighter-rouge">hierarchy type</code> và <code class="language-plaintext highlighter-rouge">contour approximation method</code>, trong đó:</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">hierarchy type</code> hiểu đơn giản là phương pháp trích xuất contours. Với <code class="language-plaintext highlighter-rouge">cv2.RETR_EXTERNAL</code> thì phương pháp trích xuất này sẽ chỉ tập trung vào khai thác những contours bên ngoài (viền ngoài) của object. Ngược lại, <code class="language-plaintext highlighter-rouge">cv2.RETR_TREE</code> sẽ đi sâu và tìm những contours một cách chi tiết hơn (ví dụ đôi khi bên trong 1 đối tượng lớn sẽ là 1 đối tượng nhỏ hơn). Ngoài ra có 1 số phương pháp tương tự như: <code class="language-plaintext highlighter-rouge">cv2.RETR_LIST</code>, <code class="language-plaintext highlighter-rouge">cv2.RETR_COMP</code>.</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">contour approximation method</code> là phương pháp xấp xỉ tìm contours và <code class="language-plaintext highlighter-rouge">cv2.CHAIN_APPROX_SIMPLE</code> sẽ đưa ra kết quả tốt cũng như tiết kiệm bộ nhớ nhất.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Sau khi sử dụng hàm <code class="language-plaintext highlighter-rouge">cv2.findContours</code> sẽ trả về 2 tham số:</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">contours</code> là một tuple chứa các numpy array, mỗi numpy array sẽ chứa các tọa độ (x,y) của mỗi điểm thuộc object.</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">hierarchy</code> là danh sách các vector, chứa mối quan hệ giữa các contours.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Cuối cùng là hàm <code class="language-plaintext highlighter-rouge">cv2.drawContours</code> sẽ sử dụng để vẽ những contours tìm được lên ảnh, bao gồm 5 tham số lần lượt là: ảnh, contours tìm được, index của contours (-1 sẽ là vẽ toàn bộ contours), màu sắc, độ dày của nét vẽ.</p>
+  </li>
+</ul>
+
+<p>Để hiểu kĩ hơn xem bên trong biến <code class="language-plaintext highlighter-rouge">contours</code> cách lưu trữ và giá trị như thế nào cùng xem bên dưới:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">contours</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">contours</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">tuple</span><span class="s">'&gt; 9
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Qua ví dụ dưới đây bạn sẽ hiểu các giá trị bên trong <code class="language-plaintext highlighter-rouge">contours</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'coin2.jpg'</span><span class="p">)</span>
+<span class="n">rgb_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+<span class="n">gray_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<span class="n">img2</span> <span class="o">=</span> <span class="n">rgb_img</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span> 
+<span class="n">img3</span> <span class="o">=</span> <span class="n">rgb_img</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span> 
+
+<span class="c1"># Blur image by GaussianBlur
+</span><span class="n">blurred</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Edge detection by Canny -&gt; binary image
+</span><span class="n">edge</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="c1"># Finds contours
+</span><span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+
+<span class="c1"># Vẽ contours thứ 5
+</span><span class="n">draw_img1</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img2</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Vẽ điểm thứ 10 trong contours thứ 4 
+</span><span class="n">draw_img2</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img3</span><span class="p">,</span> <span class="n">contours</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+    
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">151</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Original'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_img</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">152</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'5st Contours'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">draw_img1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">153</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'10st of Contour 4'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">draw_img2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh12.png" class="large" /></p>
+
+<p><a name="21-shape"></a></p>
+
+<h3 id="22-shape">2.2. Shape</h3>
+
+<p><a name="221-box"></a></p>
+
+<h4 id="221-bounding-box-and-circle-box">2.2.1. Bounding Box and Circle box</h4>
+
+<p>Trong những ứng dụng thực tế, đặc biệt là trong các bài toán về Object Detection. Thường các Object sẽ được visualize bằng cách vẽ các bounding box (hình chữ nhật) bao quanh các object có trong ảnh. Hoặc trong một số bài toán sẽ cần tìm ra những đường tròn bao quanh object (lưu ý ở phần trên hình ảnh Contours thực chất đường viền màu xanh không phải đường tròn mà là đường nối toàn bộ điểm tìm được với nhau và có hình dáng khá giống hình tròn).</p>
+
+<p>Đầu tiên hãy xem đoạn code sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'coin2.jpg'</span><span class="p">)</span>
+<span class="n">rgb_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+<span class="n">gray_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<span class="n">img2</span> <span class="o">=</span> <span class="n">rgb_img</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1"># Blur image by GaussianBlur
+</span><span class="n">blurred</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Edge detection by Canny -&gt; binary image
+</span><span class="n">edge</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">150</span><span class="p">)</span>
+<span class="c1"># Finds contours
+</span><span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span><span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">contours</span><span class="p">:</span>
+    <span class="c1"># find bounding box coordinates
+</span>    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">boundingRect</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># calculate center and radius of minimum enclosing circle
+</span>    <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">radius</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">minEnclosingCircle</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="c1"># cast to integers
+</span>    <span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+    <span class="n">radius</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+    <span class="c1"># draw the circle
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">draw_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img2</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">151</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Original'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_img</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">152</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Contours'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">draw_img</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">153</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Other shape'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">),</span><span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai10/anh13.png" class="large" /></p>
+
+<p><strong>Giải thích:</strong></p>
+
+<p>Ở trên ta cần lưu ý hàm <code class="language-plaintext highlighter-rouge">cv2.boundingRect</code> và <code class="language-plaintext highlighter-rouge">cv2.minEnclosingCircle</code>:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">cv2.boundingRect</code> là hàm dùng để tính toán ra tọa độ (x,y) và width, height của bounding box của object dựa trên những points đã tìm tìm trong <code class="language-plaintext highlighter-rouge">contours</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">cv2.minEnclosingCircle</code> là hàm dùng để tính toán ra tọa độ tâm (x,y) và bán kính (radius) của đường tròn dựa trên những points đã tìm tìm trong <code class="language-plaintext highlighter-rouge">contours</code>.</p>
+  </li>
+</ul>
+
+<p><a name="3-evaluation"></a></p>
+
+<h2 id="3-kết-luận">3. Kết luận</h2>
+
+<ul>
+  <li>
+    <p>Qua <a href="https://hnhoangdz.github.io/2021/11/29/XLA_1.html">phần 1 - 9. Xử lí ảnh (1/2)</a> và <a href="https://hnhoangdz.github.io/2021/12/15/XLA_2.html">phần 2 - 10. Xử lí ảnh (2/2)</a> mình đã giới thiệu những kiến thức cơ bản nhất về xử lí ảnh. Còn rất nhiều kiến thức nâng cao và hay ho hơn bạn hoàn toàn có thể tìm hiểu nếu đã hiểu được 2 bài mình trình bày.</p>
+  </li>
+  <li>
+    <p>Nhìn chung, các bài toán xử lí ảnh thuần giờ không còn là xu thế mà được thay thế bởi Deep Learning vì tính mạnh mẽ và độ lớn của dữ liệu ngày càng tăng.</p>
+  </li>
+</ul>
+
+<p><a name="4-references"></a></p>
+
+<h2 id="4-tham-khảo">4. Tham khảo</h2>
+
+<p>[1] Howse, J. and Minichino, J., n.d. Learning OpenCV 4 computer vision with Python 3.</p>
+
+<p>[2] <a href="http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html">Otsu Thresholding by The Lab Book Pages</a></p>
+
+<p>[3] <a href="https://pyimagesearch.com/2021/05/12/adaptive-thresholding-with-opencv-cv2-adaptivethreshold/">Adaptive Thresholding with OpenCV by Adrian Rosebrock</a></p>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

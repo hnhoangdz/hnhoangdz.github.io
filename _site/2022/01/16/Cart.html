@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">13. Decision Tree - CART</p>
+    </h2>
+    <strong><i>16 Jan 2022</i></strong>
+</div>
+<br />
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-example">2. Ví dụ</a></li>
+  <li><a href="#3-cart">3. CART</a>
+    <ul>
+      <li><a href="#31-inequality">3.1. Bất đẳng thức Cauchy - Schwarz (Bunyakovsky)</a></li>
+      <li><a href="#32-gini">3.2. Gini index</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-meaning">4. Ý nghĩa các node trong sklearn</a></li>
+  <li><a href="#5-overfitting">5. Xử lí Overfiting</a>
+    <ul>
+      <li><a href="#51-stop">5.1. Điều kiện dừng</a></li>
+      <li><a href="#52-pruning">5.2. Pruning</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-regression">6. Regression</a>
+    <ul>
+      <li><a href="#61-idea">6.1. Ý tưởng</a></li>
+      <li><a href="#62-example">6.2. Ví dụ minh họa</a></li>
+    </ul>
+  </li>
+  <li><a href="#7-evaluation">7. Đánh giá và kết luận</a></li>
+  <li><a href="#8-references">8. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Ở <a href="https://hnhoangdz.github.io/2022/01/13/DecisionTree.html">bài 12. Decision Tree - ID3 (1/2)</a>, mình đã trình bày về thuật toán ID3 với hàm <em>information gain</em> dùng làm điều kiện để đưa ra quyết định chọn thuộc tính khi xây dựng một cây quyết định. Thuật toán này sẽ chỉ làm việc với dữ liệu dạng <em>categorical</em> (có thể chuyển từ <em>numeric</em> sang <em>categorical</em>) tuy nhiên như đã bàn luận thì cách này có thể làm mất đi tính quan trọng của dữ liệu. Vì vậy, ở bài này mình sẽ trình bày về thuật toán có thể làm việc với cả dữ liệu <em>categorical</em> và liên tục, đó là: <em>CART.</em></p>
+
+<p>CART sẽ được xây dựng một Decision Tree bằng cách ở mỗi <strong>node</strong> chỉ tạo ra 2 <strong>child node</strong> có nghĩa rằng ở thuật toán này, cây được xây dựng sẽ là một cây nhị phân (binary tree). Vì vậy các câu hỏi lúc này sẽ trở thành dạng <em>True, False</em>, hơn nữa với CART sẽ sử dụng một độ đo khác để tính toán độ tinh khiết của phân phối xác xuất tại <strong>non-leaf node</strong> dễ dàng hơn đó là Gini. Về phần ý tưởng thì thuật toán <em>ID3</em> và <em>CART</em> đều sử dụng Greedy để tìm ra những thuộc tính phù hợp nhất ở mỗi lần lặp để đặt vào <strong>non-leaf node</strong> với một chỉ số đánh giá mức độ tinh khiết lần lượt là: <em>information gain</em> và <em>gini</em>. Chi tiết mình sẽ trình bày bên dưới.</p>
+
+<p><a name="2-example"></a></p>
+
+<h2 id="2-ví-dụ">2. Ví dụ</h2>
+
+<p>Để dễ dàng cho việc giải thích ở một số vấn đề chuyên sâu thì mình sẽ sử dụng thư viện <em>sklearn</em> để biểu diểu về mặt kết quả trước, sau đó mình sẽ giải thích sau. Cùng với bộ dữ liệu về thời tiết đã được sử dụng ở <a href="https://hnhoangdz.github.io/2022/01/13/DecisionTree.html">bài 12. Decision Tree - ID3 (1/2)</a>, tuy nhiên mình cần tiền xử lí một chút vì Decision Tree trong <em>sklearn</em> yêu cầu đầu vào phải là dạng số nên sẽ phải chuyển các thuộc tính dạng categorical này one-hot vector. Ta cần xử lí như sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">"id"</span><span class="p">])</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'outlook'</span><span class="p">,</span> <span class="s">'temperature'</span><span class="p">,</span><span class="s">'humidity'</span><span class="p">,</span><span class="s">'wind'</span><span class="p">])</span>
+<span class="n">data</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/bai13/anh2.png" class="gigantic" /></p>
+
+<hr />
+
+<p>Tiếp theo ta cần xác định dữ liệu là thuộc tính và biến mục tiêu:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">features</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">columns</span>
+<span class="n">target</span> <span class="o">=</span> <span class="s">'play'</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">features</span><span class="p">].</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'play'</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Cuối cùng mình sẽ import các thư viện cần thiết của sklearn để tạo nên cây quyết định dựa trên thuật toán <em>CART</em>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="p">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">tree_clf</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+                                <span class="n">feature_names</span><span class="o">=</span><span class="n">X</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span>  
+                                <span class="n">class_names</span><span class="o">=</span><span class="p">[</span><span class="s">'No'</span><span class="p">,</span><span class="s">'Yes'</span><span class="p">],</span>
+                                <span class="n">rounded</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                <span class="n">filled</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="p">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s">"png"</span><span class="p">)</span>
+<span class="n">graph</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/bai13/anh3.png" class="normalpic" /></p>
+
+<hr />
+
+<p>Như đã đề cập bên trên thì thuật toán <em>CART</em> sẽ tạo ra một cây nhị phân. Nếu bạn để ý thì các <strong>leaf-node</strong> lúc này đều có một giá trị <code class="language-plaintext highlighter-rouge">gini = 0.0</code> đây chính là cách mà thuật toán <em>CART</em> lựa chọn thuộc tính (chi tiết mình sẽ trình bày bên dưới). Với cây ta đã tạo được, đảm bảo rằng kết quả dự đoán trên training data sẽ chính xác 100% giống với ID3. Bây giờ nếu cần dự đoán một dữ liệu mới ta chỉ cần đi hỏi liên tiếp các câu hỏi cho tới khi <strong>non-leaf node</strong> xuất hiện, cụ thể mình sẽ kiểm tra như sau:</p>
+
+<ul>
+  <li>
+    <p>Cố định 3 thuộc tính <code class="language-plaintext highlighter-rouge">outlook != overcast, humidity = normal, wid = weak</code></p>
+  </li>
+  <li>
+    <p>Các thuộc tính khác sẽ được chọn ngẫu nhiên</p>
+  </li>
+  <li>
+    <p>Đưa ra dự đoán 10 lần với cách lựa chọn trên</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="n">rd</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="n">outlook</span> <span class="o">=</span> <span class="n">rd</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="s">'sunny'</span><span class="p">,</span><span class="s">'rainy'</span><span class="p">])</span>
+  <span class="n">temperature</span> <span class="o">=</span> <span class="n">rd</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="s">'hot'</span><span class="p">,</span><span class="s">'mild'</span><span class="p">,</span><span class="s">'cold'</span><span class="p">])</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'outlook'</span><span class="p">:</span><span class="n">outlook</span><span class="p">,</span> <span class="s">'temperature'</span><span class="p">:</span><span class="n">temperature</span><span class="p">,</span> <span class="s">'humidity'</span><span class="p">:[</span><span class="s">'normal'</span><span class="p">],</span> <span class="s">'wind'</span><span class="p">:[</span><span class="s">'weak'</span><span class="p">]})</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'outlook'</span><span class="p">,</span> <span class="s">'temperature'</span><span class="p">,</span><span class="s">'humidity'</span><span class="p">,</span><span class="s">'wind'</span><span class="p">])</span>
+  
+  <span class="n">x_new</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+  <span class="n">x_new</span><span class="p">[</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_new</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="n">label</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+  <span class="k">print</span><span class="p">(</span><span class="s">'probability no {}, yes {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'predicted label {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả hoàn toàn giống nhau:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+<span class="n">probability</span> <span class="n">no</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">yes</span> <span class="mf">1.0</span>
+<span class="n">predicted</span> <span class="n">label</span> <span class="n">yes</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Điều này là hoàn toàn chính xác, nếu bạn nhìn lại cây mà ta đã tạo được thì dự đoán này sẽ chỉ đi theo 1 nhánh màu xanh như sau:</p>
+
+<hr />
+
+<p><img src="/assets/images/bai13/anh4.png" class="normal" /></p>
+
+<hr />
+
+<p>Tới đây là cách cơ bản để tạo một Decision Tree dựa trên thuật toán <em>CART</em> trong sklearn. Nếu bạn chưa hiểu cơ bản cách mà Decision Tree hoạt động và tạo nên như thế nào thì bạn có thể đọc lại bài <a href="https://hnhoangdz.github.io/2022/01/13/DecisionTree.html">bài 12. Decision Tree - ID3 (1/2)</a> mình đã trình bày chi tiết. Vậy với Decision Tree được tạo nên bởi thuật toán <em>CART</em> sử dụng độ đo tinh khiết là <em>Gini</em> được làm như thế nào? Mình sẽ trình bày cụ thể bên dưới.</p>
+
+<p><a name="3-cart"></a></p>
+
+<h2 id="3-cart">3. CART</h2>
+
+<p>Để hiểu rõ mặt bản chất của phương pháp sử dụng <em>Gini</em> làm thước đo độ tinh khiết, ở phần này mình sẽ trình bày lại một chút về mặt toán học (bất đẳng thức) một vấn đề rất hay của bậc THCS.</p>
+
+<p><a name="31-inequality"></a></p>
+
+<h3 id="31-bất-đẳng-thức-cauchy---schwarz-bunyakovsky">3.1. Bất đẳng thức Cauchy - Schwarz (Bunyakovsky)</h3>
+
+<p>Cho các số thực $(a_1, a_2, a_3, …, a_n)$ và $(b_1, b_2, b_3, …, b_n)$ với $n \geq 2$, ta có bất đẳng thức sau:</p>
+
+\[(a_1^2 + a_2^2 + a_3 + ... + a_n^2)(b_1^2 + b_2^2 + b_3^2 + ... + b_n^2) \geq (a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n)^2\]
+
+<p><strong>Chứng minh:</strong></p>
+
+<p>Đặt:</p>
+
+\[A = a_1^2 + a_2^2 + a_3 + ... + a_n^2\]
+
+\[B = b_1^2 + b_2^2 + b_3 + ... + b_n^2\]
+
+\[C = a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n\]
+
+<p>Xét giá trị $x$ là một số thực bất kì ta luôn có:</p>
+
+\[(a_1x - b_1)^2 \geq 0\]
+
+\[&lt;=&gt; a_1^2x^2 - 2a_1xb_1 + b_1^2 \geq 0\]
+
+<p>Tương tự vẫn xét giá trị $x$ này với các giá trị $(a_1, a_2, … a_n)$ và $(b_1, b_2,… b_n)$, rồi cộng vế ta được:</p>
+
+\[(a_1^2 + a_2^2 + a_3 + ... + a_n^2)x^2 - 2x(a_1b_1 + a_2b_2 + ... + a_nb_n) + (b_1^2 + b_2^2 + b_3 + ... + b_n^2)  \geq 0 \quad \quad (1)\]
+
+<p>Xét giá trị $x = \frac{C}{A}$ và thế $x, A, B, C$ vào bất đẳng (1) suy ra:</p>
+
+\[A\frac{C^2}{A^2} - 2\frac{C^2}{A} + B \geq 0\]
+
+\[&lt;=&gt; B - \frac{C^2}{A} \geq 0\]
+
+\[&lt;=&gt; AB \geq C^2 (\text{dpcm})\]
+
+<p>Xét với $b_1 = b_2 = b_3 = … = b_n = 1$ thì bất đẳng thức lúc này trở thành:</p>
+
+\[(a_1^2 + a_2^2 + a_3 + ... + a_n^2)n \geq (a_1 + a_2 + a_3 + ... + a_n)^2  \quad \quad (2)\]
+
+<p>Ngoài ra có một bất đẳng thức:</p>
+
+\[a_1^2 + a_2^2 + a_3 + ... + a_n^2 \leq (a_1 + a_2 + a_3 + ... + a_n)^2 \quad \quad (3)\]
+
+<p><a name="32-gini"></a></p>
+
+<h3 id="32-gini-index">3.2. Gini index</h3>
+
+<p><em>Gini index</em> tương tự như <em>information gain</em> mà mình đã trình bày ở <a href="https://hnhoangdz.github.io/2022/01/13/DecisionTree.html">bài 12. Decision Tree - ID3 (1/2)</a>, dùng để đánh giá xem việc phân chia ở <strong>node</strong> điều kiện có tốt hay không. Tuy nhiên, đầu tiên ta sẽ cần tính toán chỉ số  <em>Gini</em> ở mỗi <strong>node</strong>.</p>
+
+<p><strong>Bước 1</strong>: Xét bài toán phân loại có $C$ class, node đang tới là một <strong>non-leaf node</strong> $\mathcal{p}$ với các điểm dữ liệu tạo thành là $\mathcal{S}$ có số lượng phần tử là $N$. $N_i$ là số lượng phần tử của class $i$ với $i = 1, 2, …, C$. Xác suất để mỗi điểm dữ liệu rơi vào một class $i$ được xấp xỉ bằng $\frac{N_i}{N} = p_i =&gt; \sum_{i=1}^C p_i = 1$. Chỉ số này được tính bằng cách lấy 1 trừ đi tổng bình phương phân phối xác suất ở mỗi lớp, như sau:</p>
+
+\[\mathbf{\text{Gini}(\mathcal{S})} = 1-\sum_{i=1}^{C} p_i^2  \quad\quad (4)\]
+
+<p>Dựa vào (3) suy ra: $\sum_{i=1}^{C}p_i^2 \leq (\sum_{i=1}^{C} p_i)^2 =&gt;\sum_{i=1}^{C}p_i^2 \leq 1 \quad  (4) =&gt; \mathbf{\text{Gini}(\mathbf{S})} \geq 0$ và dấu ‘=’ xảy ra khi và chỉ khi tồn tại một giá trị $p_i = 1$ (nhãn thuộc về một lớp duy nhất).</p>
+
+<p>Dựa vào (2) suy ra: $\sum_{i=1}^{C}p_i^2 \geq \frac{(\sum_{i=1}^{C} p_i)^2}{C} =&gt;\sum_{i=1}^{C}p_i^2 \geq \frac{1}{C} =&gt; \mathbf{\text{Gini}(\mathbf{S})} \leq \frac{C-1}{C}$ và dấu ‘=’ xảy ra khi và chỉ khi $p_i = \frac{1}{C}$ với mọi $i = 1, 2, …, C$ (phân phối nhãn của các lớp đang chia đều).</p>
+
+<p><strong>Bước 2</strong>: Sau khi đã tính toán được giá trị <em>Gini</em> cho <strong>non-leaf node</strong> $\mathcal{p}$, ta cần chọn ra một thuộc tính $x$. Và khi $x$ được chọn thì nhánh tiếp theo sẽ có số lượng <strong>child node</strong> bằng với số giá trị mà thuộc tính $x$ có. Dựa trên $x$, các điểm dữ liệu trong $\mathcal{S}$ được phân ra thành $K$ child node $\mathcal{S_1},\mathcal{S_2},…,\mathcal{S_K}$ với số điểm trong mỗi <strong>child node</strong> lần lượt là $m_1,m_2,…,m_K$. Suy ra tổng trọng số <em>Gini</em> của mỗi <strong>child node</strong> là:</p>
+
+\[\mathbf{\text{Gini}}(x, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{\text{Gini}}(\mathcal{S}_k) \quad\quad (5)\]
+
+<p>Thông số đánh giá <em>Gini index</em> dựa trên thuộc tính $x$ được tính toán như sau:</p>
+
+\[\mathbf{\text{G}}(x, \mathcal{S}) = \mathbf{\text{Gini}(\mathcal{S})} - \mathbf{\text{Gini}}(x, \mathcal{S})\]
+
+<p>Cuối cùng, thuộc tính được lựa chọn $x^*$ là:</p>
+
+\[x^* = \arg\max_{x} \mathbf{G}(x, \mathcal{S}) = \arg\min_{x} \mathbf{\text{Gini}}(x, \mathcal{S})\]
+
+<p>tức $x^*$ làm cho <em>Gini index</em> <strong>lớn nhất</strong> hoặc tổng trọng số <em>Gini</em> <strong>nhỏ nhất</strong></p>
+
+<p><strong>Bước 3</strong>: Bước 1 và Bước 2 được lặp lại cho tới khi cây tạo ra có thể dự đoán chính xác 100% training data hoặc toàn bộ thuộc tính đã được xét tới. Tuy nhiên cách dừng thuật toán này có thể gây ra Overfiting, ở phần sau mình sẽ bàn luận chi tiết hơn. Chú ý: mỗi thuộc tính chỉ được xuất hiện một lần trên một nhánh.</p>
+
+<p><em>Nếu bạn đã đọc <a href="https://hnhoangdz.github.io/2022/01/13/DecisionTree.html">bài 12. Decision Tree - ID3 (1/2)</a> thì cách 2 độ đo information gain và gini index làm giống nhau.</em></p>
+
+<p>Tuy nhiên, như đã đề cập ở phần đầu giới thiệu thì thuật toán <em>CART</em> của thư viện sklearn sẽ chỉ sử dụng một binary tree để tạo nên Decision Tree. Vậy làm sao để với một thuộc tính bao gồm nhiều hơn 2 giá trị có thể chia thành 2 <strong>child node</strong>? Ta chỉ cần xét một ngưỡng $t$ để phân tách thành giá trị thuộc tính làm 2 vùng nhỏ hơn $t$ và lớn hơn $t$. Vì vậy ở bước công thức (5), cây lúc này sẽ là cây nhị phân nên có thể viết lại như sau với thuật toán <em>CART</em> trong sklearn:</p>
+
+<p>Một ngưỡng $t$ sẽ phân chia tập $\mathcal{S}$ thành 2 nửa: $\mathcal{S_0}$ có số lượng phần tử là $N_0$, $\mathcal{S_1}$ có số lượng phần tử là $N_1$</p>
+
+\[\mathbf{\text{Gini}}(x, t; \mathcal{S}) = \frac{N_0}{N}\mathbf{\text{Gini}}(x,\mathcal{S}_0) + \frac{N_1}{N} \mathbf{\text{Gini}}(x,\mathcal{S}_1)\]
+
+<p>tới đây ta chỉ cần tuning giá trị $t$ với thuộc tính $x$ để tìm ra giá trị hàm <em>Gini</em> <strong>nhỏ nhất</strong> và đó chính là thuộc tính và ngưỡng mà sẽ xét làm <strong>non-leaf node</strong>. Và đây chính là hàm <em>cost function</em> của thuật toán <em>CART</em> trong bài toán phân loại.</p>
+
+<p><em>Đọc tới đây chắc hẳn bạn đã hiểu cách một cây nhị phân được tạo ra như thế nào để fit chính xác 100% ở tập dữ liệu trên phần 2.</em></p>
+
+<p><a name="4-meaning"></a></p>
+
+<h2 id="4-ý-nghĩa-các-node-trong-sklearn">4. Ý nghĩa các node trong sklearn</h2>
+
+<p><img src="/assets/images/bai13/anh5.png" class="median" /></p>
+
+<p>Ở <strong>node</strong> trên cùng chính là <strong>root node</strong>, các giá trị được biểu diễn như sau:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">outlook_overcast &lt;= 0.5</code>: điều kiện phân tách tại node đang xét</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">gini = 0.459</code>: chỉ số gini của node tại node đang xét - công thức (4)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">samples = 14</code>: tổng số samples tại node đang xét</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">value = [5,9]</code>: số lượng phân phối theo class (#class = 0: 5, #class = 1: 9)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">class = 1</code>: voting class có phân phối lớn nhất làm giá trị dự đoán (nếu cần)</p>
+  </li>
+</ul>
+
+<p>Nếu từ <strong>node cha</strong> rẽ sang nhánh bên phải trái là thỏa mãn điều kiện phân tách và ngược lại. Sau khi phân tách, số samples ở <strong>node cha</strong> bằng tổng samples 2 <strong>node con</strong> tạo ra. Tuy nhiên tại sao lại cần thêm 1 bước voting class khi ta dự đoán đã chính xác 100% trên tập training? Câu trả lời đơn giản rằng, nếu để một cây quyết định tạo ra tới khi hoàn toàn tinh khiết ở <strong>leaf node</strong> thì rất rất có thể xảy ra hiện tượng <em>Overfitting</em>. Vì vậy, cách đơn giản nhất mà ta có thể nghĩ ngay tới dừng độ sâu của cây ở một mức nào đó và sử dụng voting để đưa ra dự đoán, nhưng như vậy là chưa đủ vì vậy một số cách để giảm hiện tượng <em>Overfitting</em> sẽ được trình bày bên dưới.</p>
+
+<p><a name="5-overfitting"></a></p>
+
+<h2 id="5-xử-lí-overfiting">5. Xử lí Overfiting</h2>
+
+<p>Nói chung trong một Decision Tree nếu cứ để cây có thể tạo ra cho tới khi toàn bộ <strong>child node</strong> trở thành <strong>leaf node</strong> sẽ xảy ra hiện tượng <em>Overfiting</em>. Và càng sâu thì số lượng mỗi điểm dữ liệu sẽ càng nhỏ ở mỗi <strong>non-leaf node</strong>. Dựa vào đây có 2 cách để giảm thiểu Overfitting đó là đưa ra một điều kiện dừng và cắt tỉa (Pruning).</p>
+
+<p><a name="51-stop"></a></p>
+
+<h3 id="51-điều-kiện-dừng">5.1. Điều kiện dừng</h3>
+
+<p>Cây sẽ không tiếp tục tạo mà sẽ dừng khi gặp một số điều kiện sau:</p>
+
+<ul>
+  <li>
+    <p>Giới hạn độ sâu của cây (đã đề cập bên trên).</p>
+  </li>
+  <li>
+    <p>Số lượng samples của một <strong>node</strong> đạt một ngưỡng tối thiểu. Trong trường hợp này, ta chấp nhận có một số điểm bị phân lớp sai để tránh overfitting. Class cho <strong>leaf node</strong> này có thể được xác định dựa trên voting. Với phân loại nhị phân thì 30 samples là đủ tin cậy.</p>
+  </li>
+  <li>
+    <p>Giới hạn số lượng tất cả các loại <strong>node</strong> được tạo ra.</p>
+  </li>
+  <li>
+    <p>Giới hạn số lượng <strong>leaf node</strong>.</p>
+  </li>
+  <li>
+    <p><em>information gain</em> hoặc <em>gini index</em> đạt một ngưỡng đủ nhỏ (không giảm hoặc giảm ít).</p>
+  </li>
+</ul>
+
+<p>Trong class <code class="language-plaintext highlighter-rouge">DecisionTreeClassifier</code> cung cấp một số tham số với giá trị <em>default</em> để điều chỉnh điều kiện dừng như sau:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>DecisionTreeClassifier(*, 
+criterion='gini', 
+max_depth=None, 
+min_samples_split=2, 
+min_samples_leaf=1,  
+max_features=None, 
+max_leaf_nodes=None, 
+min_impurity_decrease=0.0,
+)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>trong đó:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">criterion='gini'</code>: Hàm đo độ tinh khiết. Có thể là gini hoặc entropy</li>
+  <li><code class="language-plaintext highlighter-rouge">max_depth=None</code>: Độ sâu tối đa cho một cây quyết định</li>
+  <li><code class="language-plaintext highlighter-rouge">min_samples_split=2</code>: Số lượng samples của một node đạt một ngưỡng tối thiểu</li>
+  <li><code class="language-plaintext highlighter-rouge">min_samples_leaf=1</code>: Số lượng các node lá tối thiểu của cây quyết định.</li>
+  <li><code class="language-plaintext highlighter-rouge">max_features=None</code>: Số lượng các thuộc tính được thử và chọn ở bước tìm thuộc tính tốt nhất</li>
+  <li><code class="language-plaintext highlighter-rouge">max_leaf_nodes=None</code>: Số lượng các node lá tối đa của cây quyết định.</li>
+  <li><code class="language-plaintext highlighter-rouge">min_impurity_decrease=0.0</code>: Tiếp tục phân chia một node nếu như sự suy giảm của độ tinh khiết nếu phân chia lớn hơn ngưỡng này</li>
+</ul>
+
+<p><a name="52-pruning"></a></p>
+
+<h3 id="52-pruning">5.2. Pruning</h3>
+
+<p>Trong học máy, các kĩ thuật để giảm Overfiting rất nhiều. Một kĩ thuật phổ biến đó là <em>regularization</em> và trong Decision Tree thì kĩ thuật này được sử dụng với cái tên <em>Pruning (cắt tỉa).</em> Trong <em>Pruning</em>, một decision tree sẽ được xây dựng tới khi mọi điểm trong training set đều được phân lớp đúng. Sau đó, các <strong>leaf node</strong> có chung một <strong>non-leaf node</strong> sẽ được xóa bỏ và biến <strong>non-leaf node</strong> trở thành một <strong>leaf-node</strong>, sau đó sử dụng phương pháp voting để chọn ra nhãn của điểm dữ liệu. Nhìn chung phương pháp này nhằm giảm size của cây được tạo ra làm giảm hiện tượng <em>Overfitting.</em></p>
+
+<p><em><strong>PP1: Dựa vào một validation set</strong></em>. Trước tiên, training set được tách ra thành một cặp training set và validation set nhỏ hơn. Decision tree được xây dựng trên training set cho tới khi mọi điểm trong training set được phân lớp đúng. Sau đó, đi ngược từ các leaf node, cắt tỉa các <strong>sibling node</strong> của nó và giữ lại node bố mẹ nếu độ chính xác trên validation set được cải thiện. Khi nào độ chính xác trên validation set không được cải thiện nữa, quá trình pruning dừng lại. Phương pháp này còn được gọi là <em>reduced error pruning.</em></p>
+
+<p><em><strong>PP2: Dựa vào toàn tạp dataset</strong></em>. Ở phương pháp này ta sẽ cộng thêm một thành phần điều chuẩn (regularization term) hàm Loss. Cụ thể, giả sử Decision tree cuối cùng có $K$ <strong>leaf node</strong>, tập hợp các điểm huấn luyện rơi vào mỗi leaf node lần lượt là $S_1,…,S_K$, khi đó hàm Loss sẽ là:</p>
+
+\[\mathcal{L} = \sum_{k = 1}^K \frac{|\mathcal{S}_k|}{N}\mathbf{\text{Gini}}(\mathcal{S}_k) + \lambda K\]
+
+<p>trong đó $\lambda \geq 0$ và $\mathbf{\text{Gini}}(\mathcal{S}_k)$ là công thức (5). Chúng ta lựa chọn $\lambda$ là một giá trị dương tương đối nhỏ đại diện cho thành phần kiểm soát. Gía trị này lớn thể hiện vai trò của số lượng node lá tác động lên hàm chi phí lớn. Ở thời điểm ban đầu để phân loại đúng toàn bộ các quan sát thì cần số lượng node lá $K$ tương đối lớn. Sau đó chúng ta sẽ cắt tỉa dần cây quyết định sao cho mỗi một lượt cắt tỉa hàm mất mát giảm một lượng là lớn nhất. Quá trình cắt tỉa sẽ dừng cho tới khi hàm mất mát không còn tiếp tục giảm được nữa.</p>
+
+<p>Trong sklearn từ phiên bản 0.22 đã cung cấp một method rất tiện ích, khá giống với cách mà <em>PP2</em> làm đó là <em>cost_complexity_pruning_path</em>. Để hiểu hơn mình sẽ sử dụng bộ dữ liệu <em>iris</em> để trình bày.</p>
+
+<ul>
+  <li>Import thư viện và xử lí data (lưu ý rằng với iris thì với chỉ 2 thuộc tính cuối cùng đã có thể phân loại tốt):</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+<span class="n">boston</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">boston</span><span class="p">.</span><span class="n">data</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">boston</span><span class="p">.</span><span class="n">target</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">boston</span><span class="p">.</span><span class="n">feature_names</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">species</span> <span class="o">=</span> <span class="n">boston</span><span class="p">.</span><span class="n">target_names</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="p">.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Fit và predict:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="n">tree_clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">tree_clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Training accuracy: '</span><span class="p">,</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_train_pred</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Testing accuracy: '</span><span class="p">,</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_test_pred</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Kết quả đúng như đúng là đã bị overfiting:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">Training</span> <span class="n">accuracy</span><span class="p">:</span>  <span class="mf">0.95</span>
+<span class="n">Testing</span> <span class="n">accuracy</span><span class="p">:</span>  <span class="mf">0.6333333333333333</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Vậy nếu không sử dụng điều kiện dừng thì ta còn cách nào khác mà vẫn có thể tránh Overfitting? Ta sẽ tìm cách chọn $\lambda$ tốt nhất bằng cách tìm các $\lambda$ được tạo ra trong khi train Decision Tree:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">path</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">cost_complexity_pruning_path</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">alphas</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="s">'ccp_alphas'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">array</span><span class="p">([</span><span class="mf">0.</span>        <span class="p">,</span> <span class="mf">0.00277778</span><span class="p">,</span> <span class="mf">0.00277778</span><span class="p">,</span> <span class="mf">0.00324074</span><span class="p">,</span> <span class="mf">0.00518519</span><span class="p">,</span>
+       <span class="mf">0.00555556</span><span class="p">,</span> <span class="mf">0.00555556</span><span class="p">,</span> <span class="mf">0.00694444</span><span class="p">,</span> <span class="mf">0.00743464</span><span class="p">,</span> <span class="mf">0.00868056</span><span class="p">,</span>
+       <span class="mf">0.01041667</span><span class="p">,</span> <span class="mf">0.01161038</span><span class="p">,</span> <span class="mf">0.01230159</span><span class="p">,</span> <span class="mf">0.01581699</span><span class="p">,</span> <span class="mf">0.02010944</span><span class="p">,</span>
+       <span class="mf">0.05683866</span><span class="p">,</span> <span class="mf">0.06089286</span><span class="p">,</span> <span class="mf">0.20756944</span><span class="p">])</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Ta thấy rằng, các giá trị $\lambda$ nằm từ 0 - 0.21. Mình sẽ visualize hiệu quả của mô hình ứng với mỗi giá trị $\lambda$:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="n">acc_train</span><span class="p">,</span> <span class="n">acc_test</span> <span class="o">=</span> <span class="p">[],[]</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">:</span>
+  <span class="n">tree_clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">ccp_alpha</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+  <span class="n">tree_clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+  <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+  <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">tree_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+  <span class="n">acc_train</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_train_pred</span><span class="p">))</span>
+  <span class="n">acc_test</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_test_pred</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="p">.</span><span class="nb">set</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">acc_train</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">alphas</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'Train accuracy'</span><span class="p">)</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">acc_test</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">alphas</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'Test accuracy'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">ticks</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.00</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.01</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kết quả:</p>
+
+<p><img src="/assets/images/bai13/anh6.png" class="large" /></p>
+
+<p><em>Với các giá trị $\lambda$ nằm từ 0.012 - 0.2 đưa ra giá trị accuracy của 2 tập train và test khá tương đồng nhau = 80%. Cách này cũng là một cách giảm overfitting khá tốt.</em></p>
+
+<p><a name="6-regression"></a></p>
+
+<h2 id="6-regression">6. Regression</h2>
+
+<p>Một chủ đề mà mình chưa đề cập tới đó là với Decision Tree không chỉ làm việc tốt với các bài toán phân loại (classification) mà còn có thể sử dụng cho bài toán hồi quy (regression). Cụ thể với thuật toán <em>CART</em> mà mình đã trình bày bên trên có tên là <em>Classification and regression tree</em> tức thuật toán này có thể ứng dụng cho 2 lớp bài toán phân loại và hồi quy (ID3 cũng vậy). Về mặt ý tưởng thì đều dựa trên thuật toán Greedy (tham lam) để tìm ra thuộc tính <em>phù hợp nhất</em> và từ thuộc tính này sẽ tiếp tục phân chia tiếp. Nhưng mấu chốt ở bài toán phân loại ta cần ở mỗi <strong>node</strong> sẽ có phân phối của mỗi class còn ở bài toán hồi quy ta sẽ cần đưa ra một giá trị dự đoán cụ thể ở mỗi <strong>node</strong>, do đó thay vì sử dụng độ đo <em>information gain</em> hay <em>gini</em> cho bài toán phân loại thì ta sẽ dụng độ đo <em>reduction in variance (độ suy giảm phương sai).</em></p>
+
+<p><a name="61-idea"></a></p>
+
+<h3 id="61-ý-tưởng">6.1. Ý tưởng</h3>
+
+<p>Các bước tính toán và xét ngưỡng $t$ dựa trên một thuộc tính tương tự phần 3.2 nên mình sẽ không mô tả chi tiết lại. Các bước sẽ được tóm tắt như sau:</p>
+
+<p>Đầu tính phương sai của biến mục tiêu $y$ trên tập $\mathcal{S}$, đây chính là hàm <em>Mean Square Error</em>:</p>
+
+\[\text{mse}(y; \mathcal{S}) = \frac{1}{N} \sum_{i=1}^{N}(y_i-\bar{y})^2\]
+
+<p>Tiếp theo giả sử ta chọn một thuộc tính $\mathbf{x}$ và ngưỡng $\mathbf{t}$ và phân chia tập $\mathcal{S}$ thành $\mathcal{S_0}$ có số lượng phần tử là $N_0$ và $\mathcal{S_1}$ có số lượng phần tử là $N_1$, ta sẽ tính toán tổng phương sai trên 2 tập này như sau:</p>
+
+\[\text{mse}(y, \mathbf{x}, \mathbf{t}; \mathcal{S}) = \frac{N_0}{N}\text{mse}(y;\mathcal{S}_0) + \frac{N_1}{N} \text{mse}(y;\mathcal{S}_1) \quad \quad (6)\]
+
+<p>Cuối cùng giá trị $\mathbf{x}$ và ngưỡng $\mathbf{t}$ làm cho phương trình (6) nhỏ nhất sẽ được chọn. Cách này cũng khá dễ lí giải vì trong bài toán hồi quy, các dữ liệu có biến mục tiêu gần nhau thì phương sai sẽ nhỏ và ngược lại (nếu chưa từng đọc về cách hàm <em>Mean Square Error</em> làm như thế nào bạn có thể đọc lại <a href="https://hnhoangdz.github.io/2021/11/06/LinearRegression.html">bài 1</a> và <a href="https://hnhoangdz.github.io/2021/11/10/Gradient-Descent.html">bài 2</a>).</p>
+
+<p><a name="62-example"></a></p>
+
+<h3 id="62-ví-dụ-minh-họa">6.2. Ví dụ minh họa</h3>
+
+<p>Sau đây là bộ dữ liệu mô tả hiệu quả của thuốc dựa trên số lượng(mg) mà một người uống, thực tế là không phải cứ uống càng nhiều thuốc càng tốt mà cần vừa đủ, với việc sử dụng Decision Tree ta sẽ tìm được kết quả là một đường khít toàn bộ dữ liệu và cây được tạo ra. Cụ thể như sau:</p>
+
+<p style="display: flex">
+<img src="/assets/images/bai13/anh7.png" class="median" /> <img src="/assets/images/bai13/anh8.png" class="median" />
+</p>
+
+<hr />
+
+<p><img src="/assets/images/bai13/anh9.png" class="large" /></p>
+<hr />
+
+<p>Như bạn đã thấy với dữ liệu ban đầu chỉ có duy nhất một thuộc tính, thuật toán sẽ đi tìm ngưỡng để phương trình (6) nhỏ nhất. Cụ thể ngưỡng đầu tiên ở đây là 13.5 rồi tiếp tục phân chia khi xuất hiện <strong>leaf node</strong> tức toàn bộ giá trị mse trên <strong>leaf node</strong> bằng 0. Tuy nhiên, giống với bài toán phân loại thì nếu cứ để cây có thể tạo ra cho tới khi xuất hiện đủ <strong>leaf node</strong> để dự đoán chính xác 100% trên training set thì sẽ gây ra hiện tượng <em>Overfitting</em>. Vì vậy các phương pháp tương tự ở phần 5 có thể áp dụng. Và giá trị dự đoán của mỗi <strong>leaf node</strong> sẽ là giá trị trung bình của những điểm dữ liệu đang xét (dòng value ở các node trên đồ thị cây).</p>
+
+<p><em>Toàn bộ source code của bài <a href="https://github.com/hnhoangdz/hnhoangdz.github.io/tree/main/assets/images/bai13">tại đây</a>.</em></p>
+
+<p><a name="7-evaluation"></a></p>
+
+<h2 id="7-đánh-giá-và-kết-luận">7. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>Nhìn chung thì các thuật toán Decision Tree làm việc khá tốt và có thể dễ dàng debug hơn. Bởi vì nó sẽ diễn giải khá tốt những gì mà mô hình học được toàn bộ trên 1 cây, khác với các mô hình Deep Learning khá khó để hiểu chi tiết tất cả trong mô hình nó học như thế nào với các thuộc tính. Đây cũng là lí do mà người ta thường gọi rằng các thuật toán Decision Tree là <em>white box models</em> còn các mô hình Random Forest và Neural Netowrk là <em>black box models</em>.</p>
+  </li>
+  <li>
+    <p>Trong thuật toán Decision Tree, việc tiền xử lí như <em>feature scaling (normalization)</em>  là không cần thiết bởi vì thuật toán sẽ đi hỏi từng thuộc tính nên việc tính toán ở mỗi thuộc tính không có ảnh hưởng tới kết quả.</p>
+  </li>
+  <li>
+    <p>Tuy nhiên ở các tập dữ liệu lớn đặc biệt có thuộc tính cao chiều thì sử dụng Decision Tree là một thách thức vì việc tạo cây sẽ tốn thêm rất nhiều thời gian. Không những vậy nó sẽ rất dễ gặp <em>Overfitting</em> trên các tập dữ liệu lớn vì các chỉ tạo ra duy nhất một cây trong khi không chỉ để giải quyết bài toán thì sẽ có nhiều cây làm được.</p>
+  </li>
+  <li>
+    <p>Trong cây được tạo ra, để ý rằng đôi khi có thuộc tính không xuất hiện trong cây được tạo ra nên không ảnh hưởng tới kết quả và cây được tạo ra. Để giải quyết vấn đề này bạn có thể phân tích độ tương quan dữ liệu trước khi training hoặc sau khi build cây xong sẽ có một hàm để chỉ ra mức độ quan trọng của feature (đọc thêm <a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier.feature_importances_">tại đây</a>). <em>Lưu ý rằng nó chỉ không được cây lựa chọn làm thuộc tính phân tách chứ không phải không có ý nghĩa phi phân tích dữ liệu.</em></p>
+  </li>
+  <li>
+    <p>Decision Tree yêu cầu khá nhiều hyper-parameters nên cách tốt nhất đó là sử dụng các phương pháp tuning để lựa chọn ra các hyper-paramters tốt nhất. Về các phương pháp tuning hyper-parameters mình sẽ trình bày một bài riêng.</p>
+  </li>
+  <li>
+    <p>Ngoài ra, việc sử dụng hàm <em>entropy</em> và <em>gini</em> khi training không quá khác nhau về kết quả cây được tạo ra. Tuy nhiên việc tính toán log ở <em>entropy</em> sẽ làm cho thuật toán chậm hơn nên ta sẽ ưu tiên sử dụng <em>gini.</em></p>
+  </li>
+  <li>
+    <p>Hơn nữa ở các mô hình Decision Tree sẽ không ổn định (Instability). Trong sklearn thì thuật toán sẽ lựa chọn ngẫu nhiên một tập hợp các thuộc tính hữu hạn rồi đánh và và chọn để giữ tính ổn định cho mô hình bạn nên sử dụng tham số <code class="language-plaintext highlighter-rouge">random_state</code>. Thêm vào đó, mô hình Decision Tree rất nhạy cảm với các biến đổi nhỏ trong training data, chỉ cần xóa một vài sample có thể dẫn tới một mô hình khác biệt hoàn toàn được tạo ra. Việc này có thể giải quyết mô hình Random Forest mà mình sẽ trình bày ở bài tiếp theo.</p>
+  </li>
+  <li>
+    <p>Trong các cuộc thi về học máy, một trong những thành công của các thuật toán là dựa trên mô hình mạnh mẽ giúp cho việc dự đoán chính xác cao. Và các mô hình đó đều kế thừa và phát huy ý tưởng của Decision Tree, ở các bài sắp tới mình sẽ trình bày cụ thể.</p>
+  </li>
+</ul>
+
+<p><a name="8-references"></a></p>
+
+<h2 id="8-tham-khảo">8. Tham khảo</h2>
+
+<p>[1] <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+<p>[2] <a href="https://machinelearningcoban.com/2018/01/14/id3/">Bài 34: Decision Trees (1): Iterative Dichotomiser 3 - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[3] <a href="https://machinelearningcoban.com/tabml_book/ch_model/decision_tree.html">Decision Tree algorithm by Tuan Nguyen</a></p>
+
+<p>[4] <a href="https://www.analyticsvidhya.com/blog/2020/10/cost-complexity-pruning-decision-trees/">Understanding the problem of Overfitting in Decision Trees and solving it by Minimal Cost-Complexity Pruning using Scikit-Learn in Python by Sarthak Arora</a></p>
+
+<p>[5] <a href="https://www.youtube.com/watch?v=g9c66TUylZ4&amp;t=417s">Regression Trees, Clearly Explained!!! by StatQuest with Josh Starmer</a></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

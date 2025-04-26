@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">1. Linear Regression</p>
+    </h2>
+    <strong><i>06 Nov 2021</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-prediction">2. Hàm dự đoán</a></li>
+  <li><a href="#3-loss">3. Hàm mất mát</a></li>
+  <li><a href="#4-generalization">4. Lập công thức chung</a>
+    <ul>
+      <li><a href="#41-geometry">4.1. Hình học</a></li>
+      <li><a href="#42-linear-algebra">4.2. Đại số tuyến tính</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-coding">5. Thực nghiệm với Python</a>
+    <ul>
+      <li><a href="#51-straight-line">5.1. Dạng đường thẳng</a></li>
+      <li><a href="#52-parabol-line">5.2. Dạng parabol</a></li>
+      <li><a href="#53-sklearn">5.3. Nghiệm bằng thư viện scikit-learn</a>
+        <ul>
+          <li><a href="#531-sklearn_line">5.3.1. Dạng đường thẳng</a></li>
+          <li><a href="#532-sklearn_polynomial">5.3.2. Polynomial Regression</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#6-evaluation">6. Đánh giá và kết luận</a></li>
+  <li><a href="#7-references">7. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Hồi quy tuyến tính (Linear Regression) là một thuật toán căn bản nhất đối với bất kì ai bắt đầu học về AI đều sẽ đi qua. Trong thực tế, bài toán hồi quy tuyến tính được ứng dụng rất nhiều vì tính dễ dàng mô tả và dễ dàng triển khai. Hồi quy nói chung là lớp bài toán thuộc học có giám sát (supervised-learning). Dựa trên dữ liệu có sẵn (tức giá trị mục tiêu đã biết) và sự phụ thuộc của giá trị đầu vào để dự đoán một giá trị mới.</p>
+
+<p>Ví dụ đơn giản nhất như: dựa trên diện tích nhà để đưa ra giá dự đoán, dựa trên chiều cao để dự đoán cân nặng,… hoặc rằng buộc thêm như dựa vào diện tích nhà, số phòng, view để đưa ra giá nhà dự đoán.</p>
+
+<p><img src="/assets/images/bai1/linearregression.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: Ví dụ dự đoán giá nhà dựa trên diện tích</p>
+
+<p><a name="2-prediction"></a></p>
+
+<h2 id="2-hàm-dự-đoán">2. Hàm dự đoán</h2>
+
+<p>Hàm dự đoán hay trong machine learning thường hay gọi là model ám chỉ một hàm số $f$ sẽ là hàm mục tiêu của giá trị cần dự đoán. Một ví dụ đơn giản như dự đoán giá nhà dựa trên số phòng ngủ, diện tích. Vậy đầu vào của bài toán toán sẽ là số phòng ngủ và diện tích, đầu ra sẽ là giá trị dự đoán của căn hộ đó.</p>
+
+<p>Biểu diễn toán học: Cho \(\textbf{r}=[r_1, r_2,...,r_m]\) là vector biểu diễn cho số lượng phòng ngủ mỗi căn hộ lần lượt là \(r_1,r_2,...,r_m\), \(\textbf{s}=[s_1, s_2,...,s_m]\) cũng tương tự \(\textbf{r}\) là vector biểu diễn diện tích. Cuối cùng, \(\textbf{y}=[y_1, y_2,...,y_m]\) là dữ liệu giá mỗi căn hộ đã có sẵn. Các giá trị này đều đã biết trước, mục tiêu của chúng ta là dự đoán xem khi có một căn hộ có \(\textbf{a}\) phòng ngủ, diện tích \(\textbf{b}\) vậy giá căn hộ này là bao nhiêu?</p>
+
+<p>Trong machine learning, ký hiệu \(\hat{y}\) thường dùng để biểu diễn cho một giá trị dự đoán, ta có:</p>
+
+\[\begin{equation} \hat{y_1}=w_0 + w_1r_1 + w_2s_2 ~~~~ \end{equation}\]
+
+<p>trong đó, \(w_0\) - bias, \(w_1\) và \(w_2\) - trọng số là các giá trị cần tìm, \(r_1\) và \(s_2\) là các giá trị đã biết.</p>
+
+<p><a name="3-loss"></a></p>
+
+<h2 id="3-hàm-mất-mát---loss-function">3. Hàm mất mát - Loss function</h2>
+
+<p>Khi nhắc đến giá trị dự đoán thì sai số luôn luôn được kèm theo. Sai số tức sự khác biệt giữa giá trị dự đoán và giá trị thực. Sai số càng nhỏ chứng tỏ giá trị dự đoán càng chính xác. Đây cũng là mục tiêu của hàm mất mát nhằm giảm thiểu sai số tối đa nhất có thể.</p>
+
+<p>Loss function chỉ sai số của một điểm dữ liệu còn cost function sẽ chỉ ra trung bình sai số trên toàn tập dữ liệu. Đây là những thuật ngữ cơ bản và rất quan trọng trong machine learning. Thường các thuật toán tối ưu sẽ tối ưu phần này và cũng là phần tối ưu khó nhất vì yêu cầu kiến thức toán lớn.</p>
+
+<p>Giả sử \(f\) là giá trị thực của một căn hộ, \(f'\) là giá trị dự đoán và \(e\) là sai số khi dự đoán. Điều ta mong muốn là làm sao cho phương trình sau xảy ra:</p>
+
+\[f \approx f' + e\]
+
+<p>Và trong bài toán hồi quy tuyến tính (Linear Regression) chúng ta cần tối ưu sao cho \(e\) có giá trị nhỏ nhất có thể. Phương trình cần tối ưu trong bài toán:</p>
+
+\[\frac{1}{2}e^2 = \frac{1}{2}(f - f')^2\]
+
+<p><a name="4-generalization"></a></p>
+
+<h2 id="4-lập-công-thức-chung">4. Lập công thức chung</h2>
+
+<p>Với bài toán dự đoán giá nhà dựa trên diện tích, ta có:</p>
+
+<p>Hàm dự đoán:</p>
+
+\[\hat{y_i} = w_0 + w_1x_i\]
+
+<p>trong đó \(x_i\) biểu diễn giá trị diện tích, \(\hat{y_i}\) biểu diễn giá trị dự đoán tương ứng của mẫu dữ liệu thứ $i$, $w_0$ và $w_1$ là trọng số cần tìm</p>
+
+<p>Hàm mất mát:</p>
+
+\[J = \frac{1}{2m}\sum_{i=1}^{m}(\hat{y_i}-y_i)^2\]
+
+<p>trong đó $m$ là số lượng dữ liệu, $y_i$ là giá trị thực của mẫu dữ liệu thứ $i$.</p>
+
+<p>Lúc này khi đã định nghĩa được 2 hàm số trên, chúng ta có thể đi tìm nghiệm cho bài toán tức tìm $w_0$ và $w_1$. Với thuật toán này, có nhiều phương pháp để tìm nghiệm. Các phương pháp dựa trên toán hình học, đại số tuyến tính và giải tích. Trong bài này, mình sẽ trình bày 2 phương pháp: hình học và đại số tuyến tính.</p>
+
+<p><a name="41-geometry"></a></p>
+
+<h3 id="41-hình-học">4.1. Hình học</h3>
+
+<p>Cho 3 điểm dữ liệu $A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$ và đường màu xanh chính là đường thẳng ta cần tìm, ta có:</p>
+
+<p><img src="/assets/images/bai1/anh1.png" class="normalpic" /></p>
+
+<p>Giả sử đường thẳng màu xanh đi qua 3 điểm A,B,C thì ta có 3 phương 2 ẩn $w_0$ và $w_1$:</p>
+
+\[y_1 = w_0 + w_1x_1 (1)\]
+
+\[y_2 = w_0 + w_1x_2 (2)\]
+
+\[y_3 = w_0 + w_1x_3 (3)\]
+
+<p>Nhưng với 3 phương trình 2 ẩn thì việc tìm nghiệm chính xác là điều không thể, vì vậy ta sẽ đi tìm $w_0$ và $w_1$ gần đúng sao cho sai số là bé nhất từ đó các nhà toán học đã đưa ra một giá trị cần tối ưu: $d_A^{2} + d_B^{2} + d_C^{2}$ bé nhất.</p>
+
+<p>Từ (1), (2), (3) ta có thể vector hóa dưới dạng: \(\begin{bmatrix}y_1\\ y_2 \\ y_3\end{bmatrix} \approx w_0\begin{bmatrix}1\\ 1 \\ 1\end{bmatrix} + w_1\begin{bmatrix}x_1\\ x_2 \\ x_3\end{bmatrix} (4)\). Đặt \(y = \begin{bmatrix}y_1\\ y_2 \\ y_3\end{bmatrix}\), \(o = \begin{bmatrix}1\\ 1 \\ 1\end{bmatrix}\),\(x = \begin{bmatrix}x_1\\ x_2 \\ x_3\end{bmatrix}\). Lúc này biểu diễn dưới dạng hình học ta sẽ được</p>
+
+<p><img src="/assets/images/bai1/anh3.png" class="normalpic" /></p>
+
+<p>Với những giá trị khác nhau của $w_0$ và $w_1$ ta sẽ thu được mặt phẳng $\textbf{(P)}$, vế phải của phương trình (4) sẽ tạo được một vector $\textbf{a}$ nằm trong mặt phẳng $\textbf{(P)}$. Do đó, ta cần tìm $w_0$ và $w_1$ để $\textbf{y}$ và $\textbf{a}$ gần nhau nhất. Để điều kiện này xảy ra khi và chỉ khi $\textbf{a}$ chính là hình chiếu của $\textbf{y}$ lên mặt phẳng $\textbf{(P)}$, gọi vector hình chiếu đó là $\textbf{h}$.</p>
+
+<p>Lúc này ta có $\textbf{h}$ $\bot$ $\textbf{x}$ và $\textbf{h}$ $\bot$ $\textbf{o}$ (tính chất của đường thẳng vuông góc mặt phẳng) $=&gt;$ $\textbf{x}^T.\textbf{h}=0$ và $\textbf{o}^T.\textbf{h}=0 (5)$</p>
+
+<p>Đặt \(W = \begin{bmatrix}w_0\\ w_1 \end{bmatrix}\) và \(X = \begin{bmatrix}1 &amp;&amp; x_1 \\ 1 &amp;&amp; x_2 \\ 1 &amp;&amp; x_3 \end{bmatrix}\), theo (5) thì ta được $X^T.\textbf{h}=0$ mà $\textbf{h}$ = $\textbf{y} - \textbf{a}$ (tính chất cộng vector)</p>
+
+\[=&gt;X^T(\textbf{y} - \textbf{a}) = 0\]
+
+\[&lt;=&gt;X^T.\textbf{y} - X^T.\textbf{a} = 0\]
+
+<p>Lại có $\textbf{a} = X.W =&gt; X^T.\textbf{y} = X^T.X.W =&gt; W = (X^T.X)^{-1}.X^T.\textbf{y}$ (Lưu ý: dấu . biểu diễn dot product).</p>
+
+<p>Tới đây chúng ta đã tìm được W là vector chứa 2 giá trị $w_0$ và $w_1$.</p>
+
+<p><a name="42-linear-algebra"></a></p>
+
+<h3 id="42-đại-số-tuyến-tính">4.2. Đại số tuyến tính</h3>
+
+<p>Để cho dễ dàng triển khai code ở phần sau, thì bắt đầu từ phần này các dữ liệu sẽ được vector và ma trận hóa. Vì vậy các công thức liên quan cũng sẽ cho ra vector hoặc ma trận.</p>
+
+<p>Cho $m$ mẫu dữ liệu đã có nhãn về giá trị diện tích và giá trị căn hộ.</p>
+
+\[X = \begin{bmatrix} 1 &amp;&amp; x_1 \\ 1 &amp;&amp; x_2 \\ ... &amp;&amp; ... \\ 1 &amp;&amp; x_m \end{bmatrix}, Y = \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_m \end{bmatrix}, W = \begin{bmatrix} w_0 \\ w_1 \end{bmatrix}, \hat{Y} = X.W = \begin{bmatrix} w_0*1 + w_1*x_1  \\ w_0*1 + w_1*x_2 \\ ... \\ w_0*1 + w_1*x_m \end{bmatrix} = \begin{bmatrix} \hat{y_1} \\ \hat{y_2} \\ ... \\ \hat{y_m} \end{bmatrix}\]
+
+\[J = \frac{1}{2m}sum(\hat{Y}-Y)^2\]
+
+<p>Để tìm nghiệm tối ưu bài toán, ta sẽ đạo hàm hàm J để tìm cực tiểu</p>
+
+\[\frac{dJ}{dW} = \frac{1}{m}X^T.(\hat{Y}-Y) = 0\]
+
+\[&lt;=&gt;X^T.(X.W - Y) = 0\]
+
+\[&lt;=&gt;X^T.X.W = X^T.Y\]
+
+\[&lt;=&gt;W = (X^T.X)^{-1}.X^T.Y\]
+
+<p>Ta thấy nghiệm giải bằng phương pháp sử dụng đại số tuyến tính kết hợp đạo hàm cho ra nghiệm bài toán giống với phương pháp hình học trên. Phương pháp sử dụng đạo hàm này có thể mở rộng ra các thuật toán tối ưu trong machine learning như Gradient Descent.</p>
+
+<p><a name="5-coding"></a></p>
+
+<h2 id="5-thực-nghiệm-với-python">5. Thực nghiệm với Python</h2>
+
+<p><a name="51-straight-line"></a></p>
+
+<h3 id="51-dạng-đường-thẳng">5.1. Dạng đường thẳng</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># đstt
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># visualize
+</span>
+<span class="c1"># Dữ liệu
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">46</span><span class="p">]]).</span><span class="n">T</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">]]).</span><span class="n">T</span>
+
+<span class="c1"># Visualize dữ liệu
+</span><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1"># thêm vector cột 1 vào dữ liệu input
+</span><span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">int8</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ones</span><span class="p">,</span><span class="n">X</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># tìm nghiệm W cho bài toán
+</span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">)).</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+<span class="n">w0</span><span class="p">,</span><span class="n">w1</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># lấy điểm đầu và điểm cuối 
+# để vẽ đường thẳng cần tìm
+</span><span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x0</span>
+
+<span class="c1"># visualize đường thẳng cần tìm
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Diện tích'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Giá nhà'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai1/anh5.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 2</b>: Visualize đường thẳng cần tìm</p>
+
+<p>Và giá trị nghiệm W ta tìm được là:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mf">1.88039364</span><span class="p">]</span>
+     <span class="p">[</span><span class="mf">0.32361847</span><span class="p">]]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="52-parabol-line"></a></p>
+
+<h3 id="52-dạng-parabol">5.2. Dạng Parabol</h3>
+
+<p>Khác một chút so với dữ liệu dạng đường thẳng, nếu dữ liệu dạng không đơn điệu thì hàm dự đoán của ta cần thay đổi một chút. Ví dụ với hàm parabol đã quen thuộc khi còn học cấp 3: $y = ax^2 + bx + c$. Do vậy ở bài toán với hàm dự đoán là parabol, ta cần tìm 3 nghiệm $w_0, w_1$ và $w_2$.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># đstt
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># visualize
+</span>
+<span class="c1"># Dữ liệu
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">25</span><span class="p">]]).</span><span class="n">T</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">]]).</span><span class="n">T</span>
+
+<span class="c1"># Visualize dữ liệu
+</span><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1"># thêm vector cột 1 vào dữ liệu input
+</span><span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">int8</span><span class="p">)</span>
+<span class="n">X_square</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ones</span><span class="p">,</span><span class="n">X</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X</span><span class="p">,</span><span class="n">X_square</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># tìm nghiệm W cho bài toán
+</span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">)).</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+<span class="n">w0</span><span class="p">,</span><span class="n">w1</span><span class="p">,</span><span class="n">w2</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">W</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># lấy 10000 điểm để vẽ 
+# để vẽ đường thẳng cần tìm
+</span><span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="n">w0</span> <span class="o">+</span> <span class="n">w1</span><span class="o">*</span><span class="n">x0</span> <span class="o">+</span> <span class="n">w2</span><span class="o">*</span><span class="p">(</span><span class="n">x0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># visualize đường thẳng cần tìm
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Diện tích'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Giá nhà'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai1/anh6.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: Visualize parabol cần tìm</p>
+
+<p>Và giá trị nghiệm W ta tìm được ta:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>	<span class="p">[[</span><span class="o">-</span><span class="mf">20.44709486</span><span class="p">]</span>
+	<span class="p">[</span>  <span class="mf">7.60002888</span><span class="p">]</span>
+	<span class="p">[</span> <span class="o">-</span><span class="mf">0.25718303</span><span class="p">]]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="53-sklearn"></a></p>
+
+<h3 id="53-nghiệm-bằng-thư-viện-scikit-learn">5.3. Nghiệm bằng thư viện scikit-learn</h3>
+
+<p>Ở phần này ta sẽ sử dụng thư viện scikit-learn để thực hành bài toán và so sánh xem giữa nghiệm bài toán tự implement và nghiệm của bài toán được xử lí bởi thư viện có mang tới kết quả giống nhau không. <strong>scikit-learn</strong> là một trong những thư viện rất phổ biến để thực hành các mô hình Machine Learning cơ bản, ngoài ra trong scikit-learn sẽ gồm rất nhiều thư viện tiện ích như dataset, parameters tuning strategy,…</p>
+
+<p><a name="531-sklearn_line"></a></p>
+
+<h4 id="531-dạng-đường-thẳng">5.3.1. Dạng đường thẳng</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1"># Dữ liệu
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">46</span><span class="p">]]).</span><span class="n">T</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">]]).</span><span class="n">T</span>
+
+<span class="c1"># Khởi tạo model
+</span><span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># Fit/train model
+</span><span class="n">lin_reg</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'W = {}, b = {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">.</span><span class="n">coef_</span><span class="p">,</span><span class="n">lin_reg</span><span class="p">.</span><span class="n">intercept_</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kết quả thu được là:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">W</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.32361847</span><span class="p">]],</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.88039364</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Ta thấy kết quả nghiệm của bài toán giữa phương pháp tự thực hiện ở phần 5.1 và thư viện scikit-learn đã đưa ra kết quả giống nhau. Sau khi tìm được nghiệm bài toán, việc tiếp theo khi có dữ liệu cần dự đoán bạn chỉ cần gọi tới hàm predict để lấy ra giá trị dự đoán.</p>
+
+<p><a name="532-sklearn_polynomial"></a></p>
+
+<h4 id="532-polynomial-regression">5.3.2. Polynomial Regression</h4>
+
+<p>Ở phần 5.2 dữ liệu lúc này không còn ở dạng tuyến tính, tuy nhiên chúng ta vẫn có thể sử dụng mô hình tuyến tính để tìm nghiệm tối ưu. Ở phần 5.2 mình đã sử dụng cách thêm 1 biến bình phương để giúp mô hình có thể khái quát hóa dữ liệu tốt hơn. Vì vậy, trong scikit-learn cũng sẽ cung cấp một class PolynomialFeatures giúp thay đổi giữ liệu gốc ban đầu thành dữ liệu có cả bậc mũ cao hơn.</p>
+
+<p>Đầu tiên sẽ là bước tiền xử lí cho bài toán:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PolynomialFeatures</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> <span class="c1"># đstt
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> <span class="c1"># visualize
+</span>
+<span class="c1"># Dữ liệu
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">25</span><span class="p">]]).</span><span class="n">T</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">]]).</span><span class="n">T</span>
+
+<span class="c1"># Visualize dữ liệu
+</span><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="n">poly_features</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">X_poly</span> <span class="o">=</span> <span class="n">poly_features</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kết quả của X ban đầu và X_poly sau khi sử dụng PolynomialFeatures với mũ bậc 2:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">X_poly</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="p">[</span><span class="mf">2.</span> <span class="mf">4.</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Việc tiền xử lí này đã giúp mô hình của ta có thêm 1 biến bậc cao, bước tiếp theo chỉ cần khai báo mô hình và fit tương tự ở phần trên:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lin_reg</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_poly</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kết quả chính xác với hàm implement ở trên:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'b = {}, W = {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">lin_reg</span><span class="p">.</span><span class="n">coef_</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">20.44709486</span><span class="p">],</span> <span class="n">W</span> <span class="o">=</span> <span class="p">[[</span> <span class="mf">7.60002888</span> <span class="o">-</span><span class="mf">0.25718303</span><span class="p">]]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="6-evaluation"></a></p>
+
+<h2 id="6-đánh-giá-và-kết-luận">6. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>Nếu bài toán có dữ liệu dạng parabol mà vẫn sử dụng hàm dự đoán là đường thẳng thì sao? Vẫn được, nhưng sai số cao, chưa thể tối ưu bằng sử dụng hàm parabol. Giả sử, đầu vào lúc này không phải là 1 chiều mà là 2 chiều thì hàm dự đoán sẽ trở thành một mặt phẳng và công thức nghiệm trên vẫn đúng. Còn đầu vào có quá nhiều chiều dữ liệu thì lúc này mô hình của bài toán sẽ là một siêu phẳng (hyper plan). Như vậy bài toán dự đoán của chúng ta đã được giải quyết bằng cách tìm nghiệm W. Để dự đoán một điểm mới ta chỉ cần áp dụng như tính y0 ở trên.</p>
+  </li>
+  <li>
+    <p>Việc tìm ma trận nghịch đảo là điểm yếu của cách làm này vì sẽ tốn thêm time complexity ($O(n^{2.4}) - O(n^{3})$ với $n$ là số lượng features của bài toán) và space complexity . Vì vậy, trong thư viện scikit-learn các nhà phát triển đã tối ưu phương pháp giải bằng ứng dụng của thuật toán <a href="https://machinelearningcoban.com/2017/06/07/svd/">SVD - Singular Value Decomposite</a> và đạt được tốc độ khoảng $O(n^2)$. Tuy nhiên, cả 2 phương pháp này sẽ rất chậm với những bộ dữ liệu có features cao chiều (100.000) nên sẽ phù hợp hơn với những bộ dữ liệu thấp chiều (kể cả nhiều dữ liệu) thì phương pháp này vẫn sẽ hoạt động tốt.</p>
+  </li>
+  <li>
+    <p>Ở hàm mất mát, có một số thuật toán nhằm tránh overfiting như Ridge Regression, Lasso Regression hay trong deep learning là regurlization.</p>
+  </li>
+  <li>
+    <p>Thuật toán này sử dụng trung bình tổng sai số của giá trị dự đoán và giá trị thật để triển khai và đánh giá, vì vậy khi tồn tại dữ liệu “nhiễu” sẽ gây ảnh hưởng tới chất lượng dự đoán. Một số phương pháp khắc phục đó là sử dụng: MAE Loss, Huber Loss… Nhưng vì các hàm này khá khó để giải trực tiếp vì vậy, thường sẽ loại bỏ các dữ liệu “nhiễu” trước khi traning.</p>
+  </li>
+</ul>
+
+<p><a name="7-references"></a></p>
+
+<h2 id="7-tham-khảo">7. Tham khảo</h2>
+
+<p>[1] <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+<p>[2] <a href="https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features">Week 2 - Machine Learning coursera by Andrew Ng</a></p>
+
+<p>[2] <a href="https://machinelearningcoban.com/2016/12/28/linearregression/">Bài 3: Linear Regression - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[3] <a href="https://dunglai.github.io/2017/10/10/linear-regression/">Linear Regression by Dung Lai</a></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

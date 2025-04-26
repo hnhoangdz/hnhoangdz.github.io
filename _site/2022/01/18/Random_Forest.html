@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural
+							Network</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random
+							Forest</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree -
+							CART</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision
+							Tree - ID3</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh
+							(2/2)</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a>
+					</li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest
+							Neighbors</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập
+							đại số tuyến tính (3/3)</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập
+							đại số tuyến tính (2/3)</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập
+							đại số tuyến tính (1/3)</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3.
+							Logistic Regression</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient
+							Descent</a></li>
+
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear
+							Regression</a></li>
+
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+						<h2>
+							<p class="post-link" style="text-align: left; color: #204081; font-weight: bold">14. Random
+								Forest</p>
+						</h2>
+						<strong><i>18 Jan 2022</i></strong>
+					</div>
+					<br />
+					<ul>
+						<li><a href="#1-introduction">1. Giới thiệu</a></li>
+						<li><a href="#2-voting">2. Voting</a></li>
+						<li><a href="#3-sample">3. Phương pháp lấy mẫu</a>
+							<ul>
+								<li><a href="#31-bagging">3.1. Bagging và Pasting</a></li>
+								<li><a href="#32-coding">3.2. Thực nghiệm với Python</a></li>
+							</ul>
+						</li>
+						<li><a href="#4-rd">4. Random Forest</a>
+							<ul>
+								<li><a href="#41-idea">4.1. Ý tưởng chính</a></li>
+								<li><a href="#42-coding">4.2. Thực nghiệm với Python</a></li>
+							</ul>
+						</li>
+						<li><a href="#5-evaluation">5. Đánh giá và kết luận</a></li>
+						<li><a href="#6-references">6. Tham khảo</a></li>
+					</ul>
+
+					<p><a name="1-introduction"></a></p>
+
+					<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+					<p>Ở bài 12 và bài 13 mình đã giới thiệu về mô hình Decision Tree sử dụng các độ đo khác nhau để tìm
+						ra được cây quyết định, ngoài ra lớp mô hình này có thể làm việc với cả 2 bài toán
+						Classification và Regression. Ý tưởng chính của nó là xây dựng một chuỗi câu hỏi từ trên xuống
+						để đưa ra dự đoán ở <strong>leaf node</strong> kết thúc. Mặc dù tính mạnh mẽ của nó đã được thể
+						hiện nhưng những hạn chế còn lại khá nhiều, có thể kể đến là: dễ xảy ra hiện tượng
+						<em>Overfiting</em>, không quá tốt trong các bộ dữ liệu lớn… và một điểm yếu khác đó là mô hình
+						chỉ đưa ra dự báo dựa trên một kịch bản duy nhất (một cây được tạo ra), điều này sẽ làm cho sự
+						phụ thuộc vào các thuộc tính được lựa chọn ở trên đỉnh rất cao, cho nên khi điểm một dữ liệu
+						‘lạ’ sẽ không được dự đoán chính xác nếu mô hình không đủ tốt.</p>
+
+					<p>Giả sử sau một năm làm việc mệt nhọc, bạn muốn tìm một nơi du lịch phù hợp với túi tiền mà vẫn
+						mang lại cảm giác thoải mái. Để tìm được một địa điểm phù hợp, bạn có thể tìm kiếm thông tin
+						trên mạng, đọc các reviews từ các travel blog hoặc hỏi những người bạn xung quanh… Giả sử rằng
+						bạn đã tìm ra được một list các địa điểm phù hợp nhưng đang phân vân chưa biết chọn ra một nơi
+						phù hợp nhất. Tiếp tục bạn sẽ gửi list này cho những người bạn và yêu cầu họ chọn ra địa điểm mà
+						họ cho là tốt nhất. Và cuối cùng địa điểm mà bạn chọn lựa là địa điểm có lượt chọn cao nhất.</p>
+
+					<p>Ở ví dụ trên để có được kết quả cuối cùng ta có thể chia làm 2 bước:</p>
+
+					<ul>
+						<li>
+							<p>Bước 1: Hỏi ý kiến cá nhân mỗi người về địa điểm mà họ cho rằng là tốt. Việc này giống
+								với thuật toán Decision Tree.</p>
+						</li>
+						<li>
+							<p>Bước 2: Tổng hợp ý kiến của mọi người và chọn lựa nơi được chọn nhiều nhất. Và thực tế
+								cho thấy rằng câu trả lời mà được mọi người trả lời nhiều nhất thường đạt được kết quả
+								tốt. Thật vậy, việc tổng hợp từ nhiều nguồn thường sẽ đưa ra một kết quả tốt hơn cá nhân
+								<em>(hiệu ứng đám đông - wisdom of the crowd).</em></p>
+						</li>
+					</ul>
+
+					<p>Trong Machine Learning có một kĩ thuật tương tự đó là <em>Ensemble Learning</em>. Kĩ thuật này
+						còn có thể sử dụng để cải thiện độ yếu kém của một cây quyết định duy nhất. Các nhà nghiên cứu
+						đã đề xuất một phương pháp cải tiến đó là hợp nhất nhiều cây quyết định hơn để đưa ra kết quả.
+						Và ý tưởng của sự kết hợp nhiều cây này sẽ tạo thành thuật toán <em>Random Forest (rừng ngẫu
+							nhiên).</em> Thuật toán này có thể làm việc với 2 mô hình: <em>classification</em> và
+						<em>regression.</em></p>
+
+					<p><a name="2-voting"></a></p>
+
+					<h2 id="2-voting">2. Voting</h2>
+
+					<p>Để hiểu rõ phương pháp tổng hợp rồi đưa ra kết quả, mình sẽ giới thiệu tới một số ví dụ và thực
+						nghiệm sau. Giả sử bạn có training một số mô hình classification như: Logistic Regression, SVM,
+						Decision Tree, KNN… và đạt được kết quả khoảng 80% accuracy cho mỗi mô hình. Tuy nhiên, bạn đã
+						thử thay đổi các tham số trong mô hình nhưng độ hiệu quả không có nhiều khác biệt. Vậy liệu có
+						cách nào để cải thiện hơn? Một cách đơn giản đó là sử dụng kĩ thuật <em>Ensemble Learning</em>,
+						tức vẫn training mỗi mô hình riêng biệt nhưng ở kết quả cuối cùng ta sẽ tổng hợp và voting ra
+						nhãn được xuất hiện nhiều nhất làm kết quả cuối cùng.</p>
+
+					<p><em>Fact: trong các cuộc thi về học máy trên Kaggle, các bài đạt top đều sử dụng ý tưởng từ
+							Ensemble Learning.</em></p>
+
+					<p>Để chứng minh cho sự hiệu quả những gì mình đã đề cập bên trên, mình sẽ sử dụng phương pháp
+						<em>Ensemble Learning</em> dùng cho bài toán phân loại ung thư và so sánh với các mô hình duy
+						nhất:</p>
+
+					<ul>
+						<li>Import thư viện cần thiết và normalize dữ liệu:</li>
+					</ul>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">VotingClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+
+<span class="c1"># Load the dataset 
+</span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">target</span>
+
+<span class="c1"># Normalize
+</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">scaler</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Split dataset
+</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<ul>
+						<li>Tiếp theo mình sẽ khởi tạo 3 mô hình: <code
+								class="language-plaintext highlighter-rouge">LogisticRegression, SVM, DecisionTree</code>
+							và một mô hình tổng hợp của 3 mô hình trên <code
+								class="language-plaintext highlighter-rouge">VotingClassifier</code> với trọng số voting
+							của 3 mô hình là tương đương nhau <em>(voting = hard)</em>:</li>
+					</ul>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="c1"># Different models
+</span><span class="n">log_clf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">svm_clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
+<span class="n">tree_clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+
+<span class="c1"># Ensemble learning of different models
+</span><span class="n">voting_clf</span> <span class="o">=</span> <span class="n">VotingClassifier</span><span class="p">(</span>
+  <span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s">'lr'</span><span class="p">,</span> <span class="n">log_clf</span><span class="p">),</span> <span class="p">(</span><span class="s">'svc'</span><span class="p">,</span> <span class="n">svm_clf</span><span class="p">),</span> <span class="p">(</span><span class="s">'tree_clf'</span><span class="p">,</span> <span class="n">tree_clf</span><span class="p">)],</span>
+  <span class="n">voting</span><span class="o">=</span><span class="s">'hard'</span>
+<span class="p">)</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<ul>
+						<li>Bắt đầu training mô hình và xem kết quả đạt được:</li>
+					</ul>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="k">for</span> <span class="n">clf</span> <span class="ow">in</span> <span class="p">(</span><span class="n">log_clf</span><span class="p">,</span> <span class="n">svm_clf</span><span class="p">,</span> <span class="n">tree_clf</span><span class="p">,</span> <span class="n">voting_clf</span><span class="p">):</span>
+  <span class="n">clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">clf</span><span class="p">.</span><span class="n">__class__</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<ul>
+						<li>Kết quả:</li>
+					</ul>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="n">LogisticRegression</span> <span class="mf">0.986013986013986</span>
+<span class="n">SVC</span> <span class="mf">0.9790209790209791</span>
+<span class="n">DecisionTreeClassifier</span> <span class="mf">0.958041958041958</span>
+<span class="n">VotingClassifier</span> <span class="mf">0.986013986013986</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<p>Như đã thấy thì kết quả của mô hình <code
+							class="language-plaintext highlighter-rouge">VotingClassifier</code> đạt được kết quả cao
+						nhất là <em>0.986</em> so với các mô hình đơn lẻ, trong khi đó mô hình thấp nhất là <code
+							class="language-plaintext highlighter-rouge">DecisionTreeClassifier</code> <em>0.958</em>
+						(cách biệt gần <em>0.28</em>). Đây là một cải thiện khá tốt. Mô hình có thể tưởng tượng như sau:
+					</p>
+
+					<p><img src="/assets/images/bai14/anh2.png" class="normalpic" /></p>
+
+					<p>Ngoài ra nếu bạn muốn lấy ra xác suất của từng nhãn thì cần thay thế hàm <code
+							class="language-plaintext highlighter-rouge">predict</code> bằng <code
+							class="language-plaintext highlighter-rouge">predict_proba</code> và thay đổi phương thứ
+						voting từ <code class="language-plaintext highlighter-rouge">hard</code> sang <code
+							class="language-plaintext highlighter-rouge">soft</code> ở class <code
+							class="language-plaintext highlighter-rouge">VotingClassifier</code>. Xác suất dự đoán ở mỗi
+						class sẽ là giá trị trung bình của từng model. Tuy nhiên, để làm cho mô hình <em>Ensemble
+							Learning</em> đạt được hiệu quả thì các thuật toán bên trong cần phải khác nhau tức các mô
+						hình bên trong hoàn toàn độc lập và không liên quan gì tới nhau và mang tính khách quan cao hơn.
+						Vậy với mô hình <code class="language-plaintext highlighter-rouge">Random Forest</code> thì sao
+						trong khi các thuật toán như mình đã đề cập bên đều sử dụng mô hình <code
+							class="language-plaintext highlighter-rouge">Decision Tree</code>? Ở phần tiếp theo, mình sẽ
+						tiếp tục giải thích cụ thể ở phần dưới.</p>
+
+					<p><a name="3-sample"></a></p>
+
+					<h2 id="3-phương-pháp-lấy-mẫu">3. Phương pháp lấy mẫu</h2>
+
+					<p>Như đã đề cập bên trên thì để một mô hình <em>Ensemble Learning</em> hiệu quả thì ta có thể sử
+						dụng nhiều mô hình khác nhau trên cùng một tập dữ liệu. Tuy nhiên còn có một cách khác rất hiệu
+						quả mà chỉ sử dụng một mô hình đó là training trên các tập con ngẫu nhiên của tập dữ liệu mẫu.
+						Và có 2 cách để thực hiện việc lấy ra tập dữ liệu con hiệu quả đó là: <em>Bagging</em> và
+						<em>Pasting</em>.</p>
+
+					<p><a name="31-bagging"></a></p>
+
+					<h3 id="31-bagging-và-pasting">3.1. Bagging và Pasting</h3>
+
+					<p><em>Bagging</em> hay còn có thể gọi là <em>Boostraping</em>, là phương pháp lấy mẫu có trùng lặp.
+						Giả sử ta có tập dữ liệu ban đầu là $\mathcal{D} = {(x_1, y_1), (x_2, y_2), \dots, (x_m, y_m)}$
+						bao gồm $m$ điểm dữ liệu và $n$ features. Gọi tập hợp gồm các tập dữ liệu con ngẫu nhiên được
+						lấy từ tập dữ liệu ban đầu có tên là $\mathcal{B}$. Với mỗi tập con trong $\mathcal{B}$ sẽ lấy
+						mẫu bằng cách khi mình sampling được 1 dữ liệu thì mình không bỏ dữ liệu đấy ra mà vẫn giữ lại
+						trong tập $\mathcal{D}$, rồi tiếp tục sampling cho tới khi sampling đủ $m$ dữ liệu hoặc đủ số
+						lượng mình yêu cầu. Ví dụ minh họa:</p>
+
+					<p><img src="/assets/images/bai14/anh3.png" class="normalpic" /></p>
+
+					<p><em>Pasting</em> cũng tương tự như <em>Bagging</em> nhưng khi lấy mẫu sẽ không lấy những dữ liệu
+						trùng lặp.</p>
+
+					<p>Và lúc này sau khi ta đã thu được 3 tập dữ liệu $B_1, B_2, B_3$ như hình trên ta sẽ tiến hành
+						training một mô hình trên mỗi tập dữ liệu. Cuối cùng kết quả đánh giá sẽ là giá trị có tần suất
+						xuất hiện nhiều nhất (voting) cho bài toán <em>classification</em>, hay giá trị trung bình cho
+						bài toán <em>regression</em>. Tổng quan hóa qua hình minh họa sau:</p>
+
+					<p><img src="/assets/images/bai14/anh4.png" class="normalpic" /></p>
+
+					<p>Như bạn đã thấy thì sẽ có nhiều mô hình với các tập dữ liệu khác nhau (lấy từ dữ liệu gốc). Vì
+						mỗi mô hình là không hề liên quan tới nhau nên chúng ta hoàn toàn có thể train các mô hình này
+						song song. Vì có thể tính toán song song nên các phương pháp <em>bagging</em> và
+						<em>pasting</em> được sử dụng rất rộng rãi.</p>
+
+					<p><a name="32-coding"></a></p>
+
+					<h3 id="32-thực-nghiệm-với-python">3.2. Thực nghiệm với Python</h3>
+
+					<p>Để thực nghiệm với các giải thích mà mình đã đề cập bên trên cũng như còn có một số lưu ý nên
+						mình sẽ thực hiện training trên bộ dữ liệu ung thư ở phần trên. Trong <code
+							class="language-plaintext highlighter-rouge">sklearn</code> đã cung cấp class <code
+							class="language-plaintext highlighter-rouge">BaggingClassifier</code> cho bài toán phân loại
+						và <code class="language-plaintext highlighter-rouge">BaggingRegressor</code> cho bài toán hồi
+						quy nên mình sẽ sử dụng luôn.</p>
+
+					<p>Cụ thể mình sẽ training trên 500 mô hình <em>DecisionTree</em> <code
+							class="language-plaintext highlighter-rouge">(n_estimators)</code> với 100 samples <code
+							class="language-plaintext highlighter-rouge">(max_samples)</code> ngẫu nhiên được lấy từ
+						training set với phương pháp <em>Bagging</em> <code
+							class="language-plaintext highlighter-rouge">(bootstrap=True)</code>, nếu lấy theo phương
+						pháp <em>Pasting</em> <code
+							class="language-plaintext highlighter-rouge">(bootstrap=False)</code>.</p>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingClassifier</span>
+<span class="n">bag_clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span>
+  <span class="n">DecisionTreeClassifier</span><span class="p">(),</span> 
+  <span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> 
+  <span class="n">bootstrap</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
+  <span class="n">max_samples</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">bag_clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">bag_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<p>Kết quả đã được cải thiện so với mô hình <em>Decision Tree</em> được training duy nhất trên toàn
+						bộ dữ liệu:</p>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="k">print</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">0.965034965034965</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<p>Như đã thấy thì các tập dữ liệu sử dụng <em>boostraping</em> sẽ rất đa dạng, điều này có thể làm
+						cho mô hình có chút (high bias) <em>underfitting</em> so với <em>pasting</em> (dữ liệu ít đa
+						dạng hơn). Tuy nhiên khi kết hợp thì các mô hình sẽ càng ít liên quan tới nhau nên sẽ giảm (low
+						variance) <em>overfitting</em> hơn. Và thông thường thì <em>boostraping</em> đưa ra những kết
+						quả tốt hơn nhưng nếu có thể thì nên sử dụng cả 2 phương pháp rồi so sánh.</p>
+
+					<p>Ngoài cách lấy mẫu dựa trên phương pháp tạo ra nhiều phiên bản khác nhau của các
+						<em>instances</em> trong dữ liệu ban đầu thì ta còn có một cách khác đó là tạo ra các phiên bản
+						khác nhau của dữ liệu dựa trên các <em>features</em>. Phương pháp này khá thú vị và tạo ra các
+						kiểu dữ liệu rất đa dạng, và nó sẽ có thể ứng dụng vào các tập dữ liệu cao chiều. Về cách hoạt
+						động thì hoàn toàn tương tự <em>boostraping</em> và <em>pasting</em>. Bạn có thể đọc thêm <a
+							href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html">tại
+							đây</a>.</p>
+
+					<p><a name="4-rd"></a></p>
+
+					<h2 id="4-random-forest">4. Random Forest</h2>
+
+					<p><a name="41-idea"></a></p>
+
+					<h3 id="41-ý-tưởng-chính">4.1. Ý tưởng chính</h3>
+
+					<p>Sau tất cả các phần mình đã giới thiệu và giải thích bên trên thì thuật toán Random Forest sẽ rất
+						đơn giản để hiểu. Thuật toán này sẽ áp dụng cả 2 phương pháp <em>Ensemble Learning</em> và
+						<em>Boostraping</em>. Ở phần <em>Boostraping</em>, thuật toán sẽ dựa trên dữ liệu ban đầu mà tạo
+						một tập hợp gồm các tập dữ liệu con. Ở phần <em>Ensemble Learning</em> sẽ là tổng hợp nhiều mô
+						hình <em>Decision Tree</em> dựa trên mỗi tập dữ liệu con.</p>
+
+					<p>Tuy nhiên có một chút khác biệt là: (i)tập dữ liệu con này yêu cầu phải có cùng số lượng
+						<em>instances</em> với dữ liệu gốc; (ii)cách phân tách ở mỗi <strong>node</strong> sẽ không dựa
+						trên thuộc tính phân chia nhãn tốt nhất mà chọn ngẫu nhiên một tập hợp con của các thuộc tính và
+						nó tìm kiếm thử nghiệm tốt nhất có thể liên quan đến một trong những thuộc tính này.</p>
+
+					<p>Để hiểu rõ hơn thuật toán thì bạn có thể hiểu đơn giản các bước sẽ được tổng quát như sau:</p>
+
+					<p><strong>Bước 1:</strong> Cho một tập dữ liệu $D$ có $m$ điểm dữ liệu (<em>instances</em>) và $n$
+						thuộc tính.</p>
+
+					<p><strong>Bước 2:</strong> Giả sử ta có $T$ cây quyết định, tức ta cũng cần có $T$ tập dữ liệu được
+						<em>boostraping</em> từ dữ liệu ban đầu và mỗi tập dữ liệu này phải có $m$ <em>instances</em> và
+						$d$ thuộc tính. Tại cây thứ $i$:</p>
+
+					<ul>
+						<li>
+							<p>Tại mỗi <strong>node</strong>:</p>
+
+							<ul>
+								<li>
+									<p>Chọn ngẫu nhiên $k$ thuộc tính ($k &lt; d$).</p>
+								</li>
+								<li>
+									<p>Từ các thuộc tính $k$ được chọn chia ra các nhánh con tương ứng.</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>Cây được phát tiển tới khi đạt được ngưỡng lớn nhất có thể (không dừng, không
+								<em>pruning</em>).</p>
+						</li>
+					</ul>
+
+					<p><strong>Bước 3:</strong> Giá trị dự đoán cuối cùng có thể là <em>voting</em> cho bài toán phân
+						loại hoặc lấy trung bình cho bài toán hồi quy.</p>
+
+					<p>Như đã thấy thì việc xây dựng mỗi cây quyết định trong Random Forest mang tính ngẫu nhiên rất cao
+						và phát triển hết mức có thể nên kết quả cuối cùng của mỗi cây sẽ khá khác nhau và sẽ bị
+						<em>Overfitting</em>. Tuy nhiên, việc kết hợp những cây yếu này làm cho chúng có thể bù trừ cho
+						nhau những điểm mạnh, yêu của mỗi cây và tạo ra một mô hình tốt (Random Forest).</p>
+
+					<p><a name="42-coding"></a></p>
+
+					<h3 id="42-thực-nghiệm-với-python">4.2. Thực nghiệm với Python</h3>
+
+					<p>Trong sklearn đã cung cấp class <code
+							class="language-plaintext highlighter-rouge">RandomForestClassifier</code> cho bài toán phân
+						loại và <code class="language-plaintext highlighter-rouge">RandomForestRegressor</code> cho bài
+						toán hồi quy. Có một số hyper-parameters cần lưu ý khi khởi tạo mô hình: số lượng cây
+						(n_estimators), số lượng tối đa thuộc tính được lựa ở <strong>bước 2</strong> (max_featuers) và
+						một số thuộc tính tương tự ở <a
+							href="https://hnhoangdz.github.io/2022/01/16/Cart.html#51-stop">bài Decision Tree</a> và
+						<em>Bagging bên trên</em>.</p>
+
+					<p>Với tập dữ liệu phân loại ung thư bên trên, mình sẽ khởi tạo mô hình <code
+							class="language-plaintext highlighter-rouge">RandomForestClassifier</code> bao gồm: 500 cây,
+						mỗi cây có độ sâu tối đa là 20, số lượng <strong>leaf node</strong> tối đa là 20.</p>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="n">rnd_clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">max_depth</span><span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">rnd_clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<p>Kết quả:</p>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="n">y_pred</span> <span class="o">=</span> <span class="n">rnd_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">0.972027972027972</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<p>Và tất nhiên ta có thể sử dụng class <code
+							class="language-plaintext highlighter-rouge">BaggingClassifier</code> để tạo mô hình tương
+						tự như <code class="language-plaintext highlighter-rouge">RandomForestClassifier</code> bên
+						trên:</p>
+
+					<div class="language-python highlighter-rouge">
+						<div class="highlight">
+							<pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre>
+							</td>
+							<td class="rouge-code">
+								<pre><span class="n">bag_clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span>
+ <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">splitter</span><span class="o">=</span><span class="s">"random"</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="mi">20</span><span class="p">,),</span>
+ <span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_samples</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">bag_clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_rf</span> <span class="o">=</span> <span class="n">bag_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_rf</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">0.972027972027972</span>
+</pre>
+							</td>
+							</tr>
+							</tbody>
+							</table></code></pre>
+						</div>
+					</div>
+
+					<p>Ngoài ra nếu cần tăng tính ngẫu nhiên khi chọn thuộc tính ở mỗi <strong>node</strong> bạn có thể
+						tham khảo thêm và phần <a
+							href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesClassifier.html">ExtraTreesClassifier</a>.
+					</p>
+
+					<p><em>Toàn bộ source code của bài được lưu <a
+								href="https://github.com/hnhoangdz/hnhoangdz.github.io/tree/main/assets/images/bai14">tại
+								đây</a>.</em></p>
+
+					<p><a name="5-evaluation"></a></p>
+
+					<h2 id="5-đánh-giá-và-kết-luận">5. Đánh giá và kết luận</h2>
+
+					<ul>
+						<li>
+							<p>Random Forest là thuật toán có những cải tiến cực tốt từ việc tổng hợp các Decision Tree,
+								việc giảm <em>Overfitting</em> và có thể làm việc tốt cho các tập dữ liệu cao chiều làm
+								cho Random Forest trở nên rất phổ biến. Hơn nữa, trong mô hình Decision Tree thì rất
+								nhạy cảm với nhiễu (outlier) nên ta thường phải tìm cách loại bỏ những điểm này, nhưng
+								với Random Forest thì việc tạo ra nhiều tập dữ liệu con ngẫu nhiên nên không bị ảnh
+								hưởng bởi nhiễu.</p>
+						</li>
+						<li>
+							<p>Tuy nhiên một trong những điểm yếu của các phương <em>Ensemble Learning</em> nói riêng và
+								Random Forest nói chung là tính toán mất khá nhiều thời gian so với thông thường, đặc
+								biệt là bước predict thì điểm dữ liệu mới này phải đi qua tất cả các model rồi mới có
+								thể voting/averaging. Tất nhiên là ta có thể sử dụng nhiều máy để train các mô hình khác
+								nhau.</p>
+						</li>
+						<li>
+							<p>Ngoài ra có một điểm yếu lớn đó là việc hiểu thực sự bên trong mô hình Random Forest làm
+								gì không dễ dàng. Đã có rất nhiều lí thuyết được đưa ra để nhằm chứng minh sự hiệu quả
+								của mô hình nhưng khá định tính. So với mô hình Decision Tree thì Random Forest có thể
+								cải thiện kết quả cuối cùng tuy nhiên Decision Tree có thể giúp trả lời được khá nhiều
+								câu hỏi liên quan tới mô hình làm gì và tại sao.</p>
+						</li>
+						<li>
+							<p>Ngoài Random Forest còn có các mô hình thuộc họ <em>Ensemble Learning</em> rất mạnh đó là
+								Boosting, Stacking… về vấn đề này mình sẽ giới thiệu ở một bài khác.</p>
+						</li>
+					</ul>
+
+					<p><a name="6-references"></a></p>
+
+					<h2 id="6-tham-khảo">6. Tham khảo</h2>
+
+					<p>[1] <a
+							href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On
+							Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></p>
+
+					<p>[2] <a
+							href="https://www.datacamp.com/community/tutorials/random-forests-classifier-python#_=_">Understanding
+							Random Forests Classifiers in Python by Avinash Navlani</a></p>
+
+					<p>[3] <a
+							href="https://www.analyticsvidhya.com/blog/2020/05/decision-tree-vs-random-forest-algorithm/#h2_6">Decision
+							Tree vs. Random Forest – Which Algorithm Should you Use? by Abhishek Sharma</a></p>
+
+					<p>[4] <a
+							href="https://www.youtube.com/watch?v=BmoNAptI1nI&amp;list=PLaKukjQCR56ZRh2cAkweftiZCF2sTg11_&amp;index=6">7.2.
+							Rừng ngẫu nhiên by Khoat Than</a></p>
+
+					<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

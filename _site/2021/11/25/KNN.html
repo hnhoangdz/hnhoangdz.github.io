@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">8. K-Nearest Neighbors</p>
+    </h2>
+    <strong><i>25 Nov 2021</i></strong>
+</div>
+<br />
+<p><strong>Phụ lục:</strong></p>
+
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-classifier">2. Bài toán phân loại</a>
+    <ul>
+      <li><a href="#21-idea">2.1. Ý tưởng</a></li>
+      <li><a href="#22-coding">2.2. Thực nghiệm với Python</a>
+        <ul>
+          <li><a href="#221-implement">2.2.1. Implement thuật toán</a></li>
+          <li><a href="#222-sklearn">2.2.2. Nghiệm bằng thư viện scikit-learn</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#3-regression">3. Bài toán hồi quy</a>
+    <ul>
+      <li><a href="#31-idea">3.1. Ý tưởng</a></li>
+      <li><a href="#32-coding">3.2. Thực nghiệm với Python</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-evaluation">4. Đánh giá và kết luận</a></li>
+  <li><a href="#5-references">5. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>KNN (K-Nearest Neighbors) là một thuật toán thuộc Supervised-learning. Ý tưởng để triển khai thuật toán này rất đơn giản. Thuật toán dựa trên 2 yếu tố chính đó là: similarity measure (khoảng cách) giữa các điểm dữ liệu và nearest neighbors (“hàng xóm” lân cận) để dự đoán. Một điểm đặc biệt của thuật toán này đó là không có một hàm số giả định nào để học từ nó, khác với bài toán Linear Regression khi ta cần định nghĩa hàm số dự đoán là đường thẳng hoặc parabole. Hơn nữa, khi training thuật toán này sẽ không hề học gì từ dữ liệu, việc tính toán sẽ tập trung toàn bộ khi dự đoán một điểm dữ liệu mới.</p>
+
+<p>Với những lí do nêu trên: KNN còn có thể gọi là <i>non-parameter method, Instance-based learning, Lazy Learning, Memory-based learning</i>. Thuật toán KNN có thể sử dụng cho 2 lớp bài toán hồi quy dự đoán (regression) và phân loại (classification) trong Supervised-leaning.</p>
+
+<p><a name="2-classifier"></a></p>
+
+<h2 id="2-bài-toán-phân-loại">2. Bài toán phân loại</h2>
+
+<p>Khác với bài toán phân loại của thuật toán Logistic Regression đã được trình bày ở <a href="https://hnhoangdz.github.io/2021/11/12/LogisticRegression.html">bài 3 - Logistic Regression</a> sử dụng chính trong các bài toán phân loại nhị phân (binary classification), với thuật toán KNN được sử dụng để phân loại đa lớp (multi-classification). Hiểu đơn giản thì phân loại nhị phân sẽ giúp ta trả lời câu hỏi có hoặc không, ví dụ như khi phân loại email spam thì khi dự đoán một email mới đầu ra của bài toán sẽ trả lời email mới này có là email spam hay không. Nhưng với bài toán phân loại đa lớp sẽ đa dạng hơn, ví dụ khi phân loại 3 con vật chó, mèo, gà thì khi một bức ảnh mới đưa vào sẽ dự đoán nó là chó hay mèo hay gà.</p>
+
+<p><a name="21-idea"></a></p>
+
+<h3 id="21-ý-tưởng">2.1. Ý tưởng</h3>
+
+<p>Giả sử ta có tập dữ liệu như sau, 3 nhãn: 0 tương ứng hình tròn - màu đỏ, 1 tương ứng hình tam giác - màu xanh lục, 2 tương ứng hình vuông - màu xanh dương và điểm dữ liệu x - màu tím cần dự đoán thuộc nhãn nào trong 3 nhãn trên.</p>
+
+<p><img src="/assets/images/bai8/anh1.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: Dữ liệu</p>
+
+<p>Ý tưởng để tìm nhãn cho dữ liệu x - màu tìm rất đơn giản.</p>
+
+<ul>
+  <li>
+    <p>Bước 1: Tính toán khoảng cách giữa x với toàn bộ điểm dữ liệu</p>
+  </li>
+  <li>
+    <p>Bước 2: Chọn ra $K$ khoảng cách ngắn nhất</p>
+  </li>
+  <li>
+    <p>Bước 3: Với $K$ khoảng cách tìm được ở bước 2, ta sẽ xem những khoảng cách lấy ra $a$ - số lượng khoảng cách của x so với nhãn 0, tương tự $b$ - nhãn 1 và $c$ - nhãn 2. Suy ra: $a + b + c = K$.</p>
+  </li>
+  <li>
+    <p>Bước 4: Tìm $max(a,b,c)$. Ví dụ nếu $max(a,b,c) = a$ thì dữ liệu x - màu tìm sẽ thuộc nhãn 0.</p>
+  </li>
+</ul>
+
+<p style="display: flex">
+<img src="/assets/images/bai8/anh2.png" class="smallpic" /> <img src="/assets/images/bai8/anh3.png" class="smallpic" />
+</p>
+<p align="center"> <b>Hình 2</b>: Bên trái - các đường thẳng màu vàng là khoảng cách giữa điểm dữ liệu x với toàn bộ dữ liệu. Bên phải chọn $K$ = 4 ta được 4 đường thẳng ngắn nhất so với x, lúc này số lượng đường thẳng so với x thuộc nhãn 1 (hình tam giác - màu xanh lục) là max. Vì vậy điểm x sẽ thuộc nhãn 1. </p>
+
+<p><a name="22-coding"></a></p>
+
+<h3 id="22-thực-nghiệm-với-python">2.2. Thực nghiệm với Python</h3>
+
+<p><a name="221-implement"></a></p>
+
+<h4 id="221-implement-thuật-toán">2.2.1. Implement thuật toán</h4>
+
+<p>Ở phần này, mình sẽ sử dụng một bộ thư viện có sẵn trong sklearn đó là Iris (một bộ dữ liệu về các loài hoa). Bộ dữ liệu gồm 3 nhãn: Iris setosa, Iris virginica và Iris versicolor. Mỗi nhãn có 50 bông hoa với 4 thông tin chính: chiều dài, chiều rộng đài hoa (sepal), và chiều dài, chiều rộng cánh hoa (petal). Minh họa các loài hoa trong Iris dataset:</p>
+
+<p><img src="/assets/images/bai8/anh4.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: Iris dataset (nguồn: <a href="https://machinelearningcoban.com/2017/01/08/knn/">Machine learning cơ bản</a>)</p>
+
+<p>Load dữ liệu</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="n">load_iris</span><span class="p">()</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">target</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of classes: %d'</span> <span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of data points: %d'</span> <span class="o">%</span><span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Features of each point: %d'</span><span class="o">%</span><span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">Number</span> <span class="n">of</span> <span class="n">classes</span><span class="p">:</span> <span class="mi">3</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">data</span> <span class="n">points</span><span class="p">:</span> <span class="mi">150</span>
+<span class="n">Features</span> <span class="n">of</span> <span class="n">each</span> <span class="n">point</span><span class="p">:</span> <span class="mi">4</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tiếp theo chia bộ dataset thành training set (2/3) và test set (1/3) để đánh giá hiệu năng của mô hình. Tức ta sẽ lấy kết quả ở test set làm kết quả của bài toán, ở trong bộ dữ liệu này phân phối mỗi nhãn là tương đồng nhau nên ta có thể sử dụng accuracy score để đánh giá.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Numbers of training set: %d"</span> <span class="o">%</span><span class="n">X_train</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Numbers of test set: %d"</span> <span class="o">%</span><span class="n">X_test</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">Numbers</span> <span class="n">of</span> <span class="n">training</span> <span class="nb">set</span><span class="p">:</span> <span class="mi">100</span>
+<span class="n">Numbers</span> <span class="n">of</span> <span class="n">test</span> <span class="nb">set</span><span class="p">:</span> <span class="mi">50</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tiếp theo ta sẽ xây dựng các hàm cần thiết cho bài toán.</p>
+
+<ul>
+  <li>Hàm tính khoảng cách giữa 2 điểm</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1"># Khoảng cách o-clit giữa 2 điểm
+</span><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">norm</span><span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm lấy ra toàn bộ khoảng cách với điểm xét</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1"># Tính toàn bộ khoảng cách với điểm xét x0
+</span><span class="k">def</span> <span class="nf">get_all_distance</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="c1"># Lấy toàn bộ khoảng cách và nhãn tương ứng
+</span>        <span class="n">distances</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">dist</span><span class="p">,</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">distance</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm lấy K điểm (nhãn) gần nhất</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1"># Lấy ra K điểm có khoảng cách ngắn nhất
+</span><span class="k">def</span> <span class="nf">get_K_nearest_neighbors</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x0</span><span class="p">):</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="n">get_all_distance</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="c1"># Sắp xếp tăng dần dựa trên khoảng cách kèm theo nhãn
+</span>    <span class="n">distances</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+        <span class="n">neighbors</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">neighbors</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm lấy ra nhãn có lượng vote cao nhất</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c1"># Lấy ra nhãn có số vote cao nhất
+</span><span class="k">def</span> <span class="nf">major_voting</span><span class="p">(</span><span class="n">neighbors</span><span class="p">,</span><span class="n">n_classes</span><span class="p">):</span>
+    <span class="n">counting</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n_classes</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+        <span class="n">counting</span><span class="p">[</span><span class="n">neighbors</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">counting</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm dự đoán và hàm tính số phần trăm chính xác</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="c1"># Hàm dự đoán
+</span><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">n_classes</span><span class="p">):</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="n">get_K_nearest_neighbors</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x0</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">major_voting</span><span class="p">(</span><span class="n">neighbors</span><span class="p">,</span><span class="n">n_classes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_pred</span>
+
+<span class="c1"># Tính phần trăm chính xác của dự đoán và test
+</span><span class="k">def</span> <span class="nf">accuracy_score</span><span class="p">(</span><span class="n">y_preds</span><span class="p">,</span><span class="n">y_test</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_preds</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">y_preds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">y_test</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">count</span><span class="o">/</span><span class="n">n</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Hàm main</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">y_preds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">xt</span> <span class="ow">in</span> <span class="n">X_test</span><span class="p">:</span>
+        <span class="n">yt</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">xt</span><span class="p">,</span><span class="n">n_classes</span><span class="p">)</span>
+        <span class="n">y_preds</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">yt</span><span class="p">)</span>
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_preds</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Accuracy score: %f'</span> <span class="o">%</span><span class="n">acc</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p>Kết quả thu được sau vài lần chạy thường đặt được accuracy khá cao: 0.96, 0.98 thậm chí đôi khi lên tới 1.0.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">Accuracy</span> <span class="n">score</span><span class="p">:</span> <span class="mf">0.980000</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="222-sklearn"></a></p>
+
+<h4 id="222-nghiệm-bằng-thư-viện-scikit-learn">2.2.2. Nghiệm bằng thư viện scikit-learn</h4>
+
+<p>Đầu tiên ta sẽ import các thư viện cần thiết và phân chia tập train/test.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="n">load_iris</span><span class="p">()</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">target</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Tiếp theo ta sẽ sử dụng class mà sklearn cung cấp để khởi tạo mô hình KNN, như đã nói ở trên thì thực chất thuật toán KNN sẽ không hề học gì từ dữ liệu vì vậy hàm <code class="language-plaintext highlighter-rouge">fit</code> sẽ chỉ đóng góp đưa 2 tham số <code class="language-plaintext highlighter-rouge">X_train</code> và <code class="language-plaintext highlighter-rouge">y_train</code> làm base data để dự đoán cho những dữ liệu mới.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn_clf</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># K = 5, norm 2 distance 
+</span><span class="n">knn_clf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Sau khi khởi tạo mô hình ta sẽ dự đoán và đưa ra giá trị dự đoán trên tập test</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn_clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Accuracy score: %2f'</span> <span class="o">%</span><span class="n">acc</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Kết quả:</strong></p>
+
+<p>Kết quả khá tương tự với cách mình implement ở trên sẽ có sự khác nhau ở mỗi lần chạy lại thuật toán (vì mỗi lần chạy lại chia dữ liệu train/test theo một phân phối khác nhau) ,tuy nhiên thì accuracy sẽ khoảng 0.92 trở lên. Để có thể giữ độ ổn định sau mỗi lần chạy lại thuật toán ta có thể sử dụng <code class="language-plaintext highlighter-rouge">np.random.seed(2)</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">Accuracy</span> <span class="n">score</span><span class="p">:</span> <span class="mf">0.960000</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Có một lưu ý rằng ở kĩ thuật major_voting của thuật toán KNN là các khoảng cách K gần nhất với điểm dữ liệu đang xét có trọng số như nhau (tức độ quan trọng khoảng cách của các điểm xa điểm đang xét bằng với khoảng cách các điểm gần điểm đang xét) điều này sẽ làm mô hình KNN chưa thật sự chặt chẽ để đưa ra một đáp án cuối cùng. Vì vậy sk-learn cung cấp một attribute khi khởi tạo mô hình KNN đó là <code class="language-plaintext highlighter-rouge">weight</code>. Ở đoạn code trên chưa khai báo <code class="language-plaintext highlighter-rouge">weight</code> tức trọng số toàn bộ khoảng cách là như nhau (default là <code class="language-plaintext highlighter-rouge">uniform</code>), ta có thể cung cấp vào mô hình khởi tạo KNN như sau để đánh trọng số cao hơn cho khoảng cách gần hơn:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c1"># K = 5, norm 2 distance, weights = 'distance' default: `uniform`
+</span><span class="n">knn_clf</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>  <span class="n">weights</span> <span class="o">=</span> <span class="s">'distance'</span><span class="p">)</span> 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a name="3-regression"></a></p>
+
+<h2 id="3-bài-toán-hồi-quy">3. Bài toán hồi quy</h2>
+
+<p><a name="31-idea"></a></p>
+
+<h3 id="31-ý-tưởng">3.1. Ý tưởng</h3>
+
+<p>Ý tưởng với bài toán hồi quy cũng rất đơn giản. Giả sử ta có một tập dữ liệu như sau về thời gian học và số điểm tương ứng.</p>
+
+<p><img src="/assets/images/bai8/anh5.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 4</b>: Dữ liệu ví dụ</p>
+
+<p>Lúc này với các điểm hình tròn - màu đỏ là các dữ liệu mẫu đã có, ta cần dự đoán với điểm dữ liệu tam giác - màu xanh lục sẽ có giá trị score tương ứng là bao nhiêu với time. Ý tưởng của thuật toán KNN với bài toán hồi quy như sau:</p>
+<ul>
+  <li>
+    <p>Bước 1: Tính khoảng cách của dữ liệu xét với toàn bộ dữ liệu mẫu.</p>
+  </li>
+  <li>
+    <p>Bước 2: Lấy ra K dữ liệu mẫu có K khoảng cách ngắn nhất.</p>
+  </li>
+  <li>
+    <p>Bước 3: Giá trị dự đoán là trung bình của biến mục tiêu với K dữ liệu mẫu tương ứng tìm được ở trên.</p>
+  </li>
+</ul>
+
+<p style="display: flex">
+<img src="/assets/images/bai8/anh6.png" class="smallpic" /> <img src="/assets/images/bai8/anh7.png" class="smallpic" />
+</p>
+<p align="center"> <b>Hình 5</b>: Bên trái - Sau khí tính toàn bộ khoảng cách, với $K$ = 3 ta lấy được 3 điểm hình tròn (lúc này màu xanh lục) là 3 giá trị có khoảng cách ngắn nhất so với điểm dữ liệu đang xét. Bên phải - Lấy trung bình các giá trị $y_1, y_2, y_3$ với 3 điểm trên ta được $y_0$ chính là giá trị cần dự đoán của $x_0$.</p>
+
+<p><a name="32-coding"></a></p>
+
+<h3 id="32-thực-nghiệm-với-python">3.2. Thực nghiệm với Python</h3>
+
+<p>Vì việc code khá tương tự phần trên, nên ở phần này mình sẽ không code lại mà sử dụng thư viện sklearn và đánh giá với việc chọn $K$.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neighbors</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">]],</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float'</span><span class="p">).</span><span class="n">T</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">]],</span><span class="n">dtype</span><span class="o">=</span><span class="s">'float'</span><span class="p">).</span><span class="n">T</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">500</span><span class="p">).</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">knn</span> <span class="o">=</span> <span class="n">neighbors</span><span class="p">.</span><span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">K</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">knn</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">knn</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'ro'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'K = %d'</span><span class="o">%</span><span class="n">K</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p><strong>Kết quả:</strong></p>
+
+<p><img src="/assets/images/bai8/anh8.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 6</b>: KNN regression</p>
+
+<p>Với giá trị $K$ khác nhau ta có:</p>
+
+<p style="display: flex">
+<img src="/assets/images/bai8/anh9.png" class="smallpic" /> <img src="/assets/images/bai8/anh10.png" class="smallpic" />
+</p>
+<p style="display: flex">
+<img src="/assets/images/bai8/anh11.png" class="smallpic" /> <img src="/assets/images/bai8/anh12.png" class="smallpic" />
+</p>
+
+<p align="center"> <b>Hình 7</b>: So sánh các giá trị $K$</p>
+
+<p><strong>Nhận xét:</strong></p>
+
+<ul>
+  <li>
+    <p>Ta thấy với giá trị $K$ nhỏ, hầu như các giá trị dự đoán rất khít với giá trị mẫu, điều này dẫn tới việc dự đoán khi có dữ liệu nhiễu (outlier) sẽ làm thuật toán bị overfitting. Vì vậy thuật toán này sẽ không thường chọn giá trị $K$ quá nhỏ. Điều này đúng với cả 2 bài toán Regression và Classification.</p>
+  </li>
+  <li>
+    <p>Ngoài ra, trong bài toán Regression thì KNN với <code class="language-plaintext highlighter-rouge">weight</code> là <code class="language-plaintext highlighter-rouge">distance</code> sẽ làm cho điểm dự đoán có xu hướng tiến sát gần vào những điểm gần nó trong K điểm được chọn nên sẽ gây ra hiện tượng overfitting.</p>
+  </li>
+</ul>
+
+<p style="display: flex">
+<img src="/assets/images/bai8/anh13.png" class="smallpic" /> <img src="/assets/images/bai8/anh14.png" class="smallpic" />
+</p>
+
+<p align="center"> <b>Hình 8</b>: So sánh Weight trong Regression</p>
+
+<p>Toàn bộ source code sẽ được lưu <a href="https://github.com/hnhoangdz/hnhoangdz.github.io/tree/main/assets/images/bai8">tại đây</a>.</p>
+
+<p><a name="4-evaluation"></a></p>
+
+<h2 id="4-đánh-giá-và-kết-luận">4. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>
+    <p>Với thuật toán KNN thì thời gian training mô hình bằng 0 vì nó không học bất kì kiến thức gì dữ liệu. Ngược lại quá trình training và predict sẽ gom chung vào một stage nên nếu K càng lớn thì độ phức tạp của thuật toán càng cao.</p>
+  </li>
+  <li>
+    <p>Thuật toán KNN là thuật toán đơn giản và có thể mang lại độ chính xác khá cao, nhưng khi training một tập dữ liệu lớn thì rất chậm vì việc tính toán của KNN sẽ bắt đầu lại từ đầu khi có dữ liệu mới.</p>
+  </li>
+  <li>
+    <p>Ngoài ra trong một số trường hợp thì độ đo similarity có thể thay đổi để phù hợp hơn với dữ liệu.</p>
+  </li>
+</ul>
+
+<p><a name="5-references"></a></p>
+
+<h2 id="5-tham-khảo">5. Tham khảo</h2>
+
+<p>[1] <a href="https://machinelearningcoban.com/2017/01/08/knn/">Bài 6: K-nearest neighbors - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[2] <a href="https://users.soict.hust.edu.vn/khoattq/ml-dm-course/L6-KNN.pdf">KNN - Machine Learning and Data Mining by Khoat Than</a></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>

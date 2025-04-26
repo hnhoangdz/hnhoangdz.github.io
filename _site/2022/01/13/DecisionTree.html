@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="utf-8" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<title>Computer Science</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Style for main home page -->
+	<link rel="stylesheet" href="/assets/css/styles.css?t=2025-04-26 22:59:52 +0700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="/assets/images/img.png" sizes="32x32">
+	<!-- <link rel="canonical" href="https://phamdinhHoang.github.io" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="author" content="Phạm Đình Khánh" /> -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="Hoang's blog" />
+	<meta property="og:url" content="https://phamdinhHoang.github.io" />
+	<meta property="og:description" content="" />
+
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="" />
+
+
+	<meta property="article:author" content="Hoang" />
+	<meta property="article:section" content="" />
+
+	<link rel="alternate" type="application/atom+xml" title="Hoang's blog - Atom feed" href="/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V21G183P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-L3V21G183P');
+	</script>
+</head>
+<style>
+	body {
+		padding: 0 7.5%;
+	}
+</style>
+
+<body>
+	<div content="container" style="padding-top: 1rem;">
+		<div class="row">
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<a href="/">
+					<img width="100%" style="padding-bottom: 3mm; border-radius:50%" src="/assets/images/img.png" />
+				</a>
+				<br>
+				<nav>
+					<div class="header">Latest</div>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/21/NeuralNet.html">15. Neural Network</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/18/Random_Forest.html">14. Random Forest</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/16/Cart.html">13. Decision Tree - CART</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/13/DecisionTree.html">12. Decision Tree - ID3</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2022/01/11/DBSCAN.html">11. DBSCAN</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/12/15/XLA_2.html">10. Xử lí ảnh (2/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/29/XLA_1.html">9. Xử lí ảnh (1/2)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/25/KNN.html">8. K-Nearest Neighbors</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/21/Kmeans.html">7. K-means</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/20/Linear_Algebra3.html">6. Ôn tập đại số tuyến tính (3/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/17/Linear_Algebra_2.html">5. Ôn tập đại số tuyến tính (2/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/13/Linear_Algebra_1.html">4. Ôn tập đại số tuyến tính (1/3)</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/12/LogisticRegression.html">3. Logistic Regression</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/10/Gradient-Descent.html">2. Gradient Descent</a></li>
+					
+					<li><a style="text-align: left; color: #046897" href="/2021/11/06/LinearRegression.html">1. Linear Regression</a></li>
+					
+				</nav>
+			</div>
+			<div class="col-md-8 col-xs-12" style="z-index:1">
+				<nav class="navbar navbar-inverse" style="background-color: #046897;padding-top: 20px">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="/">
+								<p style="color:#FFF"><b><i>Computer Science</i></b></p>
+							</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li><a href="/home"><span style="color: #fff"> Home</span></a></li>
+								<li><a href="/about"><span style="color: #fff"> About me</span></a></li>
+								<li><a href="/certificate"><span style="color: #fff">Certificate</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="PageNavigation">
+				</div>
+				<h1 itemprop="name" class="post-title"></h1>
+				<div id="bootstrap-overrides">
+					<div>
+    <h2>
+        <p class="post-link" style="text-align: left; color: #204081; font-weight: bold">12. Decision Tree - ID3</p>
+    </h2>
+    <strong><i>13 Jan 2022</i></strong>
+</div>
+<br />
+<ul>
+  <li><a href="#1-introduction">1. Giới thiệu</a></li>
+  <li><a href="#2-idea">2. Ý tưởng chính</a></li>
+  <li><a href="#3-id3">3. ID3</a>
+    <ul>
+      <li><a href="#31-idea">3.1. Ý tưởng</a></li>
+      <li><a href="#32-entropy">3.2. Entropy</a></li>
+      <li><a href="#33-algorithm">3.3. Thuật toán ID3</a></li>
+      <li><a href="#34-example">3.4. Ví dụ minh họa</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-evaluation">4. Đánh giá và kết luận</a></li>
+  <li><a href="#5-references">5. Tham khảo</a></li>
+</ul>
+
+<p><a name="1-introduction"></a></p>
+
+<h2 id="1-giới-thiệu">1. Giới thiệu</h2>
+
+<p>Trong thực tế, khi đưa ra một quyết định về một vấn đề nào đó ta thường dựa trên những yếu tố xung quanh để đặt ra những câu hỏi liên quan tới chủ đề mà ta đang quan tâm. Ví dụ trước khi bạn hỏi thằng bạn thân của bạn về cách tán một cô gái là có khả thi hay không, ta cần xem xét liệu có khả thi không dựa trên những gì chàng trai đang có (ở lứa tuổi học sinh) có thể biểu diễn dưới dạng sơ đồ quyết định như sau:</p>
+
+<p><img src="/assets/images/bai12/anh1.png" class="normalpic" /></p>
+
+<p align="center"> <b>Hình 1</b>: Mức độ khả thi tán cô gái dựa trên câu hỏi</p>
+
+<p>Với hình 1 ta có thể dịch lại như sau:</p>
+
+<ul>
+  <li>
+    <p>Nếu cậu bạn đẹp trai thì khả thi, nếu không cậu ta có khả năng ăn nói trôi chảy thì cũng khả thi và các trường hợp ngược lại còn lại sẽ là không khả thi.</p>
+  </li>
+  <li>
+    <p>Ô màu xanh dương là kí hiệu cho có khả thi (P) hoặc không khả thi (I).</p>
+  </li>
+  <li>
+    <p>Ô màu vàng là câu hỏi đặt ra.</p>
+  </li>
+  <li>
+    <p>Ô màu xanh lục là khả thi (P), màu đỏ là không khả thi (I).</p>
+  </li>
+</ul>
+
+<p>Ta thấy rằng để đưa ra quyết định khả thi hay không khả thi, ta phải đi trả lời liên tiếp các câu hỏi liên quan tới vấn đề cần quyết định. Và đây cũng chính là ý tưởng của thuật toán hôm nay mình sẽ đề cập tới - Decision Tree. Thuật toán này sẽ mô tả những gì mà ta suy nghĩ thường ngày để đưa ra quyết định bằng cách đặt ra những câu hỏi.</p>
+
+<p><a name="2-idea"></a></p>
+
+<h2 id="2-ý-tưởng-chính">2. Ý tưởng chính</h2>
+
+<p>Để hiểu rõ các bước mà mô hình Decision Tree làm việc, mình sẽ đưa ra một bộ dữ liệu 2D gồm 2 thuộc tính $x_1$ và $x_2$ như sau (ví dụ này được trích từ <a href="https://machinelearningcoban.com/tabml_book/ch_model/decision_tree.html">Machine Learning cho dữ liệu dạng bảng</a>):</p>
+
+<p><img src="/assets/images/bai12/anh2.png" class="medianpic" /></p>
+
+<p align="center"> <b>Hình 2</b>: Dataset</p>
+
+<p>Để phân chia tập dữ liệu này thành 2 lớp, ta có thể nghĩ ngay tới thuật toán <a href="https://hnhoangdz.github.io/2021/11/12/LogisticRegression.html">Logistic Regression</a> để tìm ra 1 đường thẳng ngăn cách. Tuy nhiên, với Decision Tree có thể tìm ra đường nhiều đường phân cách hơn, cụ thể ta xét với ngưỡng và $x_1 &gt; 5$ để chia tập dữ liệu như sau:</p>
+
+<p><img src="/assets/images/bai12/anh3.png" class="medianpic" /></p>
+
+<p align="center"> <b>Hình 3</b>: $x_1 &gt; 5$</p>
+
+<p>Từ đây ta có thể suy ra rằng, với bất kì điểm dữ liệu mới nào cần dự đoán chỉ cần có giá trị $x_1 &gt; 5$ sẽ thuộc <em>nhãn 1</em>. Tuy nhiên với $x_1 &lt; 5$ ta có thể thấy rằng vẫn còn có phần dữ liệu nhãn màu xanh dương, vì vậy khi có điểm dữ liệu có $x_1 &lt; 5$ thì rất có thể dự đoán nhầm lẫn. Do đó, ta sẽ tiếp tục xét một ngưỡng $x_2 &gt; 4$ như sau:</p>
+
+<p><img src="/assets/images/bai12/anh4.png" class="medianpic" /></p>
+
+<p align="center"> <b>Hình 4</b>: $x_2 &gt; 4$</p>
+
+<p>Lúc này ta có thể nói rằng với các điểm dữ liệu có $x_1 &gt; 5$ thì sẽ thuộc <em>nhãn 1</em>, nếu $x_1 &lt; 5$ mà có $x_2 &gt; 4$ cũng sẽ thuộc <em>nhãn 1</em> và các trường hợp còn lại thuộc <em>nhãn 0</em>. Và đây cũng chính là cách mà thuật toán Decision Tree sẽ làm:</p>
+
+<p><img src="/assets/images/bai12/anh5.png" class="large" /></p>
+
+<p align="center"> <b>Hình 5</b>: Decision Tree</p>
+
+<p>Ở <strong>hình 5</strong> bên phải chính là cây quyết định mà ta đã tạo ra sau khi xét các ngưỡng. Một số kí hiệu về cây quyết định như sau:</p>
+
+<ul>
+  <li>
+    <p>Trong decision tree, các ô hình chữ nhật màu xanh, đỏ trên được gọi là các <strong>node</strong></p>
+  </li>
+  <li>
+    <p>Các <strong>node</strong> thể hiện đầu ra màu đỏ (nhãn 1 và 0) được gọi là <strong>node lá (leaf node hoặc terminal node)</strong></p>
+  </li>
+  <li>
+    <p>Các <strong>node</strong> thể hiện câu hỏi màu xanh là các <strong>non-leaf node</strong></p>
+  </li>
+  <li>
+    <p><strong>Non-leaf node</strong> trên cùng (câu hỏi đầu tiên) được gọi là <strong>node gốc (root node)</strong></p>
+  </li>
+  <li>
+    <p>Các <strong>non-leaf node</strong> có hai hoặc nhiều <strong>node con (child node)</strong> và các <strong>child node</strong> có thể là một <strong>leaf node</strong> hoặc một <strong>non-leaf node</strong> khác</p>
+  </li>
+  <li>
+    <p>Các <strong>child node</strong> có cùng bố mẹ được gọi là <strong>sibling node</strong></p>
+  </li>
+</ul>
+
+<p>Vậy tiêu chí gì để mình tìm được điều kiện đầu tiên? tại sao lại là $x_1$ và tại sao lại là 5 mà không phải là một số khác? Nếu mọi người để ý ở trên thì mình sẽ tạo điều kiện để tách dữ liệu thành 2 phần mà dữ liệu mỗi phần có tính phân tách hơn dữ liệu ban đầu. Ví dụ: điều kiện $x_1 &gt; 5$, tại nhánh đúng thì tất cả các phần tử đều thuộc lớp 1.</p>
+
+<ul>
+  <li>
+    <p>Thế điều kiện $x_1 &gt; 8$ cũng chia nhánh đúng thành toàn lớp 1 sao không chọn? vì nhánh đúng ở điều kiện x1&gt;5 chứa nhiều phần tử lớp 1 hơn và tổng quát hơn nhán đúng của $x_1 &gt; 8$.</p>
+  </li>
+  <li>
+    <p>Còn điều kiện $x_1 &gt; 2$ thì cả 2 nhánh con đều chứa dữ liệu của cả lớp 0 và lớp 1.</p>
+  </li>
+</ul>
+
+<p>Từ ví dụ này ta có thể thấy rằng, ở mỗi bước chọn biến ($x_1$) và chọn ngưỡng ($t_1$) là các cách chọn tốt nhất có thể ở mỗi bước. Cách chọn này giống với ý tưởng của thuật toán <em>tham lam (greedy)</em>. Cách chọn này có thể không phải là tối ưu, nhưng trực giác cho chúng ta thấy rằng cách làm này sẽ gần với cách làm tối ưu. Ngoài ra, cách làm này khiến cho bài toán cần giải quyết trở nên đơn giản hơn.</p>
+
+<p>Tuy nhiên, tiêu chí chọn $x_1$ và $t_1$ để đưa ra điều kiện phân tách đều dựa trên trực giác mình có thể nhìn thấy được để đưa ra. Nhưng máy tính thì khác, nó cần một độ đo số liệu cụ thể để đưa ra các điều kiện phân tách. Vì vậy, trong bài hôm nay mình sẽ giới thiệu 2 thuật toán phổ biến nhất để làm với Decision Tree: ID3, CART.</p>
+
+<p><a name="3-id3"></a></p>
+
+<h2 id="3-id3">3. ID3</h2>
+
+<p><em>Phần này được tham khảo từ <a href="https://machinelearningcoban.com/2018/01/14/id3/#-id">phần 2. ID3 - Bài 34: Decision Trees (1): Iterative Dichotomiser 3 - Machine Learning cơ bản</a>, ở phần mình sẽ tóm tắt lại lí thuyết và đưa ra ví dụ để bản thân mình hiểu hơn chứ không implement code. Bạn có thể vào blog trên để theo dõi cách implement.</em></p>
+
+<p><em>Source code: <a href="https://github.com/tiepvupsu/DecisionTreeID3/blob/master/id3.py">Implement ID3 - Machine Learning cơ bản</a>.</em></p>
+
+<p>Thuật toán ID3 là một giải thuật được ra đời từ khá lâu đời và được sử dụng phổ biến trong bài toán cây nhị phân (binary tree). Thuật toán này được sử dụng cho các bài toán classification mà tất cả các thuộc tính ở dạng categorical. Việc xây dựng một Decision Tree là lần lượt đi chọn các câu hỏi cho từng thuộc tính với mức độ ưu tiên từ trên xuống (top-down) để từ đó tạo nên một cây mang những câu hỏi có tính phân tách dữ liệu tốt nhất. Tất nhiên là có thể kết hợp nhiều thuộc tính để đưa ra câu hỏi và lựa chọn nhưng cách này sẽ khá phức tạp.</p>
+
+<p><a name="31-idea"></a></p>
+
+<h3 id="31-ý-tưởng">3.1. Ý tưởng</h3>
+
+<p>Giả sử trong bộ dữ liệu ta có $d$ thuộc tính khác nhau. Và mỗi thuộc tính lại mang những giá trị khác nhau, vậy làm sao để sắp xếp mức độ ưu tiên cho mỗi thuộc tính và đưa ra câu hỏi? Nếu lựa chọn ngẫu nhiên 1 thuộc tính từ $d$, xác suất đúng chỉ là $\frac{1}{d}$ (rất thấp). Vì vậy ta cần xét một tiêu chí nào đó có thể đưa ra cách lựa chọn biến/thuộc tính <em>phù hợp nhất</em>, đây chính là cách ta chọn câu hỏi. Sau mỗi bước lựa chọn được thuộc tính <em>phù hợp nhất</em> ta tiếp tục chia tập dữ liệu vào các <strong>child node</strong> rồi tiếp tục lại đi tìm thuộc tính <em>phù hợp nhất</em> tiếp theo cho đến khi xuất hiện <strong>leaf node</strong>, tương ứng nhãn của dữ liệu hoặc gặp một điều kiện dừng nào đó.</p>
+
+<p>Nếu đã từng biết thuật toán <em>greedy (tham lam)</em> thì chắc hẳn bạn đã quen với cách làm này. Ở mỗi bước ta sẽ cố gắng tìm một thuộc tính <em>phù hợp nhất</em>, mặc dù có thể là chưa là tối ưu toàn cục của bài toán. Về thuật toán này, mình sẽ trình bày ở phần <em>Cấu trúc dữ liệu và giải thuật</em>.</p>
+
+<p>Tuy nhiên, trước khi trả về <strong>leaf node</strong> tức nhãn của dữ liệu ta cần <strong>child node</strong> có tính phân chia càng cao càng tốt, và tốt nhất thì toàn bộ phân phối rơi vào 1 nhãn tức <strong>child node</strong> lúc này là <strong>leaf node</strong>, và đây cũng là chính là kết quả của một chuỗi các thuộc tính/câu hỏi. Do đó, nếu phân phối của các nhãn bằng nhau tức việc phân chia lúc này rất thấp và phải tiếp tục tìm thuộc tính/câu hỏi để phân chia tiếp. Vì vậy, một chỉ số dùng để đánh giá mức độ tinh khiết (purity), hoặc độ vẩn đục (impurity) của một phép phân chia có tên là <em>Entropy</em>.</p>
+
+<p><em>Đọc đến đây nếu bạn cảm thấy khó hiểu, ‘dont worry about it’ các ví dụ cụ thể sẽ được trình bày bên dưới.</em></p>
+
+<p><a name="32-entropy"></a></p>
+
+<h3 id="32-entropy">3.2. Entropy</h3>
+
+<p>Ở <a href="https://hnhoangdz.github.io/2021/11/12/LogisticRegression.html">bài 3 - Logistic Regression</a> mình đã giới thiệu về hàm <em>Binary Cross Entropy</em>, hàm này là một trường hợp đặc biệt khi chỉ có 2 nhãn của hàm <em>Cross Entropy</em>. Mục tiêu các hàm này sử dụng để đo sai số xác suất dự báo giữa giá trị dự đoán <em>(prediction)</em> và giá trị thực <em>(ground truth)</em>.</p>
+
+<p>Tuy nhiên hàm <em>Entropy</em> sử dụng để đánh giá mức độ tinh khiết và vẩn đục của phép phân chia sẽ chỉ sử dụng mình xác suất dự đoán. Giả sử một sự kiện xảy ra với phân phối xác suất là $\mathbf{p} = (p_1, p_2, \dots, p_C)$ thoả mãn $\sum_{i=1}^{C} p_i = 1$. Khi đó hàm entropy đối với sự kiện trên là:</p>
+
+\[\mathbf{E}(\mathbf{p}) = -\sum_{i=1}^{C}p_i \log(p_i)\]
+
+<p>Nếu sự kiện chỉ có 2 xác suất xảy ra $p$ và $1 - p$ tại 1 node, hàm <em>Entropy</em> có thể viết lại như sau:</p>
+
+\[\mathbf{E}(\mathbf{p}) = -p \log(p) - (1 - p)\log(1 - p)\]
+
+<p>Để hiểu rõ mình sẽ visualize hàm $\mathbf{E}(\mathbf{p})$ với các xác suất $p$ như sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="background"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># Entropy
+</span><span class="k">def</span> <span class="nf">_entropy</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+  <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">p</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">log2</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">log2</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">)))</span>
+
+<span class="c1"># Probability p
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Visualize
+</span><span class="n">entropy</span> <span class="o">=</span> <span class="n">_entropy</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">entropy</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'p'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'entropy'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Entropy'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/bai12/anh6.png" class="median" /></p>
+
+<p align="center"> <b>Hình 6</b>: Entropy</p>
+
+<p>Nhận thấy rằng hàm <em>Entropy</em> đạt giá trị cực tiểu tại $p = 1$ và $p = 0$, đạt giá trị cực đại tại $p = 0.5$. Điều này chỉ ra rằng giá trị entropy cực tiểu đạt được khi phân phối $p$ là tinh khiết nhất, tức phân phối hoàn toàn thuộc về một lớp. Trái lại, entropy đạt cực đại khi toàn bộ xác suất thuộc về các lớp là bằng nhau. Một phân phối có entropy càng thấp thì mức độ tinh khiết của phân phối đó sẽ càng lớn.</p>
+
+<p>Với $C &gt; 2$ tức có thể là một cây nhiều nhánh thì điều này vẫn đúng (chứng minh <a href="https://machinelearningcoban.com/2017/04/02/duality/#--phuong-phap-nhan-tu-lagrange">tại đây</a>) tức hàm <em>Entropy</em> là tinh khiết nhất khi có một xác suất $p = 1$ (rơi vào chỉ 1 class).</p>
+
+<p><em>Lưu ý: khi xuất hiện một xác suất $p_i = 0$ thì ta coi $0\log(0) = 0$.</em></p>
+
+<p><a name="33-algorithm"></a></p>
+
+<h3 id="33-thuật-toán-id3">3.3. Thuật toán ID3</h3>
+
+<p>Lúc này ta đã có một độ đo để đưa ra cách lựa chọn cách phân chia <em>phù hợp nhất</em> dựa trên hàm <em>Entropy</em> đã được trình bày bên trên. Thuật toán ID3 được biểu diễn như sau:</p>
+
+<p><strong>Bước 1</strong>: Xét bài toán phân loại có $C$ class, node đang tới là một <strong>non-leaf node</strong> $\mathcal{X}$ với các điểm dữ liệu tạo thành là $\mathcal{S}$ có số lượng phần tử là $N$. $N_c$ là số lượng phần tử của class $c$ với $c = 1, 2, …, C$. Xác suất để mỗi điểm dữ liệu rơi vào một class $c$ được xấp xỉ bằng $\frac{N_c}{N}$. Hàm <em>Entropy</em> dựa trên xác suất được tính như sau:</p>
+
+\[\mathbf{E}(\mathcal{S}) = -\sum_{c=1}^C \frac{N_c}{N} \log\left(\frac{N_c}{N}\right) \quad\quad (1)\]
+
+<p><strong>Bước 2</strong>: Yêu cầu đặt ra rằng: Ở <strong>non-leaf node</strong> này ta cần chọn ra một thuộc tính $x$. Và khi $x$ được chọn thì nhánh tiếp theo sẽ có số lượng <strong>child node</strong> bằng với số giá trị mà thuộc tính $x$ có. Dựa trên $x$, các điểm dữ liệu trong $\mathcal{S}$ được phân ra thành $K$ child node $\mathcal{S_1},\mathcal{S_2},…,\mathcal{S_K}$ với số điểm trong mỗi <strong>child node</strong> lần lượt là $m_1,m_2,…,m_K$. Suy ra tổng trọng số <em>Entropy</em> của mỗi <strong>child node</strong> là:</p>
+
+\[\mathbf{E}(x, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{E}(\mathcal{S}_k) \quad\quad (2)\]
+
+<p>Thông số đánh giá <em>information gain</em> dựa trên thuộc tính $x$ được tính toán như sau:</p>
+
+\[\mathbf{G}(x, \mathcal{S}) = \mathbf{E}(\mathcal{S}) - \mathbf{E}(x, \mathcal{S}) \quad\quad (3)\]
+
+<p>Cuối cùng, thuộc tính được lựa chọn $x^*$ là:</p>
+
+\[x^* = \arg\max_{x} \mathbf{G}(x, \mathcal{S}) = \arg\min_{x} \mathbf{E}(x, \mathcal{S}) \quad\quad (4)\]
+
+<p>tức $x^*$ làm cho <em>information gain</em> <strong>lớn nhất</strong> hoặc tổng trọng số <em>Entropy</em> <strong>nhỏ nhất</strong></p>
+
+<p><strong>Bước 3</strong>: Bước 1 và Bước 2 được lặp lại cho tới khi cây tạo ra có thể dự đoán chính xác 100% training data hoặc toàn bộ thuộc tính đã được xét tới. Tuy nhiên cách dừng thuật toán này có thể gây ra Overfiting, ở phần sau mình sẽ bàn luận chi tiết hơn. Chú ý: mỗi thuộc tính chỉ được xuất hiện một lần trên một nhánh.</p>
+
+<p><a name="34-example"></a></p>
+
+<h3 id="34-ví-dụ-minh-họa">3.4. Ví dụ minh họa</h3>
+
+<p>Cho tập dữ liệu sau:</p>
+
+<hr />
+
+<p><img src="/assets/images/bai12/anh7.png" class="normalpic" /></p>
+
+<hr />
+
+<p>Có 4 thuộc tính về thời tiết:</p>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Outlook</code> có thể bằng <em>Sunny</em> hoặc <em>Overcast</em> hoặc <em>Rain</em>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Temperature</code> có thể bằng <em>Hot</em> hoặc <em>Mild</em> hoặc <em>Cool</em>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Humidity</code> có thể bằng <em>High</em> hoặc <em>Normal</em>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Wind</code> có thể bằng <em>Weak</em> hoặc <em>Strong</em></p>
+  </li>
+</ol>
+
+<p>và <code class="language-plaintext highlighter-rouge">Play Tennis</code> là giá trị cần dự đoán dựa vào 4 thuộc tính trên.</p>
+
+<p>Ta sẽ bắt đầu đi tìm thuộc tính và xây dựng một Decision Tree dựa trên thuật toán ID3 đã trình bày bên trên. Đầu tiên ta thấy rằng ở bảng trên có <em>5 giá trị <code class="language-plaintext highlighter-rouge">Play Tennis = No</code></em> và <em>9 giá trị <code class="language-plaintext highlighter-rouge">Play Tennis = Yes</code></em> (bước 1) suy ra <em>Entropy</em> tại <strong>root node</strong> sẽ có giá trị bằng:</p>
+
+\[\mathbf{E}(\mathcal{S}) = - \frac{5}{14}\log\left(\frac{5}{14}\right) - \frac{9}{14}\log\left(\frac{9}{14}\right) \approx 0.94\]
+
+<p>Tiếp theo ta sẽ tính toán <em>information gain</em> hoặc tổng trọng số <em>Entropy</em> của 4 thuộc tính <code class="language-plaintext highlighter-rouge">Outlook</code>, <code class="language-plaintext highlighter-rouge">Temperature</code>, <code class="language-plaintext highlighter-rouge">Humidity</code>, <code class="language-plaintext highlighter-rouge">Wind</code> để tìm ra thuộc tính <em>phù hợp nhất</em> làm <strong>root node</strong>.</p>
+
+<p><em>Xét <strong>root node</strong> là <code class="language-plaintext highlighter-rouge">Outlook</code>, ta có thể vẽ lại bảng sau cho dễ tính toán:</em></p>
+
+<hr />
+
+<p><img src="/assets/images/bai12/outlook_sunny.png" class="normalpic" /></p>
+
+<p><img src="/assets/images/bai12/outlook_overcast.png" class="normalpic" /></p>
+
+<p><img src="/assets/images/bai12/outlook_rain.png" class="normalpic" /></p>
+
+<hr />
+
+<ul>
+  <li>
+    <p>Ta thấy rằng với <strong>root node</strong> là <code class="language-plaintext highlighter-rouge">Outlook</code> ta sẽ có 3 <strong>child node</strong>: <em>Sunny, Overcast, Rain</em>. Bây giờ ta cần đi tìm <em>information gain</em> của <code class="language-plaintext highlighter-rouge">Outlook</code> dựa trên 3 <strong>child node</strong> này (bước 2):</p>
+
+\[\mathbf{G}(\text{outlook}, \mathcal{S}) = \mathbf{E}(\mathcal{S}) - \mathbf{E}(\text{outlook}, \mathcal{S})\]
+
+    <p>mà \(\mathbf{E}(\text{outlook}, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{E}(\mathcal{S}_k)\) trong đó $K = 3, N = 14$.</p>
+  </li>
+  <li>
+    <p><em>Entropy</em> của 3 tập con <em>Sunny, Overcast, Rain</em> trong <code class="language-plaintext highlighter-rouge">outlook</code> sẽ được kí hiệu lần lượt là: $\mathbf{E}(\mathcal{S}_s), \mathbf{E}(\mathcal{S}_o), \mathbf{E}(\mathcal{S}_r)$. Suy ra:</p>
+
+\[\mathbf{E}(\mathcal{S}_s) = - \frac{3}{5}\log\left(\frac{3}{5}\right) - \frac{2}{5}\log\left(\frac{2}{5}\right) \approx 0.97\]
+
+\[\mathbf{E}(\mathcal{S}_o) = - \frac{0}{4}\log\left(\frac{0}{4}\right) - \frac{4}{4}\log\left(\frac{4}{4}\right) = 0\]
+
+\[\mathbf{E}(\mathcal{S}_r) = - \frac{2}{5}\log\left(\frac{2}{5}\right) - \frac{3}{5}\log\left(\frac{3}{5}\right) \approx 0.97\]
+
+\[\mathbf{E}(\text{outlook}, \mathcal{S}) = \frac{5}{14}\mathbf{E}(\mathcal{S}_s) + \frac{4}{14}\mathbf{E}(\mathcal{S}_o) +\frac{5}{14}\mathbf{E}(\mathcal{S}_r) \approx 0.69\]
+
+\[\mathbf{G}(\text{outlook}, \mathcal{S}) = 0.94 - 0.69 = 0.25 \quad\quad (5)\]
+  </li>
+</ul>
+
+<p><em>Xét <strong>root node</strong> là <code class="language-plaintext highlighter-rouge">Wind</code>, tương tự ta có thể vẽ lại bảng sau:</em></p>
+
+<hr />
+
+<p><img src="/assets/images/bai12/wind_weak.png" class="normalpic" /></p>
+
+<p><img src="/assets/images/bai12/weak_strong.png" class="normalpic" /></p>
+
+<hr />
+
+<ul>
+  <li>
+    <p>Ta thấy rằng với <strong>root node</strong> là <code class="language-plaintext highlighter-rouge">Wind</code> ta sẽ có 2 <strong>child node</strong>: <em>Weak, Strong</em>. Bây giờ ta cần đi tìm <em>information gain</em> của <code class="language-plaintext highlighter-rouge">Wind</code> dựa trên  <strong>child node</strong> này (bước 2):</p>
+
+\[\mathbf{G}(\text{wind}, \mathcal{S}) = \mathbf{E}(\mathcal{S}) - \mathbf{E}(\text{wind}, \mathcal{S})\]
+
+    <p>mà \(\mathbf{E}(\text{wind}, \mathcal{S}) = \sum_{k=1}^K \frac{m_k}{N} \mathbf{E}(\mathcal{S}_k)\) trong đó $K = 2, N = 14$.</p>
+  </li>
+  <li>
+    <p><em>Entropy</em> của <em>Weak, Strong</em> trong <code class="language-plaintext highlighter-rouge">Wind</code> sẽ được kí hiệu lần lượt là: $\mathbf{E}(\mathcal{S}_w), \mathbf{E}(\mathcal{S}_s)$. Suy ra:</p>
+
+\[\mathbf{E}(\mathcal{S}_w) = - \frac{2}{8}\log\left(\frac{2}{8}\right) - \frac{6}{8}\log\left(\frac{6}{8}\right) \approx 0.81\]
+
+\[\mathbf{E}(\mathcal{S}_s) = - \frac{3}{6}\log\left(\frac{3}{6}\right) - \frac{3}{6}\log\left(\frac{3}{6}\right) = 1\]
+
+\[\mathbf{E}(\text{wind}, \mathcal{S}) = \frac{8}{14}\mathbf{E}(\mathcal{S}_w) + \frac{6}{14}\mathbf{E}(\mathcal{S}_s) \approx 0.89\]
+
+\[\mathbf{G}(\text{wind}, \mathcal{S}) = 0.94 - 0.89 = 0.05 \quad\quad (6)\]
+  </li>
+</ul>
+
+<p><em>Tương tự xét <strong>root node</strong> cho <code class="language-plaintext highlighter-rouge">Temperature</code> và <code class="language-plaintext highlighter-rouge">Humidity</code></em> sẽ thu được các giá trị <em>information gain</em> là:</p>
+
+\[\mathbf{G}(\text{temperature}, \mathcal{S}) = 0.029, \mathbf{G}(\text{humidity}, \mathcal{S}) = 0.151 \quad\quad (7)\]
+
+<p>Từ (5), (6), (7) suy ra thuộc tính sẽ được chọn ở <strong>root node</strong> là <code class="language-plaintext highlighter-rouge">Outlook</code> vì có <em>information gain</em> lớn nhất. Điều này chính xác vì bằng trực giác ta có thể nhìn thấy rằng biến <code class="language-plaintext highlighter-rouge">overcast</code> của <code class="language-plaintext highlighter-rouge">Outlook</code> đều rơi vào nhãn <code class="language-plaintext highlighter-rouge">Yes</code> vì vậy <em>độ tinh khiết</em> tại đây là cao nhất. Lúc này cây của ta sẽ có hình dạng như sau:</p>
+
+<p><img src="/assets/images/bai12/anh8.png" class="normalpic" /></p>
+
+<p>Như đã thấy ở hình trên thì tại <strong>root node</strong> đã chia làm 3 nhánh <code class="language-plaintext highlighter-rouge">overcast</code>, <code class="language-plaintext highlighter-rouge">sunny</code> và <code class="language-plaintext highlighter-rouge">rain</code>. Tại nhánh <code class="language-plaintext highlighter-rouge">overcast</code> thì đã xuất hiện <strong>leaf node</strong> tức độ tinh khiết lúc này là cao nhất. Tuy nhiên ở 2 nhánh còn lại thì chia được phân chia rõ ràng giữa 2 lớp (vẩn đục) vì vậy ta sẽ tiếp tục xét lần lượt các thuộc tính còn lại (ngoại trừ <code class="language-plaintext highlighter-rouge">outlook</code>) để phân chia cho tới khi độ tinh khiết cao nhất.</p>
+
+<p><em>Xét nhánh <strong>sunny</strong>:</em></p>
+
+<p><img src="/assets/images/bai12/anh9.png" class="normalpic" /></p>
+
+<ul>
+  <li>Giá trị Entropy của $\mathcal{S}$ tại nhánh <em>sunny</em> là:</li>
+</ul>
+
+\[\mathbf{E}(\mathcal{S}_\text{sunny}) = - \frac{3}{5}\log\left(\frac{3}{5}\right) - \frac{2}{5}\log\left(\frac{2}{5}\right) \approx 0.97\]
+
+<ul>
+  <li>Nếu chọn thuộc tính <code class="language-plaintext highlighter-rouge">Humidity</code> (nhìn nhanh thì bạn có thể thấy được thuộc tính này phân tách rất rõ ràng khi được phân loại tuy nhiên mình vẫn sẽ viết toàn bộ cách tính), <em>Entropy</em> của <em>High, Normal</em> sẽ được kí hiệu lần lượt là: $\mathbf{E}(\mathcal{S}_h), \mathbf{E}(\mathcal{S}_n)$. Suy ra:</li>
+</ul>
+
+\[\mathbf{E}(\mathcal{S}_h) = - \frac{3}{3}\log\left(\frac{3}{3}\right) - \frac{0}{3}\log\left(\frac{0}{3}\right) = 0\]
+
+\[\mathbf{E}(\mathcal{S}_n) = - \frac{0}{2}\log\left(\frac{0}{2}\right) - \frac{2}{2}\log\left(\frac{2}{2}\right) = 0\]
+
+\[\mathbf{E}(\text{humidity}, \mathcal{S}_\text{sunny}) = \frac{3}{5}\mathbf{E}(\mathcal{S}_h) + \frac{2}{5}\mathbf{E}(\mathcal{S}_n) = 0\]
+
+\[\mathbf{G}(\text{humidity}, \mathcal{S}_\text{sunny}) = \mathbf{E}(\mathcal{S}_\text{sunny}) - \mathbf{E}(\text{humidity}, \mathcal{S}_\text{sunny}) = 0.97\]
+
+<ul>
+  <li>Tính toán tương tự cho 2 thuộc tính <code class="language-plaintext highlighter-rouge">Temperature</code> và <code class="language-plaintext highlighter-rouge">Wind</code> bạn sẽ nhận được giá <em>information gain</em> lần lượt là: $0.57,  0.019$. So sánh với <em>information gain</em> của <code class="language-plaintext highlighter-rouge">Humidity</code> thì ta sẽ chọn <strong>node</strong> này là <code class="language-plaintext highlighter-rouge">Humidity</code> và cây của ta lúc này sẽ được như sau:</li>
+</ul>
+
+<p><img src="/assets/images/bai12/anh10.png" class="normalpic" /></p>
+
+<p><em>Tương tự xét nhánh <strong>rain</strong> ta sẽ thu được một cây hoàn chỉnh với các <strong>leaf node</strong> xuất hiện như sau:</em></p>
+
+<p><img src="/assets/images/bai12/anh11.png" class="normalpic" /></p>
+
+<p><strong>Kết luận:</strong> Tới đây một Decision Tree đã được hoàn thiện bằng thuật toán ID3, khi có một điểm dữ liệu mới ta sẽ bắt đầu hỏi các câu hỏi từ trên xuống (từ root node) để xác định nhãn cuối cùng. Nếu bạn thử lại toàn bộ dữ liệu ở trên ví dụ thì sẽ thấy với cây ta tạo được sẽ dự đoán chính xác 100% và nếu dụ một dữ liệu như sau: <em><code class="language-plaintext highlighter-rouge">Outlook: Rain</code>, <code class="language-plaintext highlighter-rouge">Temperature: Hot</code>, <code class="language-plaintext highlighter-rouge">Humidity: Normal</code>, <code class="language-plaintext highlighter-rouge">Wind: Strong</code></em> thì sẽ có nhãn là <code class="language-plaintext highlighter-rouge">No</code>.</p>
+
+<p><a name="4-evaluation"></a></p>
+
+<h2 id="4-đánh-giá-và-kết-luận">4. Đánh giá và kết luận</h2>
+
+<ul>
+  <li>ID3 sử dụng thuật toán Greedy (tham lam) dựa trên rằng buộc là <em>information gain</em> hoặc tổng trọng số <em>Entropy</em> của một thuộc tính để từ đó chọn ra một thuộc tính có thể phân chia dữ liệu theo nhãn <em>phù hợp nhất</em> ở mỗi <strong>node</strong> được chọn. Tuy nhiên điểm yếu của thuật toán Greedy là đôi khi nó không tìm ra một nghiệm tối ưu toàn cục mà chỉ là cục bộ. Vì vậy ID3 chưa chắc đã tạo nên một cây tối ưu nhất, ví dụ với bộ dữ liệu bên trên vẫn tồn tại một số sơ đồ cây khác đảm bảo dự đoán chính xác 100% training data như sau:</li>
+</ul>
+
+<hr />
+
+<p><img src="/assets/images/bai12/anh12.png" class="normalpic" /></p>
+
+<hr />
+
+<ul>
+  <li>
+    <p>Vậy ID3 sẽ lựa chọn cây nào? ID3 sẽ lựa chọn duy nhất một cây thỏa mãn điều kiện hỗn tạp (<em>information gain</em> lớn nhất) nhỏ nhất, vì vậy cây tìm ra sẽ dựa trên thuộc tính mà ID3 tìm ra và lựa chọn làm <strong>non-leaf node</strong> ở mỗi lần lặp.</p>
+  </li>
+  <li>
+    <p>Với ID3 cây có xu hướng mở rộng bề ngang (lùn, thấp) vì những thuộc tính có <em>information gain</em> cao sẽ càng gần <strong>root node</strong>. Thật vậy, giả sử khi bạn muốn dựa trên một số thông tin cho trước để đưa ra dự đoán xem đó là ai trong lớp học. Các thông tin này có thể bao gồm: Sở thích, thói quen, giới tính, ngày sinh… giả sử rằng trong lớp không có ai trùng ngày sinh với nhau thì ta chỉ cần mỗi thông tin/thuộc tính này để có thể đưa ra dự đoán chính xác 100%. Vì tính hỗn tạp của thuộc tính lúc này là không có tức tổng trọng số hàm <em>Entropy</em> lúc này bằng không thì <em>information gain</em> là lớn nhất. Vì vậy thuộc tính mà có càng nhiều giá trị thường có xu thế nằm gần <strong>root node</strong>.</p>
+  </li>
+  <li>
+    <p>Thuật toán ID3 làm việc với dữ liệu dạng <em>categorical</em> tuy nhiên với dữ liệu dạng liên tục ta có thể biến đổi một chút để đưa thành dạng <em>categorical</em>. Ví dụ bạn có dữ liệu thuộc tính điểm là: $1,2,3,…10$ bạn có thể chia thành 3 khoảng: $1 - 4$ là <em>weak</em>, $5 - 7$ là <em>median</em>, $8 - 10$ là <em>high</em>. Tuy nhiên cách này sẽ làm mất đi khá nhiều ý nghĩa của dữ liệu. Đặc biệt khi phân chia kiểu này thì sẽ rất dễ bị nhầm lẫn khi dự đoán vì vô tình ta đã coi điểm $1 = 4$.</p>
+  </li>
+</ul>
+
+<p><em>Vì bài tới đây khá dài nên mình sẽ trình bày về thuật toán CART ở bài sau cũng như vấn đề mà các thuật toán Decision Tree gặp phải.</em></p>
+
+<p><a name="5-references"></a></p>
+
+<h2 id="5-tham-khảo">5. Tham khảo</h2>
+
+<p>[1] <a href="https://machinelearningcoban.com/2018/01/14/id3/">Bài 34: Decision Trees (1): Iterative Dichotomiser 3 - Machine Learning cơ bản by Vu Huu Tiep</a></p>
+
+<p>[2] <a href="https://machinelearningcoban.com/tabml_book/ch_model/decision_tree.html">Decision Tree algorithm by Tuan Nguyen</a></p>
+
+<p>[3] <a href="https://users.soict.hust.edu.vn/khoattq/ml-dm-course/L7-Random-forests.pdf">Decision Tree - Machine Learning and Data Mining by Khoat Than</a></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10rem"></footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Config MathJax  -->
+	<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			skipHtmlTags: [
+				'script', 'noscript', 'style', 'textarea', 'pre'
+			],
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+
+	
+	<script src="/js/toc.js"></script>
+	<script src="/js/btnTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#toc').toc();
+		});
+	</script>
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-89509207-1', 'auto');
+		// ga('send', 'pageview');
+		ga('send', 'pageview', {
+			'page': '/',
+			'title': ''
+		});
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KTCD8BX');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+</body>
+
+</html>
